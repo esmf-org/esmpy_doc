@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Tutorials &#8212; ESMPy 8.1.0 beta snapshot documentation</title>
+    <title>Tutorials &#8212; ESMPy 8.0.1 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="install.html" title="Installation"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.1.0 beta snapshot documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.0.1 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -72,7 +72,7 @@ and <a class="reference internal" href="locstream.html#ESMF.api.locstream.LocStr
 <span class="sd">    :param domask: a boolean to tell whether or not to add a mask</span>
 <span class="sd">    :return: LocStream</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">pet_count</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">pet_count</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;processor count must be 1 to use this function&quot;</span><span class="p">)</span>
 
     <span class="n">locstream</span> <span class="o">=</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">LocStream</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="n">coord_sys</span><span class="o">=</span><span class="n">coord_sys</span><span class="p">)</span>
@@ -98,7 +98,7 @@ and <a class="reference internal" href="locstream.html#ESMF.api.locstream.LocStr
 <span class="sd">    :param domask: a boolean to tell whether or not to add a mask</span>
 <span class="sd">    :return: LocStream</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">pet_count</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">pet_count</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="mi">4</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;processor count must be 4 to use this function&quot;</span><span class="p">)</span>
 
     <span class="n">deg_rad</span> <span class="o">=</span> <span class="n">pi</span>
@@ -106,25 +106,25 @@ and <a class="reference internal" href="locstream.html#ESMF.api.locstream.LocStr
         <span class="n">deg_rad</span> <span class="o">=</span> <span class="mf">180.0</span>
 
     <span class="n">locstream</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="ow">is</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">locstream</span> <span class="o">=</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">LocStream</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">coord_sys</span><span class="o">=</span><span class="n">coord_sys</span><span class="p">)</span>
         <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
         <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">deg_rad</span><span class="o">/-</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">deg_rad</span><span class="o">/-</span><span class="mf">2.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">domask</span><span class="p">:</span>
             <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Mask&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">elif</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="ow">is</span> <span class="mi">1</span><span class="p">:</span>
         <span class="n">locstream</span> <span class="o">=</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">LocStream</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">coord_sys</span><span class="o">=</span><span class="n">coord_sys</span><span class="p">)</span>
         <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
         <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">deg_rad</span><span class="o">/-</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">deg_rad</span><span class="o">/-</span><span class="mf">2.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">domask</span><span class="p">:</span>
             <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Mask&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">elif</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="ow">is</span> <span class="mi">2</span><span class="p">:</span>
         <span class="n">locstream</span> <span class="o">=</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">LocStream</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">coord_sys</span><span class="o">=</span><span class="n">coord_sys</span><span class="p">)</span>
         <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
         <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="n">deg_rad</span><span class="o">/</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">deg_rad</span><span class="o">/</span><span class="mf">2.0</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">domask</span><span class="p">:</span>
             <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Mask&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="k">elif</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="ow">is</span> <span class="mi">3</span><span class="p">:</span>
         <span class="n">locstream</span> <span class="o">=</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">LocStream</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">coord_sys</span><span class="o">=</span><span class="n">coord_sys</span><span class="p">)</span>
         <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
         <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="n">deg_rad</span><span class="o">/</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">deg_rad</span><span class="o">/</span><span class="mf">2.0</span><span class="p">]</span>
@@ -697,7 +697,7 @@ can be run in serial or parallel with no modification.</p>
 <span class="n">num_nodes</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">xctfield</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[:])</span>
 <span class="n">relerr</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">meanrelerr</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">if</span> <span class="n">num_nodes</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">num_nodes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">relerr</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">dstfield</span><span class="o">.</span><span class="n">data</span> <span class="o">-</span> <span class="n">xctfield</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">/</span>
                        <span class="n">numpy</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">xctfield</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
     <span class="n">meanrelerr</span> <span class="o">=</span> <span class="n">relerr</span> <span class="o">/</span> <span class="n">num_nodes</span>
@@ -708,41 +708,38 @@ can be run in serial or parallel with no modification.</p>
     <span class="n">num_nodes</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">reduce_val</span><span class="p">(</span><span class="n">num_nodes</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">constants</span><span class="o">.</span><span class="n">Reduce</span><span class="o">.</span><span class="n">SUM</span><span class="p">)</span>
 
 <span class="c1"># output the results from one processor only</span>
-<span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="ow">is</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">meanrelerr</span> <span class="o">=</span> <span class="n">relerr</span> <span class="o">/</span> <span class="n">num_nodes</span>
     <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;ESMPy Grid Mesh Regridding Example&quot;</span><span class="p">)</span>
     <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;  interpolation mean relative error = </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">meanrelerr</span><span class="p">))</span>
 
-    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">filename</span><span class="p">)):</span>
-        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">filename</span><span class="p">))</span>
-
 <span class="c1"># set to 1 to output results</span>
-<span class="c1"># if ESMF.pet_count() == 0:</span>
-<span class="c1">#     import matplotlib.pyplot as plt</span>
-<span class="c1">#     fig = plt.figure(1, (15, 6))</span>
-<span class="c1">#     fig.suptitle(&#39;ESMPy Periodic Grids&#39;, fontsize=14, fontweight=&#39;bold&#39;)</span>
-<span class="c1"># </span>
-<span class="c1">#     ax = fig.add_subplot(1, 2, 1)</span>
-<span class="c1">#     im = ax.imshow(srcfield.data, vmin=1, vmax=3, cmap=&#39;gist_ncar&#39;, aspect=&#39;auto&#39;,</span>
-<span class="c1">#                    extent=[min(slons_par), max(slons_par), min(slats_par), max(slats_par)])</span>
-<span class="c1">#     ax.set_xbound(lower=min(slons_par), upper=max(slons_par))</span>
-<span class="c1">#     ax.set_ybound(lower=min(slats_par), upper=max(slats_par))</span>
-<span class="c1">#     ax.set_xlabel(&quot;Longitude&quot;)</span>
-<span class="c1">#     ax.set_ylabel(&quot;Latitude&quot;)</span>
-<span class="c1">#     ax.set_title(&quot;Source Data&quot;)</span>
-<span class="c1"># </span>
-<span class="c1">#     ax = fig.add_subplot(1, 2, 2)</span>
-<span class="c1">#     im = ax.imshow(dstfield.data, vmin=1, vmax=3, cmap=&#39;gist_ncar&#39;, aspect=&#39;auto&#39;,</span>
-<span class="c1">#                    extent=[min(dlons_par), max(dlons_par), min(dlats_par), max(dlats_par)])</span>
-<span class="c1">#     ax.set_xlabel(&quot;Longitude&quot;)</span>
-<span class="c1">#     ax.set_ylabel(&quot;Latitude&quot;)</span>
-<span class="c1">#     ax.set_title(&quot;Regrid Solution&quot;)</span>
-<span class="c1"># </span>
-<span class="c1">#     fig.subplots_adjust(right=0.8)</span>
-<span class="c1">#     cbar_ax = fig.add_axes([0.9, 0.1, 0.01, 0.8])</span>
-<span class="c1">#     fig.colorbar(im, cax=cbar_ax)</span>
-<span class="c1"># </span>
-<span class="c1">#     plt.show()</span>
+<span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">pet_count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;ESMPy Periodic Grids&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">srcfield</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gist_ncar&#39;</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span>
+                   <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="nb">min</span><span class="p">(</span><span class="n">slons_par</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">slons_par</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="n">slats_par</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">slats_par</span><span class="p">)])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xbound</span><span class="p">(</span><span class="n">lower</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">slons_par</span><span class="p">),</span> <span class="n">upper</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">slons_par</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ybound</span><span class="p">(</span><span class="n">lower</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">slats_par</span><span class="p">),</span> <span class="n">upper</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">slats_par</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Longitude&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Latitude&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Source Data&quot;</span><span class="p">)</span>
+
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">dstfield</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gist_ncar&#39;</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span>
+                   <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="nb">min</span><span class="p">(</span><span class="n">dlons_par</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">dlons_par</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="n">dlats_par</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">dlats_par</span><span class="p">)])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Longitude&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Latitude&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Regrid Solution&quot;</span><span class="p">)</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">right</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+    <span class="n">cbar_ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">])</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">cax</span><span class="o">=</span><span class="n">cbar_ax</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -761,11 +758,6 @@ can be run in serial or parallel with no modification.</p>
 <span class="c1"># from ESMF.util.cache_data import cache_data_file</span>
 <span class="c1"># cache_data_file(os.path.join(DD, &quot;ll1deg_grid.nc&quot;))</span>
 
-<span class="k">try</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">SkipTest</span>
-<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">nose</span> <span class="kn">import</span> <span class="n">SkipTest</span>
-
 <span class="kn">import</span> <span class="nn">ESMF</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
 
@@ -781,8 +773,8 @@ can be run in serial or parallel with no modification.</p>
 <span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">pet_count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
     <span class="n">locstream</span> <span class="o">=</span> <span class="n">create_locstream_spherical_16</span><span class="p">(</span><span class="n">coord_sys</span><span class="o">=</span><span class="n">coord_sys</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="n">domask</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">constants</span><span class="o">.</span><span class="n">_ESMF_MPIRUN_NP</span> <span class="o">!=</span> <span class="mi">4</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">SkipTest</span><span class="p">(</span><span class="s1">&#39;processor count must be 4 or 1 for this example&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">pet_count</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;processor count must be 4 or 1 for this example&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">locstream</span> <span class="o">=</span> <span class="n">create_locstream_spherical_16_parallel</span><span class="p">(</span><span class="n">coord_sys</span><span class="o">=</span><span class="n">coord_sys</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="n">domask</span><span class="p">)</span>
 
@@ -835,7 +827,7 @@ can be run in serial or parallel with no modification.</p>
 <span class="n">dstfield</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">dstfield</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
 <span class="n">xctfield</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">xctfield</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">num_nodes</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">num_nodes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">ind</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">dstfield</span> <span class="o">!=</span> <span class="mf">1e20</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">xctfield</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">relerr</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">dstfield</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span> <span class="o">-</span> <span class="n">xctfield</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span> <span class="o">/</span> <span class="n">numpy</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">xctfield</span><span class="p">[</span><span class="n">ind</span><span class="p">]))</span>
     <span class="n">meanrelerr</span> <span class="o">=</span> <span class="n">relerr</span> <span class="o">/</span> <span class="n">num_nodes</span>
@@ -846,7 +838,7 @@ can be run in serial or parallel with no modification.</p>
     <span class="n">num_nodes</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">reduce_val</span><span class="p">(</span><span class="n">num_nodes</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">constants</span><span class="o">.</span><span class="n">Reduce</span><span class="o">.</span><span class="n">SUM</span><span class="p">)</span>
 
 <span class="c1"># output the results from one processor only</span>
-<span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="ow">is</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">meanrelerr</span> <span class="o">=</span> <span class="n">relerr</span> <span class="o">/</span> <span class="n">num_nodes</span>
     <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;ESMPy Grid LocStream Regridding Example&quot;</span><span class="p">)</span>
     <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;  interpolation mean relative error = </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">meanrelerr</span><span class="p">))</span>
@@ -860,11 +852,6 @@ can be run in serial or parallel with no modification.</p>
 <h3>Mesh to LocStream<a class="headerlink" href="#mesh-to-locstream" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This example demonstrates how to regrid between a mesh and a locstream.</span>
-
-<span class="k">try</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">SkipTest</span>
-<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">nose</span> <span class="kn">import</span> <span class="n">SkipTest</span>
 
 <span class="kn">import</span> <span class="nn">ESMF</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
@@ -881,8 +868,8 @@ can be run in serial or parallel with no modification.</p>
     <span class="n">mesh</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">mesh_create_5</span><span class="p">()</span>
     <span class="n">locstream</span> <span class="o">=</span> <span class="n">create_locstream_16</span><span class="p">()</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">constants</span><span class="o">.</span><span class="n">_ESMF_MPIRUN_NP</span> <span class="o">!=</span> <span class="mi">4</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">SkipTest</span><span class="p">(</span><span class="s1">&#39;processor count must be 4 or 1 for this example&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">pet_count</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;processor count must be 4 or 1 for this example&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">mesh</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">mesh_create_5_parallel</span><span class="p">()</span>
         <span class="n">locstream</span> <span class="o">=</span> <span class="n">create_locstream_16_parallel</span><span class="p">()</span>
@@ -920,7 +907,7 @@ can be run in serial or parallel with no modification.</p>
 <span class="n">num_nodes</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">xctfield</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[:])</span>
 <span class="n">relerr</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">meanrelerr</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">if</span> <span class="n">num_nodes</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">num_nodes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">ind</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">dstfield</span><span class="o">.</span><span class="n">data</span> <span class="o">!=</span> <span class="mf">1e20</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">xctfield</span><span class="o">.</span><span class="n">data</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">relerr</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">dstfield</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span> <span class="o">-</span> <span class="n">xctfield</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span> <span class="o">/</span> <span class="n">numpy</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">xctfield</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">ind</span><span class="p">]))</span>
     <span class="n">meanrelerr</span> <span class="o">=</span> <span class="n">relerr</span> <span class="o">/</span> <span class="n">num_nodes</span>
@@ -931,7 +918,7 @@ can be run in serial or parallel with no modification.</p>
     <span class="n">num_nodes</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">reduce_val</span><span class="p">(</span><span class="n">num_nodes</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">constants</span><span class="o">.</span><span class="n">Reduce</span><span class="o">.</span><span class="n">SUM</span><span class="p">)</span>
 
 <span class="c1"># output the results from one processor only</span>
-<span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="ow">is</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">meanrelerr</span> <span class="o">=</span> <span class="n">relerr</span> <span class="o">/</span> <span class="n">num_nodes</span>
     <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;ESMPy Grid Mesh Regridding Example&quot;</span><span class="p">)</span>
     <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;  interpolation mean relative error = </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">meanrelerr</span><span class="p">))</span>
@@ -955,11 +942,6 @@ can be run in serial or parallel with no modification.</p>
 <span class="c1"># from ESMF.util.cache_data import cache_data_file</span>
 <span class="c1"># cache_data_file(os.path.join(DD, &quot;ll1deg_grid.nc&quot;))</span>
 
-<span class="k">try</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">SkipTest</span>
-<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">nose</span> <span class="kn">import</span> <span class="n">SkipTest</span>
-
 <span class="kn">import</span> <span class="nn">ESMF</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
 
@@ -978,8 +960,8 @@ can be run in serial or parallel with no modification.</p>
 <span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">pet_count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
     <span class="n">locstream</span> <span class="o">=</span> <span class="n">create_locstream_spherical_16</span><span class="p">(</span><span class="n">coord_sys</span><span class="o">=</span><span class="n">coord_sys</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="n">domask</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">constants</span><span class="o">.</span><span class="n">_ESMF_MPIRUN_NP</span> <span class="o">!=</span> <span class="mi">4</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">SkipTest</span><span class="p">(</span><span class="s1">&#39;processor count must be 4 or 1 for this example&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">pet_count</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;processor count must be 4 or 1 for this example&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">locstream</span> <span class="o">=</span> <span class="n">create_locstream_spherical_16_parallel</span><span class="p">(</span><span class="n">coord_sys</span><span class="o">=</span><span class="n">coord_sys</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="n">domask</span><span class="p">)</span>
 
@@ -1137,7 +1119,7 @@ can be run in serial or parallel with no modification.</p>
     <span class="n">num_nodes</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="n">mul</span><span class="p">,</span> <span class="n">xctfield</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
     <span class="n">relerr</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">meanrelerr</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">if</span> <span class="n">num_nodes</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">num_nodes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">ind</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">dstfield</span> <span class="o">!=</span> <span class="mf">1e20</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">xctfield</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">relerr</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span>
             <span class="n">numpy</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">dstfield</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span> <span class="o">-</span> <span class="n">xctfield</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span> <span class="o">/</span> <span class="n">numpy</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span>
@@ -1290,7 +1272,7 @@ can be run in serial or parallel with no modification.</p>
         <li class="right" >
           <a href="install.html" title="Installation"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.1.0 beta snapshot documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.0.1 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

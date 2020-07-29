@@ -5,229 +5,217 @@
 \let\spxextra \sphinxstyleindexextra
 
   \bigletter {\sphinxsymbolsname}
-  \item \spxentry{\_\_call\_\_()}\spxextra{ESMF.api.regrid.Regrid method}, \hyperpage{62}
-  \item \spxentry{\_\_call\_\_()}\spxextra{ESMF.api.regrid.RegridFromFile method}, \hyperpage{64}
+  \item \spxentry{\_\_call\_\_()}\spxextra{ESMF.api.regrid.Regrid method}, \hyperpage{60}
+  \item \spxentry{\_\_call\_\_()}\spxextra{ESMF.api.regrid.RegridFromFile method}, \hyperpage{62}
 
   \indexspace
   \bigletter A
-  \item \spxentry{add\_coords()}\spxextra{ESMF.api.grid.Grid method}, \hyperpage{55}
-  \item \spxentry{add\_elements()}\spxextra{ESMF.api.mesh.Mesh method}, \hyperpage{58}
-  \item \spxentry{add\_item()}\spxextra{ESMF.api.grid.Grid method}, \hyperpage{55}
-  \item \spxentry{add\_nodes()}\spxextra{ESMF.api.mesh.Mesh method}, \hyperpage{58}
-  \item \spxentry{ALLAVG}\spxextra{ESMF.api.constants.PoleMethod attribute}, \hyperpage{68}
-  \item \spxentry{AREA}\spxextra{ESMF.api.constants.GridItem attribute}, \hyperpage{66}
-  \item \spxentry{area()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{53}
-  \item \spxentry{area()}\spxextra{ESMF.api.mesh.Mesh property}, \hyperpage{57}
-  \item \spxentry{areatype()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{53}
+  \item \spxentry{add\_coords()}\spxextra{ESMF.api.grid.Grid method}, \hyperpage{53}
+  \item \spxentry{add\_elements()}\spxextra{ESMF.api.mesh.Mesh method}, \hyperpage{56}
+  \item \spxentry{add\_item()}\spxextra{ESMF.api.grid.Grid method}, \hyperpage{53}
+  \item \spxentry{add\_nodes()}\spxextra{ESMF.api.mesh.Mesh method}, \hyperpage{56}
+  \item \spxentry{ALLAVG}\spxextra{ESMF.api.constants.PoleMethod attribute}, \hyperpage{65}
+  \item \spxentry{AREA}\spxextra{ESMF.api.constants.GridItem attribute}, \hyperpage{63}
+  \item \spxentry{area()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{51}
+  \item \spxentry{area()}\spxextra{ESMF.api.mesh.Mesh property}, \hyperpage{55}
+  \item \spxentry{areatype()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{51}
 
   \indexspace
   \bigletter B
-  \item \spxentry{BASIC}\spxextra{ESMF.api.constants.FileMode attribute}, \hyperpage{66}
-  \item \spxentry{BILINEAR}\spxextra{ESMF.api.constants.RegridMethod attribute}, \hyperpage{69}
-  \item \spxentry{BIPOLE}\spxextra{ESMF.api.constants.PoleKind attribute}, \hyperpage{68}
+  \item \spxentry{BILINEAR}\spxextra{ESMF.api.constants.RegridMethod attribute}, \hyperpage{66}
+  \item \spxentry{BIPOLE}\spxextra{ESMF.api.constants.PoleKind attribute}, \hyperpage{65}
 
   \indexspace
   \bigletter C
-  \item \spxentry{CART}\spxextra{ESMF.api.constants.CoordSys attribute}, \hyperpage{65}
-  \item \spxentry{CART}\spxextra{ESMF.api.constants.LineType attribute}, \hyperpage{66}
-  \item \spxentry{CENTER}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{70}
+  \item \spxentry{CART}\spxextra{ESMF.api.constants.CoordSys attribute}, \hyperpage{62}
+  \item \spxentry{CART}\spxextra{ESMF.api.constants.LineType attribute}, \hyperpage{63}
+  \item \spxentry{CENTER}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{67}
   \item \spxentry{CENTER\_VCENTER}\spxextra{ESMF.api.constants.StaggerLoc attribute}, 
-		\hyperpage{70}
-  \item \spxentry{CENTER\_VFACE}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{70}
-  \item \spxentry{CONSERVE}\spxextra{ESMF.api.constants.RegridMethod attribute}, \hyperpage{69}
+		\hyperpage{67}
+  \item \spxentry{CENTER\_VFACE}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{67}
+  \item \spxentry{CONSERVE}\spxextra{ESMF.api.constants.RegridMethod attribute}, \hyperpage{66}
   \item \spxentry{CONSERVE\_2ND}\spxextra{ESMF.api.constants.RegridMethod attribute}, 
-		\hyperpage{69}
-  \item \spxentry{coord\_sys()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{53}
-  \item \spxentry{coord\_sys()}\spxextra{ESMF.api.mesh.Mesh property}, \hyperpage{57}
-  \item \spxentry{coords()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{53}
-  \item \spxentry{coords()}\spxextra{ESMF.api.mesh.Mesh property}, \hyperpage{57}
-  \item \spxentry{CoordSys}\spxextra{class in ESMF.api.constants}, \hyperpage{65}
-  \item \spxentry{copy()}\spxextra{ESMF.api.field.Field method}, \hyperpage{51}
-  \item \spxentry{copy()}\spxextra{ESMF.api.grid.Grid method}, \hyperpage{55}
-  \item \spxentry{copy()}\spxextra{ESMF.api.locstream.LocStream method}, \hyperpage{60}
-  \item \spxentry{copy()}\spxextra{ESMF.api.mesh.Mesh method}, \hyperpage{59}
-  \item \spxentry{copy()}\spxextra{ESMF.api.regrid.Regrid method}, \hyperpage{62}
-  \item \spxentry{copy()}\spxextra{ESMF.api.regrid.RegridFromFile method}, \hyperpage{64}
-  \item \spxentry{CORNER}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{70}
+		\hyperpage{67}
+  \item \spxentry{coord\_sys()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{51}
+  \item \spxentry{coord\_sys()}\spxextra{ESMF.api.mesh.Mesh property}, \hyperpage{55}
+  \item \spxentry{coords()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{51}
+  \item \spxentry{coords()}\spxextra{ESMF.api.mesh.Mesh property}, \hyperpage{55}
+  \item \spxentry{CoordSys}\spxextra{class in ESMF.api.constants}, \hyperpage{62}
+  \item \spxentry{copy()}\spxextra{ESMF.api.field.Field method}, \hyperpage{49}
+  \item \spxentry{copy()}\spxextra{ESMF.api.grid.Grid method}, \hyperpage{53}
+  \item \spxentry{copy()}\spxextra{ESMF.api.locstream.LocStream method}, \hyperpage{58}
+  \item \spxentry{copy()}\spxextra{ESMF.api.mesh.Mesh method}, \hyperpage{57}
+  \item \spxentry{copy()}\spxextra{ESMF.api.regrid.Regrid method}, \hyperpage{60}
+  \item \spxentry{copy()}\spxextra{ESMF.api.regrid.RegridFromFile method}, \hyperpage{62}
+  \item \spxentry{CORNER}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{67}
   \item \spxentry{CORNER\_VCENTER}\spxextra{ESMF.api.constants.StaggerLoc attribute}, 
-		\hyperpage{70}
-  \item \spxentry{CORNER\_VFACE}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{70}
+		\hyperpage{67}
+  \item \spxentry{CORNER\_VFACE}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{67}
 
   \indexspace
   \bigletter D
-  \item \spxentry{data()}\spxextra{ESMF.api.field.Field property}, \hyperpage{50}
-  \item \spxentry{destroy()}\spxextra{ESMF.api.field.Field method}, \hyperpage{51}
-  \item \spxentry{destroy()}\spxextra{ESMF.api.grid.Grid method}, \hyperpage{55}
-  \item \spxentry{destroy()}\spxextra{ESMF.api.locstream.LocStream method}, \hyperpage{60}
-  \item \spxentry{destroy()}\spxextra{ESMF.api.mesh.Mesh method}, \hyperpage{59}
-  \item \spxentry{destroy()}\spxextra{ESMF.api.regrid.Regrid method}, \hyperpage{62}
-  \item \spxentry{destroy()}\spxextra{ESMF.api.regrid.RegridFromFile method}, \hyperpage{64}
-  \item \spxentry{DSTAREA}\spxextra{ESMF.api.constants.NormType attribute}, \hyperpage{67}
+  \item \spxentry{data()}\spxextra{ESMF.api.field.Field property}, \hyperpage{48}
+  \item \spxentry{destroy()}\spxextra{ESMF.api.field.Field method}, \hyperpage{49}
+  \item \spxentry{destroy()}\spxextra{ESMF.api.grid.Grid method}, \hyperpage{53}
+  \item \spxentry{destroy()}\spxextra{ESMF.api.locstream.LocStream method}, \hyperpage{58}
+  \item \spxentry{destroy()}\spxextra{ESMF.api.mesh.Mesh method}, \hyperpage{57}
+  \item \spxentry{destroy()}\spxextra{ESMF.api.regrid.Regrid method}, \hyperpage{60}
+  \item \spxentry{destroy()}\spxextra{ESMF.api.regrid.RegridFromFile method}, \hyperpage{62}
+  \item \spxentry{DSTAREA}\spxextra{ESMF.api.constants.NormType attribute}, \hyperpage{65}
 
   \indexspace
   \bigletter E
-  \item \spxentry{EDGE1}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{70}
-  \item \spxentry{EDGE1\_VCENTER}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{70}
-  \item \spxentry{EDGE1\_VFACE}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{70}
-  \item \spxentry{EDGE2}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{70}
-  \item \spxentry{EDGE2\_VCENTER}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{70}
-  \item \spxentry{EDGE2\_VFACE}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{70}
-  \item \spxentry{ELEMENT}\spxextra{ESMF.api.constants.MeshLoc attribute}, \hyperpage{67}
-  \item \spxentry{EMPTY}\spxextra{ESMF.api.constants.Region attribute}, \hyperpage{69}
-  \item \spxentry{ERROR}\spxextra{ESMF.api.constants.UnmappedAction attribute}, \hyperpage{71}
+  \item \spxentry{EDGE1}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{67}
+  \item \spxentry{EDGE1\_VCENTER}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{67}
+  \item \spxentry{EDGE1\_VFACE}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{67}
+  \item \spxentry{EDGE2}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{67}
+  \item \spxentry{EDGE2\_VCENTER}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{67}
+  \item \spxentry{EDGE2\_VFACE}\spxextra{ESMF.api.constants.StaggerLoc attribute}, \hyperpage{67}
+  \item \spxentry{ELEMENT}\spxextra{ESMF.api.constants.MeshLoc attribute}, \hyperpage{64}
+  \item \spxentry{EMPTY}\spxextra{ESMF.api.constants.Region attribute}, \hyperpage{66}
+  \item \spxentry{ERROR}\spxextra{ESMF.api.constants.UnmappedAction attribute}, \hyperpage{68}
   \item \spxentry{ESMF}
     \subitem \spxentry{module}, \hyperpage{3}
-  \item \spxentry{ESMFGRID}\spxextra{ESMF.api.constants.FileFormat attribute}, \hyperpage{66}
-  \item \spxentry{ESMFMESH}\spxextra{ESMF.api.constants.FileFormat attribute}, \hyperpage{65}
-  \item \spxentry{ExtrapMethod}\spxextra{class in ESMF.api.constants}, \hyperpage{65}
+  \item \spxentry{ESMFGRID}\spxextra{ESMF.api.constants.FileFormat attribute}, \hyperpage{63}
+  \item \spxentry{ESMFMESH}\spxextra{ESMF.api.constants.FileFormat attribute}, \hyperpage{63}
 
   \indexspace
   \bigletter F
-  \item \spxentry{Field}\spxextra{class in ESMF.api.field}, \hyperpage{49}
-  \item \spxentry{FileFormat}\spxextra{class in ESMF.api.constants}, \hyperpage{65}
-  \item \spxentry{FileMode}\spxextra{class in ESMF.api.constants}, \hyperpage{66}
-  \item \spxentry{FRACAREA}\spxextra{ESMF.api.constants.NormType attribute}, \hyperpage{67}
-  \item \spxentry{free\_memory()}\spxextra{ESMF.api.mesh.Mesh method}, \hyperpage{59}
+  \item \spxentry{Field}\spxextra{class in ESMF.api.field}, \hyperpage{47}
+  \item \spxentry{FileFormat}\spxextra{class in ESMF.api.constants}, \hyperpage{63}
+  \item \spxentry{FRACAREA}\spxextra{ESMF.api.constants.NormType attribute}, \hyperpage{65}
+  \item \spxentry{free\_memory()}\spxextra{ESMF.api.mesh.Mesh method}, \hyperpage{57}
 
   \indexspace
   \bigletter G
-  \item \spxentry{get\_area()}\spxextra{ESMF.api.field.Field method}, \hyperpage{51}
-  \item \spxentry{get\_coords()}\spxextra{ESMF.api.grid.Grid method}, \hyperpage{55}
-  \item \spxentry{get\_coords()}\spxextra{ESMF.api.mesh.Mesh method}, \hyperpage{59}
-  \item \spxentry{get\_factors()}\spxextra{ESMF.api.regrid.Regrid method}, \hyperpage{62}
-  \item \spxentry{get\_item()}\spxextra{ESMF.api.grid.Grid method}, \hyperpage{56}
-  \item \spxentry{get\_weights\_dict()}\spxextra{ESMF.api.regrid.Regrid method}, \hyperpage{63}
-  \item \spxentry{GREAT\_CIRCLE}\spxextra{ESMF.api.constants.LineType attribute}, \hyperpage{66}
-  \item \spxentry{Grid}\spxextra{class in ESMF.api.grid}, \hyperpage{51}
-  \item \spxentry{grid()}\spxextra{ESMF.api.field.Field property}, \hyperpage{50}
-  \item \spxentry{GridItem}\spxextra{class in ESMF.api.constants}, \hyperpage{66}
-  \item \spxentry{GRIDSPEC}\spxextra{ESMF.api.constants.FileFormat attribute}, \hyperpage{66}
+  \item \spxentry{get\_area()}\spxextra{ESMF.api.field.Field method}, \hyperpage{49}
+  \item \spxentry{get\_coords()}\spxextra{ESMF.api.grid.Grid method}, \hyperpage{53}
+  \item \spxentry{get\_coords()}\spxextra{ESMF.api.mesh.Mesh method}, \hyperpage{57}
+  \item \spxentry{get\_factors()}\spxextra{ESMF.api.regrid.Regrid method}, \hyperpage{60}
+  \item \spxentry{get\_item()}\spxextra{ESMF.api.grid.Grid method}, \hyperpage{54}
+  \item \spxentry{get\_weights\_dict()}\spxextra{ESMF.api.regrid.Regrid method}, \hyperpage{61}
+  \item \spxentry{GREAT\_CIRCLE}\spxextra{ESMF.api.constants.LineType attribute}, \hyperpage{63}
+  \item \spxentry{Grid}\spxextra{class in ESMF.api.grid}, \hyperpage{49}
+  \item \spxentry{grid()}\spxextra{ESMF.api.field.Field property}, \hyperpage{48}
+  \item \spxentry{GridItem}\spxextra{class in ESMF.api.constants}, \hyperpage{63}
+  \item \spxentry{GRIDSPEC}\spxextra{ESMF.api.constants.FileFormat attribute}, \hyperpage{63}
 
   \indexspace
   \bigletter H
-  \item \spxentry{has\_corners()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{53}
-  \item \spxentry{HEX}\spxextra{ESMF.api.constants.MeshElemType attribute}, \hyperpage{67}
+  \item \spxentry{has\_corners()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{51}
+  \item \spxentry{HEX}\spxextra{ESMF.api.constants.MeshElemType attribute}, \hyperpage{64}
 
   \indexspace
   \bigletter I
-  \item \spxentry{I4}\spxextra{ESMF.api.constants.TypeKind attribute}, \hyperpage{70}
-  \item \spxentry{I8}\spxextra{ESMF.api.constants.TypeKind attribute}, \hyperpage{70}
-  \item \spxentry{IGNORE}\spxextra{ESMF.api.constants.UnmappedAction attribute}, \hyperpage{71}
+  \item \spxentry{I4}\spxextra{ESMF.api.constants.TypeKind attribute}, \hyperpage{68}
+  \item \spxentry{I8}\spxextra{ESMF.api.constants.TypeKind attribute}, \hyperpage{68}
+  \item \spxentry{IGNORE}\spxextra{ESMF.api.constants.UnmappedAction attribute}, \hyperpage{68}
 
   \indexspace
   \bigletter L
-  \item \spxentry{LineType}\spxextra{class in ESMF.api.constants}, \hyperpage{66}
-  \item \spxentry{LocStream}\spxextra{class in ESMF.api.locstream}, \hyperpage{59}
-  \item \spxentry{LogKind}\spxextra{class in ESMF.api.constants}, \hyperpage{67}
-  \item \spxentry{lower\_bounds()}\spxextra{ESMF.api.field.Field property}, \hyperpage{50}
-  \item \spxentry{lower\_bounds()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{54}
-  \item \spxentry{lower\_bounds()}\spxextra{ESMF.api.locstream.LocStream property}, \hyperpage{60}
+  \item \spxentry{LineType}\spxextra{class in ESMF.api.constants}, \hyperpage{63}
+  \item \spxentry{LocStream}\spxextra{class in ESMF.api.locstream}, \hyperpage{57}
+  \item \spxentry{LogKind}\spxextra{class in ESMF.api.constants}, \hyperpage{64}
+  \item \spxentry{lower\_bounds()}\spxextra{ESMF.api.field.Field property}, \hyperpage{48}
+  \item \spxentry{lower\_bounds()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{52}
+  \item \spxentry{lower\_bounds()}\spxextra{ESMF.api.locstream.LocStream property}, \hyperpage{58}
 
   \indexspace
   \bigletter M
-  \item \spxentry{Manager}\spxextra{class in ESMF.api.esmpymanager}, \hyperpage{49}
-  \item \spxentry{MASK}\spxextra{ESMF.api.constants.GridItem attribute}, \hyperpage{66}
-  \item \spxentry{mask()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{54}
-  \item \spxentry{mask()}\spxextra{ESMF.api.mesh.Mesh property}, \hyperpage{57}
-  \item \spxentry{max\_index()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{54}
-  \item \spxentry{Mesh}\spxextra{class in ESMF.api.mesh}, \hyperpage{56}
-  \item \spxentry{MeshElemType}\spxextra{class in ESMF.api.constants}, \hyperpage{67}
-  \item \spxentry{MeshLoc}\spxextra{class in ESMF.api.constants}, \hyperpage{67}
+  \item \spxentry{Manager}\spxextra{class in ESMF.api.esmpymanager}, \hyperpage{47}
+  \item \spxentry{MASK}\spxextra{ESMF.api.constants.GridItem attribute}, \hyperpage{63}
+  \item \spxentry{mask()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{52}
+  \item \spxentry{mask()}\spxextra{ESMF.api.mesh.Mesh property}, \hyperpage{55}
+  \item \spxentry{max\_index()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{52}
+  \item \spxentry{Mesh}\spxextra{class in ESMF.api.mesh}, \hyperpage{54}
+  \item \spxentry{MeshElemType}\spxextra{class in ESMF.api.constants}, \hyperpage{64}
+  \item \spxentry{MeshLoc}\spxextra{class in ESMF.api.constants}, \hyperpage{64}
   \item \spxentry{module}
     \subitem \spxentry{ESMF}, \hyperpage{3}
-  \item \spxentry{MONOPOLE}\spxextra{ESMF.api.constants.PoleKind attribute}, \hyperpage{68}
-  \item \spxentry{MULTI}\spxextra{ESMF.api.constants.LogKind attribute}, \hyperpage{67}
+  \item \spxentry{MONOPOLE}\spxextra{ESMF.api.constants.PoleKind attribute}, \hyperpage{65}
+  \item \spxentry{MULTI}\spxextra{ESMF.api.constants.LogKind attribute}, \hyperpage{64}
 
   \indexspace
   \bigletter N
-  \item \spxentry{name()}\spxextra{ESMF.api.field.Field property}, \hyperpage{50}
-  \item \spxentry{name()}\spxextra{ESMF.api.locstream.LocStream property}, \hyperpage{60}
-  \item \spxentry{ndbounds()}\spxextra{ESMF.api.field.Field property}, \hyperpage{50}
+  \item \spxentry{name()}\spxextra{ESMF.api.field.Field property}, \hyperpage{48}
+  \item \spxentry{name()}\spxextra{ESMF.api.locstream.LocStream property}, \hyperpage{58}
+  \item \spxentry{ndbounds()}\spxextra{ESMF.api.field.Field property}, \hyperpage{48}
   \item \spxentry{NEAREST\_DTOS}\spxextra{ESMF.api.constants.RegridMethod attribute}, 
-		\hyperpage{69}
-  \item \spxentry{NEAREST\_IDAVG}\spxextra{ESMF.api.constants.ExtrapMethod attribute}, 
-		\hyperpage{65}
-  \item \spxentry{NEAREST\_STOD}\spxextra{ESMF.api.constants.ExtrapMethod attribute}, 
-		\hyperpage{65}
+		\hyperpage{66}
   \item \spxentry{NEAREST\_STOD}\spxextra{ESMF.api.constants.RegridMethod attribute}, 
-		\hyperpage{69}
-  \item \spxentry{NODE}\spxextra{ESMF.api.constants.MeshLoc attribute}, \hyperpage{67}
-  \item \spxentry{NONE}\spxextra{ESMF.api.constants.ExtrapMethod attribute}, \hyperpage{65}
-  \item \spxentry{NONE}\spxextra{ESMF.api.constants.LogKind attribute}, \hyperpage{67}
-  \item \spxentry{NONE}\spxextra{ESMF.api.constants.PoleKind attribute}, \hyperpage{68}
-  \item \spxentry{NONE}\spxextra{ESMF.api.constants.PoleMethod attribute}, \hyperpage{68}
-  \item \spxentry{NormType}\spxextra{class in ESMF.api.constants}, \hyperpage{67}
-  \item \spxentry{NPNTAVG}\spxextra{ESMF.api.constants.PoleMethod attribute}, \hyperpage{68}
-  \item \spxentry{num\_peri\_dims()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{54}
+		\hyperpage{66}
+  \item \spxentry{NODE}\spxextra{ESMF.api.constants.MeshLoc attribute}, \hyperpage{64}
+  \item \spxentry{NONE}\spxextra{ESMF.api.constants.LogKind attribute}, \hyperpage{64}
+  \item \spxentry{NONE}\spxextra{ESMF.api.constants.PoleKind attribute}, \hyperpage{65}
+  \item \spxentry{NONE}\spxextra{ESMF.api.constants.PoleMethod attribute}, \hyperpage{65}
+  \item \spxentry{NormType}\spxextra{class in ESMF.api.constants}, \hyperpage{65}
+  \item \spxentry{NPNTAVG}\spxextra{ESMF.api.constants.PoleMethod attribute}, \hyperpage{65}
+  \item \spxentry{num\_peri\_dims()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{52}
 
   \indexspace
   \bigletter P
-  \item \spxentry{PATCH}\spxextra{ESMF.api.constants.RegridMethod attribute}, \hyperpage{69}
-  \item \spxentry{periodic\_dim()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{54}
-  \item \spxentry{pole\_dim()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{54}
-  \item \spxentry{PoleKind}\spxextra{class in ESMF.api.constants}, \hyperpage{68}
-  \item \spxentry{PoleMethod}\spxextra{class in ESMF.api.constants}, \hyperpage{68}
+  \item \spxentry{PATCH}\spxextra{ESMF.api.constants.RegridMethod attribute}, \hyperpage{66}
+  \item \spxentry{periodic\_dim()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{52}
+  \item \spxentry{pole\_dim()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{52}
+  \item \spxentry{PoleKind}\spxextra{class in ESMF.api.constants}, \hyperpage{65}
+  \item \spxentry{PoleMethod}\spxextra{class in ESMF.api.constants}, \hyperpage{65}
 
   \indexspace
   \bigletter Q
-  \item \spxentry{QUAD}\spxextra{ESMF.api.constants.MeshElemType attribute}, \hyperpage{67}
+  \item \spxentry{QUAD}\spxextra{ESMF.api.constants.MeshElemType attribute}, \hyperpage{64}
 
   \indexspace
   \bigletter R
-  \item \spxentry{R4}\spxextra{ESMF.api.constants.TypeKind attribute}, \hyperpage{70}
-  \item \spxentry{R8}\spxextra{ESMF.api.constants.TypeKind attribute}, \hyperpage{70}
-  \item \spxentry{rank()}\spxextra{ESMF.api.field.Field property}, \hyperpage{50}
-  \item \spxentry{rank()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{54}
-  \item \spxentry{rank()}\spxextra{ESMF.api.locstream.LocStream property}, \hyperpage{60}
-  \item \spxentry{rank()}\spxextra{ESMF.api.mesh.Mesh property}, \hyperpage{57}
-  \item \spxentry{read()}\spxextra{ESMF.api.field.Field method}, \hyperpage{51}
-  \item \spxentry{Region}\spxextra{class in ESMF.api.constants}, \hyperpage{69}
-  \item \spxentry{Regrid}\spxextra{class in ESMF.api.regrid}, \hyperpage{61}
-  \item \spxentry{RegridFromFile}\spxextra{class in ESMF.api.regrid}, \hyperpage{64}
-  \item \spxentry{RegridMethod}\spxextra{class in ESMF.api.constants}, \hyperpage{69}
+  \item \spxentry{R4}\spxextra{ESMF.api.constants.TypeKind attribute}, \hyperpage{68}
+  \item \spxentry{R8}\spxextra{ESMF.api.constants.TypeKind attribute}, \hyperpage{68}
+  \item \spxentry{rank()}\spxextra{ESMF.api.field.Field property}, \hyperpage{48}
+  \item \spxentry{rank()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{52}
+  \item \spxentry{rank()}\spxextra{ESMF.api.locstream.LocStream property}, \hyperpage{58}
+  \item \spxentry{rank()}\spxextra{ESMF.api.mesh.Mesh property}, \hyperpage{55}
+  \item \spxentry{read()}\spxextra{ESMF.api.field.Field method}, \hyperpage{49}
+  \item \spxentry{Region}\spxextra{class in ESMF.api.constants}, \hyperpage{66}
+  \item \spxentry{Regrid}\spxextra{class in ESMF.api.regrid}, \hyperpage{59}
+  \item \spxentry{RegridFromFile}\spxextra{class in ESMF.api.regrid}, \hyperpage{61}
+  \item \spxentry{RegridMethod}\spxextra{class in ESMF.api.constants}, \hyperpage{66}
 
   \indexspace
   \bigletter S
-  \item \spxentry{SCRIP}\spxextra{ESMF.api.constants.FileFormat attribute}, \hyperpage{65}
-  \item \spxentry{SELECT}\spxextra{ESMF.api.constants.Region attribute}, \hyperpage{69}
-  \item \spxentry{size()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{54}
-  \item \spxentry{size()}\spxextra{ESMF.api.locstream.LocStream property}, \hyperpage{60}
-  \item \spxentry{size()}\spxextra{ESMF.api.mesh.Mesh property}, \hyperpage{58}
-  \item \spxentry{size\_owned()}\spxextra{ESMF.api.mesh.Mesh property}, \hyperpage{58}
-  \item \spxentry{SPH\_DEG}\spxextra{ESMF.api.constants.CoordSys attribute}, \hyperpage{65}
-  \item \spxentry{SPH\_RAD}\spxextra{ESMF.api.constants.CoordSys attribute}, \hyperpage{65}
-  \item \spxentry{StaggerLoc}\spxextra{class in ESMF.api.constants}, \hyperpage{70}
-  \item \spxentry{staggerloc()}\spxextra{ESMF.api.field.Field property}, \hyperpage{50}
-  \item \spxentry{staggerloc()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{54}
+  \item \spxentry{SCRIP}\spxextra{ESMF.api.constants.FileFormat attribute}, \hyperpage{63}
+  \item \spxentry{SELECT}\spxextra{ESMF.api.constants.Region attribute}, \hyperpage{66}
+  \item \spxentry{size()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{52}
+  \item \spxentry{size()}\spxextra{ESMF.api.locstream.LocStream property}, \hyperpage{58}
+  \item \spxentry{size()}\spxextra{ESMF.api.mesh.Mesh property}, \hyperpage{56}
+  \item \spxentry{size\_owned()}\spxextra{ESMF.api.mesh.Mesh property}, \hyperpage{56}
+  \item \spxentry{SPH\_DEG}\spxextra{ESMF.api.constants.CoordSys attribute}, \hyperpage{62}
+  \item \spxentry{SPH\_RAD}\spxextra{ESMF.api.constants.CoordSys attribute}, \hyperpage{62}
+  \item \spxentry{StaggerLoc}\spxextra{class in ESMF.api.constants}, \hyperpage{67}
+  \item \spxentry{staggerloc()}\spxextra{ESMF.api.field.Field property}, \hyperpage{48}
+  \item \spxentry{staggerloc()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{52}
 
   \indexspace
   \bigletter T
-  \item \spxentry{TEETH}\spxextra{ESMF.api.constants.PoleMethod attribute}, \hyperpage{68}
-  \item \spxentry{TETRA}\spxextra{ESMF.api.constants.MeshElemType attribute}, \hyperpage{67}
-  \item \spxentry{TOTAL}\spxextra{ESMF.api.constants.Region attribute}, \hyperpage{69}
-  \item \spxentry{TRI}\spxextra{ESMF.api.constants.MeshElemType attribute}, \hyperpage{67}
-  \item \spxentry{type()}\spxextra{ESMF.api.field.Field property}, \hyperpage{51}
-  \item \spxentry{type()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{54}
-  \item \spxentry{TypeKind}\spxextra{class in ESMF.api.constants}, \hyperpage{70}
+  \item \spxentry{TEETH}\spxextra{ESMF.api.constants.PoleMethod attribute}, \hyperpage{65}
+  \item \spxentry{TETRA}\spxextra{ESMF.api.constants.MeshElemType attribute}, \hyperpage{64}
+  \item \spxentry{TOTAL}\spxextra{ESMF.api.constants.Region attribute}, \hyperpage{66}
+  \item \spxentry{TRI}\spxextra{ESMF.api.constants.MeshElemType attribute}, \hyperpage{64}
+  \item \spxentry{type()}\spxextra{ESMF.api.field.Field property}, \hyperpage{49}
+  \item \spxentry{type()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{52}
+  \item \spxentry{TypeKind}\spxextra{class in ESMF.api.constants}, \hyperpage{68}
 
   \indexspace
   \bigletter U
-  \item \spxentry{UGRID}\spxextra{ESMF.api.constants.FileFormat attribute}, \hyperpage{66}
-  \item \spxentry{UnmappedAction}\spxextra{class in ESMF.api.constants}, \hyperpage{71}
-  \item \spxentry{upper\_bounds()}\spxextra{ESMF.api.field.Field property}, \hyperpage{51}
-  \item \spxentry{upper\_bounds()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{54}
-  \item \spxentry{upper\_bounds()}\spxextra{ESMF.api.locstream.LocStream property}, \hyperpage{60}
+  \item \spxentry{UGRID}\spxextra{ESMF.api.constants.FileFormat attribute}, \hyperpage{63}
+  \item \spxentry{UnmappedAction}\spxextra{class in ESMF.api.constants}, \hyperpage{68}
+  \item \spxentry{upper\_bounds()}\spxextra{ESMF.api.field.Field property}, \hyperpage{49}
+  \item \spxentry{upper\_bounds()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{52}
+  \item \spxentry{upper\_bounds()}\spxextra{ESMF.api.locstream.LocStream property}, \hyperpage{58}
 
   \indexspace
   \bigletter V
-  \item \spxentry{VTK}\spxextra{ESMF.api.constants.FileFormat attribute}, \hyperpage{65}
-
-  \indexspace
-  \bigletter W
-  \item \spxentry{WITHAUX}\spxextra{ESMF.api.constants.FileMode attribute}, \hyperpage{66}
+  \item \spxentry{VTK}\spxextra{ESMF.api.constants.FileFormat attribute}, \hyperpage{63}
 
   \indexspace
   \bigletter X
-  \item \spxentry{xd()}\spxextra{ESMF.api.field.Field property}, \hyperpage{51}
+  \item \spxentry{xd()}\spxextra{ESMF.api.field.Field property}, \hyperpage{49}
 
 \end{sphinxtheindex}

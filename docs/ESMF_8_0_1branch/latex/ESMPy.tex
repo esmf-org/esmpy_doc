@@ -73,7 +73,7 @@
 
 \title{ESMPy Documentation}
 \date{Jul 29, 2020}
-\release{8.1.0 beta snapshot}
+\release{8.0.1}
 \author{ESMPy}
 \newcommand{\sphinxlogo}{\vbox{}}
 \renewcommand{\releasename}{Release}
@@ -103,9 +103,9 @@ unstructured meshes and sets of unconnected points; regional or global grids;
 information from NetCDF files in a variety of formats, including the
 \sphinxhref{http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html}{Climate and Forecast (CF) V1.6 (a.k.a GridSpec)},
 \sphinxhref{https://github.com/ugrid-conventions/ugrid-conventions}{UGRID},
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node3.html\#SECTION03028200000000000000}{ESMF Unstructured}
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node3.html\#SECTION03028200000000000000}{ESMF Unstructured}
 and
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node3.html\#SECTION03028100000000000000}{SCRIP}
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node3.html\#SECTION03028100000000000000}{SCRIP}
 conventions.
 
 ESMPy provides a {\hyperref[\detokenize{grid:ESMF.api.grid.Grid}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Grid}}}}} to represent single\sphinxhyphen{}tile logically
@@ -173,7 +173,7 @@ The \sphinxhref{https://www.earthsystemcog.org/projects/esmf/regridding\_8\_0\_0
 page gives a good overview of the functionality that is available through
 various interfaces to ESMF regridding.
 
-The \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node3.html\#SECTION03020000000000000000}{ESMF\_RegridWeightGen application}
+The \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node3.html\#SECTION03020000000000000000}{ESMF\_RegridWeightGen application}
 is a command\sphinxhyphen{}line version of the functionality that is available through ESMPy.
 
 Please contact \sphinxhref{mailto:esmf\_support@ucar.edu}{esmf\_support@ucar.edu} with any questions or problems.
@@ -187,7 +187,7 @@ Please contact \sphinxhref{mailto:esmf\_support@ucar.edu}{esmf\_support@ucar.edu
 The following packages are \sphinxstyleemphasis{required} to work with ESMPy:
 \begin{itemize}
 \item {} 
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_usrdoc/node9.html}{ESMF installation}
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_usrdoc/node9.html}{ESMF installation}
 
 \item {} 
 \sphinxhref{http://python.org/}{python}
@@ -219,9 +219,9 @@ NetCDF must be built as a shared library for ESMPy installation to succeed
 
 \section{Getting the code}
 \label{\detokenize{install:getting-the-code}}
-The \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_usrdoc/}{ESMF User’s Guide}
+The \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_usrdoc/}{ESMF User’s Guide}
 contains information on building and installing ESMF.
-The \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/}{ESMF Reference Manual}
+The \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/}{ESMF Reference Manual}
 contains information on the architecture of ESMF, example code, and details of the API (Application Programming
 Interface).
 
@@ -230,16 +230,16 @@ Instructions on how to download the ESMPy code can be found at the \sphinxhref{h
 
 \subsection{Anaconda Packages}
 \label{\detokenize{install:anaconda-packages}}
-ESMPy conda packages are available through the conda\sphinxhyphen{}forge channel:
+ESMPy conda packages are available through the NESII channel:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{conda} \PYG{n}{create} \PYG{o}{\PYGZhy{}}\PYG{n}{n} \PYG{n}{esmpy} \PYG{o}{\PYGZhy{}}\PYG{n}{c} \PYG{n}{conda}\PYG{o}{\PYGZhy{}}\PYG{n}{forge} \PYG{n}{esmpy}
+\PYG{n}{conda} \PYG{n}{install} \PYG{o}{\PYGZhy{}}\PYG{n}{n} \PYG{n}{esmpy} \PYG{o}{\PYGZhy{}}\PYG{n}{c} \PYG{n}{nesii} \PYG{o}{\PYGZhy{}}\PYG{n}{c} \PYG{n}{conda}\PYG{o}{\PYGZhy{}}\PYG{n}{forge} \PYG{n}{esmpy}
 \end{sphinxVerbatim}
 
 Specific versions of the conda package can be installed like this:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{conda} \PYG{n}{create} \PYG{o}{\PYGZhy{}}\PYG{n}{n} \PYG{n}{esmpy} \PYG{o}{\PYGZhy{}}\PYG{n}{c} \PYG{n}{conda}\PYG{o}{\PYGZhy{}}\PYG{n}{forge} \PYG{n}{esmpy}\PYG{o}{=}\PYG{l+m+mf}{8.0}\PYG{o}{.}\PYG{l+m+mi}{1}
+\PYG{n}{conda} \PYG{n}{create} \PYG{o}{\PYGZhy{}}\PYG{n}{n} \PYG{n}{esmpy} \PYG{o}{\PYGZhy{}}\PYG{n}{c} \PYG{n}{nesii} \PYG{o}{\PYGZhy{}}\PYG{n}{c} \PYG{n}{conda}\PYG{o}{\PYGZhy{}}\PYG{n}{forge} \PYG{n}{esmpy}\PYG{o}{=}\PYG{l+m+mf}{7.1}\PYG{o}{.}\PYG{l+m+mi}{0}\PYG{n}{r}
 \end{sphinxVerbatim}
 
 
@@ -406,7 +406,7 @@ and {\hyperref[\detokenize{locstream:ESMF.api.locstream.LocStream}]{\sphinxcross
 \PYG{l+s+sd}{    :param domask: a boolean to tell whether or not to add a mask}
 \PYG{l+s+sd}{    :return: LocStream}
 \PYG{l+s+sd}{    \PYGZdq{}\PYGZdq{}\PYGZdq{}}
-    \PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{pet\PYGZus{}count}\PYG{p}{(}\PYG{p}{)} \PYG{o}{!=} \PYG{l+m+mi}{1}\PYG{p}{:}
+    \PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{pet\PYGZus{}count}\PYG{p}{(}\PYG{p}{)} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{l+m+mi}{1}\PYG{p}{:}
         \PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{processor count must be 1 to use this function}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
 
     \PYG{n}{locstream} \PYG{o}{=} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{LocStream}\PYG{p}{(}\PYG{l+m+mi}{16}\PYG{p}{,} \PYG{n}{coord\PYGZus{}sys}\PYG{o}{=}\PYG{n}{coord\PYGZus{}sys}\PYG{p}{)}
@@ -433,7 +433,7 @@ and {\hyperref[\detokenize{locstream:ESMF.api.locstream.LocStream}]{\sphinxcross
 \PYG{l+s+sd}{    :param domask: a boolean to tell whether or not to add a mask}
 \PYG{l+s+sd}{    :return: LocStream}
 \PYG{l+s+sd}{    \PYGZdq{}\PYGZdq{}\PYGZdq{}}
-    \PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{pet\PYGZus{}count}\PYG{p}{(}\PYG{p}{)} \PYG{o}{!=} \PYG{l+m+mi}{4}\PYG{p}{:}
+    \PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{pet\PYGZus{}count}\PYG{p}{(}\PYG{p}{)} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{l+m+mi}{4}\PYG{p}{:}
         \PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{processor count must be 4 to use this function}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
 
     \PYG{n}{deg\PYGZus{}rad} \PYG{o}{=} \PYG{n}{pi}
@@ -441,25 +441,25 @@ and {\hyperref[\detokenize{locstream:ESMF.api.locstream.LocStream}]{\sphinxcross
         \PYG{n}{deg\PYGZus{}rad} \PYG{o}{=} \PYG{l+m+mf}{180.0}
 
     \PYG{n}{locstream} \PYG{o}{=} \PYG{k+kc}{None}
-    \PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{local\PYGZus{}pet}\PYG{p}{(}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+    \PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{local\PYGZus{}pet}\PYG{p}{(}\PYG{p}{)} \PYG{o+ow}{is} \PYG{l+m+mi}{0}\PYG{p}{:}
         \PYG{n}{locstream} \PYG{o}{=} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{LocStream}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{n}{coord\PYGZus{}sys}\PYG{o}{=}\PYG{n}{coord\PYGZus{}sys}\PYG{p}{)}
         \PYG{n}{locstream}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ESMF:Lon}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mf}{0.0}\PYG{p}{,} \PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{,} \PYG{l+m+mf}{0.0}\PYG{p}{,} \PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{]}
         \PYG{n}{locstream}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ESMF:Lat}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{p}{[}\PYG{n}{deg\PYGZus{}rad}\PYG{o}{/}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.0}\PYG{p}{,} \PYG{n}{deg\PYGZus{}rad}\PYG{o}{/}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.0}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.25}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.25}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{]}
         \PYG{k}{if} \PYG{n}{domask}\PYG{p}{:}
             \PYG{n}{locstream}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ESMF:Mask}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{int32}\PYG{p}{)}
-    \PYG{k}{elif} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{local\PYGZus{}pet}\PYG{p}{(}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{:}
+    \PYG{k}{elif} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{local\PYGZus{}pet}\PYG{p}{(}\PYG{p}{)} \PYG{o+ow}{is} \PYG{l+m+mi}{1}\PYG{p}{:}
         \PYG{n}{locstream} \PYG{o}{=} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{LocStream}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{n}{coord\PYGZus{}sys}\PYG{o}{=}\PYG{n}{coord\PYGZus{}sys}\PYG{p}{)}
         \PYG{n}{locstream}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ESMF:Lon}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mf}{1.5}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{,} \PYG{l+m+mf}{1.5}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{]}
         \PYG{n}{locstream}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ESMF:Lat}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{p}{[}\PYG{n}{deg\PYGZus{}rad}\PYG{o}{/}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.0}\PYG{p}{,} \PYG{n}{deg\PYGZus{}rad}\PYG{o}{/}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.0}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.25}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.25}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{]}
         \PYG{k}{if} \PYG{n}{domask}\PYG{p}{:}
             \PYG{n}{locstream}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ESMF:Mask}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{int32}\PYG{p}{)}
-    \PYG{k}{elif} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{local\PYGZus{}pet}\PYG{p}{(}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{2}\PYG{p}{:}
+    \PYG{k}{elif} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{local\PYGZus{}pet}\PYG{p}{(}\PYG{p}{)} \PYG{o+ow}{is} \PYG{l+m+mi}{2}\PYG{p}{:}
         \PYG{n}{locstream} \PYG{o}{=} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{LocStream}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{n}{coord\PYGZus{}sys}\PYG{o}{=}\PYG{n}{coord\PYGZus{}sys}\PYG{p}{)}
         \PYG{n}{locstream}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ESMF:Lon}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mf}{0.0}\PYG{p}{,} \PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{,} \PYG{l+m+mf}{0.0}\PYG{p}{,} \PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{]}
         \PYG{n}{locstream}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ESMF:Lat}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mf}{0.25}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{,} \PYG{l+m+mf}{0.25}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{,} \PYG{n}{deg\PYGZus{}rad}\PYG{o}{/}\PYG{l+m+mf}{2.0}\PYG{p}{,} \PYG{n}{deg\PYGZus{}rad}\PYG{o}{/}\PYG{l+m+mf}{2.0}\PYG{p}{]}
         \PYG{k}{if} \PYG{n}{domask}\PYG{p}{:}
             \PYG{n}{locstream}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ESMF:Mask}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{int32}\PYG{p}{)}
-    \PYG{k}{elif} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{local\PYGZus{}pet}\PYG{p}{(}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{3}\PYG{p}{:}
+    \PYG{k}{elif} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{local\PYGZus{}pet}\PYG{p}{(}\PYG{p}{)} \PYG{o+ow}{is} \PYG{l+m+mi}{3}\PYG{p}{:}
         \PYG{n}{locstream} \PYG{o}{=} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{LocStream}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{n}{coord\PYGZus{}sys}\PYG{o}{=}\PYG{n}{coord\PYGZus{}sys}\PYG{p}{)}
         \PYG{n}{locstream}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ESMF:Lon}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mf}{1.5}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{,} \PYG{l+m+mf}{1.5}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{]}
         \PYG{n}{locstream}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ESMF:Lat}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mf}{0.25}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{,} \PYG{l+m+mf}{0.25}\PYG{o}{*}\PYG{n}{deg\PYGZus{}rad}\PYG{p}{,} \PYG{n}{deg\PYGZus{}rad}\PYG{o}{/}\PYG{l+m+mf}{2.0}\PYG{p}{,} \PYG{n}{deg\PYGZus{}rad}\PYG{o}{/}\PYG{l+m+mf}{2.0}\PYG{p}{]}
@@ -1043,7 +1043,7 @@ can be run in serial or parallel with no modification.
 \PYG{n}{num\PYGZus{}nodes} \PYG{o}{=} \PYG{n}{numpy}\PYG{o}{.}\PYG{n}{prod}\PYG{p}{(}\PYG{n}{xctfield}\PYG{o}{.}\PYG{n}{data}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{p}{:}\PYG{p}{]}\PYG{p}{)}
 \PYG{n}{relerr} \PYG{o}{=} \PYG{l+m+mi}{0}
 \PYG{n}{meanrelerr} \PYG{o}{=} \PYG{l+m+mi}{0}
-\PYG{k}{if} \PYG{n}{num\PYGZus{}nodes} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{p}{:}
+\PYG{k}{if} \PYG{n}{num\PYGZus{}nodes} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{l+m+mi}{0}\PYG{p}{:}
     \PYG{n}{relerr} \PYG{o}{=} \PYG{n}{numpy}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{numpy}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{dstfield}\PYG{o}{.}\PYG{n}{data} \PYG{o}{\PYGZhy{}} \PYG{n}{xctfield}\PYG{o}{.}\PYG{n}{data}\PYG{p}{)} \PYG{o}{/}
                        \PYG{n}{numpy}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{xctfield}\PYG{o}{.}\PYG{n}{data}\PYG{p}{)}\PYG{p}{)}
     \PYG{n}{meanrelerr} \PYG{o}{=} \PYG{n}{relerr} \PYG{o}{/} \PYG{n}{num\PYGZus{}nodes}
@@ -1054,41 +1054,38 @@ can be run in serial or parallel with no modification.
     \PYG{n}{num\PYGZus{}nodes} \PYG{o}{=} \PYG{n}{helpers}\PYG{o}{.}\PYG{n}{reduce\PYGZus{}val}\PYG{p}{(}\PYG{n}{num\PYGZus{}nodes}\PYG{p}{,} \PYG{n}{op}\PYG{o}{=}\PYG{n}{constants}\PYG{o}{.}\PYG{n}{Reduce}\PYG{o}{.}\PYG{n}{SUM}\PYG{p}{)}
 
 \PYG{c+c1}{\PYGZsh{} output the results from one processor only}
-\PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{local\PYGZus{}pet}\PYG{p}{(}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+\PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{local\PYGZus{}pet}\PYG{p}{(}\PYG{p}{)} \PYG{o+ow}{is} \PYG{l+m+mi}{0}\PYG{p}{:}
     \PYG{n}{meanrelerr} \PYG{o}{=} \PYG{n}{relerr} \PYG{o}{/} \PYG{n}{num\PYGZus{}nodes}
     \PYG{n+nb}{print} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ESMPy Grid Mesh Regridding Example}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
     \PYG{n+nb}{print} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{  interpolation mean relative error = }\PYG{l+s+si}{\PYGZob{}0\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{meanrelerr}\PYG{p}{)}\PYG{p}{)}
 
-    \PYG{k}{if} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{isfile}\PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{getcwd}\PYG{p}{(}\PYG{p}{)}\PYG{p}{,} \PYG{n}{filename}\PYG{p}{)}\PYG{p}{)}\PYG{p}{:}
-        \PYG{n}{os}\PYG{o}{.}\PYG{n}{remove}\PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{getcwd}\PYG{p}{(}\PYG{p}{)}\PYG{p}{,} \PYG{n}{filename}\PYG{p}{)}\PYG{p}{)}
-
 \PYG{c+c1}{\PYGZsh{} set to 1 to output results}
-\PYG{c+c1}{\PYGZsh{} if ESMF.pet\PYGZus{}count() == 0:}
-\PYG{c+c1}{\PYGZsh{}     import matplotlib.pyplot as plt}
-\PYG{c+c1}{\PYGZsh{}     fig = plt.figure(1, (15, 6))}
-\PYG{c+c1}{\PYGZsh{}     fig.suptitle(\PYGZsq{}ESMPy Periodic Grids\PYGZsq{}, fontsize=14, fontweight=\PYGZsq{}bold\PYGZsq{})}
-\PYG{c+c1}{\PYGZsh{} }
-\PYG{c+c1}{\PYGZsh{}     ax = fig.add\PYGZus{}subplot(1, 2, 1)}
-\PYG{c+c1}{\PYGZsh{}     im = ax.imshow(srcfield.data, vmin=1, vmax=3, cmap=\PYGZsq{}gist\PYGZus{}ncar\PYGZsq{}, aspect=\PYGZsq{}auto\PYGZsq{},}
-\PYG{c+c1}{\PYGZsh{}                    extent=[min(slons\PYGZus{}par), max(slons\PYGZus{}par), min(slats\PYGZus{}par), max(slats\PYGZus{}par)])}
-\PYG{c+c1}{\PYGZsh{}     ax.set\PYGZus{}xbound(lower=min(slons\PYGZus{}par), upper=max(slons\PYGZus{}par))}
-\PYG{c+c1}{\PYGZsh{}     ax.set\PYGZus{}ybound(lower=min(slats\PYGZus{}par), upper=max(slats\PYGZus{}par))}
-\PYG{c+c1}{\PYGZsh{}     ax.set\PYGZus{}xlabel(\PYGZdq{}Longitude\PYGZdq{})}
-\PYG{c+c1}{\PYGZsh{}     ax.set\PYGZus{}ylabel(\PYGZdq{}Latitude\PYGZdq{})}
-\PYG{c+c1}{\PYGZsh{}     ax.set\PYGZus{}title(\PYGZdq{}Source Data\PYGZdq{})}
-\PYG{c+c1}{\PYGZsh{} }
-\PYG{c+c1}{\PYGZsh{}     ax = fig.add\PYGZus{}subplot(1, 2, 2)}
-\PYG{c+c1}{\PYGZsh{}     im = ax.imshow(dstfield.data, vmin=1, vmax=3, cmap=\PYGZsq{}gist\PYGZus{}ncar\PYGZsq{}, aspect=\PYGZsq{}auto\PYGZsq{},}
-\PYG{c+c1}{\PYGZsh{}                    extent=[min(dlons\PYGZus{}par), max(dlons\PYGZus{}par), min(dlats\PYGZus{}par), max(dlats\PYGZus{}par)])}
-\PYG{c+c1}{\PYGZsh{}     ax.set\PYGZus{}xlabel(\PYGZdq{}Longitude\PYGZdq{})}
-\PYG{c+c1}{\PYGZsh{}     ax.set\PYGZus{}ylabel(\PYGZdq{}Latitude\PYGZdq{})}
-\PYG{c+c1}{\PYGZsh{}     ax.set\PYGZus{}title(\PYGZdq{}Regrid Solution\PYGZdq{})}
-\PYG{c+c1}{\PYGZsh{} }
-\PYG{c+c1}{\PYGZsh{}     fig.subplots\PYGZus{}adjust(right=0.8)}
-\PYG{c+c1}{\PYGZsh{}     cbar\PYGZus{}ax = fig.add\PYGZus{}axes([0.9, 0.1, 0.01, 0.8])}
-\PYG{c+c1}{\PYGZsh{}     fig.colorbar(im, cax=cbar\PYGZus{}ax)}
-\PYG{c+c1}{\PYGZsh{} }
-\PYG{c+c1}{\PYGZsh{}     plt.show()}
+\PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{pet\PYGZus{}count}\PYG{p}{(}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+    \PYG{k+kn}{import} \PYG{n+nn}{matplotlib}\PYG{n+nn}{.}\PYG{n+nn}{pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+    \PYG{n}{fig} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{p}{(}\PYG{l+m+mi}{15}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{)}\PYG{p}{)}
+    \PYG{n}{fig}\PYG{o}{.}\PYG{n}{suptitle}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{ESMPy Periodic Grids}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{14}\PYG{p}{,} \PYG{n}{fontweight}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{bold}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+    \PYG{n}{ax} \PYG{o}{=} \PYG{n}{fig}\PYG{o}{.}\PYG{n}{add\PYGZus{}subplot}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{n}{im} \PYG{o}{=} \PYG{n}{ax}\PYG{o}{.}\PYG{n}{imshow}\PYG{p}{(}\PYG{n}{srcfield}\PYG{o}{.}\PYG{n}{data}\PYG{p}{,} \PYG{n}{vmin}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{vmax}\PYG{o}{=}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{n}{cmap}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{gist\PYGZus{}ncar}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{aspect}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{auto}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
+                   \PYG{n}{extent}\PYG{o}{=}\PYG{p}{[}\PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{slons\PYGZus{}par}\PYG{p}{)}\PYG{p}{,} \PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{slons\PYGZus{}par}\PYG{p}{)}\PYG{p}{,} \PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{slats\PYGZus{}par}\PYG{p}{)}\PYG{p}{,} \PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{slats\PYGZus{}par}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}
+    \PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}xbound}\PYG{p}{(}\PYG{n}{lower}\PYG{o}{=}\PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{slons\PYGZus{}par}\PYG{p}{)}\PYG{p}{,} \PYG{n}{upper}\PYG{o}{=}\PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{slons\PYGZus{}par}\PYG{p}{)}\PYG{p}{)}
+    \PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}ybound}\PYG{p}{(}\PYG{n}{lower}\PYG{o}{=}\PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{slats\PYGZus{}par}\PYG{p}{)}\PYG{p}{,} \PYG{n}{upper}\PYG{o}{=}\PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{slats\PYGZus{}par}\PYG{p}{)}\PYG{p}{)}
+    \PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}xlabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Longitude}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+    \PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}ylabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Latitude}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+    \PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}title}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Source Data}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+    \PYG{n}{ax} \PYG{o}{=} \PYG{n}{fig}\PYG{o}{.}\PYG{n}{add\PYGZus{}subplot}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}
+    \PYG{n}{im} \PYG{o}{=} \PYG{n}{ax}\PYG{o}{.}\PYG{n}{imshow}\PYG{p}{(}\PYG{n}{dstfield}\PYG{o}{.}\PYG{n}{data}\PYG{p}{,} \PYG{n}{vmin}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{vmax}\PYG{o}{=}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{n}{cmap}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{gist\PYGZus{}ncar}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{aspect}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{auto}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
+                   \PYG{n}{extent}\PYG{o}{=}\PYG{p}{[}\PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{dlons\PYGZus{}par}\PYG{p}{)}\PYG{p}{,} \PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{dlons\PYGZus{}par}\PYG{p}{)}\PYG{p}{,} \PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{dlats\PYGZus{}par}\PYG{p}{)}\PYG{p}{,} \PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{dlats\PYGZus{}par}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}
+    \PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}xlabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Longitude}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+    \PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}ylabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Latitude}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+    \PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}title}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Regrid Solution}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+    \PYG{n}{fig}\PYG{o}{.}\PYG{n}{subplots\PYGZus{}adjust}\PYG{p}{(}\PYG{n}{right}\PYG{o}{=}\PYG{l+m+mf}{0.8}\PYG{p}{)}
+    \PYG{n}{cbar\PYGZus{}ax} \PYG{o}{=} \PYG{n}{fig}\PYG{o}{.}\PYG{n}{add\PYGZus{}axes}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mf}{0.9}\PYG{p}{,} \PYG{l+m+mf}{0.1}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{,} \PYG{l+m+mf}{0.8}\PYG{p}{]}\PYG{p}{)}
+    \PYG{n}{fig}\PYG{o}{.}\PYG{n}{colorbar}\PYG{p}{(}\PYG{n}{im}\PYG{p}{,} \PYG{n}{cax}\PYG{o}{=}\PYG{n}{cbar\PYGZus{}ax}\PYG{p}{)}
+
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
 \end{sphinxVerbatim}
 \end{quote}
 
@@ -1108,11 +1105,6 @@ can be run in serial or parallel with no modification.
 \PYG{c+c1}{\PYGZsh{} from ESMF.util.cache\PYGZus{}data import cache\PYGZus{}data\PYGZus{}file}
 \PYG{c+c1}{\PYGZsh{} cache\PYGZus{}data\PYGZus{}file(os.path.join(DD, \PYGZdq{}ll1deg\PYGZus{}grid.nc\PYGZdq{}))}
 
-\PYG{k}{try}\PYG{p}{:}
-    \PYG{k+kn}{from} \PYG{n+nn}{unittest} \PYG{k+kn}{import} \PYG{n}{SkipTest}
-\PYG{k}{except} \PYG{n+ne}{ImportError}\PYG{p}{:}
-    \PYG{k+kn}{from} \PYG{n+nn}{nose} \PYG{k+kn}{import} \PYG{n}{SkipTest}
-
 \PYG{k+kn}{import} \PYG{n+nn}{ESMF}
 \PYG{k+kn}{import} \PYG{n+nn}{numpy}
 
@@ -1128,8 +1120,8 @@ can be run in serial or parallel with no modification.
 \PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{pet\PYGZus{}count}\PYG{p}{(}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{:}
     \PYG{n}{locstream} \PYG{o}{=} \PYG{n}{create\PYGZus{}locstream\PYGZus{}spherical\PYGZus{}16}\PYG{p}{(}\PYG{n}{coord\PYGZus{}sys}\PYG{o}{=}\PYG{n}{coord\PYGZus{}sys}\PYG{p}{,} \PYG{n}{domask}\PYG{o}{=}\PYG{n}{domask}\PYG{p}{)}
 \PYG{k}{else}\PYG{p}{:}
-    \PYG{k}{if} \PYG{n}{constants}\PYG{o}{.}\PYG{n}{\PYGZus{}ESMF\PYGZus{}MPIRUN\PYGZus{}NP} \PYG{o}{!=} \PYG{l+m+mi}{4}\PYG{p}{:}
-        \PYG{k}{raise} \PYG{n}{SkipTest}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{processor count must be 4 or 1 for this example}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{pet\PYGZus{}count}\PYG{p}{(}\PYG{p}{)} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{l+m+mi}{4}\PYG{p}{:}
+        \PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{processor count must be 4 or 1 for this example}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
     \PYG{k}{else}\PYG{p}{:}
         \PYG{n}{locstream} \PYG{o}{=} \PYG{n}{create\PYGZus{}locstream\PYGZus{}spherical\PYGZus{}16\PYGZus{}parallel}\PYG{p}{(}\PYG{n}{coord\PYGZus{}sys}\PYG{o}{=}\PYG{n}{coord\PYGZus{}sys}\PYG{p}{,} \PYG{n}{domask}\PYG{o}{=}\PYG{n}{domask}\PYG{p}{)}
 
@@ -1182,7 +1174,7 @@ can be run in serial or parallel with no modification.
 \PYG{n}{dstfield} \PYG{o}{=} \PYG{n}{numpy}\PYG{o}{.}\PYG{n}{ravel}\PYG{p}{(}\PYG{n}{dstfield}\PYG{o}{.}\PYG{n}{data}\PYG{p}{)}
 \PYG{n}{xctfield} \PYG{o}{=} \PYG{n}{numpy}\PYG{o}{.}\PYG{n}{ravel}\PYG{p}{(}\PYG{n}{xctfield}\PYG{o}{.}\PYG{n}{data}\PYG{p}{)}
 
-\PYG{k}{if} \PYG{n}{num\PYGZus{}nodes} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{p}{:}
+\PYG{k}{if} \PYG{n}{num\PYGZus{}nodes} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{l+m+mi}{0}\PYG{p}{:}
     \PYG{n}{ind} \PYG{o}{=} \PYG{n}{numpy}\PYG{o}{.}\PYG{n}{where}\PYG{p}{(}\PYG{p}{(}\PYG{n}{dstfield} \PYG{o}{!=} \PYG{l+m+mf}{1e20}\PYG{p}{)} \PYG{o}{\PYGZam{}} \PYG{p}{(}\PYG{n}{xctfield} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{)}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
     \PYG{n}{relerr} \PYG{o}{=} \PYG{n}{numpy}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{numpy}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{dstfield}\PYG{p}{[}\PYG{n}{ind}\PYG{p}{]} \PYG{o}{\PYGZhy{}} \PYG{n}{xctfield}\PYG{p}{[}\PYG{n}{ind}\PYG{p}{]}\PYG{p}{)} \PYG{o}{/} \PYG{n}{numpy}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{xctfield}\PYG{p}{[}\PYG{n}{ind}\PYG{p}{]}\PYG{p}{)}\PYG{p}{)}
     \PYG{n}{meanrelerr} \PYG{o}{=} \PYG{n}{relerr} \PYG{o}{/} \PYG{n}{num\PYGZus{}nodes}
@@ -1193,7 +1185,7 @@ can be run in serial or parallel with no modification.
     \PYG{n}{num\PYGZus{}nodes} \PYG{o}{=} \PYG{n}{helpers}\PYG{o}{.}\PYG{n}{reduce\PYGZus{}val}\PYG{p}{(}\PYG{n}{num\PYGZus{}nodes}\PYG{p}{,} \PYG{n}{op}\PYG{o}{=}\PYG{n}{constants}\PYG{o}{.}\PYG{n}{Reduce}\PYG{o}{.}\PYG{n}{SUM}\PYG{p}{)}
 
 \PYG{c+c1}{\PYGZsh{} output the results from one processor only}
-\PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{local\PYGZus{}pet}\PYG{p}{(}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+\PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{local\PYGZus{}pet}\PYG{p}{(}\PYG{p}{)} \PYG{o+ow}{is} \PYG{l+m+mi}{0}\PYG{p}{:}
     \PYG{n}{meanrelerr} \PYG{o}{=} \PYG{n}{relerr} \PYG{o}{/} \PYG{n}{num\PYGZus{}nodes}
     \PYG{n+nb}{print} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ESMPy Grid LocStream Regridding Example}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
     \PYG{n+nb}{print} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{  interpolation mean relative error = }\PYG{l+s+si}{\PYGZob{}0\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{meanrelerr}\PYG{p}{)}\PYG{p}{)}
@@ -1208,11 +1200,6 @@ can be run in serial or parallel with no modification.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} This example demonstrates how to regrid between a mesh and a locstream.}
-
-\PYG{k}{try}\PYG{p}{:}
-    \PYG{k+kn}{from} \PYG{n+nn}{unittest} \PYG{k+kn}{import} \PYG{n}{SkipTest}
-\PYG{k}{except} \PYG{n+ne}{ImportError}\PYG{p}{:}
-    \PYG{k+kn}{from} \PYG{n+nn}{nose} \PYG{k+kn}{import} \PYG{n}{SkipTest}
 
 \PYG{k+kn}{import} \PYG{n+nn}{ESMF}
 \PYG{k+kn}{import} \PYG{n+nn}{numpy}
@@ -1229,8 +1216,8 @@ can be run in serial or parallel with no modification.
     \PYG{n}{mesh}\PYG{p}{,} \PYG{n}{\PYGZus{}}\PYG{p}{,} \PYG{n}{\PYGZus{}}\PYG{p}{,} \PYG{n}{\PYGZus{}}\PYG{p}{,} \PYG{n}{\PYGZus{}}\PYG{p}{,} \PYG{n}{\PYGZus{}} \PYG{o}{=} \PYG{n}{mesh\PYGZus{}create\PYGZus{}5}\PYG{p}{(}\PYG{p}{)}
     \PYG{n}{locstream} \PYG{o}{=} \PYG{n}{create\PYGZus{}locstream\PYGZus{}16}\PYG{p}{(}\PYG{p}{)}
 \PYG{k}{else}\PYG{p}{:}
-    \PYG{k}{if} \PYG{n}{constants}\PYG{o}{.}\PYG{n}{\PYGZus{}ESMF\PYGZus{}MPIRUN\PYGZus{}NP} \PYG{o}{!=} \PYG{l+m+mi}{4}\PYG{p}{:}
-        \PYG{k}{raise} \PYG{n}{SkipTest}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{processor count must be 4 or 1 for this example}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{pet\PYGZus{}count}\PYG{p}{(}\PYG{p}{)} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{l+m+mi}{4}\PYG{p}{:}
+        \PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{processor count must be 4 or 1 for this example}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
     \PYG{k}{else}\PYG{p}{:}
         \PYG{n}{mesh}\PYG{p}{,} \PYG{n}{\PYGZus{}}\PYG{p}{,} \PYG{n}{\PYGZus{}}\PYG{p}{,} \PYG{n}{\PYGZus{}}\PYG{p}{,} \PYG{n}{\PYGZus{}} \PYG{o}{=} \PYG{n}{mesh\PYGZus{}create\PYGZus{}5\PYGZus{}parallel}\PYG{p}{(}\PYG{p}{)}
         \PYG{n}{locstream} \PYG{o}{=} \PYG{n}{create\PYGZus{}locstream\PYGZus{}16\PYGZus{}parallel}\PYG{p}{(}\PYG{p}{)}
@@ -1268,7 +1255,7 @@ can be run in serial or parallel with no modification.
 \PYG{n}{num\PYGZus{}nodes} \PYG{o}{=} \PYG{n}{numpy}\PYG{o}{.}\PYG{n}{prod}\PYG{p}{(}\PYG{n}{xctfield}\PYG{o}{.}\PYG{n}{data}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{p}{:}\PYG{p}{]}\PYG{p}{)}
 \PYG{n}{relerr} \PYG{o}{=} \PYG{l+m+mi}{0}
 \PYG{n}{meanrelerr} \PYG{o}{=} \PYG{l+m+mi}{0}
-\PYG{k}{if} \PYG{n}{num\PYGZus{}nodes} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{p}{:}
+\PYG{k}{if} \PYG{n}{num\PYGZus{}nodes} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{l+m+mi}{0}\PYG{p}{:}
     \PYG{n}{ind} \PYG{o}{=} \PYG{n}{numpy}\PYG{o}{.}\PYG{n}{where}\PYG{p}{(}\PYG{p}{(}\PYG{n}{dstfield}\PYG{o}{.}\PYG{n}{data} \PYG{o}{!=} \PYG{l+m+mf}{1e20}\PYG{p}{)} \PYG{o}{\PYGZam{}} \PYG{p}{(}\PYG{n}{xctfield}\PYG{o}{.}\PYG{n}{data} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{)}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
     \PYG{n}{relerr} \PYG{o}{=} \PYG{n}{numpy}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{numpy}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{dstfield}\PYG{o}{.}\PYG{n}{data}\PYG{p}{[}\PYG{n}{ind}\PYG{p}{]} \PYG{o}{\PYGZhy{}} \PYG{n}{xctfield}\PYG{o}{.}\PYG{n}{data}\PYG{p}{[}\PYG{n}{ind}\PYG{p}{]}\PYG{p}{)} \PYG{o}{/} \PYG{n}{numpy}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{xctfield}\PYG{o}{.}\PYG{n}{data}\PYG{p}{[}\PYG{n}{ind}\PYG{p}{]}\PYG{p}{)}\PYG{p}{)}
     \PYG{n}{meanrelerr} \PYG{o}{=} \PYG{n}{relerr} \PYG{o}{/} \PYG{n}{num\PYGZus{}nodes}
@@ -1279,7 +1266,7 @@ can be run in serial or parallel with no modification.
     \PYG{n}{num\PYGZus{}nodes} \PYG{o}{=} \PYG{n}{helpers}\PYG{o}{.}\PYG{n}{reduce\PYGZus{}val}\PYG{p}{(}\PYG{n}{num\PYGZus{}nodes}\PYG{p}{,} \PYG{n}{op}\PYG{o}{=}\PYG{n}{constants}\PYG{o}{.}\PYG{n}{Reduce}\PYG{o}{.}\PYG{n}{SUM}\PYG{p}{)}
 
 \PYG{c+c1}{\PYGZsh{} output the results from one processor only}
-\PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{local\PYGZus{}pet}\PYG{p}{(}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+\PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{local\PYGZus{}pet}\PYG{p}{(}\PYG{p}{)} \PYG{o+ow}{is} \PYG{l+m+mi}{0}\PYG{p}{:}
     \PYG{n}{meanrelerr} \PYG{o}{=} \PYG{n}{relerr} \PYG{o}{/} \PYG{n}{num\PYGZus{}nodes}
     \PYG{n+nb}{print} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ESMPy Grid Mesh Regridding Example}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
     \PYG{n+nb}{print} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{  interpolation mean relative error = }\PYG{l+s+si}{\PYGZob{}0\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{meanrelerr}\PYG{p}{)}\PYG{p}{)}
@@ -1304,11 +1291,6 @@ can be run in serial or parallel with no modification.
 \PYG{c+c1}{\PYGZsh{} from ESMF.util.cache\PYGZus{}data import cache\PYGZus{}data\PYGZus{}file}
 \PYG{c+c1}{\PYGZsh{} cache\PYGZus{}data\PYGZus{}file(os.path.join(DD, \PYGZdq{}ll1deg\PYGZus{}grid.nc\PYGZdq{}))}
 
-\PYG{k}{try}\PYG{p}{:}
-    \PYG{k+kn}{from} \PYG{n+nn}{unittest} \PYG{k+kn}{import} \PYG{n}{SkipTest}
-\PYG{k}{except} \PYG{n+ne}{ImportError}\PYG{p}{:}
-    \PYG{k+kn}{from} \PYG{n+nn}{nose} \PYG{k+kn}{import} \PYG{n}{SkipTest}
-
 \PYG{k+kn}{import} \PYG{n+nn}{ESMF}
 \PYG{k+kn}{import} \PYG{n+nn}{numpy}
 
@@ -1327,8 +1309,8 @@ can be run in serial or parallel with no modification.
 \PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{pet\PYGZus{}count}\PYG{p}{(}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{:}
     \PYG{n}{locstream} \PYG{o}{=} \PYG{n}{create\PYGZus{}locstream\PYGZus{}spherical\PYGZus{}16}\PYG{p}{(}\PYG{n}{coord\PYGZus{}sys}\PYG{o}{=}\PYG{n}{coord\PYGZus{}sys}\PYG{p}{,} \PYG{n}{domask}\PYG{o}{=}\PYG{n}{domask}\PYG{p}{)}
 \PYG{k}{else}\PYG{p}{:}
-    \PYG{k}{if} \PYG{n}{constants}\PYG{o}{.}\PYG{n}{\PYGZus{}ESMF\PYGZus{}MPIRUN\PYGZus{}NP} \PYG{o}{!=} \PYG{l+m+mi}{4}\PYG{p}{:}
-        \PYG{k}{raise} \PYG{n}{SkipTest}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{processor count must be 4 or 1 for this example}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{ESMF}\PYG{o}{.}\PYG{n}{pet\PYGZus{}count}\PYG{p}{(}\PYG{p}{)} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{l+m+mi}{4}\PYG{p}{:}
+        \PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{processor count must be 4 or 1 for this example}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
     \PYG{k}{else}\PYG{p}{:}
         \PYG{n}{locstream} \PYG{o}{=} \PYG{n}{create\PYGZus{}locstream\PYGZus{}spherical\PYGZus{}16\PYGZus{}parallel}\PYG{p}{(}\PYG{n}{coord\PYGZus{}sys}\PYG{o}{=}\PYG{n}{coord\PYGZus{}sys}\PYG{p}{,} \PYG{n}{domask}\PYG{o}{=}\PYG{n}{domask}\PYG{p}{)}
 
@@ -1487,7 +1469,7 @@ can be run in serial or parallel with no modification.
     \PYG{n}{num\PYGZus{}nodes} \PYG{o}{=} \PYG{n}{reduce}\PYG{p}{(}\PYG{n}{mul}\PYG{p}{,} \PYG{n}{xctfield}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{)}
     \PYG{n}{relerr} \PYG{o}{=} \PYG{l+m+mi}{0}
     \PYG{n}{meanrelerr} \PYG{o}{=} \PYG{l+m+mi}{0}
-    \PYG{k}{if} \PYG{n}{num\PYGZus{}nodes} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{p}{:}
+    \PYG{k}{if} \PYG{n}{num\PYGZus{}nodes} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{l+m+mi}{0}\PYG{p}{:}
         \PYG{n}{ind} \PYG{o}{=} \PYG{n}{numpy}\PYG{o}{.}\PYG{n}{where}\PYG{p}{(}\PYG{p}{(}\PYG{n}{dstfield} \PYG{o}{!=} \PYG{l+m+mf}{1e20}\PYG{p}{)} \PYG{o}{\PYGZam{}} \PYG{p}{(}\PYG{n}{xctfield} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{)}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
         \PYG{n}{relerr} \PYG{o}{=} \PYG{n}{numpy}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}
             \PYG{n}{numpy}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{dstfield}\PYG{p}{[}\PYG{n}{ind}\PYG{p}{]} \PYG{o}{\PYGZhy{}} \PYG{n}{xctfield}\PYG{p}{[}\PYG{n}{ind}\PYG{p}{]}\PYG{p}{)} \PYG{o}{/} \PYG{n}{numpy}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}
@@ -1651,11 +1633,6 @@ Specify the coordinate system of a {\hyperref[\detokenize{grid:ESMF.api.grid.Gri
 Specify the format of a data file
 \\
 \hline
-{\hyperref[\detokenize{FileMode:ESMF.api.constants.FileMode}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{FileMode}}}}}
-&
-Specify the mode of a data file
-\\
-\hline
 {\hyperref[\detokenize{GridItem:ESMF.api.constants.GridItem}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{GridItem}}}}}
 &
 Specify a mask or area item on a {\hyperref[\detokenize{grid:ESMF.api.grid.Grid}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Grid}}}}}
@@ -1735,7 +1712,7 @@ resources, enable logging, and control garbage collection.
 
 \subsection{Resource Allocation}
 \label{\detokenize{api:resource-allocation}}
-The ESMF Virtual Machine (VM) \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node6.html\#SECTION060120000000000000000}{ESMF Virtual Machine (VM)}
+The ESMF Virtual Machine (VM) \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node6.html\#SECTION060120000000000000000}{ESMF Virtual Machine (VM)}
 is created at the beginning of each ESMPy execution, and contains information
 about the topology and characteristics of the underlying computer. The VM
 allocates computational resources in the form of
@@ -1801,7 +1778,7 @@ The {\hyperref[\detokenize{grid:ESMF.api.grid.Grid}]{\sphinxcrossref{\sphinxcode
 rectangular physical grids. The {\hyperref[\detokenize{grid:ESMF.api.grid.Grid}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Grid}}}}} can also hold information that can used in
 calculations involving the {\hyperref[\detokenize{grid:ESMF.api.grid.Grid}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Grid}}}}}, like a mask or the cell areas. The ESMF reference
 manual has an in\sphinxhyphen{}depth description of the
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node5.html\#SECTION05080000000000000000}{Grid class}.
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node5.html\#SECTION05080000000000000000}{Grid class}.
 
 
 \subsubsection{Staggering}
@@ -1965,7 +1942,7 @@ been allocated and retrieved using {\hyperref[\detokenize{grid:ESMF.api.grid.Gri
 \label{\detokenize{api:mesh}}
 A {\hyperref[\detokenize{mesh:ESMF.api.mesh.Mesh}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Mesh}}}}} is an object for representing unstructured grids. The ESMF reference
 manual has an in\sphinxhyphen{}depth description of the
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node5.html\#SECTION050100000000000000000}{Mesh class}.
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node5.html\#SECTION050100000000000000000}{Mesh class}.
 
 A {\hyperref[\detokenize{mesh:ESMF.api.mesh.Mesh}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Mesh}}}}} is constructed of \sphinxstyleemphasis{nodes} and \sphinxstyleemphasis{elements}. A node, also known as a vertex
 or corner, is a part of a {\hyperref[\detokenize{mesh:ESMF.api.mesh.Mesh}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Mesh}}}}} which represents a single point. An element,
@@ -2177,7 +2154,7 @@ data points. For example, in the data assimilation world, {\hyperref[\detokenize
 to represent a set of observations. The values of the data points are stored
 within a {\hyperref[\detokenize{field:ESMF.api.field.Field}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Field}}}}} created using the {\hyperref[\detokenize{locstream:ESMF.api.locstream.LocStream}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{LocStream}}}}}. The ESMF reference
 manual has an in\sphinxhyphen{}depth description of the
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node5.html\#SECTION05090000000000000000}{LocStream class}.
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node5.html\#SECTION05090000000000000000}{LocStream class}.
 
 The locations are generally described using Cartesian (x, y, z), or
 (lat, lon, radius) coordinates. The coordinates are stored using constructs
@@ -2229,7 +2206,7 @@ This file format is used by the {\hyperref[\detokenize{FileFormat:ESMF.api.const
 work with that package should also work here.  {\hyperref[\detokenize{FileFormat:ESMF.api.constants.FileFormat.SCRIP}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{SCRIP}}}}} format files are
 capable of storing either 2D logically rectangular grids or 2D
 unstructured grids.  More information can be found in the ESMF reference
-manual section on the \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node3.html\#SECTION03028100000000000000}{SCRIP Grid File Format}.
+manual section on the \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node3.html\#SECTION03028100000000000000}{SCRIP Grid File Format}.
 
 
 \subsubsection{ESMFMESH}
@@ -2239,7 +2216,7 @@ This format is more compatible than the {\hyperref[\detokenize{FileFormat:ESMF.a
 used to create a {\hyperref[\detokenize{mesh:ESMF.api.mesh.Mesh}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Mesh}}}}} object, so less conversion needs to be done to
 create a {\hyperref[\detokenize{mesh:ESMF.api.mesh.Mesh}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Mesh}}}}}. The {\hyperref[\detokenize{FileFormat:ESMF.api.constants.FileFormat.ESMFMESH}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{ESMFMESH}}}}} format is thus more efficient than {\hyperref[\detokenize{FileFormat:ESMF.api.constants.FileFormat.SCRIP}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{SCRIP}}}}} when
 used with ESMPy.  More information can be found in the ESMF reference
-manual section on the \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node3.html\#SECTION03028200000000000000}{ESMF Unstructured Grid File Format}.
+manual section on the \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node3.html\#SECTION03028200000000000000}{ESMF Unstructured Grid File Format}.
 
 
 \subsubsection{GRIDSPEC}
@@ -2249,7 +2226,7 @@ conventions for the representation of gridded data for Earth System
 Models.  ESMPy supports NetCDF files that follow the CF {\hyperref[\detokenize{FileFormat:ESMF.api.constants.FileFormat.GRIDSPEC}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{GRIDSPEC}}}}}
 convention to support logically rectangular lat/lon grids.  More
 information can be found in the ESMF reference manual section on the
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node3.html\#SECTION03028300000000000000}{CF Convention GRIDSPEC File Format}.
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node3.html\#SECTION03028300000000000000}{CF Convention GRIDSPEC File Format}.
 
 
 \subsubsection{UGRID}
@@ -2258,7 +2235,7 @@ information can be found in the ESMF reference manual section on the
 conventions for the unstructured grid data model.  ESMPy support
 NetCDF files that follow the CF {\hyperref[\detokenize{FileFormat:ESMF.api.constants.FileFormat.UGRID}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{UGRID}}}}} convention for unstructured grids.
 More information can be found in the ESMF reference manual section on
-the \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node3.html\#SECTION03028400000000000000}{CF Convention UGRID File Format}.
+the \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node3.html\#SECTION03028400000000000000}{CF Convention UGRID File Format}.
 
 
 \subsection{Meshes from File}
@@ -2323,77 +2300,77 @@ Link
 &
 Linear regridding in two dimensions
 &
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node5.html\#SECTION05012100000000000000}{Bilinear}
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node5.html\#SECTION05012100000000000000}{Bilinear}
 \\
 \hline
 {\hyperref[\detokenize{RegridMethod:ESMF.api.constants.RegridMethod.PATCH}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{PATCH}}}}}
 &
 Higher\sphinxhyphen{}order least squares method
 &
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node5.html\#SECTION05012200000000000000}{Higher\sphinxhyphen{}order patch}
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node5.html\#SECTION05012200000000000000}{Higher\sphinxhyphen{}order patch}
 \\
 \hline
 {\hyperref[\detokenize{RegridMethod:ESMF.api.constants.RegridMethod.NEAREST_STOD}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{NEAREST\_STOD}}}}}
 &
 Nearest source point used for each destination
 &
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node5.html\#SECTION05012300000000000000}{Nearest source to destination}
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node5.html\#SECTION05012300000000000000}{Nearest source to destination}
 \\
 \hline
 {\hyperref[\detokenize{RegridMethod:ESMF.api.constants.RegridMethod.NEAREST_DTOS}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{NEAREST\_DTOS}}}}}
 &
 Nearest destination point used for each source
 &
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node5.html\#SECTION05012400000000000000}{Nearest destination to source}
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node5.html\#SECTION05012400000000000000}{Nearest destination to source}
 \\
 \hline
 {\hyperref[\detokenize{RegridMethod:ESMF.api.constants.RegridMethod.CONSERVE}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{CONSERVE}}}}}
 &
 First\sphinxhyphen{}order conservative
 &
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node5.html\#SECTION05012500000000000000}{First\sphinxhyphen{}order conservative}
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node5.html\#SECTION05012500000000000000}{First\sphinxhyphen{}order conservative}
 \\
 \hline
 {\hyperref[\detokenize{RegridMethod:ESMF.api.constants.RegridMethod.CONSERVE_2ND}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{CONSERVE\_2ND}}}}}
 &
 Second\sphinxhyphen{}order conservative
 &
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node5.html\#SECTION05012600000000000000}{Second\sphinxhyphen{}order conservative}
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node5.html\#SECTION05012600000000000000}{Second\sphinxhyphen{}order conservative}
 \\
 \hline
 See conservative options above.
 &
 Conservation equations
 &
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node5.html\#SECTION05012700000000000000}{Conservation}
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node5.html\#SECTION05012700000000000000}{Conservation}
 \\
 \hline
 {\hyperref[\detokenize{NormType:ESMF.api.constants.NormType}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{NormType}}}}}
 &
 Normalization options for integral conservation
 &
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node5.html\#SECTION05012800000000000000}{Normalization options}
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node5.html\#SECTION05012800000000000000}{Normalization options}
 \\
 \hline
 {\hyperref[\detokenize{LineType:ESMF.api.constants.LineType}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{LineType}}}}}
 &
 Line types for spherical and Cartesian space
 &
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node5.html\#SECTION05012900000000000000}{Great circle cells}
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node5.html\#SECTION05012900000000000000}{Great circle cells}
 \\
 \hline
 {\hyperref[\detokenize{UnmappedAction:ESMF.api.constants.UnmappedAction}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{UnmappedAction}}}}}
 &
 Unmapped destination point handling options
 &
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node5.html\#SECTION050121500000000000000}{Unmapped destination points}
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node5.html\#SECTION050121500000000000000}{Unmapped destination points}
 \\
 \hline
 {\hyperref[\detokenize{CoordSys:ESMF.api.constants.CoordSys}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{CoordSys}}}}}
 &
 Spherical grids and pole handling
 &
-\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node5.html\#SECTION050121600000000000000}{Spherical grids and poles}
+\sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/non\_public/ESMF\_8\_0\_0/ESMF\_refdoc/node5.html\#SECTION050121600000000000000}{Spherical grids and poles}
 \\
 \hline
 \end{tabulary}
@@ -4154,7 +4131,7 @@ Release the memory associated with a
 \label{\detokenize{regrid:regrid}}\label{\detokenize{regrid::doc}}\index{Regrid (class in ESMF.api.regrid)@\spxentry{Regrid}\spxextra{class in ESMF.api.regrid}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{regrid:ESMF.api.regrid.Regrid}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{ESMF.api.regrid.}}\sphinxbfcode{\sphinxupquote{Regrid}}}{\emph{\DUrole{n}{srcfield}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{dstfield}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{filename}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{rh\_filename}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{src\_mask\_values}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{dst\_mask\_values}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{regrid\_method}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{pole\_method}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{regrid\_pole\_npoints}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{line\_type}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{norm\_type}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{extrap\_method}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{extrap\_num\_src\_pnts}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{extrap\_dist\_exponent}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{unmapped\_action}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{ignore\_degenerate}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{create\_rh}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{filemode}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{src\_file}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{dst\_file}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{src\_file\_type}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{dst\_file\_type}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{src\_frac\_field}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{dst\_frac\_field}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{factors}\DUrole{o}{=}\DUrole{default_value}{False}}}{}
+\phantomsection\label{\detokenize{regrid:ESMF.api.regrid.Regrid}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{ESMF.api.regrid.}}\sphinxbfcode{\sphinxupquote{Regrid}}}{\emph{\DUrole{n}{srcfield}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{dstfield}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{filename}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{rh\_filename}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{src\_mask\_values}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{dst\_mask\_values}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{regrid\_method}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{pole\_method}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{regrid\_pole\_npoints}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{line\_type}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{norm\_type}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{extrap\_method}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{extrap\_num\_src\_pnts}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{extrap\_dist\_exponent}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{unmapped\_action}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{ignore\_degenerate}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{create\_rh}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{src\_frac\_field}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{dst\_frac\_field}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{factors}\DUrole{o}{=}\DUrole{default_value}{False}}}{}
 The {\hyperref[\detokenize{regrid:ESMF.api.regrid.Regrid}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Regrid}}}}} object represents a regridding operator between two {\hyperref[\detokenize{field:ESMF.api.field.Field}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Fields}}}}}.  The
 creation of this object is analogous to ESMF\_FieldRegridStore(), and
 calling this object corresponds to ESMF\_FieldRegrid().
@@ -4234,18 +4211,18 @@ generating conservative regridding weights. If \sphinxcode{\sphinxupquote{None}}
 {\hyperref[\detokenize{NormType:ESMF.api.constants.NormType.DSTAREA}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{DSTAREA}}}}}.
 
 \item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{extrap\_method}} ({\hyperref[\detokenize{ExtrapMethod:ESMF.api.constants.ExtrapMethod}]{\sphinxcrossref{\sphinxstyleliteralemphasis{\sphinxupquote{ExtrapMethod}}}}}) \textendash{} Specify which extrapolation method to use on 
+\sphinxstyleliteralstrong{\sphinxupquote{extrap\_method}} (\sphinxstyleliteralemphasis{\sphinxupquote{ExtrapMethod}}) \textendash{} Specify which extrapolation method to use on 
 unmapped destination points after regridding.
 
 \item {} 
 \sphinxstyleliteralstrong{\sphinxupquote{extrap\_num\_src\_pnts}} (\sphinxhref{https://docs.python.org/2.7/library/functions.html\#int}{\sphinxstyleliteralemphasis{\sphinxupquote{int}}}) \textendash{} The number of source points to use for the 
 extrapolation methods that use more than one source point 
-(e.g. {\hyperref[\detokenize{ExtrapMethod:ESMF.api.constants.ExtrapMethod.NEAREST_IDAVG}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{NEAREST\_IDAVG}}}}}). If not 
+(e.g. \sphinxcode{\sphinxupquote{NEAREST\_IDAVG}}). If not 
 specified, defaults to 8.
 
 \item {} 
 \sphinxstyleliteralstrong{\sphinxupquote{extrap\_dist\_exponent}} (\sphinxhref{https://docs.python.org/2.7/library/functions.html\#float}{\sphinxstyleliteralemphasis{\sphinxupquote{float}}}) \textendash{} The exponent to raise the distance to when 
-calculating weights for the {\hyperref[\detokenize{ExtrapMethod:ESMF.api.constants.ExtrapMethod.NEAREST_IDAVG}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{NEAREST\_IDAVG}}}}}
+calculating weights for the \sphinxcode{\sphinxupquote{NEAREST\_IDAVG}}
 extrapolation method. A higher value reduces the influence of more distant
 points. If not specified, defaults to \sphinxcode{\sphinxupquote{2.0}}.
 
@@ -4280,7 +4257,7 @@ to NumPy arrays and attached to the regrid object. The factor arrays
 are retrievable via \sphinxcode{\sphinxupquote{get\_factors()}} or \sphinxcode{\sphinxupquote{get\_weights\_dict()}}.
 See the respective documentation on those methods for additional information.
 For more information on how \sphinxcode{\sphinxupquote{ESMF}} treats factor retrieval see the
-documentation for \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node5.html\#SECTION050366000000000000000}{ESMF\_FieldRegridStore}.
+documentation for \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/last\_built/ESMF\_refdoc/node5.html\#SECTION050366000000000000000}{ESMF\_FieldRegridStore}.
 
 \end{itemize}
 
@@ -4346,7 +4323,7 @@ Release the memory associated with a {\hyperref[\detokenize{regrid:ESMF.api.regr
 \phantomsection\label{\detokenize{regrid:ESMF.api.regrid.Regrid.get_factors}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_factors}}}{\emph{\DUrole{n}{deep\_copy}\DUrole{o}{=}\DUrole{default_value}{False}}}{}
 Return factor and factor index arrays. These arrays will only be
 available if the \sphinxcode{\sphinxupquote{Regrid}} object was initialized with \sphinxcode{\sphinxupquote{factors=True}}.
-See the \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/public/ESMF\_8\_0\_1/ESMF\_refdoc/node5.html\#SECTION050366000000000000000}{ESMF documentation}
+See the \sphinxhref{http://www.earthsystemmodeling.org/esmf\_releases/last\_built/ESMF\_refdoc/node5.html\#SECTION050366000000000000000}{ESMF documentation}
 for additional information on these arrays (see below for indexing in
 Python though).
 
@@ -4602,51 +4579,6 @@ coord\_dim=1 in {\hyperref[\detokenize{grid:ESMF.api.grid.Grid.get_coords}]{\sph
 
 
 
-\subsection{ExtrapMethod}
-\label{\detokenize{ExtrapMethod:extrapmethod}}\label{\detokenize{ExtrapMethod::doc}}\index{ExtrapMethod (class in ESMF.api.constants)@\spxentry{ExtrapMethod}\spxextra{class in ESMF.api.constants}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{ExtrapMethod:ESMF.api.constants.ExtrapMethod}}\pysigline{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{ESMF.api.constants.}}\sphinxbfcode{\sphinxupquote{ExtrapMethod}}}
-Specify which extrapolation method to use on unmapped destination points after 
-regridding.
-\index{NONE (ESMF.api.constants.ExtrapMethod attribute)@\spxentry{NONE}\spxextra{ESMF.api.constants.ExtrapMethod attribute}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{ExtrapMethod:ESMF.api.constants.ExtrapMethod.NONE}}\pysigline{\sphinxbfcode{\sphinxupquote{NONE}}\sphinxbfcode{\sphinxupquote{ = \textless{}ExtrapMethod.NONE: 0\textgreater{}}}}
-Indicates that no extrapolation should be done.
-
-\end{fulllineitems}
-
-\index{NEAREST\_STOD (ESMF.api.constants.ExtrapMethod attribute)@\spxentry{NEAREST\_STOD}\spxextra{ESMF.api.constants.ExtrapMethod attribute}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{ExtrapMethod:ESMF.api.constants.ExtrapMethod.NEAREST_STOD}}\pysigline{\sphinxbfcode{\sphinxupquote{NEAREST\_STOD}}\sphinxbfcode{\sphinxupquote{ = \textless{}ExtrapMethod.NEAREST\_STOD: 1\textgreater{}}}}
-Inverse distance weighted average. 
-Here the value of a destination point is the weighted average of the 
-closest N source points. The weight is the reciprocal of the distance of 
-the source point from the destination point raised to a power P. All the
-weights contributing to one destination point are normalized so that they 
-sum to 1.0. The user can choose N and P when using this method, but 
-defaults are also provided.
-
-\end{fulllineitems}
-
-\index{NEAREST\_IDAVG (ESMF.api.constants.ExtrapMethod attribute)@\spxentry{NEAREST\_IDAVG}\spxextra{ESMF.api.constants.ExtrapMethod attribute}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{ExtrapMethod:ESMF.api.constants.ExtrapMethod.NEAREST_IDAVG}}\pysigline{\sphinxbfcode{\sphinxupquote{NEAREST\_IDAVG}}\sphinxbfcode{\sphinxupquote{ = \textless{}ExtrapMethod.NEAREST\_IDAVG: 2\textgreater{}}}}
-Nearest source to destination. 
-Here each destination point is mapped to the closest source point. A given 
-source point may go to multiple destination points, but no destination 
-point will receive input from more than one source point.
-
-\end{fulllineitems}
-
-
-\end{fulllineitems}
-
-
-
 \subsection{FileFormat}
 \label{\detokenize{FileFormat:fileformat}}\label{\detokenize{FileFormat::doc}}\index{FileFormat (class in ESMF.api.constants)@\spxentry{FileFormat}\spxextra{class in ESMF.api.constants}}
 
@@ -4700,33 +4632,6 @@ Use the {\hyperref[\detokenize{api:id6}]{\sphinxcrossref{\DUrole{std,std-ref}{UG
 \begin{fulllineitems}
 \phantomsection\label{\detokenize{FileFormat:ESMF.api.constants.FileFormat.GRIDSPEC}}\pysigline{\sphinxbfcode{\sphinxupquote{GRIDSPEC}}\sphinxbfcode{\sphinxupquote{ = \textless{}FileFormat.GRIDSPEC: 6\textgreater{}}}}
 Use the {\hyperref[\detokenize{api:id5}]{\sphinxcrossref{\DUrole{std,std-ref}{UGRID single tile grid file format based on CF V1.6 conventions (a.k.a GRIDSPEC)}}}}.
-
-\end{fulllineitems}
-
-
-\end{fulllineitems}
-
-
-
-\subsection{FileMode}
-\label{\detokenize{FileMode:filemode}}\label{\detokenize{FileMode::doc}}\index{FileMode (class in ESMF.api.constants)@\spxentry{FileMode}\spxextra{class in ESMF.api.constants}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{FileMode:ESMF.api.constants.FileMode}}\pysigline{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{ESMF.api.constants.}}\sphinxbfcode{\sphinxupquote{FileMode}}}
-Specify which mode to use when writing a weight file.
-\index{BASIC (ESMF.api.constants.FileMode attribute)@\spxentry{BASIC}\spxextra{ESMF.api.constants.FileMode attribute}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{FileMode:ESMF.api.constants.FileMode.BASIC}}\pysigline{\sphinxbfcode{\sphinxupquote{BASIC}}\sphinxbfcode{\sphinxupquote{ = \textless{}FileMode.BASIC: 0\textgreater{}}}}
-Indicates that only the factorList and factorIndexList should be written.
-
-\end{fulllineitems}
-
-\index{WITHAUX (ESMF.api.constants.FileMode attribute)@\spxentry{WITHAUX}\spxextra{ESMF.api.constants.FileMode attribute}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{FileMode:ESMF.api.constants.FileMode.WITHAUX}}\pysigline{\sphinxbfcode{\sphinxupquote{WITHAUX}}\sphinxbfcode{\sphinxupquote{ = \textless{}FileMode.WITHAUX: 1\textgreater{}}}}
-Indicates that grid center coordinates should also be written.
 
 \end{fulllineitems}
 

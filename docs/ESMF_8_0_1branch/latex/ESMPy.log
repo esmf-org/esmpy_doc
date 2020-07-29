@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.22)  29 JUL 2020 14:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.22)  29 JUL 2020 16:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -924,210 +924,181 @@ Overfull \vbox (2.43936pt too high) detected at line 747
  []
 
 [17] [18] [19] [20]
-Overfull \vbox (2.43936pt too high) detected at line 1092
+Overfull \vbox (2.43936pt too high) detected at line 1089
  []
 
 [21]
-Underfull \vbox (badness 10000) detected at line 1092
+Underfull \vbox (badness 10000) detected at line 1089
  []
 
 
-Overfull \vbox (2.68169pt too high) detected at line 1092
+Overfull \vbox (2.68169pt too high) detected at line 1089
  []
 
 [22]
-Underfull \vbox (badness 10000) detected at line 1092
+Underfull \vbox (badness 10000) detected at line 1089
  []
 
 
-Overfull \vbox (2.68169pt too high) detected at line 1092
+Overfull \vbox (2.68169pt too high) detected at line 1089
  []
 
 [23]
-Overfull \vbox (2.43936pt too high) detected at line 1202
+Overfull \vbox (2.43936pt too high) detected at line 1194
  []
 
 [24]
-Underfull \vbox (badness 10000) detected at line 1202
+Underfull \vbox (badness 10000) detected at line 1194
  []
 
 
-Overfull \vbox (2.68169pt too high) detected at line 1202
+Overfull \vbox (2.68169pt too high) detected at line 1194
  []
 
 [25]
-Overfull \vbox (2.43936pt too high) detected at line 1288
+Overfull \vbox (2.43936pt too high) detected at line 1275
  []
 
-[26]
-Underfull \vbox (badness 10000) detected at line 1288
- []
-
-
-Overfull \vbox (2.68169pt too high) detected at line 1288
- []
-
-[27]
-Overfull \vbox (13.43936pt too high) detected at line 1400
- []
-
-[28]
-Underfull \vbox (badness 10000) detected at line 1400
+[26] [27]
+Underfull \vbox (badness 10000) detected at line 1382
  []
 
 
-Overfull \vbox (2.68169pt too high) detected at line 1400
+Overfull \vbox (4.18259pt too high) detected at line 1382
  []
 
-[29]
-Overfull \vbox (2.43936pt too high) detected at line 1558
+[28] [29]
+Underfull \vbox (badness 10000) detected at line 1540
  []
 
 [30]
-Underfull \vbox (badness 10000) detected at line 1558
+Underfull \vbox (badness 10000) detected at line 1540
  []
 
 
-Overfull \vbox (2.68169pt too high) detected at line 1558
+Overfull \vbox (2.68169pt too high) detected at line 1540
  []
 
-[31]
-Underfull \vbox (badness 10000) detected at line 1558
- []
-
-
-Overfull \vbox (2.68169pt too high) detected at line 1558
- []
-
-[32] [33] [34
-
-]
+[31] [32]
 Chapter 5.
-[35] [36] [37] [38] [39]
+[33
+
+] [34] [35] [36] [37]
 LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <10> not available
 (Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 1.
- [40] [41] [42] [43] [44] [45] [46] [47] [48]
+ [38] [39]
+Overfull \vbox (23.69797pt too high) detected at line 2190
+ []
+
+[40] [41] [42] [43] [44] [45] [46
+
+]
 Chapter 6.
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 2618.
-[49
-
-] [50]
-Underfull \hbox (badness 10000) in paragraph at lines 2954--2954
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 2595.
+[47] [48]
+Underfull \hbox (badness 10000) in paragraph at lines 2931--2931
 []\T1/ptm/m/it/10 max_index=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 num_peri_dims=
 0\T1/ptm/m/n/10 , \T1/ptm/m/it/10 pe-ri-odic_dim=None\T1/ptm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2954--2954
+Underfull \hbox (badness 10000) in paragraph at lines 2931--2931
 \T1/ptm/m/it/10 pole_dim=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 co-ord_sys=None\T
 1/ptm/m/n/10 , \T1/ptm/m/it/10 co-ord_typekind=None\T1/ptm/m/n/10 , \T1/ptm/m/i
 t/10 stag-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2954--2954
+Underfull \hbox (badness 10000) in paragraph at lines 2931--2931
 \T1/ptm/m/it/10 ger-loc=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 pole_kind=None\T1/
 ptm/m/n/10 , \T1/ptm/m/it/10 file-name=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 fil
 e-type=None\T1/ptm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2954--2954
+Underfull \hbox (badness 10000) in paragraph at lines 2931--2931
 \T1/ptm/m/it/10 reg_decomp=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 de-compflag=Non
 e\T1/ptm/m/n/10 , \T1/ptm/m/it/10 is_sphere=None\T1/ptm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2954--2954
+Underfull \hbox (badness 10000) in paragraph at lines 2931--2931
 \T1/ptm/m/it/10 add_corner_stagger=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 add_use
 r_area=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 add_mask=None\T1/ptm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2954--2954
+Underfull \hbox (badness 10000) in paragraph at lines 2931--2931
 \T1/ptm/m/it/10 var-name=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 co-ord_names=None
 \T1/ptm/m/n/10 , \T1/ptm/m/it/10 tile-size=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10
  regDe-compP-
  []
 
-[51] [52] [53] [54] [55]
-Underfull \hbox (badness 10000) in paragraph at lines 3549--3549
+[49] [50] [51] [52] [53]
+Underfull \hbox (badness 10000) in paragraph at lines 3526--3526
 []\T1/ptm/m/it/10 parametric_dim=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 spa-tial_
 dim=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 co-ord_sys=None\T1/ptm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3549--3549
+Underfull \hbox (badness 10000) in paragraph at lines 3526--3526
 \T1/ptm/m/it/10 file-name=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 file-type=None\T
 1/ptm/m/n/10 , \T1/ptm/m/it/10 con-vert_to_dual=None\T1/ptm/m/n/10 ,
  []
 
-[56] [57] [58]
-Underfull \hbox (badness 10000) in paragraph at lines 3943--3943
+[54] [55] [56]
+Underfull \hbox (badness 10000) in paragraph at lines 3920--3920
 []\T1/ptm/m/it/10 location_count\T1/ptm/m/n/10 , \T1/ptm/m/it/10 co-ord_sys=Non
 e\T1/ptm/m/n/10 , \T1/ptm/m/it/10 name=None\T1/ptm/m/n/10 ,
  []
 
-[59] [60]
-Underfull \hbox (badness 10000) in paragraph at lines 4157--4157
+[57] [58]
+Underfull \hbox (badness 10000) in paragraph at lines 4134--4134
 \T1/ptm/m/it/10 src_mask_values=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 dst_mask_v
 alues=None\T1/ptm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4157--4157
+Underfull \hbox (badness 10000) in paragraph at lines 4134--4134
 \T1/ptm/m/it/10 re-grid_method=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 pole_method
 =None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4157--4157
+Underfull \hbox (badness 10000) in paragraph at lines 4134--4134
 \T1/ptm/m/it/10 grid_pole_npoints=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 line_typ
 e=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 norm_type=None\T1/ptm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4157--4157
+Underfull \hbox (badness 10000) in paragraph at lines 4134--4134
 \T1/ptm/m/it/10 ex-trap_method=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 ex-trap_num
 _src_pnts=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 ex-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4157--4157
+Underfull \hbox (badness 10000) in paragraph at lines 4134--4134
 \T1/ptm/m/it/10 trap_dist_exponent=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 un-mapp
 ed_action=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 ig-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4157--4157
+Underfull \hbox (badness 5652) in paragraph at lines 4134--4134
 \T1/ptm/m/it/10 nore_degenerate=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 cre-ate_rh
-=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 file-mode=None\T1/ptm/m/n/10 ,
+=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 src_frac_field=None\T1/ptm/m/n/10 ,
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 4157--4157
-\T1/ptm/m/it/10 src_file=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 dst_file=None\T1/
-ptm/m/n/10 , \T1/ptm/m/it/10 src_file_type=None\T1/ptm/m/n/10 ,
- []
+[59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69
 
 
-Underfull \hbox (badness 5475) in paragraph at lines 4157--4157
-\T1/ptm/m/it/10 dst_file_type=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 src_frac_fie
-ld=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 dst_frac_field=None\T1/ptm/m/n/10 ,
- []
+] [70
 
-[61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72
-
-] [73
-
-] [74
-
-] [75
+] [71
 
 
-]
-(./ESMPy.ind [76
+] (./ESMPy.ind
+[72
 
 
 ]
@@ -1137,106 +1108,94 @@ ridFromFile
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
 []\T1/pcr/m/n/10 BILINEAR \T1/ptm/m/n/10 (\T1/ptm/m/it/10 ESMF.api.constants.Re
 gridMethod at-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--36
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
 []\T1/pcr/m/n/10 CENTER_VCENTER \T1/ptm/m/n/10 (\T1/ptm/m/it/10 ESMF.api.consta
 nts.StaggerLoc
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 []\T1/pcr/m/n/10 CONSERVE \T1/ptm/m/n/10 (\T1/ptm/m/it/10 ESMF.api.constants.Re
 gridMethod at-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--54
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
 []\T1/pcr/m/n/10 CORNER_VCENTER \T1/ptm/m/n/10 (\T1/ptm/m/it/10 ESMF.api.consta
 nts.StaggerLoc
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 []\T1/pcr/m/n/10 EDGE1_VFACE \T1/ptm/m/n/10 (\T1/ptm/m/it/10 ESMF.api.constants
 .StaggerLoc at-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
 []\T1/pcr/m/n/10 EDGE2_VFACE \T1/ptm/m/n/10 (\T1/ptm/m/it/10 ESMF.api.constants
 .StaggerLoc at-
  []
 
-[77
+[73
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 []\T1/pcr/m/n/10 get_weights_dict() \T1/ptm/m/n/10 (\T1/ptm/m/it/10 ESMF.api.re
 grid.Regrid
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 []\T1/pcr/m/n/10 GREAT_CIRCLE \T1/ptm/m/n/10 (\T1/ptm/m/it/10 ESMF.api.constant
 s.LineType at-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 []\T1/pcr/m/n/10 IGNORE \T1/ptm/m/n/10 (\T1/ptm/m/it/10 ESMF.api.constants.Unma
 ppedAction at-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
 []\T1/pcr/m/n/10 lower_bounds() \T1/ptm/m/n/10 (\T1/ptm/m/it/10 ESMF.api.locstr
 eam.LocStream
  []
 
-
-Underfull \hbox (badness 6961) in paragraph at lines 148--150
-[]\T1/pcr/m/n/10 NEAREST_IDAVG \T1/ptm/m/n/10 (\T1/ptm/m/it/10 ESMF.api.constan
-ts.ExtrapMethod
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 150--152
-[]\T1/pcr/m/n/10 NEAREST_STOD \T1/ptm/m/n/10 (\T1/ptm/m/it/10 ESMF.api.constant
-s.ExtrapMethod
- []
-
-[78]
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
+[74]
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
 []\T1/pcr/m/n/10 upper_bounds() \T1/ptm/m/n/10 (\T1/ptm/m/it/10 ESMF.api.locstr
 eam.LocStream
  []
 
-[79
+[75
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5385.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5385.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5290.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5290.
  (./ESMPy.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5385.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5385.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5290.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5290.
 
 Package rerunfilecheck Info: File `ESMPy.out' has not changed.
-(rerunfilecheck)             Checksum: 657647336384193131D313F4560ACCFC;10763.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5385.
+(rerunfilecheck)             Checksum: F061FE7DADEB6A96DA0686F1A9DBF5C7;10537.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5290.
  ) 
 Here is how much of TeX's memory you used:
- 14040 strings out of 492649
- 201169 string characters out of 6129622
- 481084 words of memory out of 5000000
- 17269 multiletter control sequences out of 15000+600000
+ 14014 strings out of 492649
+ 200561 string characters out of 6129622
+ 483327 words of memory out of 5000000
+ 17256 multiletter control sequences out of 15000+600000
  59493 words of font info for 86 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 37i,12n,51p,2132b,612s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,12n,51p,1766b,631s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/tex
 live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
@@ -1251,10 +1210,10 @@ c/uhvbo8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/helvetic/uhvr
 8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></u
 sr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/t
 exlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ESMPy.pdf (83 pages, 384726 bytes).
+Output written on ESMPy.pdf (79 pages, 379148 bytes).
 PDF statistics:
- 2032 PDF objects out of 2073 (max. 8388607)
- 1852 compressed objects within 19 object streams
- 340 named destinations out of 1000 (max. 500000)
- 677 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1985 PDF objects out of 2073 (max. 8388607)
+ 1810 compressed objects within 19 object streams
+ 327 named destinations out of 1000 (max. 500000)
+ 661 words of extra memory for PDF output out of 10000 (max. 10000000)
 
