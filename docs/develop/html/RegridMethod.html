@@ -1,20 +1,19 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>RegridMethod &#8212; ESMPy 8.1.0 beta snapshot documentation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RegridMethod &#8212; ESMPy 8.0.1 beta snapshot documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -36,8 +35,9 @@
         <li class="right" >
           <a href="Region.html" title="Region"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.1.0 beta snapshot documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.0.1 beta snapshot documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">RegridMethod</a></li> 
       </ul>
     </div>  
 
@@ -48,22 +48,22 @@
             
   <div class="section" id="regridmethod">
 <h1>RegridMethod<a class="headerlink" href="#regridmethod" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="ESMF.api.constants.RegridMethod">
-<em class="property">class </em><code class="descclassname">ESMF.api.constants.</code><code class="descname">RegridMethod</code><a class="headerlink" href="#ESMF.api.constants.RegridMethod" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">ESMF.api.constants.</code><code class="sig-name descname">RegridMethod</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">module</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.constants.RegridMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify which interpolation method to use during regridding.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="ESMF.api.constants.RegridMethod.BILINEAR">
-<code class="descname">BILINEAR</code><em class="property"> = &lt;RegridMethod.BILINEAR: 0&gt;</em><a class="headerlink" href="#ESMF.api.constants.RegridMethod.BILINEAR" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">BILINEAR</code><em class="property"> = &lt;RegridMethod.BILINEAR: 0&gt;</em><a class="headerlink" href="#ESMF.api.constants.RegridMethod.BILINEAR" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bilinear interpolation. Destination value is a linear combination of the 
 source values in the cell which contains the destination point. The 
 weights for the linear combination are based on the distance of destination 
 point from each source value.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="ESMF.api.constants.RegridMethod.PATCH">
-<code class="descname">PATCH</code><em class="property"> = &lt;RegridMethod.PATCH: 1&gt;</em><a class="headerlink" href="#ESMF.api.constants.RegridMethod.PATCH" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">PATCH</code><em class="property"> = &lt;RegridMethod.PATCH: 1&gt;</em><a class="headerlink" href="#ESMF.api.constants.RegridMethod.PATCH" title="Permalink to this definition">¶</a></dt>
 <dd><p>Higher-order patch recovery interpolation. Destination value is a weighted 
 average of 2D polynomial patches constructed from cells surrounding the 
 source cell which contains the destination point. This method typically 
@@ -72,9 +72,9 @@ However, because of its larger stencil, it also results in a much larger
 interpolation matrix (and thus routeHandle) than the bilinear.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="ESMF.api.constants.RegridMethod.CONSERVE">
-<code class="descname">CONSERVE</code><em class="property"> = &lt;RegridMethod.CONSERVE: 2&gt;</em><a class="headerlink" href="#ESMF.api.constants.RegridMethod.CONSERVE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">CONSERVE</code><em class="property"> = &lt;RegridMethod.CONSERVE: 2&gt;</em><a class="headerlink" href="#ESMF.api.constants.RegridMethod.CONSERVE" title="Permalink to this definition">¶</a></dt>
 <dd><p>First-order conservative interpolation. The main purpose of this method is 
 to preserve the integral of the field between the source and destination. 
 Will typically give a less accurate approximation to the individual field 
@@ -88,27 +88,27 @@ the destination cell. Needs corner coordinate values to be provided in the
 the <a class="reference internal" href="mesh.html#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> element location.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="ESMF.api.constants.RegridMethod.NEAREST_STOD">
-<code class="descname">NEAREST_STOD</code><em class="property"> = &lt;RegridMethod.NEAREST_STOD: 3&gt;</em><a class="headerlink" href="#ESMF.api.constants.RegridMethod.NEAREST_STOD" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">NEAREST_STOD</code><em class="property"> = &lt;RegridMethod.NEAREST_STOD: 3&gt;</em><a class="headerlink" href="#ESMF.api.constants.RegridMethod.NEAREST_STOD" title="Permalink to this definition">¶</a></dt>
 <dd><p>In this version of nearest neighbor interpolation each destination point is 
 mapped to the closest source point. A given source point may go to multiple 
 destination points, but no destination point will receive input from more 
 than one source point.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="ESMF.api.constants.RegridMethod.NEAREST_DTOS">
-<code class="descname">NEAREST_DTOS</code><em class="property"> = &lt;RegridMethod.NEAREST_DTOS: 4&gt;</em><a class="headerlink" href="#ESMF.api.constants.RegridMethod.NEAREST_DTOS" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">NEAREST_DTOS</code><em class="property"> = &lt;RegridMethod.NEAREST_DTOS: 4&gt;</em><a class="headerlink" href="#ESMF.api.constants.RegridMethod.NEAREST_DTOS" title="Permalink to this definition">¶</a></dt>
 <dd><p>In this version of nearest neighbor interpolation each source point is 
 mapped to the closest destination point. A given destination point may 
 receive input from multiple source points, but no source point will go to 
 more than one destination point.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="ESMF.api.constants.RegridMethod.CONSERVE_2ND">
-<code class="descname">CONSERVE_2ND</code><em class="property"> = &lt;RegridMethod.CONSERVE_2ND: 5&gt;</em><a class="headerlink" href="#ESMF.api.constants.RegridMethod.CONSERVE_2ND" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">CONSERVE_2ND</code><em class="property"> = &lt;RegridMethod.CONSERVE_2ND: 5&gt;</em><a class="headerlink" href="#ESMF.api.constants.RegridMethod.CONSERVE_2ND" title="Permalink to this definition">¶</a></dt>
 <dd><p>Second-order conservative interpolation. As with first-order, preserves the 
 integral of the value between the source and destination. However, typically 
 produces a smoother more accurate result than first-order. Also like 
@@ -127,6 +127,7 @@ on the <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -146,17 +147,15 @@ on the <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -176,13 +175,14 @@ on the <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="
         <li class="right" >
           <a href="Region.html" title="Region"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.1.0 beta snapshot documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.0.1 beta snapshot documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">RegridMethod</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.3.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

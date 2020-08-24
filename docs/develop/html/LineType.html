@@ -1,20 +1,19 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>LineType &#8212; ESMPy 8.1.0 beta snapshot documentation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LineType &#8212; ESMPy 8.0.1 beta snapshot documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -36,8 +35,9 @@
         <li class="right" >
           <a href="GridItem.html" title="GridItem"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.1.0 beta snapshot documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.0.1 beta snapshot documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">LineType</a></li> 
       </ul>
     </div>  
 
@@ -48,18 +48,18 @@
             
   <div class="section" id="linetype">
 <h1>LineType<a class="headerlink" href="#linetype" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="ESMF.api.constants.LineType">
-<em class="property">class </em><code class="descclassname">ESMF.api.constants.</code><code class="descname">LineType</code><a class="headerlink" href="#ESMF.api.constants.LineType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">ESMF.api.constants.</code><code class="sig-name descname">LineType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">module</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.constants.LineType" title="Permalink to this definition">¶</a></dt>
 <dd><p>This argument controls the path of the line which connects two points on
 the surface of the sphere. This in turn controls the path along which
 distances are calculated and the shape of the edges that make up a cell.
 Both of these quantities can influence how interpolation weights are
 calculated. As would be expected, this argument is only applicable with
 grids which lie on the surface of a sphere.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="ESMF.api.constants.LineType.CART">
-<code class="descname">CART</code><em class="property"> = &lt;LineType.CART: 0&gt;</em><a class="headerlink" href="#ESMF.api.constants.LineType.CART" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">CART</code><em class="property"> = &lt;LineType.CART: 0&gt;</em><a class="headerlink" href="#ESMF.api.constants.LineType.CART" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cartesian line. When this option is specified distances are calculated in a
 straight line through the 3D Cartesian space in which the sphere is
 embedded. Cells are approximated by 3D planes bounded by 3D Cartesian lines
@@ -68,9 +68,9 @@ type is currently the default for the following all regrid methods except
 for conservative.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="ESMF.api.constants.LineType.GREAT_CIRCLE">
-<code class="descname">GREAT_CIRCLE</code><em class="property"> = &lt;LineType.GREAT_CIRCLE: 1&gt;</em><a class="headerlink" href="#ESMF.api.constants.LineType.GREAT_CIRCLE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">GREAT_CIRCLE</code><em class="property"> = &lt;LineType.GREAT_CIRCLE: 1&gt;</em><a class="headerlink" href="#ESMF.api.constants.LineType.GREAT_CIRCLE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Great circle line. When this option is specified distances are calculated
 along a great circle path (the shortest distance between two points on a
 sphere surface). Cells are bounded by great circle paths between their
@@ -83,6 +83,7 @@ currently the default for the conservative regrid method.</p>
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -102,17 +103,15 @@ currently the default for the conservative regrid method.</p>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -132,13 +131,14 @@ currently the default for the conservative regrid method.</p>
         <li class="right" >
           <a href="GridItem.html" title="GridItem"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.1.0 beta snapshot documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.0.1 beta snapshot documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">LineType</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.3.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

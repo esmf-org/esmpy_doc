@@ -1,20 +1,19 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>FileMode &#8212; ESMPy 8.1.0 beta snapshot documentation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FileMode &#8212; ESMPy 8.0.1 beta snapshot documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -36,8 +35,9 @@
         <li class="right" >
           <a href="FileFormat.html" title="FileFormat"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.1.0 beta snapshot documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.0.1 beta snapshot documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FileMode</a></li> 
       </ul>
     </div>  
 
@@ -48,19 +48,19 @@
             
   <div class="section" id="filemode">
 <h1>FileMode<a class="headerlink" href="#filemode" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="ESMF.api.constants.FileMode">
-<em class="property">class </em><code class="descclassname">ESMF.api.constants.</code><code class="descname">FileMode</code><a class="headerlink" href="#ESMF.api.constants.FileMode" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">ESMF.api.constants.</code><code class="sig-name descname">FileMode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">module</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.constants.FileMode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify which mode to use when writing a weight file.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="ESMF.api.constants.FileMode.BASIC">
-<code class="descname">BASIC</code><em class="property"> = &lt;FileMode.BASIC: 0&gt;</em><a class="headerlink" href="#ESMF.api.constants.FileMode.BASIC" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">BASIC</code><em class="property"> = &lt;FileMode.BASIC: 0&gt;</em><a class="headerlink" href="#ESMF.api.constants.FileMode.BASIC" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates that only the factorList and factorIndexList should be written.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="ESMF.api.constants.FileMode.WITHAUX">
-<code class="descname">WITHAUX</code><em class="property"> = &lt;FileMode.WITHAUX: 1&gt;</em><a class="headerlink" href="#ESMF.api.constants.FileMode.WITHAUX" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">WITHAUX</code><em class="property"> = &lt;FileMode.WITHAUX: 1&gt;</em><a class="headerlink" href="#ESMF.api.constants.FileMode.WITHAUX" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates that grid center coordinates should also be written.</p>
 </dd></dl>
 
@@ -69,6 +69,7 @@
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -88,17 +89,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -118,13 +117,14 @@
         <li class="right" >
           <a href="FileFormat.html" title="FileFormat"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.1.0 beta snapshot documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.0.1 beta snapshot documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FileMode</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.3.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

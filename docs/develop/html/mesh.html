@@ -1,20 +1,19 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Mesh &#8212; ESMPy 8.1.0 beta snapshot documentation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mesh &#8212; ESMPy 8.0.1 beta snapshot documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -36,8 +35,9 @@
         <li class="right" >
           <a href="grid.html" title="Grid"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.1.0 beta snapshot documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.0.1 beta snapshot documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Mesh</a></li> 
       </ul>
     </div>  
 
@@ -48,9 +48,9 @@
             
   <div class="section" id="mesh">
 <h1>Mesh<a class="headerlink" href="#mesh" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="ESMF.api.mesh.Mesh">
-<em class="property">class </em><code class="descclassname">ESMF.api.mesh.</code><code class="descname">Mesh</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">ESMF.api.mesh.</code><code class="sig-name descname">Mesh</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> class is a Python wrapper object for the ESMF Mesh.
 The individual values of all coordinate and mask arrays are referenced to
 those of the underlying Fortran ESMF object.</p>
@@ -71,344 +71,294 @@ documentation</a>.</p>
 memory, or from a SCRIP formatted or CF compliant UGRID file. The arguments
 for each type of <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> creation are outlined below.</p>
 <p><strong>Created in-memory:</strong></p>
-<dl class="docutils">
-<dt>The in-memory <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> can be created manually in 3 steps:</dt>
-<dd><ol class="first last arabic simple">
-<li>create the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> (specifying <code class="docutils literal notranslate"><span class="pre">parametric_dim</span></code> and <code class="docutils literal notranslate"><span class="pre">spatial_dim</span></code>),</li>
-<li>add nodes,</li>
-<li>add elements.</li>
+<dl class="simple">
+<dt>The in-memory <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> can be created manually in 3 steps:</dt><dd><ol class="arabic simple">
+<li><p>create the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> (specifying <code class="docutils literal notranslate"><span class="pre">parametric_dim</span></code> and <code class="docutils literal notranslate"><span class="pre">spatial_dim</span></code>),</p></li>
+<li><p>add nodes,</p></li>
+<li><p>add elements.</p></li>
 </ol>
 </dd>
 </dl>
 <p><em>REQUIRED:</em></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>parametric_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – the dimension of the topology of the
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parametric_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – the dimension of the topology of the
 <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> (e.g. a <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> composed of squares would have a
 parametric dimension of 2 and a <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> composed of cubes
-would have a parametric dimension of 3).</li>
-<li><strong>spatial_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – the number of coordinate dimensions
+would have a parametric dimension of 3).</p></li>
+<li><p><strong>spatial_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – the number of coordinate dimensions
 needed to describe the locations of the nodes making up the
 <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.  For a manifold the spatial dimension can be larger
 than the parametric dimension (e.g. the 2D surface of a
-sphere in 3D space), but it cannot be smaller.</li>
+sphere in 3D space), but it cannot be smaller.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p><em>OPTIONAL:</em></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>coord_sys</strong> (<a class="reference internal" href="CoordSys.html#ESMF.api.constants.CoordSys" title="ESMF.api.constants.CoordSys"><em>CoordSys</em></a>) – Coordinate system for the
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>coord_sys</strong> (<a class="reference internal" href="CoordSys.html#ESMF.api.constants.CoordSys" title="ESMF.api.constants.CoordSys"><em>CoordSys</em></a>) – Coordinate system for the
 <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.
-If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="CoordSys.html#ESMF.api.constants.CoordSys.SPH_DEG" title="ESMF.api.constants.CoordSys.SPH_DEG"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SPH_DEG</span></code></a>.</td>
-</tr>
-</tbody>
-</table>
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="CoordSys.html#ESMF.api.constants.CoordSys.SPH_DEG" title="ESMF.api.constants.CoordSys.SPH_DEG"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SPH_DEG</span></code></a>.</p>
+</dd>
+</dl>
 <p><strong>Created from file:</strong></p>
 <p>Note that <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Meshes</span></code></a> created from file do not use the <code class="docutils literal notranslate"><span class="pre">parametric_dim</span></code> and
 <code class="docutils literal notranslate"><span class="pre">spatial_dim</span></code> parameters.</p>
 <p><em>REQUIRED:</em></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – the name of NetCDF file containing the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</li>
-<li><strong>filetype</strong> (<a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat" title="ESMF.api.constants.FileFormat"><em>FileFormat</em></a>) – the input
-<a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat" title="ESMF.api.constants.FileFormat"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FileFormat</span></code></a> of the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – the name of NetCDF file containing the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p></li>
+<li><p><strong>filetype</strong> (<a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat" title="ESMF.api.constants.FileFormat"><em>FileFormat</em></a>) – the input
+<a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat" title="ESMF.api.constants.FileFormat"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FileFormat</span></code></a> of the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p><em>OPTIONAL:</em></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>convert_to_dual</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – a boolean value to specify if the
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>convert_to_dual</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – a boolean value to specify if the
 dual <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> should be calculated.  Defaults to False.  This
 argument is only supported with
-<a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat.SCRIP" title="ESMF.api.constants.FileFormat.SCRIP"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SCRIP</span></code></a>.</li>
-<li><strong>add_user_area</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – a boolean value to specify if an area
+<a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat.SCRIP" title="ESMF.api.constants.FileFormat.SCRIP"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SCRIP</span></code></a>.</p></li>
+<li><p><strong>add_user_area</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – a boolean value to specify if an area
 property should be added to the mesh.  This argument is only
 supported for <a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat.SCRIP" title="ESMF.api.constants.FileFormat.SCRIP"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SCRIP</span></code></a>
 or <a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat.ESMFMESH" title="ESMF.api.constants.FileFormat.ESMFMESH"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ESMFMESH</span></code></a>.
-If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to False.</li>
-<li><strong>meshname</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – the name of the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> metadata variable in
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to False.</p></li>
+<li><p><strong>meshname</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – the name of the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> metadata variable in
 a UGRID file.  This argument is only supported with
 <a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat.UGRID" title="ESMF.api.constants.FileFormat.UGRID"><code class="xref py py-attr docutils literal notranslate"><span class="pre">UGRID</span></code></a>.
-If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to the empty string.</li>
-<li><strong>mask_flag</strong> (<a class="reference internal" href="MeshLoc.html#ESMF.api.constants.MeshLoc" title="ESMF.api.constants.MeshLoc"><em>MeshLoc</em></a>) – an enumerated integer that, if
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to the empty string.</p></li>
+<li><p><strong>mask_flag</strong> (<a class="reference internal" href="MeshLoc.html#ESMF.api.constants.MeshLoc" title="ESMF.api.constants.MeshLoc"><em>MeshLoc</em></a>) – an enumerated integer that, if
 specified, tells whether a mask in a UGRID file should be
 defined on the <code class="xref py py-attr docutils literal notranslate"><span class="pre">Mesh</span></code>.
 This argument is only supported with
 <a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat.UGRID" title="ESMF.api.constants.FileFormat.UGRID"><code class="xref py py-attr docutils literal notranslate"><span class="pre">UGRID</span></code></a>.
-If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to no masking.</li>
-<li><strong>varname</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – a variable name for the mask in a UGRID file
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to no masking.</p></li>
+<li><p><strong>varname</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – a variable name for the mask in a UGRID file
 if mask_flag is specified.  This argument is only supported
 for <a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat.UGRID" title="ESMF.api.constants.FileFormat.UGRID"><code class="xref py py-attr docutils literal notranslate"><span class="pre">UGRID</span></code></a>.
-If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to the empty string.</li>
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to the empty string.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="attribute">
+</dd>
+</dl>
+<dl class="py method">
 <dt id="ESMF.api.mesh.Mesh.area">
-<code class="descname">area</code><a class="headerlink" href="#ESMF.api.mesh.Mesh.area" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">A two element list of numpy arrays to hold values for the nodes
-and elements of the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> area represented as a numpy
-array of floats of the same number of entries as <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> elements.</td>
-</tr>
-</tbody>
-</table>
+<em class="property">property </em><code class="sig-name descname">area</code><a class="headerlink" href="#ESMF.api.mesh.Mesh.area" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A two element list of numpy arrays to hold values for the nodes
+and elements of the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> area represented as a numpy
+array of floats of the same number of entries as <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> elements.</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py method">
 <dt id="ESMF.api.mesh.Mesh.coords">
-<code class="descname">coords</code><a class="headerlink" href="#ESMF.api.mesh.Mesh.coords" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">A two element list of numpy arrays to hold values for the nodes
-and elements of the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The coordinates represented as a numpy array of floats
+<em class="property">property </em><code class="sig-name descname">coords</code><a class="headerlink" href="#ESMF.api.mesh.Mesh.coords" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A two element list of numpy arrays to hold values for the nodes
+and elements of the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The coordinates represented as a numpy array of floats
 with a value for each node and/or element of the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>
-<a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</td>
-</tr>
-</tbody>
-</table>
+<a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py method">
 <dt id="ESMF.api.mesh.Mesh.coord_sys">
-<code class="descname">coord_sys</code><a class="headerlink" href="#ESMF.api.mesh.Mesh.coord_sys" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="CoordSys.html#ESMF.api.constants.CoordSys" title="ESMF.api.constants.CoordSys"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CoordSys</span></code></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The coordinate system of the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</td>
-</tr>
-</tbody>
-</table>
+<em class="property">property </em><code class="sig-name descname">coord_sys</code><a class="headerlink" href="#ESMF.api.mesh.Mesh.coord_sys" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="CoordSys.html#ESMF.api.constants.CoordSys" title="ESMF.api.constants.CoordSys"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CoordSys</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The coordinate system of the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py method">
 <dt id="ESMF.api.mesh.Mesh.mask">
-<code class="descname">mask</code><a class="headerlink" href="#ESMF.api.mesh.Mesh.mask" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">A two element list of numpy arrays to hold values for the nodes
-and elements of the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The masked values on the nodes and elements of the
-<a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</td>
-</tr>
-</tbody>
-</table>
+<em class="property">property </em><code class="sig-name descname">mask</code><a class="headerlink" href="#ESMF.api.mesh.Mesh.mask" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A two element list of numpy arrays to hold values for the nodes
+and elements of the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The masked values on the nodes and elements of the
+<a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py method">
 <dt id="ESMF.api.mesh.Mesh.rank">
-<code class="descname">rank</code><a class="headerlink" href="#ESMF.api.mesh.Mesh.rank" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The rank of the Mesh, (i.e. always 1).</td>
-</tr>
-</tbody>
-</table>
+<em class="property">property </em><code class="sig-name descname">rank</code><a class="headerlink" href="#ESMF.api.mesh.Mesh.rank" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The rank of the Mesh, (i.e. always 1).</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py method">
 <dt id="ESMF.api.mesh.Mesh.size">
-<code class="descname">size</code><a class="headerlink" href="#ESMF.api.mesh.Mesh.size" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">A two element list of integers.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of nodes and elements in the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> on the current
-processor.</td>
-</tr>
-</tbody>
-</table>
+<em class="property">property </em><code class="sig-name descname">size</code><a class="headerlink" href="#ESMF.api.mesh.Mesh.size" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A two element list of integers.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The number of nodes and elements in the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> on the current
+processor.</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py method">
 <dt id="ESMF.api.mesh.Mesh.size_owned">
-<code class="descname">size_owned</code><a class="headerlink" href="#ESMF.api.mesh.Mesh.size_owned" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">A two element list of integers.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of owned nodes and elements in the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> on the
-current processor.</td>
-</tr>
-</tbody>
-</table>
+<em class="property">property </em><code class="sig-name descname">size_owned</code><a class="headerlink" href="#ESMF.api.mesh.Mesh.size_owned" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A two element list of integers.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The number of owned nodes and elements in the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> on the
+current processor.</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="ESMF.api.mesh.Mesh.add_elements">
-<code class="descname">add_elements</code><span class="sig-paren">(</span><em>element_count</em>, <em>element_ids</em>, <em>element_types</em>, <em>element_conn</em>, <em>element_mask=None</em>, <em>element_area=None</em>, <em>element_coords=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.add_elements" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_elements</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">element_count</span></em>, <em class="sig-param"><span class="n">element_ids</span></em>, <em class="sig-param"><span class="n">element_types</span></em>, <em class="sig-param"><span class="n">element_conn</span></em>, <em class="sig-param"><span class="n">element_mask</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">element_area</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">element_coords</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.add_elements" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add elements to a <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>, this must be done after adding nodes.</p>
 <p><em>REQUIRED:</em></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>element_count</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – the number of elements to add to the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</li>
-<li><strong>element_ids</strong> (<em>ndarray</em>) – a numpy array of of shape
-<code class="docutils literal notranslate"><span class="pre">(element_count,</span> <span class="pre">1)</span></code> to specify the element ids.</li>
-<li><strong>element_types</strong> (<em>ndarray</em>) – a numpy array of
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element_count</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – the number of elements to add to the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p></li>
+<li><p><strong>element_ids</strong> (<em>ndarray</em>) – a numpy array of of shape
+<code class="docutils literal notranslate"><span class="pre">(element_count,</span> <span class="pre">1)</span></code> to specify the element ids.</p></li>
+<li><p><strong>element_types</strong> (<em>ndarray</em>) – a numpy array of
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">MeshElemType`s</span> <span class="pre">of</span> <span class="pre">shape</span>
-<span class="pre">``(element_count,</span> <span class="pre">1)`</span></code> to specify the element types.</li>
-<li><strong>element_conn</strong> (<em>ndarray</em>) – a numpy array of shape
+<span class="pre">``(element_count,</span> <span class="pre">1)`</span></code> to specify the element types.</p></li>
+<li><p><strong>element_conn</strong> (<em>ndarray</em>) – a numpy array of shape
 <code class="docutils literal notranslate"><span class="pre">sum(element_types[:],</span> <span class="pre">1)</span></code> to specify the connectivity of the
 <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>. The connectivity array is constructed by concatenating the
 tuples that correspond to the element_ids. The connectivity tuples
 are constructed by listing the node_ids of each element in
-<strong>COUNTERCLOCKWISE</strong> order.</li>
+<strong>COUNTERCLOCKWISE</strong> order.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p><em>OPTIONAL:</em></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>element_mask</strong> (<em>ndarray</em>) – a numpy array of shape
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element_mask</strong> (<em>ndarray</em>) – a numpy array of shape
 <code class="docutils literal notranslate"><span class="pre">(element_count,</span> <span class="pre">1)</span></code> containing integer values to specify masked
 elements. The specific values that are masked are specified in the
-<a class="reference internal" href="regrid.html#ESMF.api.regrid.Regrid" title="ESMF.api.regrid.Regrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Regrid</span></code></a> constructor.</li>
-<li><strong>element_area</strong> (<em>ndarray</em>) – a numpy array of shape
-<code class="docutils literal notranslate"><span class="pre">(element_count,</span> <span class="pre">1)</span></code> to specify the areas of the elements.</li>
-<li><strong>element_coords</strong> (<em>ndarray</em>) – a numpy array of shape
-<code class="docutils literal notranslate"><span class="pre">(element_count,</span> <span class="pre">1)</span></code> to specify the coordinates of the elements.</li>
+<a class="reference internal" href="regrid.html#ESMF.api.regrid.Regrid" title="ESMF.api.regrid.Regrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Regrid</span></code></a> constructor.</p></li>
+<li><p><strong>element_area</strong> (<em>ndarray</em>) – a numpy array of shape
+<code class="docutils literal notranslate"><span class="pre">(element_count,</span> <span class="pre">1)</span></code> to specify the areas of the elements.</p></li>
+<li><p><strong>element_coords</strong> (<em>ndarray</em>) – a numpy array of shape
+<code class="docutils literal notranslate"><span class="pre">(element_count,</span> <span class="pre">1)</span></code> to specify the coordinates of the elements.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="ESMF.api.mesh.Mesh.add_nodes">
-<code class="descname">add_nodes</code><span class="sig-paren">(</span><em>node_count</em>, <em>node_ids</em>, <em>node_coords</em>, <em>node_owners</em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.add_nodes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_nodes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node_count</span></em>, <em class="sig-param"><span class="n">node_ids</span></em>, <em class="sig-param"><span class="n">node_coords</span></em>, <em class="sig-param"><span class="n">node_owners</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.add_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add nodes to a <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>, this must be done before adding elements.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>node_count</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – the number of nodes to add to the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</li>
-<li><strong>node_ids</strong> (<em>ndarray</em>) – a numpy array of shape (node_count, 1) to
-specify the node_ids.</li>
-<li><strong>node_coords</strong> (<em>ndarray</em>) – a numpy array of shape
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_count</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – the number of nodes to add to the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p></li>
+<li><p><strong>node_ids</strong> (<em>ndarray</em>) – a numpy array of shape (node_count, 1) to
+specify the node_ids.</p></li>
+<li><p><strong>node_coords</strong> (<em>ndarray</em>) – a numpy array of shape
 (spatial_dim*node_count, 1) to specify the coordinates of the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.
 The array should be constructed by concatenating the coordinate
-tuples into a numpy array that correspond to node_ids.</li>
-<li><strong>node_owners</strong> (<em>ndarray</em>) – a numpy array of shape (node_count, 1) to
-specify the rank of the processor that owns each node.</li>
+tuples into a numpy array that correspond to node_ids.</p></li>
+<li><p><strong>node_owners</strong> (<em>ndarray</em>) – a numpy array of shape (node_count, 1) to
+specify the rank of the processor that owns each node.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="ESMF.api.mesh.Mesh.copy">
-<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.copy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copy a <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> in an ESMF-safe manner.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> shallow copy.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> shallow copy.</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="ESMF.api.mesh.Mesh.destroy">
-<code class="descname">destroy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.destroy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">destroy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.destroy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Release the memory associated with a <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="ESMF.api.mesh.Mesh.free_memory">
-<code class="descname">free_memory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.free_memory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">free_memory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.free_memory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Free memory associated with the creation of a
 <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> which is no longer needed for ongoing
 operations.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="ESMF.api.mesh.Mesh.get_coords">
-<code class="descname">get_coords</code><span class="sig-paren">(</span><em>coord_dim</em>, <em>meshloc=&lt;MeshLoc.NODE: 0&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.get_coords" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_coords</code><span class="sig-paren">(</span><em class="sig-param">coord_dim</em>, <em class="sig-param">meshloc=&lt;MeshLoc.NODE: 0&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.get_coords" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a numpy array of coordinates at a specified <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> 
 location (coordinates can only be returned for the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>
 <a class="reference internal" href="MeshLoc.html#ESMF.api.constants.MeshLoc.NODE" title="ESMF.api.constants.MeshLoc.NODE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NODE</span></code></a>s
 at this time). The returned array is NOT a copy, it is
 directly aliased to the underlying memory allocated by ESMF.</p>
 <p><em>REQUIRED:</em></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>coord_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – the dimension number of the coordinates to return:
-e.g. <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1,</span> <span class="pre">2)</span></code>, or <code class="docutils literal notranslate"><span class="pre">[lat,</span> <span class="pre">lon]</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1)</span></code></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>coord_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – the dimension number of the coordinates to return:
+e.g. <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1,</span> <span class="pre">2)</span></code>, or <code class="docutils literal notranslate"><span class="pre">[lat,</span> <span class="pre">lon]</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1)</span></code></p>
+</dd>
+</dl>
 <p><em>OPTIONAL:</em></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>meshloc</strong> (<a class="reference internal" href="MeshLoc.html#ESMF.api.constants.MeshLoc" title="ESMF.api.constants.MeshLoc"><em>MeshLoc</em></a>) – the <a class="reference internal" href="MeshLoc.html#ESMF.api.constants.MeshLoc" title="ESMF.api.constants.MeshLoc"><code class="xref py py-attr docutils literal notranslate"><span class="pre">MeshLoc</span></code></a> of the
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>meshloc</strong> (<a class="reference internal" href="MeshLoc.html#ESMF.api.constants.MeshLoc" title="ESMF.api.constants.MeshLoc"><em>MeshLoc</em></a>) – the <a class="reference internal" href="MeshLoc.html#ESMF.api.constants.MeshLoc" title="ESMF.api.constants.MeshLoc"><code class="xref py py-attr docutils literal notranslate"><span class="pre">MeshLoc</span></code></a> of the
 coordinates.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to
-<a class="reference internal" href="MeshLoc.html#ESMF.api.constants.MeshLoc.NODE" title="ESMF.api.constants.MeshLoc.NODE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NODE</span></code></a>.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A numpy array of coordinate values at the specified
-<a class="reference internal" href="MeshLoc.html#ESMF.api.constants.MeshLoc" title="ESMF.api.constants.MeshLoc"><code class="xref py py-attr docutils literal notranslate"><span class="pre">MeshLoc</span></code></a>.</td>
-</tr>
-</tbody>
-</table>
+<a class="reference internal" href="MeshLoc.html#ESMF.api.constants.MeshLoc.NODE" title="ESMF.api.constants.MeshLoc.NODE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NODE</span></code></a>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A numpy array of coordinate values at the specified
+<a class="reference internal" href="MeshLoc.html#ESMF.api.constants.MeshLoc" title="ESMF.api.constants.MeshLoc"><code class="xref py py-attr docutils literal notranslate"><span class="pre">MeshLoc</span></code></a>.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -416,6 +366,7 @@ coordinates.  If <code class="docutils literal notranslate"><span class="pre">No
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -435,17 +386,15 @@ coordinates.  If <code class="docutils literal notranslate"><span class="pre">No
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -465,13 +414,14 @@ coordinates.  If <code class="docutils literal notranslate"><span class="pre">No
         <li class="right" >
           <a href="grid.html" title="Grid"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.1.0 beta snapshot documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.0.1 beta snapshot documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Mesh</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.3.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>
