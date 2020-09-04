@@ -1,4 +1,4 @@
-PWD /esmf/src/addon/ESMPy/doc/esmpy_doc/latex
+PWD /opt/esmpy-doc-build/src/addon/ESMPy/doc/esmpy_doc/latex
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
