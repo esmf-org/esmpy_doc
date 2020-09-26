@@ -73,7 +73,7 @@
 
 
 \title{ESMPy Documentation}
-\date{Sep 24, 2020}
+\date{Sep 26, 2020}
 \release{8.1.0 beta snapshot}
 \author{ESMPy}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -4251,6 +4251,12 @@ extrapolation method. A higher value reduces the influence of more distant
 points. If not specified, defaults to \sphinxcode{\sphinxupquote{2.0}}.
 
 \item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{extrap\_num\_levels}} (\sphinxhref{https://docs.python.org/2.7/library/functions.html\#int}{\sphinxstyleliteralemphasis{\sphinxupquote{int}}}) \textendash{} The number of levels to output for the extrapolation 
+methods that fill levels (e.g. \sphinxcode{\sphinxupquote{CREEP}}). 
+When a method is used that requires this, then an error will be returned if it 
+is not specified.
+
+\item {} 
 \sphinxstyleliteralstrong{\sphinxupquote{unmapped\_action}} ({\hyperref[\detokenize{UnmappedAction:ESMF.api.constants.UnmappedAction}]{\sphinxcrossref{\sphinxstyleliteralemphasis{\sphinxupquote{UnmappedAction}}}}}) \textendash{} specifies which action to take if a
 destination point is found which does not map to any source point. If
 \sphinxcode{\sphinxupquote{None}}, defaults to {\hyperref[\detokenize{UnmappedAction:ESMF.api.constants.UnmappedAction.ERROR}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{ERROR}}}}}.
@@ -4647,6 +4653,20 @@ Nearest source to destination.
 Here each destination point is mapped to the closest source point. A given 
 source point may go to multiple destination points, but no destination 
 point will receive input from more than one source point.
+
+\end{fulllineitems}
+
+\index{CREEP\_FILL (ESMF.api.constants.ExtrapMethod attribute)@\spxentry{CREEP\_FILL}\spxextra{ESMF.api.constants.ExtrapMethod attribute}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{ExtrapMethod:ESMF.api.constants.ExtrapMethod.CREEP_FILL}}\pysigline{\sphinxbfcode{\sphinxupquote{CREEP\_FILL}}\sphinxbfcode{\sphinxupquote{ = \textless{}ExtrapMethod.CREEP\_FILL: 3\textgreater{}}}}
+Creep fill extrapolation.
+Here unmapped destination points are filled by repeatedly moving data from
+mapped locations to neighboring unmapped locations. The data filled into a 
+new location is the average of its already filled neighbors’ values. This 
+process is repeated for a user specified number of levels (e.g. in Regrid() 
+this is specified via the extrap\_num\_levels parameter). This extrapolation 
+method is not supported with conservative regrid methods.
 
 \end{fulllineitems}
 

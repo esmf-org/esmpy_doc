@@ -115,6 +115,10 @@ specified, defaults to 8.</p></li>
 calculating weights for the <a class="reference internal" href="ExtrapMethod.html#ESMF.api.constants.ExtrapMethod.NEAREST_IDAVG" title="ESMF.api.constants.ExtrapMethod.NEAREST_IDAVG"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NEAREST_IDAVG</span></code></a>
 extrapolation method. A higher value reduces the influence of more distant
 points. If not specified, defaults to <code class="docutils literal notranslate"><span class="pre">2.0</span></code>.</p></li>
+<li><p><strong>extrap_num_levels</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The number of levels to output for the extrapolation 
+methods that fill levels (e.g. <code class="xref py py-attr docutils literal notranslate"><span class="pre">CREEP</span></code>). 
+When a method is used that requires this, then an error will be returned if it 
+is not specified.</p></li>
 <li><p><strong>unmapped_action</strong> (<a class="reference internal" href="UnmappedAction.html#ESMF.api.constants.UnmappedAction" title="ESMF.api.constants.UnmappedAction"><em>UnmappedAction</em></a>) – specifies which action to take if a
 destination point is found which does not map to any source point. If
 <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="UnmappedAction.html#ESMF.api.constants.UnmappedAction.ERROR" title="ESMF.api.constants.UnmappedAction.ERROR"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ERROR</span></code></a>.</p></li>
