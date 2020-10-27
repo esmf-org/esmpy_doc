@@ -2468,6 +2468,16 @@ The mask generated for a {\hyperref[\detokenize{grid:ESMF.api.grid.Grid}]{\sphin
 {\hyperref[\detokenize{mesh:ESMF.api.mesh.Mesh}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Mesh}}}}} or {\hyperref[\detokenize{locstream:ESMF.api.locstream.LocStream}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{LocStream}}}}} created
 from file will have 0 for the masked values and 1 for the unmasked values.
 
+\begin{sphinxadmonition}{note}{Note:}
+The {\hyperref[\detokenize{Region:ESMF.api.constants.Region.SELECT}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Region.SELECT}}}}} flag to the
+\end{sphinxadmonition}
+
+\sphinxcode{\sphinxupquote{zero\_region}} parameter of {\hyperref[\detokenize{regrid:ESMF.api.regrid.Regrid}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Regrid}}}}} can be used to
+maintain {\hyperref[\detokenize{field:ESMF.api.field.Field}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Fields}}}}} values on locations that do not
+participate in the regridding operation. This is useful when setting an
+uninitialized value to help identify masked locations within the
+{\hyperref[\detokenize{field:ESMF.api.field.Field}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Fields}}}}} data.
+
 
 \section{Numpy Slicing and Indexing}
 \label{\detokenize{api:numpy-slicing-and-indexing}}

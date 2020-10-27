@@ -787,6 +787,15 @@ then the masking should also be set on <a class="reference internal" href="Stagg
 <p>The mask generated for a <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>,
 <a class="reference internal" href="mesh.html#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> or <a class="reference internal" href="locstream.html#ESMF.api.locstream.LocStream" title="ESMF.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStream</span></code></a> created
 from file will have 0 for the masked values and 1 for the unmasked values.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <a class="reference internal" href="Region.html#ESMF.api.constants.Region.SELECT" title="ESMF.api.constants.Region.SELECT"><code class="xref py py-class docutils literal notranslate"><span class="pre">Region.SELECT</span></code></a> flag to the</p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">zero_region</span></code> parameter of <a class="reference internal" href="regrid.html#ESMF.api.regrid.Regrid" title="ESMF.api.regrid.Regrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Regrid</span></code></a> can be used to
+maintain <a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fields</span></code></a> values on locations that do not
+participate in the regridding operation. This is useful when setting an
+uninitialized value to help identify masked locations within the
+<a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fields</span></code></a> data.</p>
 </div>
 <div class="section" id="numpy-slicing-and-indexing">
 <h2>Numpy Slicing and Indexing<a class="headerlink" href="#numpy-slicing-and-indexing" title="Permalink to this headline">¶</a></h2>
