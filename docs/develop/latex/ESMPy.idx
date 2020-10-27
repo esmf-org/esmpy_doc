@@ -143,11 +143,11 @@
 \indexentry{EDGE1\_VFACE (ESMF.api.constants.StaggerLoc attribute)@\spxentry{EDGE1\_VFACE}\spxextra{ESMF.api.constants.StaggerLoc attribute}|hyperpage}{70}
 \indexentry{EDGE2\_VFACE (ESMF.api.constants.StaggerLoc attribute)@\spxentry{EDGE2\_VFACE}\spxextra{ESMF.api.constants.StaggerLoc attribute}|hyperpage}{70}
 \indexentry{CORNER\_VFACE (ESMF.api.constants.StaggerLoc attribute)@\spxentry{CORNER\_VFACE}\spxextra{ESMF.api.constants.StaggerLoc attribute}|hyperpage}{70}
-\indexentry{TypeKind (class in ESMF.api.constants)@\spxentry{TypeKind}\spxextra{class in ESMF.api.constants}|hyperpage}{70}
-\indexentry{I4 (ESMF.api.constants.TypeKind attribute)@\spxentry{I4}\spxextra{ESMF.api.constants.TypeKind attribute}|hyperpage}{70}
-\indexentry{I8 (ESMF.api.constants.TypeKind attribute)@\spxentry{I8}\spxextra{ESMF.api.constants.TypeKind attribute}|hyperpage}{70}
-\indexentry{R4 (ESMF.api.constants.TypeKind attribute)@\spxentry{R4}\spxextra{ESMF.api.constants.TypeKind attribute}|hyperpage}{70}
-\indexentry{R8 (ESMF.api.constants.TypeKind attribute)@\spxentry{R8}\spxextra{ESMF.api.constants.TypeKind attribute}|hyperpage}{70}
+\indexentry{TypeKind (class in ESMF.api.constants)@\spxentry{TypeKind}\spxextra{class in ESMF.api.constants}|hyperpage}{71}
+\indexentry{I4 (ESMF.api.constants.TypeKind attribute)@\spxentry{I4}\spxextra{ESMF.api.constants.TypeKind attribute}|hyperpage}{71}
+\indexentry{I8 (ESMF.api.constants.TypeKind attribute)@\spxentry{I8}\spxextra{ESMF.api.constants.TypeKind attribute}|hyperpage}{71}
+\indexentry{R4 (ESMF.api.constants.TypeKind attribute)@\spxentry{R4}\spxextra{ESMF.api.constants.TypeKind attribute}|hyperpage}{71}
+\indexentry{R8 (ESMF.api.constants.TypeKind attribute)@\spxentry{R8}\spxextra{ESMF.api.constants.TypeKind attribute}|hyperpage}{71}
 \indexentry{UnmappedAction (class in ESMF.api.constants)@\spxentry{UnmappedAction}\spxextra{class in ESMF.api.constants}|hyperpage}{71}
 \indexentry{ERROR (ESMF.api.constants.UnmappedAction attribute)@\spxentry{ERROR}\spxextra{ESMF.api.constants.UnmappedAction attribute}|hyperpage}{71}
 \indexentry{IGNORE (ESMF.api.constants.UnmappedAction attribute)@\spxentry{IGNORE}\spxextra{ESMF.api.constants.UnmappedAction attribute}|hyperpage}{71}

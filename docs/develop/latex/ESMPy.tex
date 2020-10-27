@@ -73,7 +73,7 @@
 
 
 \title{ESMPy Documentation}
-\date{Oct 26, 2020}
+\date{Oct 27, 2020}
 \release{8.1.0 beta snapshot}
 \author{ESMPy}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -1897,7 +1897,7 @@ to a {\hyperref[\detokenize{grid:ESMF.api.grid.Grid}]{\sphinxcrossref{\sphinxcod
 any combination of which may be also activated on the {\hyperref[\detokenize{field:ESMF.api.field.Field}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Field}}}}} by specifying the
 corresponding integer values. The activation of {\hyperref[\detokenize{field:ESMF.api.field.Field}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Field}}}}} masks with respect to the
 underlying {\hyperref[\detokenize{grid:ESMF.api.grid.Grid}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Grid}}}}} mask is handled by {\hyperref[\detokenize{regrid:ESMF.api.regrid.Regrid}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Regrid}}}}}, and a more
-general discussion of masking is covered in the {\hyperref[\detokenize{api:id8}]{\sphinxcrossref{\DUrole{std,std-ref}{masking}}}}
+general discussion of masking is covered in the {\hyperref[\detokenize{api:id9}]{\sphinxcrossref{\DUrole{std,std-ref}{masking}}}}
 section.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -2408,8 +2408,30 @@ Spherical grids and pole handling
 \sphinxattableend\end{savenotes}
 
 
+\subsection{Great Circle Cells}
+\label{\detokenize{api:id7}}
+For Grids and Meshes on a sphere some combinations of interpolation options
+(e.g. first and second\sphinxhyphen{}order conservative methods) use cells whose edges are
+great circles. This section describes some behavior that the user may not expect
+from these cells and some potential solutions. A great circle edge isn’t
+necessarily the same as a straight line in latitude longitude space. For small
+edges, this difference will be small, but for long edges it could be
+significant. This means if the user expects cell edges as straight lines in
+latitude longitude space, they should avoid using one large cell with long edges
+to compute an average over a region (e.g. over an ocean basin).
+
+Also, the user should also avoid using cells that contain one edge that runs
+half way or more around the earth, because the regrid weight calculation assumes
+the edge follows the shorter great circle path. There isn’t a unique great
+circle edge defined between points on the exact opposite side of the earth from
+one another (antipodal points). However, the user can work around both of these
+problem by breaking the long edge into two smaller edges by inserting an extra
+node, or by breaking the large target grid cells into two or more smaller grid
+cells. This allows the application to resolve the ambiguity in edge direction.
+
+
 \section{Masking}
-\label{\detokenize{api:id7}}\phantomsection\label{\detokenize{api:id8}}
+\label{\detokenize{api:id8}}\phantomsection\label{\detokenize{api:id9}}
 Masking is the process whereby parts of a {\hyperref[\detokenize{grid:ESMF.api.grid.Grid}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Grid}}}}}, {\hyperref[\detokenize{mesh:ESMF.api.mesh.Mesh}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Mesh}}}}} or {\hyperref[\detokenize{locstream:ESMF.api.locstream.LocStream}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{LocStream}}}}} can be marked to be ignored
 during an operation, such as when they are used in regridding. Masking can be used on a {\hyperref[\detokenize{field:ESMF.api.field.Field}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Field}}}}}
 created from a regridding source to indicate that certain portions should not be used to generate
@@ -5145,15 +5167,16 @@ interpolation matrix (and thus routeHandle) than the bilinear.
 \begin{fulllineitems}
 \phantomsection\label{\detokenize{RegridMethod:ESMF.api.constants.RegridMethod.CONSERVE}}\pysigline{\sphinxbfcode{\sphinxupquote{CONSERVE}}\sphinxbfcode{\sphinxupquote{ = \textless{}RegridMethod.CONSERVE: 2\textgreater{}}}}
 First\sphinxhyphen{}order conservative interpolation. The main purpose of this method is 
-to preserve the integral of the field between the source and destination. 
-Will typically give a less accurate approximation to the individual field 
-values than the bilinear or patch methods. The value of a destination cell 
+to preserve the integral of the field across the interpolation from source 
+to destination. In this method the value across each source cell is treated 
+as a constant, so it will typically have a larger interpolation error than 
+the bilinear or patch methods.  The value of a destination cell 
 is calculated as the weighted sum of the values of the source cells that it 
 overlaps. The weights are determined by the amount the source cell overlaps 
-the destination cell. Needs corner coordinate values to be provided in the 
-{\hyperref[\detokenize{grid:ESMF.api.grid.Grid}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Grid}}}}}. Currently only works for 
-{\hyperref[\detokenize{field:ESMF.api.field.Field}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Fields}}}}} created on the 
-{\hyperref[\detokenize{grid:ESMF.api.grid.Grid}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Grid}}}}} center stagger or 
+the destination cell. This method requires corner coordinate values to be 
+provided in the {\hyperref[\detokenize{grid:ESMF.api.grid.Grid}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Grid}}}}}. It currently only works for 
+\sphinxcode{\sphinxupquote{Fields \textless{}ESMF.api.field.Field\textgreater{}\textasciigrave{}s created on the 
+:class:\textasciigrave{}\textasciitilde{}ESMF.api.grid.Grid}} center stagger or 
 the {\hyperref[\detokenize{mesh:ESMF.api.mesh.Mesh}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Mesh}}}}} element location.
 
 \end{fulllineitems}
@@ -5184,17 +5207,23 @@ more than one destination point.
 
 \begin{fulllineitems}
 \phantomsection\label{\detokenize{RegridMethod:ESMF.api.constants.RegridMethod.CONSERVE_2ND}}\pysigline{\sphinxbfcode{\sphinxupquote{CONSERVE\_2ND}}\sphinxbfcode{\sphinxupquote{ = \textless{}RegridMethod.CONSERVE\_2ND: 5\textgreater{}}}}
-Second\sphinxhyphen{}order conservative interpolation. As with first\sphinxhyphen{}order, preserves the 
-integral of the value between the source and destination. However, typically 
-produces a smoother more accurate result than first\sphinxhyphen{}order. Also like 
-first\sphinxhyphen{}order, the value of a destination cell is calculated as the weighted 
-sum of the values of the source cells that it overlaps. However, 
-second\sphinxhyphen{}order also includes additional terms to take into account the 
-gradient of the field across the source cell. Needs corner coordinate 
-values to be provided in the {\hyperref[\detokenize{grid:ESMF.api.grid.Grid}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Grid}}}}}. Currently only 
-works for {\hyperref[\detokenize{field:ESMF.api.field.Field}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Fields}}}}} created 
-on the {\hyperref[\detokenize{grid:ESMF.api.grid.Grid}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Grid}}}}} center stagger or the 
-{\hyperref[\detokenize{mesh:ESMF.api.mesh.Mesh}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Mesh}}}}} element location.
+Second\sphinxhyphen{}order conservative interpolation. This method’s main purpose is to 
+preserve the integral of the field across the interpolation from source to 
+destination. The difference between the first and second\sphinxhyphen{}order conservative 
+methods is that the second\sphinxhyphen{}order takes the source gradient into account, so 
+it yields a smoother destination field that typically better matches the 
+source field. This difference between the first and second\sphinxhyphen{}order methods is 
+particularly apparent when going from a coarse source grid to a finer 
+destination grid. Another difference is that the second\sphinxhyphen{}order method does 
+not guarantee that after regridding the range of values in the destination 
+field is within the range of values in the source field. For example, if the 
+mininum value in the source field is 0.0, then it’s possible that after 
+regridding with the second\sphinxhyphen{}order method, the destination field will contain 
+values less than 0.0. This method requires corner coordinate values to be 
+provided in the {\hyperref[\detokenize{grid:ESMF.api.grid.Grid}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Grid}}}}}. It currently only works for 
+\sphinxcode{\sphinxupquote{Fields \textless{}ESMF.api.field.Field\textgreater{}\textasciigrave{}s created on the 
+:class:\textasciigrave{}\textasciitilde{}ESMF.api.grid.Grid}} center stagger or 
+the {\hyperref[\detokenize{mesh:ESMF.api.mesh.Mesh}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Mesh}}}}} element location.
 
 \end{fulllineitems}
 

@@ -111,8 +111,8 @@
 
   \indexspace
   \bigletter I
-  \item \spxentry{I4}\spxextra{ESMF.api.constants.TypeKind attribute}, \hyperpage{70}
-  \item \spxentry{I8}\spxextra{ESMF.api.constants.TypeKind attribute}, \hyperpage{70}
+  \item \spxentry{I4}\spxextra{ESMF.api.constants.TypeKind attribute}, \hyperpage{71}
+  \item \spxentry{I8}\spxextra{ESMF.api.constants.TypeKind attribute}, \hyperpage{71}
   \item \spxentry{IGNORE}\spxextra{ESMF.api.constants.UnmappedAction attribute}, \hyperpage{71}
 
   \indexspace
@@ -175,8 +175,8 @@
 
   \indexspace
   \bigletter R
-  \item \spxentry{R4}\spxextra{ESMF.api.constants.TypeKind attribute}, \hyperpage{70}
-  \item \spxentry{R8}\spxextra{ESMF.api.constants.TypeKind attribute}, \hyperpage{70}
+  \item \spxentry{R4}\spxextra{ESMF.api.constants.TypeKind attribute}, \hyperpage{71}
+  \item \spxentry{R8}\spxextra{ESMF.api.constants.TypeKind attribute}, \hyperpage{71}
   \item \spxentry{rank()}\spxextra{ESMF.api.field.Field property}, \hyperpage{50}
   \item \spxentry{rank()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{54}
   \item \spxentry{rank()}\spxextra{ESMF.api.locstream.LocStream property}, \hyperpage{60}
@@ -209,7 +209,7 @@
   \item \spxentry{TRI}\spxextra{ESMF.api.constants.MeshElemType attribute}, \hyperpage{67}
   \item \spxentry{type()}\spxextra{ESMF.api.field.Field property}, \hyperpage{51}
   \item \spxentry{type()}\spxextra{ESMF.api.grid.Grid property}, \hyperpage{54}
-  \item \spxentry{TypeKind}\spxextra{class in ESMF.api.constants}, \hyperpage{70}
+  \item \spxentry{TypeKind}\spxextra{class in ESMF.api.constants}, \hyperpage{71}
 
   \indexspace
   \bigletter U

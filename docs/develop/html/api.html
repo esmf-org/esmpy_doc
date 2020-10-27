@@ -298,7 +298,7 @@ to a <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ES
 any combination of which may be also activated on the <a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> by specifying the
 corresponding integer values. The activation of <a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> masks with respect to the
 underlying <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> mask is handled by <a class="reference internal" href="regrid.html#ESMF.api.regrid.Regrid" title="ESMF.api.regrid.Regrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Regrid</span></code></a>, and a more
-general discussion of masking is covered in the <a class="reference internal" href="#id8"><span class="std std-ref">masking</span></a>
+general discussion of masking is covered in the <a class="reference internal" href="#id9"><span class="std std-ref">masking</span></a>
 section.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
    <span class="o">...</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">ESMF</span>
@@ -732,10 +732,30 @@ and an ESMF documentation reference.</p>
 </tr>
 </tbody>
 </table>
-</div>
 <div class="section" id="id7">
-<h2>Masking<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
-<p id="id8">Masking is the process whereby parts of a <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>, <a class="reference internal" href="mesh.html#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> or <a class="reference internal" href="locstream.html#ESMF.api.locstream.LocStream" title="ESMF.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStream</span></code></a> can be marked to be ignored
+<h3>Great Circle Cells<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>For Grids and Meshes on a sphere some combinations of interpolation options
+(e.g. first and second-order conservative methods) use cells whose edges are
+great circles. This section describes some behavior that the user may not expect
+from these cells and some potential solutions. A great circle edge isn’t
+necessarily the same as a straight line in latitude longitude space. For small
+edges, this difference will be small, but for long edges it could be
+significant. This means if the user expects cell edges as straight lines in
+latitude longitude space, they should avoid using one large cell with long edges
+to compute an average over a region (e.g. over an ocean basin).</p>
+<p>Also, the user should also avoid using cells that contain one edge that runs
+half way or more around the earth, because the regrid weight calculation assumes
+the edge follows the shorter great circle path. There isn’t a unique great
+circle edge defined between points on the exact opposite side of the earth from
+one another (antipodal points). However, the user can work around both of these
+problem by breaking the long edge into two smaller edges by inserting an extra
+node, or by breaking the large target grid cells into two or more smaller grid
+cells. This allows the application to resolve the ambiguity in edge direction.</p>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>Masking<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p id="id9">Masking is the process whereby parts of a <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>, <a class="reference internal" href="mesh.html#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> or <a class="reference internal" href="locstream.html#ESMF.api.locstream.LocStream" title="ESMF.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStream</span></code></a> can be marked to be ignored
 during an operation, such as when they are used in regridding. Masking can be used on a <a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>
 created from a regridding source to indicate that certain portions should not be used to generate
 regridded data. This is useful, for example, if a portion of the source contains unusable values.
@@ -973,8 +993,11 @@ of the documentation.</p>
 <li><a class="reference internal" href="#grids-from-file">Grids from File</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#regridding">Regridding</a></li>
-<li><a class="reference internal" href="#id7">Masking</a></li>
+<li><a class="reference internal" href="#regridding">Regridding</a><ul>
+<li><a class="reference internal" href="#id7">Great Circle Cells</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8">Masking</a></li>
 <li><a class="reference internal" href="#numpy-slicing-and-indexing">Numpy Slicing and Indexing</a><ul>
 <li><a class="reference internal" href="#dimension-ordering">Dimension Ordering</a></li>
 </ul>

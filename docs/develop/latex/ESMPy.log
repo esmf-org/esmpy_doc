@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.5)  26 OCT 2020 18:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.5)  27 OCT 2020 01:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -828,12 +828,12 @@ Chapter 6.
 
 Package textcomp Warning: Symbol \textasciigrave not provided by
 (textcomp)                font family ptm in TS1 encoding.
-(textcomp)                Default family used instead on input line 3239.
+(textcomp)                Default family used instead on input line 3261.
 
 
 Package textcomp Warning: Symbol \textasciigrave not provided by
 (textcomp)                font family ptm in TS1 encoding.
-(textcomp)                Default family used instead on input line 3240.
+(textcomp)                Default family used instead on input line 3262.
 
 [54] [55] [56] [57]
 
@@ -874,42 +874,62 @@ Package textcomp Warning: Symbol \textasciigrave not provided by
 (textcomp)                Default family used instead on input line 1.
 
 [64]
-Underfull \hbox (badness 6268) in paragraph at lines 4629--4629
+Underfull \hbox (badness 6268) in paragraph at lines 4651--4651
 []\T1/ptm/m/it/10 value\T1/ptm/m/n/10 , \T1/ptm/m/it/10 names=None\T1/ptm/m/n/1
 0 , \T1/ptm/m/it/10 mod-ule=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 type=None\T1/p
 tm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4688--4688
+Underfull \hbox (badness 10000) in paragraph at lines 4710--4710
 []\T1/ptm/m/it/10 value\T1/ptm/m/n/10 , \T1/ptm/m/it/10 names=None\T1/ptm/m/n/1
 0 , \T1/ptm/m/it/10 mod-ule=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 type=None\T1/p
 tm/m/n/10 ,
  []
 
 [65] [66]
-Underfull \hbox (badness 6268) in paragraph at lines 4873--4873
+Underfull \hbox (badness 6268) in paragraph at lines 4895--4895
 []\T1/ptm/m/it/10 value\T1/ptm/m/n/10 , \T1/ptm/m/it/10 names=None\T1/ptm/m/n/1
 0 , \T1/ptm/m/it/10 mod-ule=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 type=None\T1/p
 tm/m/n/10 ,
  []
 
 [67]
-Underfull \hbox (badness 10000) in paragraph at lines 5019--5019
+Underfull \hbox (badness 10000) in paragraph at lines 5041--5041
 []\T1/ptm/m/it/10 value\T1/ptm/m/n/10 , \T1/ptm/m/it/10 names=None\T1/ptm/m/n/1
 0 , \T1/ptm/m/it/10 mod-ule=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 type=None\T1/p
 tm/m/n/10 ,
  []
 
 [68]
-Underfull \hbox (badness 6268) in paragraph at lines 5117--5117
+Underfull \hbox (badness 6268) in paragraph at lines 5139--5139
 []\T1/ptm/m/it/10 value\T1/ptm/m/n/10 , \T1/ptm/m/it/10 names=None\T1/ptm/m/n/1
 0 , \T1/ptm/m/it/10 mod-ule=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 type=None\T1/p
 tm/m/n/10 ,
  []
 
+
+Package textcomp Warning: Symbol \textasciigrave not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 1.
+
+
+Package textcomp Warning: Symbol \textasciigrave not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 1.
+
+
+Package textcomp Warning: Symbol \textasciigrave not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 1.
+
+
+Package textcomp Warning: Symbol \textasciigrave not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 1.
+
 [69]
-Underfull \hbox (badness 10000) in paragraph at lines 5210--5210
+Underfull \hbox (badness 10000) in paragraph at lines 5239--5239
 []\T1/ptm/m/it/10 value\T1/ptm/m/n/10 , \T1/ptm/m/it/10 names=None\T1/ptm/m/n/1
 0 , \T1/ptm/m/it/10 mod-ule=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 type=None\T1/p
 tm/m/n/10 ,
@@ -1016,21 +1036,21 @@ eam.LocStream
 [79
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5419.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5419.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5448.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5448.
  (./ESMPy.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5419.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5419.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5448.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5448.
 
 Package rerunfilecheck Info: File `ESMPy.out' has not changed.
-(rerunfilecheck)             Checksum: FDB7D8CE621A24280647E29645CD3571;10763.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5419.
+(rerunfilecheck)             Checksum: BA745E8986DCAB03A84126DD066782C8;10921.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5448.
  ) 
 Here is how much of TeX's memory you used:
- 14224 strings out of 483183
- 205142 string characters out of 5966293
- 658653 words of memory out of 5000000
- 28539 multiletter control sequences out of 15000+600000
+ 14227 strings out of 483183
+ 205185 string characters out of 5966293
+ 658709 words of memory out of 5000000
+ 28541 multiletter control sequences out of 15000+600000
  589573 words of font info for 99 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
  38i,12n,51p,1304b,612s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1050,10 +1070,10 @@ w/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/
 uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ESMPy.pdf (83 pages, 386670 bytes).
+Output written on ESMPy.pdf (83 pages, 388281 bytes).
 PDF statistics:
- 2051 PDF objects out of 2073 (max. 8388607)
- 1868 compressed objects within 19 object streams
- 341 named destinations out of 1000 (max. 500000)
- 677 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2052 PDF objects out of 2073 (max. 8388607)
+ 1869 compressed objects within 19 object streams
+ 342 named destinations out of 1000 (max. 500000)
+ 685 words of extra memory for PDF output out of 10000 (max. 10000000)
 
