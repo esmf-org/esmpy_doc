@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.5)  11 FEB 2021 21:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.5)  12 FEB 2021 00:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -687,14 +687,14 @@ Chapter 2.
 ]
 Chapter 3.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-90.
+93.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 LaTeX Font Info:    Font shape `T1/pcr/b/it' in size <10> not available
-(Font)              Font shape `T1/pcr/b/sl' tried instead on input line 204.
+(Font)              Font shape `T1/pcr/b/sl' tried instead on input line 207.
  [7]
-Underfull \hbox (badness 6477) in paragraph at lines 324--329
+Underfull \hbox (badness 6477) in paragraph at lines 329--334
 \T1/ptm/b/n/10 Note:  \T1/ptm/m/n/10 The \T1/pcr/m/n/10 regrid_from_file \T1/pt
 m/m/n/10 tests can take up a lot of mem-ory and band-width. The
  []
@@ -704,113 +704,113 @@ m/m/n/10 tests can take up a lot of mem-ory and band-width. The
 ]
 Chapter 4.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 391.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 396.
 [11] [12]
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 4
-87.
+92.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 )
 LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <9> not available
-(Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 487.
+(Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 492.
 
-Underfull \vbox (badness 10000) detected at line 543
+Underfull \vbox (badness 10000) detected at line 548
  []
 
 [13]
-Overfull \vbox (2.43936pt too high) detected at line 624
+Overfull \vbox (2.43936pt too high) detected at line 629
  []
 
 [14]
-Underfull \vbox (badness 10000) detected at line 624
+Underfull \vbox (badness 10000) detected at line 629
  []
 
 
-Overfull \vbox (2.68169pt too high) detected at line 624
+Overfull \vbox (2.68169pt too high) detected at line 629
  []
 
 [15]
-Overfull \vbox (2.43936pt too high) detected at line 684
+Overfull \vbox (2.43936pt too high) detected at line 689
  []
 
 [16]
-Overfull \vbox (2.43936pt too high) detected at line 754
+Overfull \vbox (2.43936pt too high) detected at line 759
  []
 
 [17] [18] [19] [20]
-Overfull \vbox (2.43936pt too high) detected at line 1099
+Overfull \vbox (2.43936pt too high) detected at line 1104
  []
 
 [21]
-Underfull \vbox (badness 10000) detected at line 1099
+Underfull \vbox (badness 10000) detected at line 1104
  []
 
 
-Overfull \vbox (2.68169pt too high) detected at line 1099
+Overfull \vbox (2.68169pt too high) detected at line 1104
  []
 
 [22]
-Underfull \vbox (badness 10000) detected at line 1099
+Underfull \vbox (badness 10000) detected at line 1104
  []
 
 
-Overfull \vbox (2.68169pt too high) detected at line 1099
+Overfull \vbox (2.68169pt too high) detected at line 1104
  []
 
 [23]
-Overfull \vbox (2.43936pt too high) detected at line 1209
+Overfull \vbox (2.43936pt too high) detected at line 1214
  []
 
 [24]
-Underfull \vbox (badness 10000) detected at line 1209
+Underfull \vbox (badness 10000) detected at line 1214
  []
 
 
-Overfull \vbox (2.68169pt too high) detected at line 1209
+Overfull \vbox (2.68169pt too high) detected at line 1214
  []
 
 [25]
-Overfull \vbox (2.43936pt too high) detected at line 1295
+Overfull \vbox (2.43936pt too high) detected at line 1300
  []
 
 [26]
-Underfull \vbox (badness 10000) detected at line 1295
+Underfull \vbox (badness 10000) detected at line 1300
  []
 
 
-Overfull \vbox (2.68169pt too high) detected at line 1295
+Overfull \vbox (2.68169pt too high) detected at line 1300
  []
 
 [27]
-Overfull \vbox (13.43936pt too high) detected at line 1407
+Overfull \vbox (13.43936pt too high) detected at line 1412
  []
 
 [28]
-Underfull \vbox (badness 10000) detected at line 1407
+Underfull \vbox (badness 10000) detected at line 1412
  []
 
 
-Overfull \vbox (2.68169pt too high) detected at line 1407
+Overfull \vbox (2.68169pt too high) detected at line 1412
  []
 
 [29]
-Overfull \vbox (2.43936pt too high) detected at line 1565
+Overfull \vbox (2.43936pt too high) detected at line 1570
  []
 
 [30]
-Underfull \vbox (badness 10000) detected at line 1565
+Underfull \vbox (badness 10000) detected at line 1570
  []
 
 
-Overfull \vbox (2.68169pt too high) detected at line 1565
+Overfull \vbox (2.68169pt too high) detected at line 1570
  []
 
 [31]
-Underfull \vbox (badness 10000) detected at line 1565
+Underfull \vbox (badness 10000) detected at line 1570
  []
 
 
-Overfull \vbox (2.68169pt too high) detected at line 1565
+Overfull \vbox (2.68169pt too high) detected at line 1570
  []
 
 [32] [33] [34
@@ -828,12 +828,12 @@ Chapter 6.
 
 Package textcomp Warning: Symbol \textasciigrave not provided by
 (textcomp)                font family ptm in TS1 encoding.
-(textcomp)                Default family used instead on input line 3271.
+(textcomp)                Default family used instead on input line 3276.
 
 
 Package textcomp Warning: Symbol \textasciigrave not provided by
 (textcomp)                font family ptm in TS1 encoding.
-(textcomp)                Default family used instead on input line 3272.
+(textcomp)                Default family used instead on input line 3277.
 
 [54] [55] [56] [57]
 
@@ -874,35 +874,35 @@ Package textcomp Warning: Symbol \textasciigrave not provided by
 (textcomp)                Default family used instead on input line 1.
 
 [64]
-Underfull \hbox (badness 6268) in paragraph at lines 4661--4661
+Underfull \hbox (badness 6268) in paragraph at lines 4666--4666
 []\T1/ptm/m/it/10 value\T1/ptm/m/n/10 , \T1/ptm/m/it/10 names=None\T1/ptm/m/n/1
 0 , \T1/ptm/m/it/10 mod-ule=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 type=None\T1/p
 tm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4720--4720
+Underfull \hbox (badness 10000) in paragraph at lines 4725--4725
 []\T1/ptm/m/it/10 value\T1/ptm/m/n/10 , \T1/ptm/m/it/10 names=None\T1/ptm/m/n/1
 0 , \T1/ptm/m/it/10 mod-ule=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 type=None\T1/p
 tm/m/n/10 ,
  []
 
 [65] [66]
-Underfull \hbox (badness 6268) in paragraph at lines 4905--4905
+Underfull \hbox (badness 6268) in paragraph at lines 4910--4910
 []\T1/ptm/m/it/10 value\T1/ptm/m/n/10 , \T1/ptm/m/it/10 names=None\T1/ptm/m/n/1
 0 , \T1/ptm/m/it/10 mod-ule=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 type=None\T1/p
 tm/m/n/10 ,
  []
 
 [67]
-Underfull \hbox (badness 10000) in paragraph at lines 5051--5051
+Underfull \hbox (badness 10000) in paragraph at lines 5056--5056
 []\T1/ptm/m/it/10 value\T1/ptm/m/n/10 , \T1/ptm/m/it/10 names=None\T1/ptm/m/n/1
 0 , \T1/ptm/m/it/10 mod-ule=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 type=None\T1/p
 tm/m/n/10 ,
  []
 
 [68]
-Underfull \hbox (badness 6268) in paragraph at lines 5149--5149
+Underfull \hbox (badness 6268) in paragraph at lines 5154--5154
 []\T1/ptm/m/it/10 value\T1/ptm/m/n/10 , \T1/ptm/m/it/10 names=None\T1/ptm/m/n/1
 0 , \T1/ptm/m/it/10 mod-ule=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 type=None\T1/p
 tm/m/n/10 ,
@@ -929,7 +929,7 @@ Package textcomp Warning: Symbol \textasciigrave not provided by
 (textcomp)                Default family used instead on input line 1.
 
 [69]
-Underfull \hbox (badness 10000) in paragraph at lines 5249--5249
+Underfull \hbox (badness 10000) in paragraph at lines 5254--5254
 []\T1/ptm/m/it/10 value\T1/ptm/m/n/10 , \T1/ptm/m/it/10 names=None\T1/ptm/m/n/1
 0 , \T1/ptm/m/it/10 mod-ule=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 type=None\T1/p
 tm/m/n/10 ,
@@ -1036,15 +1036,15 @@ eam.LocStream
 [79
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5458.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5458.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5463.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5463.
  (./ESMPy.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5458.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5458.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5463.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5463.
 
 Package rerunfilecheck Info: File `ESMPy.out' has not changed.
 (rerunfilecheck)             Checksum: BA745E8986DCAB03A84126DD066782C8;10921.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5458.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5463.
  ) 
 Here is how much of TeX's memory you used:
  14227 strings out of 483183
@@ -1070,10 +1070,10 @@ w/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/
 uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ESMPy.pdf (83 pages, 388675 bytes).
+Output written on ESMPy.pdf (83 pages, 388615 bytes).
 PDF statistics:
- 2056 PDF objects out of 2073 (max. 8388607)
- 1873 compressed objects within 19 object streams
+ 2057 PDF objects out of 2073 (max. 8388607)
+ 1874 compressed objects within 19 object streams
  342 named destinations out of 1000 (max. 500000)
  685 words of extra memory for PDF output out of 10000 (max. 10000000)
 
