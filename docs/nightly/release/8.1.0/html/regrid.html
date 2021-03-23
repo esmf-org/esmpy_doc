@@ -57,8 +57,9 @@ calling this object corresponds to ESMF_FieldRegrid().
 ESMF_FieldRegridRelease() is called when the <a class="reference internal" href="#ESMF.api.regrid.Regrid" title="ESMF.api.regrid.Regrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Regrid</span></code></a> object goes out of
 scope (this only happens when the <a class="reference internal" href="manager.html#ESMF.api.esmpymanager.Manager" title="ESMF.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> goes out of scope, there is a
 destroy() call for explicit deallocation of the <a class="reference internal" href="#ESMF.api.regrid.Regrid" title="ESMF.api.regrid.Regrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Regrid</span></code></a>).</p>
-<p>For more information about the ESMF Regridding functionality, please see
-the <a class="reference external" href="http://earthsystemmodeling.org/docs/release/ESMF_8_1_0/ESMF_refdoc/node5.html#SECTION05012000000000000000">ESMF Regrid documentation</a>.</p>
+<p>Refer to the ESMF_FieldRegrid methods in the 
+<a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_refdoc/">ESMF Reference Manual</a>
+for more information.</p>
 <p>The following arguments are used to create a handle to a Regridding
 operation between two <a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fields</span></code></a>.</p>
 <p><em>REQUIRED:</em></p>
@@ -135,13 +136,15 @@ value which contributes to the total mass of the <a class="reference internal" h
 <li><p><strong>dst_frac_field</strong> (<em>ndarray</em>) – return a numpy array of values containing
 weights corresponding to the amount of each <a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>
 value which contributes to the total mass of the <a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>.</p></li>
-<li><p><strong>factors</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, return the factor and factor index list
+<li><p><strong>factors</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – <p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, return the factor and factor index list
 when calling into <code class="docutils literal notranslate"><span class="pre">ESMF</span></code>’s regrid store method. These lists are converted
 to NumPy arrays and attached to the regrid object. The factor arrays
 are retrievable via <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_factors()</span></code> or <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_weights_dict()</span></code>.
 See the respective documentation on those methods for additional information.
 For more information on how <code class="docutils literal notranslate"><span class="pre">ESMF</span></code> treats factor retrieval see the
-documentation for <a class="reference external" href="http://www.earthsystemmodeling.org/esmf_releases/public/ESMF_http://earthsystemmodeling.org/docs/release/ESMF_8_1_0/ESMF_refdoc/node5.html#SECTION050366000000000000000">ESMF_FieldRegridStore</a>.</p></li>
+ESMF_FieldRegridStore interface in the 
+<a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_refdoc/">ESMF Reference Manual</a>.</p>
+</p></li>
 <li><p><strong>large_file</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, create the weight file in NetCDF using the 
 64-bit  offset format to allow variables larger than 2GB. Note the 64-bit offset 
 format is not supported in the NetCDF version earlier than 3.6.0.  An error message 
@@ -199,7 +202,8 @@ interpolation.  If <code class="docutils literal notranslate"><span class="pre">
 <code class="sig-name descname">get_factors</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">deep_copy</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.regrid.Regrid.get_factors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return factor and factor index arrays. These arrays will only be
 available if the <code class="docutils literal notranslate"><span class="pre">Regrid</span></code> object was initialized with <code class="docutils literal notranslate"><span class="pre">factors=True</span></code>.
-See the <a class="reference external" href="http://www.earthsystemmodeling.org/esmf_releases/public/ESMF_http://earthsystemmodeling.org/docs/release/ESMF_8_1_0/ESMF_refdoc/node5.html#SECTION050366000000000000000">ESMF documentation</a>
+See the ESMF_FieldRegridStore interface in the 
+<a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_refdoc/">ESMF Reference Manual</a>
 for additional information on these arrays (see below for indexing in
 Python though).</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">factors</span><span class="p">,</span> <span class="n">factors_index</span> <span class="o">=</span> <span class="n">get_factors</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
