@@ -5,15 +5,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Regrid &#8212; ESMPy 8.1.0 beta snapshot documentation</title>
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <title>Regrid &#8212; ESMPy 8.2.0 beta snapshot documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -35,7 +34,7 @@
         <li class="right" >
           <a href="locstream.html" title="LocStream"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.1.0 beta snapshot documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.2.0 beta snapshot documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Regrid</a></li> 
       </ul>
@@ -50,7 +49,7 @@
 <h1>Regrid<a class="headerlink" href="#regrid" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="ESMF.api.regrid.Regrid">
-<em class="property">class </em><code class="sig-prename descclassname">ESMF.api.regrid.</code><code class="sig-name descname">Regrid</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.regrid.Regrid" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">ESMF.api.regrid.</span></code><code class="sig-name descname"><span class="pre">Regrid</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">srcfield</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dstfield</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh_filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_mask_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst_mask_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regrid_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pole_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regrid_pole_npoints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrap_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrap_num_src_pnts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrap_dist_exponent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrap_num_levels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unmapped_action</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_degenerate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create_rh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filemode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_file_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst_file_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">large_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_frac_field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst_frac_field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.regrid.Regrid" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <a class="reference internal" href="#ESMF.api.regrid.Regrid" title="ESMF.api.regrid.Regrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Regrid</span></code></a> object represents a regridding operator between two <a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fields</span></code></a>.  The
 creation of this object is analogous to ESMF_FieldRegridStore(), and
 calling this object corresponds to ESMF_FieldRegrid().
@@ -155,7 +154,7 @@ NetCDF library earlier than 3.6.0. Defaults to <code class="docutils literal not
 </dl>
 <dl class="py method">
 <dt id="ESMF.api.regrid.Regrid.__call__">
-<code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">srcfield</span></em>, <em class="sig-param"><span class="n">dstfield</span></em>, <em class="sig-param"><span class="n">zero_region</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.regrid.Regrid.__call__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">__call__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">srcfield</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dstfield</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zero_region</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.regrid.Regrid.__call__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Call a regridding operation from srcfield to dstfield.</p>
 <p><em>REQUIRED:</em></p>
 <dl class="field-list simple">
@@ -182,7 +181,7 @@ interpolation.  If <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="py method">
 <dt id="ESMF.api.regrid.Regrid.copy">
-<code class="sig-name descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.regrid.Regrid.copy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">copy</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.regrid.Regrid.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copy a <a class="reference internal" href="#ESMF.api.regrid.Regrid" title="ESMF.api.regrid.Regrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Regrid</span></code></a> in an ESMF-safe manner.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -193,13 +192,13 @@ interpolation.  If <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="py method">
 <dt id="ESMF.api.regrid.Regrid.destroy">
-<code class="sig-name descname">destroy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.regrid.Regrid.destroy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">destroy</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.regrid.Regrid.destroy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Release the memory associated with a <a class="reference internal" href="#ESMF.api.regrid.Regrid" title="ESMF.api.regrid.Regrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Regrid</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="ESMF.api.regrid.Regrid.get_factors">
-<code class="sig-name descname">get_factors</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">deep_copy</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.regrid.Regrid.get_factors" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_factors</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep_copy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.regrid.Regrid.get_factors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return factor and factor index arrays. These arrays will only be
 available if the <code class="docutils literal notranslate"><span class="pre">Regrid</span></code> object was initialized with <code class="docutils literal notranslate"><span class="pre">factors=True</span></code>.
 See the ESMF_FieldRegridStore interface in the 
@@ -242,7 +241,7 @@ the underlying <code class="docutils literal notranslate"><span class="pre">ESMF
 
 <dl class="py method">
 <dt id="ESMF.api.regrid.Regrid.get_weights_dict">
-<code class="sig-name descname">get_weights_dict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">deep_copy</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.regrid.Regrid.get_weights_dict" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_weights_dict</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep_copy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.regrid.Regrid.get_weights_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a dictionary mapping that is more user-friendly for weight/factor
 retrieval. Please read the documentation for <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_factors()</span></code>
 before using this function.</p>
@@ -338,14 +337,14 @@ the underlying <code class="docutils literal notranslate"><span class="pre">ESMF
         <li class="right" >
           <a href="locstream.html" title="LocStream"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.1.0 beta snapshot documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.2.0 beta snapshot documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Regrid</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
     </div>
   </body>
 </html>

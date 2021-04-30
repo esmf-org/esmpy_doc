@@ -5,15 +5,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StaggerLoc &#8212; ESMPy 8.1.0 beta snapshot documentation</title>
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <title>StaggerLoc &#8212; ESMPy 8.2.0 beta snapshot documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -35,7 +34,7 @@
         <li class="right" >
           <a href="RegridMethod.html" title="RegridMethod"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.1.0 beta snapshot documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.2.0 beta snapshot documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">StaggerLoc</a></li> 
       </ul>
@@ -50,80 +49,80 @@
 <h1>StaggerLoc<a class="headerlink" href="#staggerloc" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="ESMF.api.constants.StaggerLoc">
-<em class="property">class </em><code class="sig-prename descclassname">ESMF.api.constants.</code><code class="sig-name descname">StaggerLoc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">module</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.constants.StaggerLoc" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">ESMF.api.constants.</span></code><code class="sig-name descname"><span class="pre">StaggerLoc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.constants.StaggerLoc" title="Permalink to this definition">¶</a></dt>
 <dd><p>In the <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> class, data can be located at different positions in a
 <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> cell. When setting or retrieving coordinate data the stagger
 location is specified to tell the <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> method from where in the
 cell to get the data.</p>
 <dl class="py attribute">
 <dt id="ESMF.api.constants.StaggerLoc.CENTER">
-<code class="sig-name descname">CENTER</code><em class="property"> = &lt;StaggerLoc.CENTER: 0&gt;</em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.CENTER" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">CENTER</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;StaggerLoc.CENTER:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.CENTER" title="Permalink to this definition">¶</a></dt>
 <dd><p>2D: Cell centered stagger location.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="ESMF.api.constants.StaggerLoc.EDGE1">
-<code class="sig-name descname">EDGE1</code><em class="property"> = &lt;StaggerLoc.EDGE1: 1&gt;</em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.EDGE1" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">EDGE1</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;StaggerLoc.EDGE1:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.EDGE1" title="Permalink to this definition">¶</a></dt>
 <dd><p>2D: First dimension edge stagger location.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="ESMF.api.constants.StaggerLoc.EDGE2">
-<code class="sig-name descname">EDGE2</code><em class="property"> = &lt;StaggerLoc.EDGE2: 2&gt;</em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.EDGE2" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">EDGE2</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;StaggerLoc.EDGE2:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.EDGE2" title="Permalink to this definition">¶</a></dt>
 <dd><p>2D: Second dimension edge stagger location.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="ESMF.api.constants.StaggerLoc.CORNER">
-<code class="sig-name descname">CORNER</code><em class="property"> = &lt;StaggerLoc.CORNER: 3&gt;</em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.CORNER" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">CORNER</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;StaggerLoc.CORNER:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.CORNER" title="Permalink to this definition">¶</a></dt>
 <dd><p>2D: Cell corner stagger location.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="ESMF.api.constants.StaggerLoc.CENTER_VCENTER">
-<code class="sig-name descname">CENTER_VCENTER</code><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.CENTER_VCENTER" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">CENTER_VCENTER</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;StaggerLoc.CENTER:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.CENTER_VCENTER" title="Permalink to this definition">¶</a></dt>
 <dd><p>3D: Vertically centered stagger location.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="ESMF.api.constants.StaggerLoc.EDGE1_VCENTER">
-<code class="sig-name descname">EDGE1_VCENTER</code><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.EDGE1_VCENTER" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">EDGE1_VCENTER</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;StaggerLoc.EDGE1:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.EDGE1_VCENTER" title="Permalink to this definition">¶</a></dt>
 <dd><p>3D: Vertically centered first dimension edge stagger location.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="ESMF.api.constants.StaggerLoc.EDGE2_VCENTER">
-<code class="sig-name descname">EDGE2_VCENTER</code><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.EDGE2_VCENTER" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">EDGE2_VCENTER</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;StaggerLoc.EDGE2:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.EDGE2_VCENTER" title="Permalink to this definition">¶</a></dt>
 <dd><p>3D: Vertically centered second dimension edge stagger location.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="ESMF.api.constants.StaggerLoc.CORNER_VCENTER">
-<code class="sig-name descname">CORNER_VCENTER</code><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.CORNER_VCENTER" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">CORNER_VCENTER</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;StaggerLoc.CORNER:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.CORNER_VCENTER" title="Permalink to this definition">¶</a></dt>
 <dd><p>3D: Vertically centered corner stagger location.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="ESMF.api.constants.StaggerLoc.CENTER_VFACE">
-<code class="sig-name descname">CENTER_VFACE</code><em class="property"> = &lt;StaggerLoc.CENTER_VFACE: 4&gt;</em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.CENTER_VFACE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">CENTER_VFACE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;StaggerLoc.CENTER_VFACE:</span> <span class="pre">4&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.CENTER_VFACE" title="Permalink to this definition">¶</a></dt>
 <dd><p>3D: Centered stagger location of the top and bottom cell faces.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="ESMF.api.constants.StaggerLoc.EDGE1_VFACE">
-<code class="sig-name descname">EDGE1_VFACE</code><em class="property"> = &lt;StaggerLoc.EDGE1_VFACE: 5&gt;</em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.EDGE1_VFACE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">EDGE1_VFACE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;StaggerLoc.EDGE1_VFACE:</span> <span class="pre">5&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.EDGE1_VFACE" title="Permalink to this definition">¶</a></dt>
 <dd><p>3D: First dimension edge stagger location of the top and bottom cell faces.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="ESMF.api.constants.StaggerLoc.EDGE2_VFACE">
-<code class="sig-name descname">EDGE2_VFACE</code><em class="property"> = &lt;StaggerLoc.EDGE2_VFACE: 6&gt;</em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.EDGE2_VFACE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">EDGE2_VFACE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;StaggerLoc.EDGE2_VFACE:</span> <span class="pre">6&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.EDGE2_VFACE" title="Permalink to this definition">¶</a></dt>
 <dd><p>3D: Second dimension edge stagger location of the top and bottom cell faces.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="ESMF.api.constants.StaggerLoc.CORNER_VFACE">
-<code class="sig-name descname">CORNER_VFACE</code><em class="property"> = &lt;StaggerLoc.CORNER_VFACE: 7&gt;</em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.CORNER_VFACE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">CORNER_VFACE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;StaggerLoc.CORNER_VFACE:</span> <span class="pre">7&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.StaggerLoc.CORNER_VFACE" title="Permalink to this definition">¶</a></dt>
 <dd><p>3D: Corner stagger location of the top and bottom cell faces.</p>
 </dd></dl>
 
@@ -180,14 +179,14 @@ cell to get the data.</p>
         <li class="right" >
           <a href="RegridMethod.html" title="RegridMethod"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.1.0 beta snapshot documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.2.0 beta snapshot documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">StaggerLoc</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
     </div>
   </body>
 </html>

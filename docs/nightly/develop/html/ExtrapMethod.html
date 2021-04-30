@@ -5,15 +5,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ExtrapMethod &#8212; ESMPy 8.1.0 beta snapshot documentation</title>
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <title>ExtrapMethod &#8212; ESMPy 8.2.0 beta snapshot documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -35,7 +34,7 @@
         <li class="right" >
           <a href="CoordSys.html" title="CoordSys"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.1.0 beta snapshot documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.2.0 beta snapshot documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ExtrapMethod</a></li> 
       </ul>
@@ -50,18 +49,18 @@
 <h1>ExtrapMethod<a class="headerlink" href="#extrapmethod" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="ESMF.api.constants.ExtrapMethod">
-<em class="property">class </em><code class="sig-prename descclassname">ESMF.api.constants.</code><code class="sig-name descname">ExtrapMethod</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">module</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.constants.ExtrapMethod" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">ESMF.api.constants.</span></code><code class="sig-name descname"><span class="pre">ExtrapMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.constants.ExtrapMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify which extrapolation method to use on unmapped destination points after 
 regridding.</p>
 <dl class="py attribute">
 <dt id="ESMF.api.constants.ExtrapMethod.NONE">
-<code class="sig-name descname">NONE</code><em class="property"> = &lt;ExtrapMethod.NONE: 0&gt;</em><a class="headerlink" href="#ESMF.api.constants.ExtrapMethod.NONE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">NONE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;ExtrapMethod.NONE:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.ExtrapMethod.NONE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates that no extrapolation should be done.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="ESMF.api.constants.ExtrapMethod.NEAREST_STOD">
-<code class="sig-name descname">NEAREST_STOD</code><em class="property"> = &lt;ExtrapMethod.NEAREST_STOD: 1&gt;</em><a class="headerlink" href="#ESMF.api.constants.ExtrapMethod.NEAREST_STOD" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">NEAREST_STOD</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;ExtrapMethod.NEAREST_STOD:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.ExtrapMethod.NEAREST_STOD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inverse distance weighted average. 
 Here the value of a destination point is the weighted average of the 
 closest N source points. The weight is the reciprocal of the distance of 
@@ -73,7 +72,7 @@ defaults are also provided.</p>
 
 <dl class="py attribute">
 <dt id="ESMF.api.constants.ExtrapMethod.NEAREST_IDAVG">
-<code class="sig-name descname">NEAREST_IDAVG</code><em class="property"> = &lt;ExtrapMethod.NEAREST_IDAVG: 2&gt;</em><a class="headerlink" href="#ESMF.api.constants.ExtrapMethod.NEAREST_IDAVG" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">NEAREST_IDAVG</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;ExtrapMethod.NEAREST_IDAVG:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.ExtrapMethod.NEAREST_IDAVG" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nearest source to destination. 
 Here each destination point is mapped to the closest source point. A given 
 source point may go to multiple destination points, but no destination 
@@ -82,7 +81,7 @@ point will receive input from more than one source point.</p>
 
 <dl class="py attribute">
 <dt id="ESMF.api.constants.ExtrapMethod.CREEP_FILL">
-<code class="sig-name descname">CREEP_FILL</code><em class="property"> = &lt;ExtrapMethod.CREEP_FILL: 3&gt;</em><a class="headerlink" href="#ESMF.api.constants.ExtrapMethod.CREEP_FILL" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">CREEP_FILL</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;ExtrapMethod.CREEP_FILL:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.ExtrapMethod.CREEP_FILL" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creep fill extrapolation.
 Here unmapped destination points are filled by repeatedly moving data from
 mapped locations to neighboring unmapped locations. The data filled into a 
@@ -145,14 +144,14 @@ method is not supported with conservative regrid methods.</p>
         <li class="right" >
           <a href="CoordSys.html" title="CoordSys"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.1.0 beta snapshot documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.2.0 beta snapshot documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ExtrapMethod</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
     </div>
   </body>
 </html>
