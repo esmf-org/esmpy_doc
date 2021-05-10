@@ -4,12 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>NormType &#8212; ESMPy 8.2.0 beta snapshot documentation</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -45,16 +46,16 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="normtype">
+  <section id="normtype">
 <h1>NormType<a class="headerlink" href="#normtype" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="ESMF.api.constants.NormType">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">ESMF.api.constants.</span></code><code class="sig-name descname"><span class="pre">NormType</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.constants.NormType" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ESMF.api.constants.NormType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ESMF.api.constants.</span></span><span class="sig-name descname"><span class="pre">NormType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.constants.NormType" title="Permalink to this definition">¶</a></dt>
 <dd><p>When doing conservative regridding, this option allows the user
 to select the type of normalization used when producing the weights.</p>
 <dl class="py attribute">
-<dt id="ESMF.api.constants.NormType.DSTAREA">
-<code class="sig-name descname"><span class="pre">DSTAREA</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;NormType.DSTAREA:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.NormType.DSTAREA" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ESMF.api.constants.NormType.DSTAREA">
+<span class="sig-name descname"><span class="pre">DSTAREA</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;NormType.DSTAREA:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.NormType.DSTAREA" title="Permalink to this definition">¶</a></dt>
 <dd><p>Destination area normalization. Here the weights are calculated by dividing
 the area of overlap of the source and destination cells by the area of the
 entire destination cell. In other words, the weight is the fraction of the
@@ -62,8 +63,8 @@ entire destination cell which overlaps with the given source cell.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="ESMF.api.constants.NormType.FRACAREA">
-<code class="sig-name descname"><span class="pre">FRACAREA</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;NormType.FRACAREA:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.NormType.FRACAREA" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ESMF.api.constants.NormType.FRACAREA">
+<span class="sig-name descname"><span class="pre">FRACAREA</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;NormType.FRACAREA:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.NormType.FRACAREA" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fraction area normalization. Here in addition to the weight calculation
 done for destination area normalization the weights are also divided by the
 fraction that the destination cell overlaps with the entire source grid. In
@@ -73,7 +74,7 @@ cell that overlaps with the entire source mesh.</p>
 
 </dd></dl>
 
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -131,7 +132,7 @@ cell that overlaps with the entire source mesh.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.0.
     </div>
   </body>
 </html>
