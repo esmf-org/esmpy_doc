@@ -4,12 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Mesh &#8212; ESMPy 8.2.0 beta snapshot documentation</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -45,11 +46,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="mesh">
+  <section id="mesh">
 <h1>Mesh<a class="headerlink" href="#mesh" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="ESMF.api.mesh.Mesh">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">ESMF.api.mesh.</span></code><code class="sig-name descname"><span class="pre">Mesh</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parametric_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spatial_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_sys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filetype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convert_to_dual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_user_area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask_flag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">varname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ESMF.api.mesh.Mesh">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ESMF.api.mesh.</span></span><span class="sig-name descname"><span class="pre">Mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parametric_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spatial_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_sys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filetype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convert_to_dual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_user_area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask_flag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">varname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> class is a Python wrapper object for the ESMF Mesh.
 The individual values of all coordinate and mask arrays are referenced to
 those of the underlying Fortran ESMF object.</p>
@@ -146,9 +147,9 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="ESMF.api.mesh.Mesh.area">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">area</span></code><a class="headerlink" href="#ESMF.api.mesh.Mesh.area" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.mesh.Mesh.area">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">area</span></span><a class="headerlink" href="#ESMF.api.mesh.Mesh.area" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>A two element list of numpy arrays to hold values for the nodes
@@ -161,9 +162,9 @@ array of floats of the same number of entries as <a class="reference internal" h
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="ESMF.api.mesh.Mesh.coords">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">coords</span></code><a class="headerlink" href="#ESMF.api.mesh.Mesh.coords" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.mesh.Mesh.coords">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">coords</span></span><a class="headerlink" href="#ESMF.api.mesh.Mesh.coords" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>A two element list of numpy arrays to hold values for the nodes
@@ -177,9 +178,9 @@ with a value for each node and/or element of the <a class="reference internal" h
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="ESMF.api.mesh.Mesh.coord_sys">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">coord_sys</span></code><a class="headerlink" href="#ESMF.api.mesh.Mesh.coord_sys" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.mesh.Mesh.coord_sys">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">coord_sys</span></span><a class="headerlink" href="#ESMF.api.mesh.Mesh.coord_sys" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="CoordSys.html#ESMF.api.constants.CoordSys" title="ESMF.api.constants.CoordSys"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CoordSys</span></code></a></p>
@@ -190,9 +191,9 @@ with a value for each node and/or element of the <a class="reference internal" h
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="ESMF.api.mesh.Mesh.mask">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">mask</span></code><a class="headerlink" href="#ESMF.api.mesh.Mesh.mask" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.mesh.Mesh.mask">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">mask</span></span><a class="headerlink" href="#ESMF.api.mesh.Mesh.mask" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>A two element list of numpy arrays to hold values for the nodes
@@ -205,9 +206,9 @@ and elements of the <a class="reference internal" href="#ESMF.api.mesh.Mesh" tit
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="ESMF.api.mesh.Mesh.rank">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">rank</span></code><a class="headerlink" href="#ESMF.api.mesh.Mesh.rank" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.mesh.Mesh.rank">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">rank</span></span><a class="headerlink" href="#ESMF.api.mesh.Mesh.rank" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
@@ -218,9 +219,9 @@ and elements of the <a class="reference internal" href="#ESMF.api.mesh.Mesh" tit
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="ESMF.api.mesh.Mesh.size">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">size</span></code><a class="headerlink" href="#ESMF.api.mesh.Mesh.size" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.mesh.Mesh.size">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#ESMF.api.mesh.Mesh.size" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>A two element list of integers.</p>
@@ -232,9 +233,9 @@ processor.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="ESMF.api.mesh.Mesh.size_owned">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">size_owned</span></code><a class="headerlink" href="#ESMF.api.mesh.Mesh.size_owned" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.mesh.Mesh.size_owned">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">size_owned</span></span><a class="headerlink" href="#ESMF.api.mesh.Mesh.size_owned" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>A two element list of integers.</p>
@@ -247,8 +248,8 @@ current processor.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="ESMF.api.mesh.Mesh.add_elements">
-<code class="sig-name descname"><span class="pre">add_elements</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_conn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_coords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.add_elements" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ESMF.api.mesh.Mesh.add_elements">
+<span class="sig-name descname"><span class="pre">add_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_conn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_coords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.add_elements" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add elements to a <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>, this must be done after adding nodes.</p>
 <p><em>REQUIRED:</em></p>
 <dl class="field-list simple">
@@ -287,8 +288,8 @@ elements. The specific values that are masked are specified in the
 </dd></dl>
 
 <dl class="py method">
-<dt id="ESMF.api.mesh.Mesh.add_nodes">
-<code class="sig-name descname"><span class="pre">add_nodes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_coords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_owners</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.add_nodes" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ESMF.api.mesh.Mesh.add_nodes">
+<span class="sig-name descname"><span class="pre">add_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_coords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_owners</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.add_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add nodes to a <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>, this must be done before adding elements.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -308,8 +309,8 @@ specify the rank of the processor that owns each node.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="ESMF.api.mesh.Mesh.copy">
-<code class="sig-name descname"><span class="pre">copy</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.copy" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ESMF.api.mesh.Mesh.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copy a <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> in an ESMF-safe manner.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -319,22 +320,22 @@ specify the rank of the processor that owns each node.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="ESMF.api.mesh.Mesh.destroy">
-<code class="sig-name descname"><span class="pre">destroy</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.destroy" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ESMF.api.mesh.Mesh.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.destroy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Release the memory associated with a <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="ESMF.api.mesh.Mesh.free_memory">
-<code class="sig-name descname"><span class="pre">free_memory</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.free_memory" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ESMF.api.mesh.Mesh.free_memory">
+<span class="sig-name descname"><span class="pre">free_memory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.free_memory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Free memory associated with the creation of a
 <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> which is no longer needed for ongoing
 operations.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="ESMF.api.mesh.Mesh.get_coords">
-<code class="sig-name descname"><span class="pre">get_coords</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">coord_dim</span></em>, <em class="sig-param"><span class="pre">meshloc=&lt;MeshLoc.NODE:</span> <span class="pre">0&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.get_coords" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ESMF.api.mesh.Mesh.get_coords">
+<span class="sig-name descname"><span class="pre">get_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">coord_dim</span></em>, <em class="sig-param"><span class="pre">meshloc=&lt;MeshLoc.NODE:</span> <span class="pre">0&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.mesh.Mesh.get_coords" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a numpy array of coordinates at a specified <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> 
 location (coordinates can only be returned for the <a class="reference internal" href="#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>
 <a class="reference internal" href="MeshLoc.html#ESMF.api.constants.MeshLoc.NODE" title="ESMF.api.constants.MeshLoc.NODE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NODE</span></code></a>s
@@ -363,7 +364,7 @@ coordinates.  If <code class="docutils literal notranslate"><span class="pre">No
 
 </dd></dl>
 
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -421,7 +422,7 @@ coordinates.  If <code class="docutils literal notranslate"><span class="pre">No
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>
