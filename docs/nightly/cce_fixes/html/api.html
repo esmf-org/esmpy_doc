@@ -214,6 +214,13 @@ objects is required <em>prior</em> to the end of the program, the class level
 to interpolate data between many <a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> pairs to
 conserve memory to complete all interpolations in a single execution.</p>
 </section>
+<section id="moab-mesh-backend">
+<h3>MOAB Mesh backend<a class="headerlink" href="#moab-mesh-backend" title="Permalink to this headline">¶</a></h3>
+<p>The Manager can be used to enable the <a class="reference external" href="https://sigma.mcs.anl.gov/moab-library/">MOAB</a>
+mesh backend to the Mesh. This is done by calling <code class="docutils literal notranslate"><span class="pre">set_moab()</span></code> with <code class="docutils literal notranslate"><span class="pre">moab_on=True</span></code>.
+The MOAB mesh is an alternative to the native ESMF mesh, and does not yet have
+full support.</p>
+</section>
 </section>
 <section id="spatial-discretization-objects">
 <h2>Spatial Discretization Objects<a class="headerlink" href="#spatial-discretization-objects" title="Permalink to this headline">¶</a></h2>
@@ -961,6 +968,7 @@ of the documentation.</p>
 <li><a class="reference internal" href="#resource-allocation">Resource Allocation</a></li>
 <li><a class="reference internal" href="#logging">Logging</a></li>
 <li><a class="reference internal" href="#garbage-collection">Garbage Collection</a></li>
+<li><a class="reference internal" href="#moab-mesh-backend">MOAB Mesh backend</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#spatial-discretization-objects">Spatial Discretization Objects</a><ul>
@@ -1063,7 +1071,7 @@ of the documentation.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>
 </html>

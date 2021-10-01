@@ -78,12 +78,68 @@ first time.  Subsequent calls only return whether or not ESMF is
 initialized.  Registering __del__ with atexit ensures the ESMP_Finalize
 will always be called prior to exiting Python.  Calling __init__
 explicitly results in a no-op.</p>
+<p>The Manager can be used to enable the 
+<a class="reference external" href="https://sigma.mcs.anl.gov/moab-library/">MOAB</a>
+mesh backend to the Mesh. This is done by calling <code class="docutils literal notranslate"><span class="pre">set_moab()</span></code> with <code class="docutils literal notranslate"><span class="pre">moab_on=True</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>debug</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – outputs logging information to ESMF logfiles. If
 <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to False.</p>
 </dd>
 </dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.esmpymanager.Manager.local_pet">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">local_pet</span></span><a class="headerlink" href="#ESMF.api.esmpymanager.Manager.local_pet" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The id of the current Persistent Execution Thread (PET i.e. processing core).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.esmpymanager.Manager.moab">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">moab</span></span><a class="headerlink" href="#ESMF.api.esmpymanager.Manager.moab" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)">bool</a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A boolean value to indicate if the MOAB mesh backend is in use.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.esmpymanager.Manager.pet_count">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">pet_count</span></span><a class="headerlink" href="#ESMF.api.esmpymanager.Manager.pet_count" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The number of Persistent Execution Threads (PETs i.e. processing cores)
+available in this execution.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ESMF.api.esmpymanager.Manager.barrier">
+<span class="sig-name descname"><span class="pre">barrier</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.esmpymanager.Manager.barrier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collective VM communication call that blocks calling PET until 
+all PETs of the VM have issued the call.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ESMF.api.esmpymanager.Manager.set_moab">
+<span class="sig-name descname"><span class="pre">set_moab</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moab_on</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.esmpymanager.Manager.set_moab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the Mesh backend to use MOAB or the Native ESMF mesh.</p>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -144,7 +200,7 @@ explicitly results in a no-op.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>
 </html>
