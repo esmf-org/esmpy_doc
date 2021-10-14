@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Field &#8212; ESMPy 8.3.0 beta snapshot documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Grid" href="grid.html" />
+    <link rel="prev" title="Manager" href="manager.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="grid.html" title="Grid"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="manager.html" title="Manager"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.3.0 beta snapshot documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Field</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="field">
+<h1>Field<a class="headerlink" href="#field" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ESMF.api.field.Field">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ESMF.api.field.</span></span><span class="sig-name descname"><span class="pre">Field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">typekind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndbounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.field.Field" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> class is a Python wrapper object for the ESMF Field.
+The individual values of all data arrays are referenced to those of the
+underlying Fortran ESMF object.</p>
+<p>A <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> represents a physical field, such as temperature.   The <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> class
+contains distributed and discretized field data, a reference to its
+associated grid, and metadata. The <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> class stores the grid staggering
+for that physical field. This is the relationship of how the data array of
+a field maps onto a grid (e.g. one item per cell located at the cell center,
+one item per cell located at the NW corner, one item per cell vertex, etc.).
+This means that different <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fields</span></code></a> which are on the same underlying <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> but
+have different staggerings can share the same <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> object without needing to
+replicate it multiple times.</p>
+<p>Refer to the Field Class of the 
+<a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_refdoc/">ESMF Reference Manual</a>
+for more information.</p>
+<p>The following parameters are used to create a <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>
+from a <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>, <a class="reference internal" href="mesh.html#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> or
+<a class="reference internal" href="locstream.html#ESMF.api.locstream.LocStream" title="ESMF.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStream</span></code></a>.</p>
+<p><em>REQUIRED:</em></p>
+<dl class="simple">
+<dt>:param <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>/Mesh/<a class="reference internal" href="locstream.html#ESMF.api.locstream.LocStream" title="ESMF.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStream</span></code></a> grid: A <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>,</dt><dd><p><a class="reference internal" href="mesh.html#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> or <a class="reference internal" href="locstream.html#ESMF.api.locstream.LocStream" title="ESMF.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStream</span></code></a>
+with coordinates allocated on at least one stagger location.</p>
+</dd>
+</dl>
+<p><em>OPTIONAL:</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – An optional user friendly name for the
+<a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>.</p></li>
+<li><p><strong>typekind</strong> (<a class="reference internal" href="TypeKind.html#ESMF.api.constants.TypeKind" title="ESMF.api.constants.TypeKind"><em>TypeKind</em></a>) – Type of the <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>
+data. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="TypeKind.html#ESMF.api.constants.TypeKind.R8" title="ESMF.api.constants.TypeKind.R8"><code class="xref py py-attr docutils literal notranslate"><span class="pre">R8</span></code></a>.</p></li>
+<li><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc" title="ESMF.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the
+<a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> data, only specify this argument when
+using a <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc.CENTER" title="ESMF.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a>
+in 2D and <a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc.CENTER_VCENTER" title="ESMF.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in 3D.</p></li>
+<li><p><strong>meshloc</strong> (<a class="reference internal" href="MeshLoc.html#ESMF.api.constants.MeshLoc" title="ESMF.api.constants.MeshLoc"><em>MeshLoc</em></a>) – The mesh location of the
+<a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> data, only specify this argument when
+using a <a class="reference internal" href="mesh.html#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>
+if <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="MeshLoc.html#ESMF.api.constants.MeshLoc.NODE" title="ESMF.api.constants.MeshLoc.NODE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NODE</span></code></a>.</p></li>
+<li><p><strong>ndbounds</strong> (<em>tuple</em>) – The number of entries in an extra
+<a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> dimension. This is represented as a
+single value, a list or a tuple containing the number of entries for
+each desired extra dimension of the <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>. The
+time dimension must be last, following Fortran indexing conventions.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.field.Field.data">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#ESMF.api.field.Field.data" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="TypeKind.html#ESMF.api.constants.TypeKind" title="ESMF.api.constants.TypeKind"><code class="xref py py-attr docutils literal notranslate"><span class="pre">TypeKind</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The data of the <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.field.Field.grid">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">grid</span></span><a class="headerlink" href="#ESMF.api.field.Field.grid" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>, <a class="reference internal" href="mesh.html#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>, or
+<a class="reference internal" href="locstream.html#ESMF.api.locstream.LocStream" title="ESMF.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStream</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The discretization object upon which the
+<a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> is built.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.field.Field.lower_bounds">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">lower_bounds</span></span><a class="headerlink" href="#ESMF.api.field.Field.lower_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The lower bounds of the <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.field.Field.name">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#ESMF.api.field.Field.name" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)">str</a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the name of the <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.field.Field.ndbounds">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">ndbounds</span></span><a class="headerlink" href="#ESMF.api.field.Field.ndbounds" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The bounds of the extra dimensions in the
+<a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.field.Field.rank">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">rank</span></span><a class="headerlink" href="#ESMF.api.field.Field.rank" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The rank of the <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.field.Field.staggerloc">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">staggerloc</span></span><a class="headerlink" href="#ESMF.api.field.Field.staggerloc" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc" title="ESMF.api.constants.StaggerLoc"><code class="xref py py-attr docutils literal notranslate"><span class="pre">StaggerLoc</span></code></a> or
+<a class="reference internal" href="MeshLoc.html#ESMF.api.constants.MeshLoc" title="ESMF.api.constants.MeshLoc"><code class="xref py py-attr docutils literal notranslate"><span class="pre">MeshLoc</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The location upon which the <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>
+is built.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.field.Field.type">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#ESMF.api.field.Field.type" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="TypeKind.html#ESMF.api.constants.TypeKind" title="ESMF.api.constants.TypeKind"><code class="xref py py-attr docutils literal notranslate"><span class="pre">TypeKind</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The type of the data in the <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.field.Field.upper_bounds">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">upper_bounds</span></span><a class="headerlink" href="#ESMF.api.field.Field.upper_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The upper bounds of the <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ESMF.api.field.Field.xd">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">xd</span></span><a class="headerlink" href="#ESMF.api.field.Field.xd" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The number of extra (ungridded) dimensions of the
+<a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ESMF.api.field.Field.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.field.Field.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy a <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> in an ESMF-safe manner.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> shallow copy.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ESMF.api.field.Field.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.field.Field.destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release the memory associated with a <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ESMF.api.field.Field.get_area">
+<span class="sig-name descname"><span class="pre">get_area</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.field.Field.get_area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize an existing <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> with the areas of
+the cells of the underlying <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> or
+<a class="reference internal" href="mesh.html#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ESMF.api.field.Field.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeslice</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.field.Field.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read data into an existing <a class="reference internal" href="#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> from a
+CF-compliant NetCDF file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Note</dt>
+<dd class="field-odd"><p>This interface is not supported when ESMF is built with
+<code class="docutils literal notranslate"><span class="pre">ESMF_COMM=mpiuni</span></code>.</p>
+</dd>
+<dt class="field-even">Note</dt>
+<dd class="field-even"><p>This interface does not currently support reading ungridded 
+dimensions.</p>
+</dd>
+</dl>
+<p><em>REQUIRED:</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – The name of the NetCDF file.</p></li>
+<li><p><strong>variable</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – The name of the data variable to read from file.</p></li>
+</ul>
+</dd>
+</dl>
+<p><em>OPTIONAL:</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>timeslice</strong> (<em>list</em>) – The number of timeslices to read.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="manager.html"
+                        title="previous chapter">Manager</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="grid.html"
+                        title="next chapter">Grid</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/field.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="grid.html" title="Grid"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="manager.html" title="Manager"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.3.0 beta snapshot documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Field</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
+    </div>
+  </body>
+</html>
