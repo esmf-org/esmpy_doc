@@ -50,19 +50,19 @@
 <h1>PoleMethod<a class="headerlink" href="#polemethod" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ESMF.api.constants.PoleMethod">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ESMF.api.constants.</span></span><span class="sig-name descname"><span class="pre">PoleMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.constants.PoleMethod" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ESMF.api.constants.</span></span><span class="sig-name descname"><span class="pre">PoleMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.constants.PoleMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates which type of artificial pole to construct on the source
 <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> for regridding.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ESMF.api.constants.PoleMethod.NONE">
-<span class="sig-name descname"><span class="pre">NONE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;PoleMethod.NONE:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.PoleMethod.NONE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">NONE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PoleMethod.NONE:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.PoleMethod.NONE" title="Permalink to this definition">¶</a></dt>
 <dd><p>No pole. Destination points which lie above the top or below the bottom row
 of the source <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> won’t be mapped.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ESMF.api.constants.PoleMethod.ALLAVG">
-<span class="sig-name descname"><span class="pre">ALLAVG</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;PoleMethod.ALLAVG:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.PoleMethod.ALLAVG" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ALLAVG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PoleMethod.ALLAVG:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.PoleMethod.ALLAVG" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct an artificial pole placed in the center of the top (or bottom)
 row of nodes, but projected onto the sphere formed by the rest of the grid.
 The value at this pole is the average of all the source values surrounding
@@ -71,7 +71,7 @@ the pole.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ESMF.api.constants.PoleMethod.NPNTAVG">
-<span class="sig-name descname"><span class="pre">NPNTAVG</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;PoleMethod.NPNTAVG:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.PoleMethod.NPNTAVG" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">NPNTAVG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PoleMethod.NPNTAVG:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.PoleMethod.NPNTAVG" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct an artificial pole placed in the center of the top (or bottom)
 row of nodes, but projected onto the sphere formed by the rest of the grid.
 The value at this pole is the average of the N source nodes next to the pole
@@ -84,7 +84,7 @@ the entire pole (e.g. vector components).</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ESMF.api.constants.PoleMethod.TEETH">
-<span class="sig-name descname"><span class="pre">TEETH</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;PoleMethod.TEETH:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.PoleMethod.TEETH" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">TEETH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PoleMethod.TEETH:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.PoleMethod.TEETH" title="Permalink to this definition">¶</a></dt>
 <dd><p>No new pole point is constructed, instead the holes at the poles are filled
 by constructing triangles across the top and bottom row of the source <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.
 This can be useful because no averaging occurs, however, because the top and
@@ -153,7 +153,7 @@ still not be able to be mapped to the source <a class="reference internal" href=
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
     </div>
   </body>
 </html>
