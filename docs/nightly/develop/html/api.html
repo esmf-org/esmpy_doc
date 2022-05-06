@@ -196,13 +196,16 @@ for more information.</p>
 </div>
 <p>The output will be logged in files named PET&lt;local_pet&gt;.ESMF_LogFile.</p>
 </section>
-<section id="garbage-collection">
-<h3>Garbage Collection<a class="headerlink" href="#garbage-collection" title="Permalink to this headline">¶</a></h3>
+<section id="memory-management">
+<h3>Memory management<a class="headerlink" href="#memory-management" title="Permalink to this headline">¶</a></h3>
 <p>The underlying ESMF framework needs to be initialized and finalized once and
 only once per execution. This is handled internally by the
 <a class="reference internal" href="manager.html#ESMF.api.esmpymanager.Manager" title="ESMF.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> and <strong>does not</strong> require any explicit
 user intervention. However, the ESMF garbage collection feature is not triggered
-until the finalization routine is invoked. So if memory deallocation of ESMPy
+until the finalization routine is invoked, which may not happen until the
+<a class="reference internal" href="manager.html#ESMF.api.esmpymanager.Manager" title="ESMF.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> goes out of scope at the end of the
+program execution.</p>
+<p>If memory deallocation of ESMPy
 objects is required <em>prior</em> to the end of the program, the class level
 <code class="docutils literal notranslate"><span class="pre">destroy</span></code> routines should be invoked:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mg</span> <span class="o">=</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">Manager</span><span class="p">()</span>
@@ -211,14 +214,16 @@ objects is required <em>prior</em> to the end of the program, the class level
 </pre></div>
 </div>
 <p>This is commonly required when reusing a <a class="reference internal" href="regrid.html#ESMF.api.regrid.Regrid" title="ESMF.api.regrid.Regrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Regrid</span></code></a> object
-to interpolate data between many <a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> pairs to
-conserve memory to complete all interpolations in a single execution.</p>
+to interpolate data between many <a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> pairs.</p>
 </section>
 <section id="moab-mesh-backend">
 <h3>MOAB Mesh backend<a class="headerlink" href="#moab-mesh-backend" title="Permalink to this headline">¶</a></h3>
 <p>The Manager can be used to enable the <a class="reference external" href="https://sigma.mcs.anl.gov/moab-library/">MOAB</a>
-mesh backend to the Mesh. This is done by calling <code class="docutils literal notranslate"><span class="pre">set_moab()</span></code> with <code class="docutils literal notranslate"><span class="pre">moab_on=True</span></code>.
-The MOAB mesh is an alternative to the native ESMF mesh, and does not yet have
+mesh backend to the Mesh.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mg</span><span class="o">.</span><span class="n">set_moab</span><span class="p">(</span><span class="n">moab_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The MOAB mesh is an alternative to the native ESMF mesh, and does not yet have
 full support.</p>
 </section>
 </section>
@@ -584,7 +589,7 @@ name. Each key must contain the same number of elements as there are data points
 in the <a class="reference internal" href="locstream.html#ESMF.api.locstream.LocStream" title="ESMF.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStream</span></code></a>. While there is no assumption in the ordering of the points,
 the order chosen must be maintained in each of the keys.</p>
 <p>A <a class="reference internal" href="locstream.html#ESMF.api.locstream.LocStream" title="ESMF.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStream</span></code></a> can be very large. Data assimilation systems might use <a class="reference internal" href="locstream.html#ESMF.api.locstream.LocStream" title="ESMF.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStreams</span></code></a>
-with up to <span class="math">10^8</span> observations, so efficiency is critical. <a class="reference internal" href="locstream.html#ESMF.api.locstream.LocStream" title="ESMF.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStreams</span></code></a> can be
+with up to <img class="math" src="_images/math/4ab319b8ffcfc6de23092d698c335f347028e39f.png" alt="10^8"/> observations, so efficiency is critical. <a class="reference internal" href="locstream.html#ESMF.api.locstream.LocStream" title="ESMF.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStreams</span></code></a> can be
 created from file.</p>
 <p>A <a class="reference internal" href="locstream.html#ESMF.api.locstream.LocStream" title="ESMF.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStream</span></code></a> is similar to a <a class="reference internal" href="mesh.html#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> in that both are collections of irregularly
 positioned points. However, the two structures differ because a <a class="reference internal" href="mesh.html#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> also has
@@ -615,7 +620,7 @@ of formats.  A <a class="reference internal" href="mesh.html#ESMF.api.mesh.Mesh"
 formats.  <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> files can be in <a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat.SCRIP" title="ESMF.api.constants.FileFormat.SCRIP"><code class="xref py py-class docutils literal notranslate"><span class="pre">SCRIP</span></code></a> and <a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat.GRIDSPEC" title="ESMF.api.constants.FileFormat.GRIDSPEC"><code class="xref py py-class docutils literal notranslate"><span class="pre">GRIDSPEC</span></code></a> format.</p>
 <section id="scrip">
 <h4>SCRIP<a class="headerlink" href="#scrip" title="Permalink to this headline">¶</a></h4>
-<p>This file format is used by the <a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat.SCRIP" title="ESMF.api.constants.FileFormat.SCRIP"><code class="xref py py-class docutils literal notranslate"><span class="pre">SCRIP</span></code></a> <a class="bibtex reference internal" href="appendix.html#ref-scrip" id="id6">[1]</a>, package, grid files that
+<p>This file format is used by the <a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat.SCRIP" title="ESMF.api.constants.FileFormat.SCRIP"><code class="xref py py-class docutils literal notranslate"><span class="pre">SCRIP</span></code></a> <span id="id6">[]</span>, package, grid files that
 work with that package should also work here.  <a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat.SCRIP" title="ESMF.api.constants.FileFormat.SCRIP"><code class="xref py py-class docutils literal notranslate"><span class="pre">SCRIP</span></code></a> format files are
 capable of storing either 2D logically rectangular grids or 2D
 unstructured grids.  More information can be found in the
@@ -968,7 +973,7 @@ of the documentation.</p>
 <li><a class="reference internal" href="#manager">Manager</a><ul>
 <li><a class="reference internal" href="#resource-allocation">Resource Allocation</a></li>
 <li><a class="reference internal" href="#logging">Logging</a></li>
-<li><a class="reference internal" href="#garbage-collection">Garbage Collection</a></li>
+<li><a class="reference internal" href="#memory-management">Memory management</a></li>
 <li><a class="reference internal" href="#moab-mesh-backend">MOAB Mesh backend</a></li>
 </ul>
 </li>
