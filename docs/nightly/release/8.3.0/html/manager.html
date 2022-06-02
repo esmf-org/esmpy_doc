@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Manager &#8212; ESMPy 8.3.0 beta snapshot documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
@@ -13,6 +13,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
@@ -47,7 +48,7 @@
           <div class="body" role="main">
             
   <section id="manager">
-<h1>Manager<a class="headerlink" href="#manager" title="Permalink to this headline">¶</a></h1>
+<h1>Manager<a class="headerlink" href="#manager" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ESMF.api.esmpymanager.Manager">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ESMF.api.esmpymanager.</span></span><span class="sig-name descname"><span class="pre">Manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.esmpymanager.Manager" title="Permalink to this definition">¶</a></dt>
@@ -82,7 +83,7 @@ explicitly results in a no-op.</p>
 <a class="reference external" href="https://sigma.mcs.anl.gov/moab-library/">MOAB</a>
 mesh backend to the Mesh. This is done by calling <code class="docutils literal notranslate"><span class="pre">set_moab()</span></code> with <code class="docutils literal notranslate"><span class="pre">moab_on=True</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>debug</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – outputs logging information to ESMF logfiles. If
 <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to False.</p>
 </dd>
@@ -91,10 +92,10 @@ mesh backend to the Mesh. This is done by calling <code class="docutils literal 
 <dt class="sig sig-object py" id="ESMF.api.esmpymanager.Manager.local_pet">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">local_pet</span></span><a class="headerlink" href="#ESMF.api.esmpymanager.Manager.local_pet" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The id of the current Persistent Execution Thread (PET i.e. processing core).</p>
 </dd>
 </dl>
@@ -104,10 +105,10 @@ mesh backend to the Mesh. This is done by calling <code class="docutils literal 
 <dt class="sig sig-object py" id="ESMF.api.esmpymanager.Manager.moab">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">moab</span></span><a class="headerlink" href="#ESMF.api.esmpymanager.Manager.moab" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)">bool</a></p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A boolean value to indicate if the MOAB mesh backend is in use.</p>
 </dd>
 </dl>
@@ -117,10 +118,10 @@ mesh backend to the Mesh. This is done by calling <code class="docutils literal 
 <dt class="sig sig-object py" id="ESMF.api.esmpymanager.Manager.pet_count">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pet_count</span></span><a class="headerlink" href="#ESMF.api.esmpymanager.Manager.pet_count" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The number of Persistent Execution Threads (PETs i.e. processing cores)
 available in this execution.</p>
 </dd>
@@ -177,7 +178,7 @@ all PETs of the VM have issued the call.</p>
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -204,7 +205,7 @@ all PETs of the VM have issued the call.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0.
     </div>
   </body>
 </html>
