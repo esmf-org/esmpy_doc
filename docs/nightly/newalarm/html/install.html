@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Installation &#8212; ESMPy 8.3.0 beta snapshot documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
@@ -13,6 +13,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
@@ -46,9 +47,9 @@
           <div class="body" role="main">
             
   <section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h1>
 <section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h2>
 <p>The following packages are <em>required</em> to work with ESMPy:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_usrdoc/">ESMF installation</a></p></li>
@@ -69,7 +70,7 @@
 </ul>
 </section>
 <section id="getting-the-code">
-<h2>Getting the code<a class="headerlink" href="#getting-the-code" title="Permalink to this headline">¶</a></h2>
+<h2>Getting the code<a class="headerlink" href="#getting-the-code" title="Permalink to this heading">¶</a></h2>
 <p>The ESMPy source code can be downloaded from the
 <a class="reference external" href="https://github.com/esmf-org/esmf">ESMF git repository</a>.</p>
 <p>The <a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_usrdoc/">ESMF User’s Guide</a>
@@ -78,7 +79,7 @@ contains information on building and installing ESMF.</p>
 contains information on the architecture of ESMF, example code, and details of the API (Application Programming
 Interface).</p>
 <section id="anaconda-packages">
-<h3>Anaconda Packages<a class="headerlink" href="#anaconda-packages" title="Permalink to this headline">¶</a></h3>
+<h3>Anaconda Packages<a class="headerlink" href="#anaconda-packages" title="Permalink to this heading">¶</a></h3>
 <p>ESMPy conda packages are available through the conda-forge channel:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">esmpy</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">esmpy</span>
 </pre></div>
@@ -94,7 +95,7 @@ Interface).</p>
 </section>
 </section>
 <section id="installing-esmpy-from-source">
-<h2>Installing ESMPy from Source<a class="headerlink" href="#installing-esmpy-from-source" title="Permalink to this headline">¶</a></h2>
+<h2>Installing ESMPy from Source<a class="headerlink" href="#installing-esmpy-from-source" title="Permalink to this heading">¶</a></h2>
 <p>When installing from source, ESMPy requires a pointer to a file named esmf.mk
 that is generated during an ESMF installation.  The path of this file is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">ESMF_INSTALL_DIR</span><span class="o">&gt;/</span><span class="n">lib</span><span class="o">/</span><span class="n">lib</span><span class="o">&lt;</span><span class="n">g</span><span class="o">&lt;</span><span class="ow">or</span><span class="o">&gt;</span><span class="n">O</span><span class="o">&gt;/&lt;</span><span class="n">platform</span><span class="o">&gt;/</span><span class="n">esmf</span><span class="o">.</span><span class="n">mk</span>
@@ -127,14 +128,14 @@ with the following command issued from the top level ESMPy directory:</p>
 <p>Please contact <a class="reference external" href="mailto:esmf_support&#37;&#52;&#48;ucar&#46;edu">esmf_support<span>&#64;</span>ucar<span>&#46;</span>edu</a> with any questions.</p>
 </section>
 <section id="importing-esmpy">
-<h2>Importing ESMPy<a class="headerlink" href="#importing-esmpy" title="Permalink to this headline">¶</a></h2>
+<h2>Importing ESMPy<a class="headerlink" href="#importing-esmpy" title="Permalink to this heading">¶</a></h2>
 <p>To use ESMPy in an external program, import it with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ESMF</span>
 </pre></div>
 </div>
 </section>
 <section id="validation">
-<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this heading">¶</a></h2>
 <p>The ESMPy testing is done with the nose package, both in serial and
 parallel.  The nose commands are wrapped in the following ESMPy targets:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">test</span>
@@ -167,7 +168,7 @@ be applied to bandwidth first, and then memory).</p>
 </div>
 </section>
 <section id="limitations">
-<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this heading">¶</a></h2>
 <p>ESMPy doesn’t include many aspects of ESMF, including components, field bundles,
 time management, etc.  The limitations listed here are relative
 to ESMF offline and integrated regridding capabilities.</p>
@@ -245,7 +246,7 @@ including Darwin and Linux running gfortran with openMPI.</p></li>
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -271,7 +272,7 @@ including Darwin and Linux running gfortran with openMPI.</p></li>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.1.
     </div>
   </body>
 </html>
