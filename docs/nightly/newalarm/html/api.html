@@ -4,9 +4,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>API &#8212; ESMPy 8.3.0 beta snapshot documentation</title>
+    <title>API &#8212; ESMPy 8.4.0 beta snapshot documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
@@ -36,7 +36,7 @@
         <li class="right" >
           <a href="examples.html" title="Tutorials"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.3.0 beta snapshot documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 beta snapshot documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">API</a></li> 
       </ul>
     </div>  
@@ -189,13 +189,16 @@ for more information.</p>
 </div>
 <p>The output will be logged in files named PET&lt;local_pet&gt;.ESMF_LogFile.</p>
 </section>
-<section id="garbage-collection">
-<h3>Garbage Collection<a class="headerlink" href="#garbage-collection" title="Permalink to this heading">¶</a></h3>
+<section id="memory-management">
+<h3>Memory management<a class="headerlink" href="#memory-management" title="Permalink to this heading">¶</a></h3>
 <p>The underlying ESMF framework needs to be initialized and finalized once and
 only once per execution. This is handled internally by the
 <a class="reference internal" href="manager.html#ESMF.api.esmpymanager.Manager" title="ESMF.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> and <strong>does not</strong> require any explicit
 user intervention. However, the ESMF garbage collection feature is not triggered
-until the finalization routine is invoked. So if memory deallocation of ESMPy
+until the finalization routine is invoked, which may not happen until the
+<a class="reference internal" href="manager.html#ESMF.api.esmpymanager.Manager" title="ESMF.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> goes out of scope at the end of the
+program execution.</p>
+<p>If memory deallocation of ESMPy
 objects is required <em>prior</em> to the end of the program, the class level
 <code class="docutils literal notranslate"><span class="pre">destroy</span></code> routines should be invoked:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mg</span> <span class="o">=</span> <span class="n">ESMF</span><span class="o">.</span><span class="n">Manager</span><span class="p">()</span>
@@ -204,14 +207,16 @@ objects is required <em>prior</em> to the end of the program, the class level
 </pre></div>
 </div>
 <p>This is commonly required when reusing a <a class="reference internal" href="regrid.html#ESMF.api.regrid.Regrid" title="ESMF.api.regrid.Regrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Regrid</span></code></a> object
-to interpolate data between many <a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> pairs to
-conserve memory to complete all interpolations in a single execution.</p>
+to interpolate data between many <a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> pairs.</p>
 </section>
 <section id="moab-mesh-backend">
 <h3>MOAB Mesh backend<a class="headerlink" href="#moab-mesh-backend" title="Permalink to this heading">¶</a></h3>
 <p>The Manager can be used to enable the <a class="reference external" href="https://sigma.mcs.anl.gov/moab-library/">MOAB</a>
-mesh backend to the Mesh. This is done by calling <code class="docutils literal notranslate"><span class="pre">set_moab()</span></code> with <code class="docutils literal notranslate"><span class="pre">moab_on=True</span></code>.
-The MOAB mesh is an alternative to the native ESMF mesh, and does not yet have
+mesh backend to the Mesh.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mg</span><span class="o">.</span><span class="n">set_moab</span><span class="p">(</span><span class="n">moab_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The MOAB mesh is an alternative to the native ESMF mesh, and does not yet have
 full support.</p>
 </section>
 </section>
@@ -957,7 +962,7 @@ of the documentation.</p>
 <li><a class="reference internal" href="#manager">Manager</a><ul>
 <li><a class="reference internal" href="#resource-allocation">Resource Allocation</a></li>
 <li><a class="reference internal" href="#logging">Logging</a></li>
-<li><a class="reference internal" href="#garbage-collection">Garbage Collection</a></li>
+<li><a class="reference internal" href="#memory-management">Memory management</a></li>
 <li><a class="reference internal" href="#moab-mesh-backend">MOAB Mesh backend</a></li>
 </ul>
 </li>
@@ -1060,13 +1065,13 @@ of the documentation.</p>
         <li class="right" >
           <a href="examples.html" title="Tutorials"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.3.0 beta snapshot documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 beta snapshot documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">API</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.1.
+        &#169; Copyright 2011-2022, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>
