@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>ExtrapMethod &#8212; ESMPy 8.3.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="FileFormat" href="FileFormat.html" />
+    <link rel="prev" title="CoordSys" href="CoordSys.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="FileFormat.html" title="FileFormat"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="CoordSys.html" title="CoordSys"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.3.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ExtrapMethod</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="extrapmethod">
+<h1>ExtrapMethod<a class="headerlink" href="#extrapmethod" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ESMF.api.constants.ExtrapMethod">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ESMF.api.constants.</span></span><span class="sig-name descname"><span class="pre">ExtrapMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.constants.ExtrapMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify which extrapolation method to use on unmapped destination points after 
+regridding.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ESMF.api.constants.ExtrapMethod.NONE">
+<span class="sig-name descname"><span class="pre">NONE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ExtrapMethod.NONE:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.ExtrapMethod.NONE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates that no extrapolation should be done.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ESMF.api.constants.ExtrapMethod.NEAREST_STOD">
+<span class="sig-name descname"><span class="pre">NEAREST_STOD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ExtrapMethod.NEAREST_STOD:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.ExtrapMethod.NEAREST_STOD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inverse distance weighted average. 
+Here the value of a destination point is the weighted average of the 
+closest N source points. The weight is the reciprocal of the distance of 
+the source point from the destination point raised to a power P. All the
+weights contributing to one destination point are normalized so that they 
+sum to 1.0. The user can choose N and P when using this method, but 
+defaults are also provided.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ESMF.api.constants.ExtrapMethod.NEAREST_IDAVG">
+<span class="sig-name descname"><span class="pre">NEAREST_IDAVG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ExtrapMethod.NEAREST_IDAVG:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.ExtrapMethod.NEAREST_IDAVG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nearest source to destination. 
+Here each destination point is mapped to the closest source point. A given 
+source point may go to multiple destination points, but no destination 
+point will receive input from more than one source point.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ESMF.api.constants.ExtrapMethod.CREEP_FILL">
+<span class="sig-name descname"><span class="pre">CREEP_FILL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ExtrapMethod.CREEP_FILL:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.ExtrapMethod.CREEP_FILL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creep fill extrapolation.
+Here unmapped destination points are filled by repeatedly moving data from
+mapped locations to neighboring unmapped locations. The data filled into a 
+new location is the average of its already filled neighbors’ values. This 
+process is repeated for a user specified number of levels (e.g. in Regrid() 
+this is specified via the extrap_num_levels parameter). This extrapolation 
+method is not supported with conservative regrid methods.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="CoordSys.html"
+                          title="previous chapter">CoordSys</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="FileFormat.html"
+                          title="next chapter">FileFormat</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ExtrapMethod.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="FileFormat.html" title="FileFormat"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="CoordSys.html" title="CoordSys"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.3.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ExtrapMethod</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+    </div>
+  </body>
+</html>
