@@ -94,7 +94,7 @@ to construct on the source <a class="reference internal" href="grid.html#ESMF.ap
 regridmethod == <a class="reference internal" href="RegridMethod.html#ESMF.api.constants.RegridMethod.CONSERVE" title="ESMF.api.constants.RegridMethod.CONSERVE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CONSERVE</span></code></a>, or
 <a class="reference internal" href="PoleMethod.html#ESMF.api.constants.PoleMethod.ALLAVG" title="ESMF.api.constants.PoleMethod.ALLAVG"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ALLAVG</span></code></a> for
 regridmethod != <a class="reference internal" href="RegridMethod.html#ESMF.api.constants.RegridMethod.CONSERVE" title="ESMF.api.constants.RegridMethod.CONSERVE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CONSERVE</span></code></a>.</p></li>
-<li><p><strong>regrid_pole_npoints</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – specifies how many points to average over
+<li><p><strong>regrid_pole_npoints</strong> (<em>int</em>) – specifies how many points to average over
 if polemethod == <a class="reference internal" href="PoleMethod.html#ESMF.api.constants.PoleMethod.ALLAVG" title="ESMF.api.constants.PoleMethod.ALLAVG"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ALLAVG</span></code></a>.</p></li>
 <li><p><strong>line_type</strong> (<a class="reference internal" href="LineType.html#ESMF.api.constants.LineType" title="ESMF.api.constants.LineType"><em>LineType</em></a>) – select the path of the line that connects two
 points on the surface of a sphere.  This in turn controls the path along
@@ -109,22 +109,22 @@ generating conservative regridding weights. If <code class="docutils literal not
 <a class="reference internal" href="NormType.html#ESMF.api.constants.NormType.DSTAREA" title="ESMF.api.constants.NormType.DSTAREA"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DSTAREA</span></code></a>.</p></li>
 <li><p><strong>extrap_method</strong> (<a class="reference internal" href="ExtrapMethod.html#ESMF.api.constants.ExtrapMethod" title="ESMF.api.constants.ExtrapMethod"><em>ExtrapMethod</em></a>) – Specify which extrapolation method to use on 
 unmapped destination points after regridding.</p></li>
-<li><p><strong>extrap_num_src_pnts</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The number of source points to use for the 
+<li><p><strong>extrap_num_src_pnts</strong> (<em>int</em>) – The number of source points to use for the 
 extrapolation methods that use more than one source point 
 (e.g. <a class="reference internal" href="ExtrapMethod.html#ESMF.api.constants.ExtrapMethod.NEAREST_IDAVG" title="ESMF.api.constants.ExtrapMethod.NEAREST_IDAVG"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NEAREST_IDAVG</span></code></a>). If not 
 specified, defaults to 8.</p></li>
-<li><p><strong>extrap_dist_exponent</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) – The exponent to raise the distance to when 
+<li><p><strong>extrap_dist_exponent</strong> (<em>float</em>) – The exponent to raise the distance to when 
 calculating weights for the <a class="reference internal" href="ExtrapMethod.html#ESMF.api.constants.ExtrapMethod.NEAREST_IDAVG" title="ESMF.api.constants.ExtrapMethod.NEAREST_IDAVG"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NEAREST_IDAVG</span></code></a>
 extrapolation method. A higher value reduces the influence of more distant
 points. If not specified, defaults to <code class="docutils literal notranslate"><span class="pre">2.0</span></code>.</p></li>
-<li><p><strong>extrap_num_levels</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The number of levels to output for the extrapolation 
+<li><p><strong>extrap_num_levels</strong> (<em>int</em>) – The number of levels to output for the extrapolation 
 methods that fill levels (e.g. <code class="xref py py-attr docutils literal notranslate"><span class="pre">CREEP</span></code>). 
 When a method is used that requires this, then an error will be returned if it 
 is not specified.</p></li>
 <li><p><strong>unmapped_action</strong> (<a class="reference internal" href="UnmappedAction.html#ESMF.api.constants.UnmappedAction" title="ESMF.api.constants.UnmappedAction"><em>UnmappedAction</em></a>) – specifies which action to take if a
 destination point is found which does not map to any source point. If
 <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="UnmappedAction.html#ESMF.api.constants.UnmappedAction.ERROR" title="ESMF.api.constants.UnmappedAction.ERROR"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ERROR</span></code></a>.</p></li>
-<li><p><strong>ignore_degenerate</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Ignore degenerate cells when checking the
+<li><p><strong>ignore_degenerate</strong> (<em>bool</em>) – Ignore degenerate cells when checking the
 input <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grids</span></code></a> or <a class="reference internal" href="mesh.html#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Meshes</span></code></a>
 for errors. If this is set to True, then the regridding proceeds, but
 degenerate cells will be skipped. If set to False, a degenerate cell produces
@@ -137,7 +137,7 @@ value which contributes to the total mass of the <a class="reference internal" h
 <li><p><strong>dst_frac_field</strong> (<em>ndarray</em>) – return a numpy array of values containing
 weights corresponding to the amount of each <a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>
 value which contributes to the total mass of the <a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>.</p></li>
-<li><p><strong>factors</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – <p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, return the factor and factor index list
+<li><p><strong>factors</strong> (<em>bool</em>) – <p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, return the factor and factor index list
 when calling into <code class="docutils literal notranslate"><span class="pre">ESMF</span></code>’s regrid store method. These lists are converted
 to NumPy arrays and attached to the regrid object. The factor arrays
 are retrievable via <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_factors()</span></code> or <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_weights_dict()</span></code>.
@@ -146,7 +146,7 @@ For more information on how <code class="docutils literal notranslate"><span cla
 ESMF_FieldRegridStore interface in the 
 <a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_refdoc/">ESMF Reference Manual</a>.</p>
 </p></li>
-<li><p><strong>large_file</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, create the weight file in NetCDF using the 
+<li><p><strong>large_file</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, create the weight file in NetCDF using the 
 64-bit  offset format to allow variables larger than 2GB. Note the 64-bit offset 
 format is not supported in the NetCDF version earlier than 3.6.0.  An error message 
 will be generated if this flag is specified while the application is linked with a 
@@ -231,7 +231,7 @@ to <code class="docutils literal notranslate"><span class="pre">destroy</span></
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>deep_copy</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, make deep copies of the returned
+<dd class="field-odd"><p><strong>deep_copy</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, make deep copies of the returned
 arrays. If <code class="docutils literal notranslate"><span class="pre">False</span></code> (the default), the returned arrays will reference
 the underlying <code class="docutils literal notranslate"><span class="pre">ESMF</span></code> memory.</p>
 </dd>
@@ -272,7 +272,7 @@ to NumPy array flags (<code class="docutils literal notranslate"><span class="pr
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>deep_copy</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, make deep copies of the returned
+<dd class="field-odd"><p><strong>deep_copy</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, make deep copies of the returned
 arrays. If <code class="docutils literal notranslate"><span class="pre">False</span></code> (the default), the returned arrays will reference
 the underlying <code class="docutils literal notranslate"><span class="pre">ESMF</span></code> memory.</p>
 </dd>
