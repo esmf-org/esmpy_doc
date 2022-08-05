@@ -81,11 +81,11 @@ number of grid cells in each dimension.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>num_peri_dims</strong> (<em>int</em>) – The number of periodic dimensions, either <code class="docutils literal notranslate"><span class="pre">0</span></code>
+<li><p><strong>num_peri_dims</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The number of periodic dimensions, either <code class="docutils literal notranslate"><span class="pre">0</span></code>
 or <code class="docutils literal notranslate"><span class="pre">1</span></code>. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
-<li><p><strong>periodic_dim</strong> (<em>int</em>) – The periodic dimension: <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">2</span></code>.
+<li><p><strong>periodic_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The periodic dimension: <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">2</span></code>.
 If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
-<li><p><strong>pole_dim</strong> (<em>int</em>) – The pole dimension <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span></code>.
+<li><p><strong>pole_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The pole dimension <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span></code>.
 If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 <li><p><strong>coord_sys</strong> (<a class="reference internal" href="CoordSys.html#ESMF.api.constants.CoordSys" title="ESMF.api.constants.CoordSys"><em>CoordSys</em></a>) – Coordinate system for the
 <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.
@@ -117,7 +117,7 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> (<em>str</em>) – The name of the NetCDF grid file.</p></li>
+<li><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – The name of the NetCDF grid file.</p></li>
 <li><p><strong>filetype</strong> (<a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat" title="ESMF.api.constants.FileFormat"><em>FileFormat</em></a>) – The grid <a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat" title="ESMF.api.constants.FileFormat"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FileFormat</span></code></a>.</p></li>
 </ul>
 </dd>
@@ -126,20 +126,20 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>is_sphere</strong> (<em>bool</em>) – Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> for a spherical grid, or <code class="docutils literal notranslate"><span class="pre">False</span></code>
+<li><p><strong>is_sphere</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> for a spherical grid, or <code class="docutils literal notranslate"><span class="pre">False</span></code>
 for regional. Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
-<li><p><strong>add_corner_stagger</strong> (<em>bool</em>) – Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> to use the information in
+<li><p><strong>add_corner_stagger</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> to use the information in
 the grid file to add the corner stagger to the grid. The coordinates for
 the corner stagger are required for conservative regridding. If
 not specified, defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>add_user_area</strong> (<em>bool</em>) – Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> to read in the cell area from the
+<li><p><strong>add_user_area</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> to read in the cell area from the
 grid file; otherwise, ESMF will calculate it. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>add_mask</strong> (<em>bool</em>) – Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> to generate the mask using the
+<li><p><strong>add_mask</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> to generate the mask using the
 <code class="docutils literal notranslate"><span class="pre">missing_value</span></code> attribute defined in <code class="docutils literal notranslate"><span class="pre">varname</span></code>.  This argument is
 only supported with filetype
 <a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat.GRIDSPEC" title="ESMF.api.constants.FileFormat.GRIDSPEC"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GRIDSPEC</span></code></a>.
 Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>varname</strong> (<em>str</em>) – If add_mask is <code class="docutils literal notranslate"><span class="pre">True</span></code>, provide a variable name stored
+<li><p><strong>varname</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – If add_mask is <code class="docutils literal notranslate"><span class="pre">True</span></code>, provide a variable name stored
 in the grid file and the mask will be generated using the missing value
 of the data value of this variable.  The first two dimensions of the
 variable has to be the longitude and the latitude dimension and the
@@ -159,7 +159,7 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">None</s
 <p><em>REQUIRED:</em></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>tilesize</strong> (<em>int</em>) – The number of elements on each side of the tile of the
+<dd class="field-odd"><p><strong>tilesize</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The number of elements on each side of the tile of the
 cubed sphere grid.</p>
 </dd>
 </dl>
@@ -178,7 +178,7 @@ number of DEs will be a multiple of 6 and less than or equal to the total
 PET count. For instance, if the total PET count is 16, the total DE count
 will be 12 with each tile decomposed into 1x2 blocks. The 12 DEs are mapped
 to the first 12 PETs and the remaining 4 PETs have no DEs locally.</p></li>
-<li><p><strong>name</strong> (<em>str</em>) – The name of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – The name of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -247,7 +247,7 @@ second index represent the coordinate dimensions of the
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_corners</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.has_corners" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>bool</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)">bool</a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A boolean value to tell if the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
@@ -308,7 +308,7 @@ dimension of the grid.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_peri_dims</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.num_peri_dims" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>int</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The total number of periodic dimensions in the
@@ -322,7 +322,7 @@ dimension of the grid.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">periodic_dim</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.periodic_dim" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>int</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The periodic dimension of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
@@ -337,7 +337,7 @@ dimension of the grid.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pole_dim</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.pole_dim" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>int</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The pole dimension of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
@@ -352,7 +352,7 @@ dimension of the grid.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rank</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.rank" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>int</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The rank of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
@@ -433,11 +433,11 @@ values. If <code class="docutils literal notranslate"><span class="pre">None</sp
 <a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc.CENTER" title="ESMF.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a>
 in 2D and <a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc.CENTER_VCENTER" title="ESMF.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in
 3D.</p></li>
-<li><p><strong>coord_dim</strong> (<em>int</em>) – The dimension number of the coordinates to return
+<li><p><strong>coord_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The dimension number of the coordinates to return
 e.g. <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1,</span> <span class="pre">2)</span></code>, or <code class="docutils literal notranslate"><span class="pre">[lon,</span> <span class="pre">lat]</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1)</span></code>
 (coordinates will not be returned if coord_dim is not specified and
 staggerlocs is a list with more than one element).</p></li>
-<li><p><strong>from_file</strong> (<em>bool</em>) – Boolean for internal use to determine whether the
+<li><p><strong>from_file</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Boolean for internal use to determine whether the
 <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> has already been created from file.</p></li>
 </ul>
 </dd>
@@ -469,7 +469,7 @@ values. If <code class="docutils literal notranslate"><span class="pre">None</sp
 <a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc.CENTER" title="ESMF.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a>
 in 2D and <a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc.CENTER_VCENTER" title="ESMF.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in
 3D.</p></li>
-<li><p><strong>from_file</strong> (<em>bool</em>) – Boolean for internal use to determine whether the
+<li><p><strong>from_file</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Boolean for internal use to determine whether the
 <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> has already been created from file.</p></li>
 </ul>
 </dd>
@@ -506,7 +506,7 @@ directly aliased to the underlying memory allocated by ESMF.</p>
 <p><em>REQUIRED:</em></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>coord_dim</strong> (<em>int</em>) – The dimension number of the coordinates to return
+<dd class="field-odd"><p><strong>coord_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The dimension number of the coordinates to return
 e.g. <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1,</span> <span class="pre">2)</span></code>, or <code class="docutils literal notranslate"><span class="pre">[lon,</span> <span class="pre">lat]</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1)</span></code>
 (coordinates will not be returned if <code class="docutils literal notranslate"><span class="pre">coord_dim</span></code> is not specified
 and <code class="docutils literal notranslate"><span class="pre">staggerlocs</span></code> is a list with more than one element).</p>
