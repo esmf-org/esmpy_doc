@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Grid &#8212; ESMPy 8.4.0 beta snapshot documentation</title>
+    <title>Grid &#8212; ESMPy 8.4.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
@@ -36,7 +36,7 @@
         <li class="right" >
           <a href="field.html" title="Field"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 beta snapshot documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Grid</a></li> 
       </ul>
@@ -50,24 +50,24 @@
   <section id="grid">
 <h1>Grid<a class="headerlink" href="#grid" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ESMF.api.grid.</span></span><span class="sig-name descname"><span class="pre">Grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_peri_dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periodic_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pole_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_sys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_typekind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pole_kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filetype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reg_decomp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decompflag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_sphere</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_corner_stagger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_user_area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">varname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tilesize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regDecompPTile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.grid.Grid" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> class is a Python wrapper object for the ESMF Grid.  The individual 
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">esmpy.api.grid.</span></span><span class="sig-name descname"><span class="pre">Grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_peri_dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periodic_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pole_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_sys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_typekind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pole_kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filetype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reg_decomp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decompflag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_sphere</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_corner_stagger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_user_area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">varname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tilesize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regDecompPTile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> class is a Python wrapper object for the ESMF Grid.  The individual 
 values of all coordinate and mask arrays are referenced to those of the
 underlying Fortran ESMF object.</p>
-<p>The <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> class is used to describe the geometry and
+<p>The <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> class is used to describe the geometry and
 discretization of logically rectangular physical grids.  It also contains
 the description of the underlying topology and decomposition of the physical
 grid across the available computational resources. The most frequent use of
-the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> class is to describe physical grids in user
+the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> class is to describe physical grids in user
 code so that sufficient information is available to perform regridding
 operations.</p>
 <p>Refer to the Grid Class of the 
 <a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_refdoc/">ESMF Reference Manual</a>
 for more information.</p>
-<p>A <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> can be created in two different ways, as a
-<a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> in memory, or from SCRIP formatted or CF compliant GRIDSPEC file. The
-arguments for each type of <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> creation are
+<p>A <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> can be created in two different ways, as a
+<a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> in memory, or from SCRIP formatted or CF compliant GRIDSPEC file. The
+arguments for each type of <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> creation are
 outlined below.</p>
 <p><strong>Created in-memory:</strong></p>
 <p><em>REQUIRED:</em></p>
@@ -87,12 +87,12 @@ or <code class="docutils literal notranslate"><span class="pre">1</span></code>.
 If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
 <li><p><strong>pole_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The pole dimension <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span></code>.
 If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
-<li><p><strong>coord_sys</strong> (<a class="reference internal" href="CoordSys.html#ESMF.api.constants.CoordSys" title="ESMF.api.constants.CoordSys"><em>CoordSys</em></a>) – Coordinate system for the
-<a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.
-If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="CoordSys.html#ESMF.api.constants.CoordSys.SPH_DEG" title="ESMF.api.constants.CoordSys.SPH_DEG"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SPH_DEG</span></code></a>.</p></li>
-<li><p><strong>coord_typekind</strong> (<a class="reference internal" href="TypeKind.html#ESMF.api.constants.TypeKind" title="ESMF.api.constants.TypeKind"><em>TypeKind</em></a>) – Type of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
+<li><p><strong>coord_sys</strong> (<a class="reference internal" href="CoordSys.html#esmpy.api.constants.CoordSys" title="esmpy.api.constants.CoordSys"><em>CoordSys</em></a>) – Coordinate system for the
+<a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="CoordSys.html#esmpy.api.constants.CoordSys.SPH_DEG" title="esmpy.api.constants.CoordSys.SPH_DEG"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SPH_DEG</span></code></a>.</p></li>
+<li><p><strong>coord_typekind</strong> (<a class="reference internal" href="TypeKind.html#esmpy.api.constants.TypeKind" title="esmpy.api.constants.TypeKind"><em>TypeKind</em></a>) – Type of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
 coordinates.
-If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="TypeKind.html#ESMF.api.constants.TypeKind.R8" title="ESMF.api.constants.TypeKind.R8"><code class="xref py py-attr docutils literal notranslate"><span class="pre">R8</span></code></a>.</p></li>
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="TypeKind.html#esmpy.api.constants.TypeKind.R8" title="esmpy.api.constants.TypeKind.R8"><code class="xref py py-attr docutils literal notranslate"><span class="pre">R8</span></code></a>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -100,15 +100,15 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc" title="ESMF.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the coordinate values.
-If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc.CENTER" title="ESMF.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a>
-in 2D and <a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc.CENTER_VCENTER" title="ESMF.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in 3D.</p></li>
-<li><p><strong>pole_kind</strong> (<a class="reference internal" href="PoleKind.html#ESMF.api.constants.PoleKind" title="ESMF.api.constants.PoleKind"><em>PoleKind</em></a>) – Two item list which specifies the type of
+<li><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc" title="esmpy.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the coordinate values.
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER" title="esmpy.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a>
+in 2D and <a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER_VCENTER" title="esmpy.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in 3D.</p></li>
+<li><p><strong>pole_kind</strong> (<a class="reference internal" href="PoleKind.html#esmpy.api.constants.PoleKind" title="esmpy.api.constants.PoleKind"><em>PoleKind</em></a>) – Two item list which specifies the type of
 connection which occurs at the pole. The first value specifies the
 connection that occurs at the minimum end of the pole dimension. 
 The second value specifies the connection that occurs at the maximum 
 end of the pole dimension.
-If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="PoleKind.html#ESMF.api.constants.PoleKind.MONOPOLE" title="ESMF.api.constants.PoleKind.MONOPOLE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">MONOPOLE</span></code></a>.</p></li>
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="PoleKind.html#esmpy.api.constants.PoleKind.MONOPOLE" title="esmpy.api.constants.PoleKind.MONOPOLE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">MONOPOLE</span></code></a>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -118,7 +118,7 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – The name of the NetCDF grid file.</p></li>
-<li><p><strong>filetype</strong> (<a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat" title="ESMF.api.constants.FileFormat"><em>FileFormat</em></a>) – The grid <a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat" title="ESMF.api.constants.FileFormat"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FileFormat</span></code></a>.</p></li>
+<li><p><strong>filetype</strong> (<a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat" title="esmpy.api.constants.FileFormat"><em>FileFormat</em></a>) – The grid <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat" title="esmpy.api.constants.FileFormat"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FileFormat</span></code></a>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -137,7 +137,7 @@ grid file; otherwise, ESMF will calculate it. Defaults to <code class="docutils 
 <li><p><strong>add_mask</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> to generate the mask using the
 <code class="docutils literal notranslate"><span class="pre">missing_value</span></code> attribute defined in <code class="docutils literal notranslate"><span class="pre">varname</span></code>.  This argument is
 only supported with filetype
-<a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat.GRIDSPEC" title="ESMF.api.constants.FileFormat.GRIDSPEC"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GRIDSPEC</span></code></a>.
+<a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.GRIDSPEC" title="esmpy.api.constants.FileFormat.GRIDSPEC"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GRIDSPEC</span></code></a>.
 Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 <li><p><strong>varname</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – If add_mask is <code class="docutils literal notranslate"><span class="pre">True</span></code>, provide a variable name stored
 in the grid file and the mask will be generated using the missing value
@@ -145,12 +145,12 @@ of the data value of this variable.  The first two dimensions of the
 variable has to be the longitude and the latitude dimension and the
 mask is derived from the first 2D values of this variable even if this
 data is a 3D, or 4D array. This argument is only supported with
-filetype <a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat.GRIDSPEC" title="ESMF.api.constants.FileFormat.GRIDSPEC"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GRIDSPEC</span></code></a>.
+filetype <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.GRIDSPEC" title="esmpy.api.constants.FileFormat.GRIDSPEC"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GRIDSPEC</span></code></a>.
 Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 <li><p><strong>coord_names</strong> (<em>list</em>) – A two-element array containing the longitude and
 latitude variable names in a GRIDSPEC file if there are multiple
 coordinates defined in the file. This argument is only supported with
-filetype <a class="reference internal" href="FileFormat.html#ESMF.api.constants.FileFormat.GRIDSPEC" title="ESMF.api.constants.FileFormat.GRIDSPEC"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GRIDSPEC</span></code></a>.
+filetype <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.GRIDSPEC" title="esmpy.api.constants.FileFormat.GRIDSPEC"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GRIDSPEC</span></code></a>.
 Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 </ul>
 </dd>
@@ -178,20 +178,20 @@ number of DEs will be a multiple of 6 and less than or equal to the total
 PET count. For instance, if the total PET count is 16, the total DE count
 will be 12 with each tile decomposed into 1x2 blocks. The 12 DEs are mapped
 to the first 12 PETs and the remaining 4 PETs have no DEs locally.</p></li>
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – The name of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – The name of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py property">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.area">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">area</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.area" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.area">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">area</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.area" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A list of numpy arrays with an entry for every stagger location
-of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> cell areas represented as
+<dd class="field-even"><p>The <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> cell areas represented as
 numpy arrays of floats of size given by
 <code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>.</p>
 </dd>
@@ -199,73 +199,73 @@ numpy arrays of floats of size given by
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.areatype">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">areatype</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.areatype" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.areatype">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">areatype</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.areatype" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="TypeKind.html#ESMF.api.constants.TypeKind" title="ESMF.api.constants.TypeKind"><code class="xref py py-attr docutils literal notranslate"><span class="pre">TypeKind</span></code></a></p>
+<dd class="field-odd"><p><a class="reference internal" href="TypeKind.html#esmpy.api.constants.TypeKind" title="esmpy.api.constants.TypeKind"><code class="xref py py-attr docutils literal notranslate"><span class="pre">TypeKind</span></code></a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The ESMF typekind of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> cell
+<dd class="field-even"><p>The ESMF typekind of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> cell
 areas.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.coords">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">coords</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.coords" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.coords">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">coords</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.coords" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>2D list of numpy arrays of size given by
 <code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>, where the first index represents
-the stagger locations of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> and the
+the stagger locations of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> and the
 second index represent the coordinate dimensions of the
-<a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+<a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The coordinates of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+<dd class="field-even"><p>The coordinates of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.coord_sys">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">coord_sys</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.coord_sys" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.coord_sys">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">coord_sys</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.coord_sys" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="CoordSys.html#ESMF.api.constants.CoordSys" title="ESMF.api.constants.CoordSys"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CoordSys</span></code></a></p>
+<dd class="field-odd"><p><a class="reference internal" href="CoordSys.html#esmpy.api.constants.CoordSys" title="esmpy.api.constants.CoordSys"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CoordSys</span></code></a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The coordinate system of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+<dd class="field-even"><p>The coordinate system of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.has_corners">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_corners</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.has_corners" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.has_corners">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_corners</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.has_corners" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)">bool</a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A boolean value to tell if the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
+<dd class="field-even"><p>A boolean value to tell if the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
 has corners allocated.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.lower_bounds">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lower_bounds</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.lower_bounds" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.lower_bounds">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lower_bounds</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.lower_bounds" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A list of numpy arrays with an entry for every stagger location
-of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The lower bounds of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
+<dd class="field-even"><p>The lower bounds of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
 represented as numpy arrays of ints of size given by
 <code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>.</p>
 </dd>
@@ -273,15 +273,15 @@ represented as numpy arrays of ints of size given by
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.mask">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mask</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.mask" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.mask">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mask</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.mask" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A list of numpy arrays with an entry for every stagger location
-of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The mask of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> represented as
+<dd class="field-even"><p>The mask of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> represented as
 numpy arrays of ints of size given by `
 <cite>upper_bounds - lower_bounds`</cite>.</p>
 </dd>
@@ -289,43 +289,43 @@ numpy arrays of ints of size given by `
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.max_index">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_index</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.max_index" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.max_index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_index</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.max_index" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A numpy array with as many values as the
-<a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> rank.</p>
+<a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> rank.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The number of <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> cells in each
+<dd class="field-even"><p>The number of <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> cells in each
 dimension of the grid.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.num_peri_dims">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_peri_dims</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.num_peri_dims" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.num_peri_dims">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_peri_dims</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.num_peri_dims" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The total number of periodic dimensions in the
-<a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+<a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.periodic_dim">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">periodic_dim</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.periodic_dim" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.periodic_dim">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">periodic_dim</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.periodic_dim" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The periodic dimension of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
+<dd class="field-even"><p>The periodic dimension of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
 (e.g. <code class="docutils literal notranslate"><span class="pre">0</span></code> for <code class="docutils literal notranslate"><span class="pre">x</span></code> or <code class="docutils literal notranslate"><span class="pre">longitude</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code> for <code class="docutils literal notranslate"><span class="pre">y</span></code> or
 <code class="docutils literal notranslate"><span class="pre">latitude</span></code>, etc.).</p>
 </dd>
@@ -333,14 +333,14 @@ dimension of the grid.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.pole_dim">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pole_dim</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.pole_dim" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.pole_dim">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pole_dim</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.pole_dim" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The pole dimension of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
+<dd class="field-even"><p>The pole dimension of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
 (e.g. <code class="docutils literal notranslate"><span class="pre">0</span></code> for <code class="docutils literal notranslate"><span class="pre">x</span></code> or <code class="docutils literal notranslate"><span class="pre">longitude</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code> for <code class="docutils literal notranslate"><span class="pre">y</span></code> or
 <code class="docutils literal notranslate"><span class="pre">latitude</span></code>, etc.).</p>
 </dd>
@@ -348,28 +348,28 @@ dimension of the grid.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.rank">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rank</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.rank" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.rank">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rank</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.rank" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The rank of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+<dd class="field-even"><p>The rank of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.size">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.size" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.size" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A list of numpy arrays with an entry for every stagger location
-of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The size of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> represented as
+<dd class="field-even"><p>The size of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> represented as
 numpy arrays of ints of size given by
 <code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>.</p>
 </dd>
@@ -377,43 +377,43 @@ numpy arrays of ints of size given by
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.staggerloc">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">staggerloc</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.staggerloc" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.staggerloc">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">staggerloc</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.staggerloc" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list of bools</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The stagger locations that have been allocated for the
-<a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+<a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.type">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.type" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.type" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="TypeKind.html#ESMF.api.constants.TypeKind" title="ESMF.api.constants.TypeKind"><code class="xref py py-attr docutils literal notranslate"><span class="pre">TypeKind</span></code></a></p>
+<dd class="field-odd"><p><a class="reference internal" href="TypeKind.html#esmpy.api.constants.TypeKind" title="esmpy.api.constants.TypeKind"><code class="xref py py-attr docutils literal notranslate"><span class="pre">TypeKind</span></code></a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The ESMF typekind of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
+<dd class="field-even"><p>The ESMF typekind of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
 coordinates.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.upper_bounds">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">upper_bounds</span></span><a class="headerlink" href="#ESMF.api.grid.Grid.upper_bounds" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.upper_bounds">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">upper_bounds</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.upper_bounds" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A list of numpy arrays with an entry for every stagger location
-of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The upper bounds of the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
+<dd class="field-even"><p>The upper bounds of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
 represented as numpy arrays of ints of size given by
 <code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>.</p>
 </dd>
@@ -421,24 +421,24 @@ represented as numpy arrays of ints of size given by
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.add_coords">
-<span class="sig-name descname"><span class="pre">add_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.grid.Grid.add_coords" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add coordinates to the <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> at the specified
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.add_coords">
+<span class="sig-name descname"><span class="pre">add_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid.add_coords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add coordinates to the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> at the specified
 stagger location.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc" title="ESMF.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the coordinate
+<li><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc" title="esmpy.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the coordinate
 values. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to
-<a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc.CENTER" title="ESMF.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a>
-in 2D and <a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc.CENTER_VCENTER" title="ESMF.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in
+<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER" title="esmpy.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a>
+in 2D and <a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER_VCENTER" title="esmpy.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in
 3D.</p></li>
 <li><p><strong>coord_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The dimension number of the coordinates to return
 e.g. <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1,</span> <span class="pre">2)</span></code>, or <code class="docutils literal notranslate"><span class="pre">[lon,</span> <span class="pre">lat]</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1)</span></code>
 (coordinates will not be returned if coord_dim is not specified and
 staggerlocs is a list with more than one element).</p></li>
 <li><p><strong>from_file</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Boolean for internal use to determine whether the
-<a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> has already been created from file.</p></li>
+<a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> has already been created from file.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -449,14 +449,14 @@ coord_dim are specified, otherwise return None.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.add_item">
-<span class="sig-name descname"><span class="pre">add_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.grid.Grid.add_item" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allocate space for a <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> item (mask or areas)
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.add_item">
+<span class="sig-name descname"><span class="pre">add_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid.add_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allocate space for a <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> item (mask or areas)
 at a specified stagger location.</p>
 <p><em>REQUIRED:</em></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>item</strong> (<a class="reference internal" href="GridItem.html#ESMF.api.constants.GridItem" title="ESMF.api.constants.GridItem"><em>GridItem</em></a>) – The <a class="reference internal" href="GridItem.html#ESMF.api.constants.GridItem" title="ESMF.api.constants.GridItem"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GridItem</span></code></a> to
+<dd class="field-odd"><p><strong>item</strong> (<a class="reference internal" href="GridItem.html#esmpy.api.constants.GridItem" title="esmpy.api.constants.GridItem"><em>GridItem</em></a>) – The <a class="reference internal" href="GridItem.html#esmpy.api.constants.GridItem" title="esmpy.api.constants.GridItem"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GridItem</span></code></a> to
 allocate.</p>
 </dd>
 </dl>
@@ -464,13 +464,13 @@ allocate.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc" title="ESMF.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the item
+<li><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc" title="esmpy.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the item
 values. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to
-<a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc.CENTER" title="ESMF.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a>
-in 2D and <a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc.CENTER_VCENTER" title="ESMF.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in
+<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER" title="esmpy.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a>
+in 2D and <a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER_VCENTER" title="esmpy.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in
 3D.</p></li>
 <li><p><strong>from_file</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Boolean for internal use to determine whether the
-<a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> has already been created from file.</p></li>
+<a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> has already been created from file.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -481,28 +481,28 @@ staggerloc is given, otherwise return None.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.copy">
-<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.grid.Grid.copy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Copy a <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> in an ESMF-safe manner.</p>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy a <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> in an ESMF-safe manner.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> shallow copy.</p>
+<dd class="field-odd"><p>A <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> shallow copy.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.destroy">
-<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.grid.Grid.destroy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Release the memory associated with a <a class="reference internal" href="#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid.destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release the memory associated with a <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.get_coords">
-<span class="sig-name descname"><span class="pre">get_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coord_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.grid.Grid.get_coords" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.get_coords">
+<span class="sig-name descname"><span class="pre">get_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coord_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid.get_coords" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a numpy array of coordinates at a specified stagger 
 location. The returned array is NOT a copy, it is
-directly aliased to the underlying memory allocated by ESMF.</p>
+directly aliased to the underlying memory allocated by esmpy.</p>
 <p><em>REQUIRED:</em></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -515,10 +515,10 @@ and <code class="docutils literal notranslate"><span class="pre">staggerlocs</sp
 <p><em>OPTIONAL:</em></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc" title="ESMF.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the coordinate
+<dd class="field-odd"><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc" title="esmpy.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the coordinate
 values. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to
-<a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc.CENTER" title="ESMF.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a>
-in 2D and <a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc.CENTER_VCENTER" title="ESMF.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in
+<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER" title="esmpy.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a>
+in 2D and <a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER_VCENTER" title="esmpy.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in
 3D.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -528,25 +528,25 @@ in 2D and <a class="reference internal" href="StaggerLoc.html#ESMF.api.constants
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ESMF.api.grid.Grid.get_item">
-<span class="sig-name descname"><span class="pre">get_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.grid.Grid.get_item" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.get_item">
+<span class="sig-name descname"><span class="pre">get_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid.get_item" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a numpy array of item values at a specified stagger
 location.  The returned array is NOT a copy, it is
-directly aliased to the underlying memory allocated by ESMF.</p>
+directly aliased to the underlying memory allocated by esmpy.</p>
 <p><em>REQUIRED:</em></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>item</strong> (<a class="reference internal" href="GridItem.html#ESMF.api.constants.GridItem" title="ESMF.api.constants.GridItem"><em>GridItem</em></a>) – The <a class="reference internal" href="GridItem.html#ESMF.api.constants.GridItem" title="ESMF.api.constants.GridItem"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GridItem</span></code></a> to
+<dd class="field-odd"><p><strong>item</strong> (<a class="reference internal" href="GridItem.html#esmpy.api.constants.GridItem" title="esmpy.api.constants.GridItem"><em>GridItem</em></a>) – The <a class="reference internal" href="GridItem.html#esmpy.api.constants.GridItem" title="esmpy.api.constants.GridItem"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GridItem</span></code></a> to
 return.</p>
 </dd>
 </dl>
 <p><em>OPTIONAL:</em></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc" title="ESMF.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the item
+<dd class="field-odd"><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc" title="esmpy.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the item
 values. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to
-<a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc.CENTER" title="ESMF.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a> in 2D and
-<a class="reference internal" href="StaggerLoc.html#ESMF.api.constants.StaggerLoc.CENTER_VCENTER" title="ESMF.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in 3D.</p>
+<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER" title="esmpy.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a> in 2D and
+<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER_VCENTER" title="esmpy.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in 3D.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A numpy array of mask or area values at the specified staggerloc.</p>
@@ -611,7 +611,7 @@ values. If <code class="docutils literal notranslate"><span class="pre">None</sp
         <li class="right" >
           <a href="field.html" title="Field"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 beta snapshot documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Grid</a></li> 
       </ul>
