@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>PoleMethod &#8212; ESMPy 8.3.1 beta snapshot documentation</title>
+    <title>PoleMethod &#8212; ESMPy 8.4.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
@@ -36,7 +36,7 @@
         <li class="right" >
           <a href="PoleKind.html" title="PoleKind"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.3.1 beta snapshot documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">PoleMethod</a></li> 
       </ul>
@@ -50,20 +50,20 @@
   <section id="polemethod">
 <h1>PoleMethod<a class="headerlink" href="#polemethod" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="ESMF.api.constants.PoleMethod">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ESMF.api.constants.</span></span><span class="sig-name descname"><span class="pre">PoleMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.constants.PoleMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.constants.PoleMethod">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">esmpy.api.constants.</span></span><span class="sig-name descname"><span class="pre">PoleMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.constants.PoleMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates which type of artificial pole to construct on the source
-<a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> for regridding.</p>
+<a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> for regridding.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="ESMF.api.constants.PoleMethod.NONE">
-<span class="sig-name descname"><span class="pre">NONE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PoleMethod.NONE:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.PoleMethod.NONE" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.constants.PoleMethod.NONE">
+<span class="sig-name descname"><span class="pre">NONE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PoleMethod.NONE:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#esmpy.api.constants.PoleMethod.NONE" title="Permalink to this definition">¶</a></dt>
 <dd><p>No pole. Destination points which lie above the top or below the bottom row
-of the source <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> won’t be mapped.</p>
+of the source <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> won’t be mapped.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="ESMF.api.constants.PoleMethod.ALLAVG">
-<span class="sig-name descname"><span class="pre">ALLAVG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PoleMethod.ALLAVG:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.PoleMethod.ALLAVG" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.constants.PoleMethod.ALLAVG">
+<span class="sig-name descname"><span class="pre">ALLAVG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PoleMethod.ALLAVG:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#esmpy.api.constants.PoleMethod.ALLAVG" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct an artificial pole placed in the center of the top (or bottom)
 row of nodes, but projected onto the sphere formed by the rest of the grid.
 The value at this pole is the average of all the source values surrounding
@@ -71,8 +71,8 @@ the pole.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="ESMF.api.constants.PoleMethod.NPNTAVG">
-<span class="sig-name descname"><span class="pre">NPNTAVG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PoleMethod.NPNTAVG:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.PoleMethod.NPNTAVG" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.constants.PoleMethod.NPNTAVG">
+<span class="sig-name descname"><span class="pre">NPNTAVG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PoleMethod.NPNTAVG:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#esmpy.api.constants.PoleMethod.NPNTAVG" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct an artificial pole placed in the center of the top (or bottom)
 row of nodes, but projected onto the sphere formed by the rest of the grid.
 The value at this pole is the average of the N source nodes next to the pole
@@ -84,14 +84,14 @@ the entire pole (e.g. vector components).</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="ESMF.api.constants.PoleMethod.TEETH">
-<span class="sig-name descname"><span class="pre">TEETH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PoleMethod.TEETH:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.PoleMethod.TEETH" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.constants.PoleMethod.TEETH">
+<span class="sig-name descname"><span class="pre">TEETH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PoleMethod.TEETH:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#esmpy.api.constants.PoleMethod.TEETH" title="Permalink to this definition">¶</a></dt>
 <dd><p>No new pole point is constructed, instead the holes at the poles are filled
-by constructing triangles across the top and bottom row of the source <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.
+by constructing triangles across the top and bottom row of the source <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.
 This can be useful because no averaging occurs, however, because the top and
 bottom of the sphere are now flat, for a big enough mismatch between the
 size of the destination and source pole holes, some destination points may
-still not be able to be mapped to the source <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+still not be able to be mapped to the source <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
 </dd></dl>
 
 </dd></dl>
@@ -151,7 +151,7 @@ still not be able to be mapped to the source <a class="reference internal" href=
         <li class="right" >
           <a href="PoleKind.html" title="PoleKind"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.3.1 beta snapshot documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">PoleMethod</a></li> 
       </ul>
