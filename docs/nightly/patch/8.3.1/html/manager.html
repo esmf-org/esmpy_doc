@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Manager &#8212; ESMPy 8.4.0 documentation</title>
+    <title>Manager &#8212; ESMPy 8.3.1 beta snapshot documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
@@ -36,7 +36,7 @@
         <li class="right" >
           <a href="appendix.html" title="Appendices"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.3.1 beta snapshot documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Manager</a></li> 
       </ul>
@@ -50,42 +50,38 @@
   <section id="manager">
 <h1>Manager<a class="headerlink" href="#manager" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="esmpy.api.esmpymanager.Manager">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">esmpy.api.esmpymanager.</span></span><span class="sig-name descname"><span class="pre">Manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.esmpymanager.Manager" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ESMF.api.esmpymanager.Manager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ESMF.api.esmpymanager.</span></span><span class="sig-name descname"><span class="pre">Manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.esmpymanager.Manager" title="Permalink to this definition">¶</a></dt>
 <dd><p>This singleton class is designed to ensure that ESMF is properly initialized 
 and finalized.  ESMF is initialized at 
-<a class="reference internal" href="#esmpy.api.esmpymanager.Manager" title="esmpy.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> creation, and the __del__ 
+<a class="reference internal" href="#ESMF.api.esmpymanager.Manager" title="ESMF.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> creation, and the __del__ 
 method is registered with atexit to ensure ESMF is always finalized prior to 
 exiting Python.  If the object is copied, the copy will always be an alias 
-to the original <a class="reference internal" href="#esmpy.api.esmpymanager.Manager" title="esmpy.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> object.  The 
-<a class="reference internal" href="#esmpy.api.esmpymanager.Manager" title="esmpy.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> will be created when the first 
+to the original <a class="reference internal" href="#ESMF.api.esmpymanager.Manager" title="ESMF.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> object.  The 
+<a class="reference internal" href="#ESMF.api.esmpymanager.Manager" title="ESMF.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> will be created when the first 
 ESMPy object is created if it is not created explicitly by the user.</p>
-<p>Explicit creation of a <a class="reference internal" href="#esmpy.api.esmpymanager.Manager" title="esmpy.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> object allows
+<p>Explicit creation of a <a class="reference internal" href="#ESMF.api.esmpymanager.Manager" title="ESMF.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> object allows
 for setting a flag which 
 results in the output of debug information from the ESMF logging capability 
 during the application runtime.  The output log files are named 
 PET&lt;PET number&gt;.ESMF_LogFile.</p>
 <p>The PET rank (local_pet) and total number of PETs (pet_count) 
-can also be retrieved from the <a class="reference internal" href="#esmpy.api.esmpymanager.Manager" title="esmpy.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> 
+can also be retrieved from the <a class="reference internal" href="#ESMF.api.esmpymanager.Manager" title="ESMF.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> 
 using the following calls:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">esmpy</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span>
-<span class="n">esmpy</span><span class="o">.</span><span class="n">pet_count</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ESMF</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span>
+<span class="n">ESMF</span><span class="o">.</span><span class="n">pet_count</span><span class="p">()</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">local_pet</span></code> and <code class="docutils literal notranslate"><span class="pre">pet_count</span></code> are also properties of the 
-<a class="reference internal" href="#esmpy.api.esmpymanager.Manager" title="esmpy.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a>.</p>
+<a class="reference internal" href="#ESMF.api.esmpymanager.Manager" title="ESMF.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a>.</p>
 <p>Calls ESMP_Initialize and registers __del__ with atexit when called the
 first time.  Subsequent calls only return whether or not ESMF is
 initialized.  Registering __del__ with atexit ensures the ESMP_Finalize
 will always be called prior to exiting Python.  Calling __init__
 explicitly results in a no-op.</p>
-<p>The <a class="reference internal" href="#esmpy.api.esmpymanager.Manager" title="esmpy.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> can be used to enable the 
+<p>The Manager can be used to enable the 
 <a class="reference external" href="https://sigma.mcs.anl.gov/moab-library/">MOAB</a>
-mesh backend to the <code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code>. This is done by calling <code class="docutils literal notranslate"><span class="pre">set_moab()</span></code> with <code class="docutils literal notranslate"><span class="pre">moab_on=True</span></code>.</p>
-<p>The <a class="reference internal" href="#esmpy.api.esmpymanager.Manager" title="esmpy.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> has a <cite>test_exhaustive</cite> member 
-variable that can be enabled to run 
-combinatorial expansions of <code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code> and 
-<code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code> creation parameters.</p>
+mesh backend to the Mesh. This is done by calling <code class="docutils literal notranslate"><span class="pre">set_moab()</span></code> with <code class="docutils literal notranslate"><span class="pre">moab_on=True</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>debug</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – outputs logging information to ESMF logfiles. If
@@ -93,8 +89,8 @@ combinatorial expansions of <code class="xref py py-class docutils literal notra
 </dd>
 </dl>
 <dl class="py property">
-<dt class="sig sig-object py" id="esmpy.api.esmpymanager.Manager.local_pet">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">local_pet</span></span><a class="headerlink" href="#esmpy.api.esmpymanager.Manager.local_pet" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ESMF.api.esmpymanager.Manager.local_pet">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">local_pet</span></span><a class="headerlink" href="#ESMF.api.esmpymanager.Manager.local_pet" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
@@ -106,8 +102,8 @@ combinatorial expansions of <code class="xref py py-class docutils literal notra
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="esmpy.api.esmpymanager.Manager.moab">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">moab</span></span><a class="headerlink" href="#esmpy.api.esmpymanager.Manager.moab" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ESMF.api.esmpymanager.Manager.moab">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">moab</span></span><a class="headerlink" href="#ESMF.api.esmpymanager.Manager.moab" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)">bool</a></p>
@@ -119,8 +115,8 @@ combinatorial expansions of <code class="xref py py-class docutils literal notra
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="esmpy.api.esmpymanager.Manager.pet_count">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pet_count</span></span><a class="headerlink" href="#esmpy.api.esmpymanager.Manager.pet_count" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ESMF.api.esmpymanager.Manager.pet_count">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pet_count</span></span><a class="headerlink" href="#ESMF.api.esmpymanager.Manager.pet_count" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
@@ -133,15 +129,15 @@ available in this execution.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="esmpy.api.esmpymanager.Manager.barrier">
-<span class="sig-name descname"><span class="pre">barrier</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.esmpymanager.Manager.barrier" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ESMF.api.esmpymanager.Manager.barrier">
+<span class="sig-name descname"><span class="pre">barrier</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.esmpymanager.Manager.barrier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Collective VM communication call that blocks calling PET until 
 all PETs of the VM have issued the call.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="esmpy.api.esmpymanager.Manager.set_moab">
-<span class="sig-name descname"><span class="pre">set_moab</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moab_on</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.esmpymanager.Manager.set_moab" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ESMF.api.esmpymanager.Manager.set_moab">
+<span class="sig-name descname"><span class="pre">set_moab</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moab_on</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.esmpymanager.Manager.set_moab" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the Mesh backend to use MOAB or the Native ESMF mesh.</p>
 </dd></dl>
 
@@ -202,7 +198,7 @@ all PETs of the VM have issued the call.</p>
         <li class="right" >
           <a href="appendix.html" title="Appendices"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.3.1 beta snapshot documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Manager</a></li> 
       </ul>
