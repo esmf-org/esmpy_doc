@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>CoordSys &#8212; ESMPy 8.3.0 beta snapshot documentation</title>
+    <title>CoordSys &#8212; ESMPy 8.4.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
@@ -15,6 +15,7 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -36,7 +37,7 @@
         <li class="right" >
           <a href="regridfromfile.html" title="RegridFromFile"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.3.0 beta snapshot documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">CoordSys</a></li> 
       </ul>
@@ -50,37 +51,37 @@
   <section id="coordsys">
 <h1>CoordSys<a class="headerlink" href="#coordsys" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="ESMF.api.constants.CoordSys">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ESMF.api.constants.</span></span><span class="sig-name descname"><span class="pre">CoordSys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESMF.api.constants.CoordSys" title="Permalink to this definition">¶</a></dt>
-<dd><p>This flag indicates the coordinate system of a <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>. This value is
+<dt class="sig sig-object py" id="esmpy.api.constants.CoordSys">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">esmpy.api.constants.</span></span><span class="sig-name descname"><span class="pre">CoordSys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.constants.CoordSys" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag indicates the coordinate system of a <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>. This value is
 useful both to indicate to other users the type of the coordinates,
 but also to control how the coordinates are interpreted in
-regridding methods (e.g. <a class="reference internal" href="regrid.html#ESMF.api.regrid.Regrid" title="ESMF.api.regrid.Regrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Regrid</span></code></a>).</p>
+regridding methods (e.g. <a class="reference internal" href="regrid.html#esmpy.api.regrid.Regrid" title="esmpy.api.regrid.Regrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Regrid</span></code></a>).</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="ESMF.api.constants.CoordSys.CART">
-<span class="sig-name descname"><span class="pre">CART</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;CoordSys.CART:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.CoordSys.CART" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.constants.CoordSys.CART">
+<span class="sig-name descname"><span class="pre">CART</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;CoordSys.CART:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#esmpy.api.constants.CoordSys.CART" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cartesian coordinate system. In this system, the Cartesian
-coordinates are mapped to the <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> coordinate dimensions in the
+coordinates are mapped to the <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> coordinate dimensions in the
 following order: x, y, z. (e.g. using coord_dim=1 in
-<a class="reference internal" href="grid.html#ESMF.api.grid.Grid.get_coords" title="ESMF.api.grid.Grid.get_coords"><code class="xref py py-class docutils literal notranslate"><span class="pre">get_coords()</span></code></a> references the y dimension)</p>
+<a class="reference internal" href="grid.html#esmpy.api.grid.Grid.get_coords" title="esmpy.api.grid.Grid.get_coords"><code class="xref py py-class docutils literal notranslate"><span class="pre">get_coords()</span></code></a> references the y dimension)</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="ESMF.api.constants.CoordSys.SPH_DEG">
-<span class="sig-name descname"><span class="pre">SPH_DEG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;CoordSys.SPH_DEG:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.CoordSys.SPH_DEG" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.constants.CoordSys.SPH_DEG">
+<span class="sig-name descname"><span class="pre">SPH_DEG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;CoordSys.SPH_DEG:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#esmpy.api.constants.CoordSys.SPH_DEG" title="Permalink to this definition">¶</a></dt>
 <dd><p>Spherical coordinates in degrees. In this system, the spherical
-coordinates are mapped to the <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> coordinate dimensions in the
+coordinates are mapped to the <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> coordinate dimensions in the
 following order: longitude, latitude, radius. (E.g. using
 coord_dim=1 in <code class="xref py py-class docutils literal notranslate"><span class="pre">get_coords()`</span></code> references the latitude dimension).</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="ESMF.api.constants.CoordSys.SPH_RAD">
-<span class="sig-name descname"><span class="pre">SPH_RAD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;CoordSys.SPH_RAD:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#ESMF.api.constants.CoordSys.SPH_RAD" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="esmpy.api.constants.CoordSys.SPH_RAD">
+<span class="sig-name descname"><span class="pre">SPH_RAD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;CoordSys.SPH_RAD:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#esmpy.api.constants.CoordSys.SPH_RAD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Spherical coordinates in radians. In this system, the spherical
-coordinates are mapped to the <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> coordinate dimensions in the
+coordinates are mapped to the <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> coordinate dimensions in the
 following order: longitude, latitude, radius. (E.g. using
-coord_dim=1 in <a class="reference internal" href="grid.html#ESMF.api.grid.Grid.get_coords" title="ESMF.api.grid.Grid.get_coords"><code class="xref py py-class docutils literal notranslate"><span class="pre">get_coords()</span></code></a> references the latitude dimension).</p>
+coord_dim=1 in <a class="reference internal" href="grid.html#esmpy.api.grid.Grid.get_coords" title="esmpy.api.grid.Grid.get_coords"><code class="xref py py-class docutils literal notranslate"><span class="pre">get_coords()</span></code></a> references the latitude dimension).</p>
 </dd></dl>
 
 </dd></dl>
@@ -94,6 +95,21 @@ coord_dim=1 in <a class="reference internal" href="grid.html#ESMF.api.grid.Grid.
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">CoordSys</a><ul>
+<li><a class="reference internal" href="#esmpy.api.constants.CoordSys"><code class="docutils literal notranslate"><span class="pre">CoordSys</span></code></a><ul>
+<li><a class="reference internal" href="#esmpy.api.constants.CoordSys.CART"><code class="docutils literal notranslate"><span class="pre">CoordSys.CART</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.constants.CoordSys.SPH_DEG"><code class="docutils literal notranslate"><span class="pre">CoordSys.SPH_DEG</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.constants.CoordSys.SPH_RAD"><code class="docutils literal notranslate"><span class="pre">CoordSys.SPH_RAD</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div>
     <h4>Previous topic</h4>
     <p class="topless"><a href="regridfromfile.html"
@@ -140,14 +156,14 @@ coord_dim=1 in <a class="reference internal" href="grid.html#ESMF.api.grid.Grid.
         <li class="right" >
           <a href="regridfromfile.html" title="RegridFromFile"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.3.0 beta snapshot documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">CoordSys</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+        &#169; Copyright 2011-2022, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.2.3.
     </div>
   </body>
 </html>
