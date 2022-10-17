@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>LocStream &#8212; ESMPy 8.4.0 documentation</title>
+    <title>LocStream &#8212; ESMPy 8.5.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="mesh.html" title="Mesh"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.5.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">LocStream</a></li> 
       </ul>
@@ -94,6 +94,32 @@ they need to be named with the appropriate identifiers. The particular
 identifiers depend on the coordinate system (i.e. <code class="docutils literal notranslate"><span class="pre">coord_sys</span></code> argument)
 used to create the <a class="reference internal" href="#esmpy.api.locstream.LocStream" title="esmpy.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStream</span></code></a>.</p>
 <p>The valid values are:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Coordinate System</p></th>
+<th class="head"><p>dimension 1</p></th>
+<th class="head"><p>dimension 2</p></th>
+<th class="head"><p>dimension 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="CoordSys.html#esmpy.api.constants.CoordSys.SPH_DEG" title="esmpy.api.constants.CoordSys.SPH_DEG"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SPH_DEG</span></code></a></p></td>
+<td><p>ESMF:Lon</p></td>
+<td><p>ESMF:Lat</p></td>
+<td><p>ESMF:Radius</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="CoordSys.html#esmpy.api.constants.CoordSys.SPH_RAD" title="esmpy.api.constants.CoordSys.SPH_RAD"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SPH_RAD</span></code></a></p></td>
+<td><p>ESMF:Lon</p></td>
+<td><p>ESMF:Lat</p></td>
+<td><p>ESMF:Radius</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="CoordSys.html#esmpy.api.constants.CoordSys.CART" title="esmpy.api.constants.CoordSys.CART"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CART</span></code></a></p></td>
+<td><p>ESMF:X</p></td>
+<td><p>ESMF:Y</p></td>
+<td><p>ESMF:Z</p></td>
+</tr>
+</tbody>
+</table>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -264,14 +290,14 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
         <li class="right" >
           <a href="mesh.html" title="Mesh"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.5.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">LocStream</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2011-2022, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.2.3.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>
