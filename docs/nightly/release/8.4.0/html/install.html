@@ -110,6 +110,10 @@ with the following command issued from the top level ESMPy directory:</p>
 </pre></div>
 </div>
 <p>Please contact <a class="reference external" href="mailto:esmf_support&#37;&#52;&#48;ucar&#46;edu">esmf_support<span>&#64;</span>ucar<span>&#46;</span>edu</a> with any questions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>With some python versions, there is a problem with the automatic installation of the required package <code class="docutils literal notranslate"><span class="pre">setuptools-git-versioning</span></code>. If the output from the <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> command ends with <code class="docutils literal notranslate"><span class="pre">Successfully</span> <span class="pre">installed</span> <span class="pre">esmpy-0.0.0</span></code>, this indicates that the <code class="docutils literal notranslate"><span class="pre">setuptools-git-versioning</span></code> package was not invoked and the build thinks you are using ESMF version 0.0.0. This will cause problems when you try to use ESMPy. To solve this problem, simply rerun the above installation command (<code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code>). You should then see a reasonable version number at the end, such as, <code class="docutils literal notranslate"><span class="pre">Successfully</span> <span class="pre">installed</span> <span class="pre">esmpy-8.4.0</span></code>.</p>
+</div>
 </section>
 <section id="importing-esmpy">
 <h2>Importing ESMPy<a class="headerlink" href="#importing-esmpy" title="Permalink to this heading">¶</a></h2>
