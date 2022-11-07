@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Installation &#8212; ESMPy 8.4.0 documentation</title>
+    <title>Installation &#8212; ESMPy 8.5.0b0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="intro.html" title="Overview"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.5.0b0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Installation</a></li> 
       </ul>
     </div>  
@@ -110,6 +110,10 @@ with the following command issued from the top level ESMPy directory:</p>
 </pre></div>
 </div>
 <p>Please contact <a class="reference external" href="mailto:esmf_support&#37;&#52;&#48;ucar&#46;edu">esmf_support<span>&#64;</span>ucar<span>&#46;</span>edu</a> with any questions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>With some python versions, there is a problem with the automatic installation of the required package <code class="docutils literal notranslate"><span class="pre">setuptools-git-versioning</span></code>. If the output from the <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> command ends with <code class="docutils literal notranslate"><span class="pre">Successfully</span> <span class="pre">installed</span> <span class="pre">esmpy-0.0.0</span></code>, this indicates that the <code class="docutils literal notranslate"><span class="pre">setuptools-git-versioning</span></code> package was not invoked and the build thinks you are using ESMF version 0.0.0. This will cause problems when you try to use ESMPy. To solve this problem, simply rerun the above installation command (<code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code>). You should then see a reasonable version number at the end, such as, <code class="docutils literal notranslate"><span class="pre">Successfully</span> <span class="pre">installed</span> <span class="pre">esmpy-8.4.0</span></code>.</p>
+</div>
 </section>
 <section id="importing-esmpy">
 <h2>Importing ESMPy<a class="headerlink" href="#importing-esmpy" title="Permalink to this heading">¶</a></h2>
@@ -247,13 +251,13 @@ including Darwin and Linux running gfortran with openMPI.</p></li>
         <li class="right" >
           <a href="intro.html" title="Overview"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.5.0b0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Installation</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2011-2022, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.2.3.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>

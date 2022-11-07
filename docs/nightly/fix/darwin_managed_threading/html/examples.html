@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Tutorials &#8212; ESMPy 8.4.0 documentation</title>
+    <title>Tutorials &#8212; ESMPy 8.5.0b0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="install.html" title="Installation"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.5.0b0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Tutorials</a></li> 
       </ul>
     </div>  
@@ -530,22 +530,20 @@ can be run in serial or parallel with no modification.</p>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This example demonstrates how to create ESMPy Grid, Mesh and Field objects </span>
 <span class="c1"># from file and use them for regridding.</span>
-<span class="c1"># The data files can be retrieved from the ESMF data repository by uncommenting the</span>
-<span class="c1"># following block of code:</span>
-<span class="c1">#</span>
-<span class="c1"># import os</span>
-<span class="c1"># DD = os.path.join(os.getcwd(), &quot;examples/data&quot;)</span>
-<span class="c1"># if not os.path.isdir(DD):</span>
-<span class="c1">#     os.makedirs(DD)</span>
-<span class="c1"># from esmpy.util.cache_data import cache_data_file</span>
-<span class="c1"># cache_data_file(os.path.join(DD, &quot;so_Omon_GISS-E2.nc&quot;))</span>
-<span class="c1"># cache_data_file(os.path.join(DD, &quot;mpas_uniform_10242_dual_counterclockwise.nc&quot;))</span>
+
 
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">esmpy</span>
 
 <span class="kn">from</span> <span class="nn">esmpy.util.cache_data</span> <span class="kn">import</span> <span class="n">DATA_DIR</span>
 <span class="kn">from</span> <span class="nn">esmpy.util.exceptions</span> <span class="kn">import</span> <span class="n">DataMissing</span>
+
+<span class="c1"># The data files can be retrieved from the ESMF data repository by uncommenting the</span>
+<span class="c1"># following block of code:</span>
+<span class="c1">#</span>
+<span class="c1"># from esmpy.util.cache_data import cache_data_file</span>
+<span class="c1"># cache_data_file(os.path.join(DATA_DIR, &quot;so_Omon_GISS-E2.nc&quot;))</span>
+<span class="c1"># cache_data_file(os.path.join(DATA_DIR, &quot;mpas_uniform_10242_dual_counterclockwise.nc&quot;))</span>
 
 <span class="c1"># This call enables debug logging</span>
 <span class="c1"># esmpy.Manager(debug=True)</span>
@@ -596,22 +594,16 @@ can be run in serial or parallel with no modification.</p>
 <h3>Read and Write a Weight File<a class="headerlink" href="#read-and-write-a-weight-file" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This example demonstrates how to regrid between a Grid and a Mesh.</span>
-<span class="c1"># The data files can be retrieved from the ESMF data repository by uncommenting the</span>
-<span class="c1"># following block of code:</span>
-<span class="c1">#</span>
-<span class="c1"># import os</span>
-<span class="c1"># DD = os.path.join(os.getcwd(), &quot;examples/data&quot;)</span>
-<span class="c1"># if not os.path.isdir(DD):</span>
-<span class="c1">#     os.makedirs(DD)</span>
-<span class="c1"># from esmpy.util.cache_data import cache_data_file</span>
-<span class="c1"># cache_data_file(os.path.join(DD, &quot;ll2.5deg_grid.nc&quot;))</span>
-<span class="c1"># cache_data_file(os.path.join(DD, &quot;mpas_uniform_10242_dual_counterclockwise.nc&quot;))</span>
+
 
 <span class="kn">import</span> <span class="nn">esmpy</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
 
+<span class="kn">import</span> <span class="nn">os</span>
+
 <span class="kn">import</span> <span class="nn">esmpy.util.helpers</span> <span class="k">as</span> <span class="nn">helpers</span>
 <span class="kn">import</span> <span class="nn">esmpy.api.constants</span> <span class="k">as</span> <span class="nn">constants</span>
+
 
 <span class="c1"># This call enables debug logging</span>
 <span class="n">mg</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Manager</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -688,7 +680,6 @@ can be run in serial or parallel with no modification.</p>
 <span class="c1"># write regridding weights to file</span>
 <span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;esmpy_example_weight_file.nc&quot;</span>
 <span class="k">if</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="kn">import</span> <span class="nn">os</span>
     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span>
         <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">filename</span><span class="p">)):</span>
         <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">filename</span><span class="p">))</span>
@@ -763,15 +754,6 @@ can be run in serial or parallel with no modification.</p>
 <h3>Grid to LocStream<a class="headerlink" href="#grid-to-locstream" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This example demonstrates how to regrid between a Grid and a LocStream.</span>
-<span class="c1"># The data files can be retrieved from the ESMF data repository by uncommenting the</span>
-<span class="c1"># following block of code:</span>
-<span class="c1">#</span>
-<span class="c1"># import os</span>
-<span class="c1"># DD = os.path.join(os.getcwd(), &quot;examples/data&quot;)</span>
-<span class="c1"># if not os.path.isdir(DD):</span>
-<span class="c1">#     os.makedirs(DD)</span>
-<span class="c1"># from esmpy.util.cache_data import cache_data_file</span>
-<span class="c1"># cache_data_file(os.path.join(DD, &quot;ll1deg_grid.nc&quot;))</span>
 
 <span class="kn">import</span> <span class="nn">esmpy</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
@@ -782,6 +764,12 @@ can be run in serial or parallel with no modification.</p>
 <span class="kn">import</span> <span class="nn">esmpy.api.constants</span> <span class="k">as</span> <span class="nn">constants</span>
 <span class="kn">from</span> <span class="nn">esmpy.util.cache_data</span> <span class="kn">import</span> <span class="n">DATA_DIR</span>
 <span class="kn">from</span> <span class="nn">esmpy.util.exceptions</span> <span class="kn">import</span> <span class="n">DataMissing</span>
+
+<span class="c1"># The data files can be retrieved from the ESMF data repository by uncommenting the</span>
+<span class="c1"># following block of code:</span>
+<span class="c1">#</span>
+<span class="c1"># from esmpy.util.cache_data import cache_data_file</span>
+<span class="c1"># cache_data_file(os.path.join(DATA_DIR, &quot;ll1deg_grid.nc&quot;))</span>
 
 <span class="c1"># This call enables debug logging</span>
 <span class="n">esmpy</span><span class="o">.</span><span class="n">Manager</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -948,15 +936,6 @@ can be run in serial or parallel with no modification.</p>
 <h3>LocStream to Grid<a class="headerlink" href="#locstream-to-grid" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This example demonstrates how to regrid between a LocStream and a Grid.</span>
-<span class="c1"># The data files can be retrieved from the ESMF data repository by uncommenting the</span>
-<span class="c1"># following block of code:</span>
-<span class="c1">#</span>
-<span class="c1"># import os</span>
-<span class="c1"># DD = os.path.join(os.getcwd(), &quot;examples/data&quot;)</span>
-<span class="c1"># if not os.path.isdir(DD):</span>
-<span class="c1">#     os.makedirs(DD)</span>
-<span class="c1"># from esmpy.util.cache_data import cache_data_file</span>
-<span class="c1"># cache_data_file(os.path.join(DD, &quot;ll1deg_grid.nc&quot;))</span>
 
 <span class="kn">import</span> <span class="nn">esmpy</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
@@ -967,6 +946,12 @@ can be run in serial or parallel with no modification.</p>
 <span class="kn">import</span> <span class="nn">esmpy.api.constants</span> <span class="k">as</span> <span class="nn">constants</span>
 <span class="kn">from</span> <span class="nn">esmpy.util.cache_data</span> <span class="kn">import</span> <span class="n">DATA_DIR</span>
 <span class="kn">from</span> <span class="nn">esmpy.util.exceptions</span> <span class="kn">import</span> <span class="n">DataMissing</span>
+
+<span class="c1"># The data files can be retrieved from the ESMF data repository by uncommenting the</span>
+<span class="c1"># following block of code:</span>
+<span class="c1">#</span>
+<span class="c1"># from esmpy.util.cache_data import cache_data_file</span>
+<span class="c1"># cache_data_file(os.path.join(DATA_DIR, &quot;ll1deg_grid.nc&quot;))</span>
 
 <span class="c1"># This call enables debug logging</span>
 <span class="n">esmpy</span><span class="o">.</span><span class="n">Manager</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1063,16 +1048,6 @@ can be run in serial or parallel with no modification.</p>
 <span class="c1"># NOTE: MPI.COMM_WORLD.Spawn does not seem to work for mpi4py installations</span>
 <span class="c1">#       installations built with mpich, however openmpi does work (July 2016).</span>
 <span class="c1">#</span>
-<span class="c1"># The data files can be retrieved from the ESMF data repository by uncommenting the</span>
-<span class="c1"># following block of code:</span>
-<span class="c1">#</span>
-<span class="c1"># import os</span>
-<span class="c1"># DD = os.path.join(os.getcwd(), &quot;examples/data&quot;)</span>
-<span class="c1"># if not os.path.isdir(DD):</span>
-<span class="c1">#     os.makedirs(DD)</span>
-<span class="c1"># from esmpy.util.cache_data import cache_data_file</span>
-<span class="c1"># cache_data_file(os.path.join(DD, &quot;ll1deg_grid.nc&quot;))</span>
-<span class="c1"># cache_data_file(os.path.join(DD, &quot;mpas_uniform_10242_dual_counterclockwise.nc&quot;))</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span>
 <span class="kn">from</span> <span class="nn">mpi4py</span> <span class="kn">import</span> <span class="n">MPI</span>
@@ -1080,6 +1055,14 @@ can be run in serial or parallel with no modification.</p>
 
 <span class="kn">from</span> <span class="nn">esmpy.util.cache_data</span> <span class="kn">import</span> <span class="n">DATA_DIR</span>
 <span class="kn">from</span> <span class="nn">esmpy.util.exceptions</span> <span class="kn">import</span> <span class="n">DataMissing</span>
+
+<span class="c1"># The data files can be retrieved from the ESMF data repository by uncommenting the</span>
+<span class="c1"># following block of code:</span>
+<span class="c1">#</span>
+<span class="c1"># from esmpy.util.cache_data import cache_data_file</span>
+<span class="c1"># cache_data_file(os.path.join(DATA_DIR, &quot;ll1deg_grid.nc&quot;))</span>
+<span class="c1"># cache_data_file(os.path.join(DATA_DIR, &quot;mpas_uniform_10242_dual_counterclockwise.nc&quot;))</span>
+
 
 <span class="k">def</span> <span class="nf">regrid</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>
@@ -1307,13 +1290,13 @@ can be run in serial or parallel with no modification.</p>
         <li class="right" >
           <a href="install.html" title="Installation"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.5.0b0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Tutorials</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2011-2022, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.2.3.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>
