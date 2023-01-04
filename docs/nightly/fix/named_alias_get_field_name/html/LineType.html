@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>LineType &#8212; ESMPy 8.4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="LogKind" href="LogKind.html" />
+    <link rel="prev" title="GridItem" href="GridItem.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="LogKind.html" title="LogKind"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="GridItem.html" title="GridItem"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">LineType</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="linetype">
+<h1>LineType<a class="headerlink" href="#linetype" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="esmpy.api.constants.LineType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">esmpy.api.constants.</span></span><span class="sig-name descname"><span class="pre">LineType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.constants.LineType" title="Permalink to this definition">¶</a></dt>
+<dd><p>This argument controls the path of the line which connects two points on
+the surface of the sphere. This in turn controls the path along which
+distances are calculated and the shape of the edges that make up a cell.
+Both of these quantities can influence how interpolation weights are
+calculated. As would be expected, this argument is only applicable with
+grids which lie on the surface of a sphere.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="esmpy.api.constants.LineType.CART">
+<span class="sig-name descname"><span class="pre">CART</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;LineType.CART:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#esmpy.api.constants.LineType.CART" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cartesian line. When this option is specified distances are calculated in a
+straight line through the 3D Cartesian space in which the sphere is
+embedded. Cells are approximated by 3D planes bounded by 3D Cartesian lines
+between their corner vertices. When calculating regrid weights, this line
+type is currently the default for the following all regrid methods except
+for conservative.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="esmpy.api.constants.LineType.GREAT_CIRCLE">
+<span class="sig-name descname"><span class="pre">GREAT_CIRCLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;LineType.GREAT_CIRCLE:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#esmpy.api.constants.LineType.GREAT_CIRCLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Great circle line. When this option is specified distances are calculated
+along a great circle path (the shortest distance between two points on a
+sphere surface). Cells are bounded by great circle paths between their
+corner vertices. When calculating regrid weights, this line type is
+currently the default for the conservative regrid method.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">LineType</a><ul>
+<li><a class="reference internal" href="#esmpy.api.constants.LineType"><code class="docutils literal notranslate"><span class="pre">LineType</span></code></a><ul>
+<li><a class="reference internal" href="#esmpy.api.constants.LineType.CART"><code class="docutils literal notranslate"><span class="pre">LineType.CART</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.constants.LineType.GREAT_CIRCLE"><code class="docutils literal notranslate"><span class="pre">LineType.GREAT_CIRCLE</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="GridItem.html"
+                          title="previous chapter">GridItem</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="LogKind.html"
+                          title="next chapter">LogKind</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/LineType.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="LogKind.html" title="LogKind"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="GridItem.html" title="GridItem"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">LineType</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.0.0.
+    </div>
+  </body>
+</html>
