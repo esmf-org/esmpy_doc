@@ -57,8 +57,15 @@
 <p>The following packages are <em>optional</em>:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>ESMF installation with NetCDF - required to create <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grids</span></code></a> and <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Meshes</span></code></a> from file</dt><dd><ul>
+<dt>ESMF installation with NetCDF - required to create <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grids</span></code></a>, <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Meshes</span></code></a> and <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fields</span></code></a> from file, and to write regridding weights to file</dt><dd><ul>
 <li><p>NetCDF must be built as a shared library for ESMPy installation to succeed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>ESMF installation with PIO (the Parallel IO library) - required to create <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Meshes</span></code></a> and <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fields</span></code></a> from file, and to write regridding weights to file</dt><dd><ul>
+<li><p>Note that building ESMF with PIO requires building with a real MPI library (not mpiuni)</p></li>
 </ul>
 </dd>
 </dl>
