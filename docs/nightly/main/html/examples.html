@@ -1,21 +1,17 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tutorials &#8212; ESMPy 8.4.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    <title>Tutorials &#8212; ESMPy 8.5.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=89b800e6" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b9e8587e"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -37,7 +33,7 @@
         <li class="right" >
           <a href="install.html" title="Installation"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.5.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Tutorials</a></li> 
       </ul>
     </div>  
@@ -71,7 +67,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <section id="locstream-create">
 <h3>LocStream Create<a class="headerlink" href="#locstream-create" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_locstream_spherical_16</span><span class="p">(</span><span class="n">coord_sys</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_DEG</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param coord_sys: the coordinate system of the LocStream</span>
 <span class="sd">    :param domask: a boolean to tell whether or not to add a mask</span>
 <span class="sd">    :return: LocStream</span>
@@ -97,7 +93,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <section id="locstream-create-parallel">
 <h3>LocStream Create Parallel<a class="headerlink" href="#locstream-create-parallel" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_locstream_spherical_16_parallel</span><span class="p">(</span><span class="n">coord_sys</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_DEG</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param coord_sys: the coordinate system of the LocStream</span>
 <span class="sd">    :param domask: a boolean to tell whether or not to add a mask</span>
 <span class="sd">    :return: LocStream</span>
@@ -143,7 +139,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <h3>Create a 2D Grid<a class="headerlink" href="#create-a-2d-grid" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">grid_create_from_coordinates</span><span class="p">(</span><span class="n">xcoords</span><span class="p">,</span> <span class="n">ycoords</span><span class="p">,</span> <span class="n">xcorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ycorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">doarea</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ctk</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">TypeKind</span><span class="o">.</span><span class="n">R8</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create a 2 dimensional Grid using the bounds of the x and y coordiantes.</span>
 <span class="sd">    :param xcoords: The 1st dimension or &#39;x&#39; coordinates at cell centers, as a Python list or numpy Array</span>
 <span class="sd">    :param ycoords: The 2nd dimension or &#39;y&#39; coordinates at cell centers, as a Python list or numpy Array</span>
@@ -209,7 +205,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <h3>Create a 3D Grid<a class="headerlink" href="#create-a-3d-grid" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">grid_create_from_coordinates_3d</span><span class="p">(</span><span class="n">xcoords</span><span class="p">,</span> <span class="n">ycoords</span><span class="p">,</span> <span class="n">zcoords</span><span class="p">,</span> <span class="n">xcorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ycorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">zcorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">doarea</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create a 3 dimensional Grid using the xcoordinates, ycoordinates and zcoordinates.</span>
 <span class="sd">    :param xcoords: The 1st dimension or &#39;x&#39; coordinates at cell centers, as a Python list or numpy Array</span>
 <span class="sd">    :param ycoords: The 2nd dimension or &#39;y&#39; coordinates at cell centers, as a Python list or numpy Array</span>
@@ -289,7 +285,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <h3>Create a Periodic Grid<a class="headerlink" href="#create-a-periodic-grid" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">grid_create_from_coordinates_periodic</span><span class="p">(</span><span class="n">longitudes</span><span class="p">,</span> <span class="n">latitudes</span><span class="p">,</span> <span class="n">lon_corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">lat_corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create a 2 dimensional periodic Grid using the &#39;longitudes&#39; and &#39;latitudes&#39;.</span>
 <span class="sd">    :param longitudes: longitude coordinate values at cell centers</span>
 <span class="sd">    :param latitudes: latitude coordinate values at cell centers</span>
@@ -348,7 +344,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <h3>Create a 5 Element Mesh<a class="headerlink" href="#create-a-5-element-mesh" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mesh_create_5</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    PRECONDITIONS: None</span>
 <span class="sd">    POSTCONDITIONS: A 5 element Mesh has been created.    </span>
 <span class="sd">    RETURN VALUES: \n Mesh :: mesh \n</span>
@@ -417,7 +413,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <h3>Create a Field<a class="headerlink" href="#create-a-field" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">create_field</span><span class="p">(</span><span class="n">gml</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        PRECONDITIONS: An Grid, Mesh or LocStream has been created, and &#39;name&#39; is a string that</span>
 <span class="sd">                       will be used to initialize the name of a new Field.\n</span>
 <span class="sd">        POSTCONDITIONS: A Field has been created.\n</span>
@@ -434,7 +430,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <h3>Initialize an Analytic Field<a class="headerlink" href="#initialize-an-analytic-field" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">initialize_field_grid_periodic</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    PRECONDITIONS: A Field has been created as &#39;field&#39; with a &#39;grid&#39;</span>
 <span class="sd">                   where coordinates have been set on both </span>
 <span class="sd">                   the center and corner stagger locations. \n</span>
@@ -462,7 +458,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">run_regridding</span><span class="p">(</span><span class="n">srcfield</span><span class="p">,</span> <span class="n">dstfield</span><span class="p">,</span> <span class="n">srcfracfield</span><span class="p">,</span> <span class="n">dstfracfield</span><span class="p">):</span>
         <span class="c1"># This is for documentation. Do not modify.</span>
-        <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        PRECONDITIONS: Two Fields have been created and a regridding</span>
 <span class="sd">                       operation is desired from &#39;srcfield&#39; to &#39;dstfield&#39;.</span>
 <span class="sd">                       The &#39;srcfracfield&#39; and &#39;dstfractfield&#39; are Fields</span>
@@ -493,7 +489,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_mass_grid</span><span class="p">(</span><span class="n">valuefield</span><span class="p">,</span> <span class="n">dofrac</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fracfield</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                       <span class="n">uninitval</span><span class="o">=</span><span class="mf">422397696.</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    PRECONDITIONS: &#39;fracfield&#39; contains the fractions of each cell</span>
 <span class="sd">                   which contributed to a regridding operation involving</span>
 <span class="sd">                   &#39;valuefield.  &#39;dofrac&#39; is a boolean value that gives </span>
@@ -1290,13 +1286,13 @@ can be run in serial or parallel with no modification.</p>
         <li class="right" >
           <a href="install.html" title="Installation"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.5.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Tutorials</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2011-2022, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    &#169; Copyright 2011-2023, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.0.
     </div>
   </body>
 </html>
