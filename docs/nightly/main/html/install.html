@@ -5,11 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Installation &#8212; ESMPy 8.5.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <title>Installation &#8212; ESMPy 8.6.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css?v=89b800e6" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b9e8587e"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=2b978695"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="intro.html" title="Overview"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.5.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.6.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Installation</a></li> 
       </ul>
     </div>  
@@ -154,6 +154,14 @@ commands will simply download the test files without actually running them
 (allowing the stress on the machine to be applied to bandwidth first, and
 then memory).</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, test data will be downloaded to a <code class="docutils literal notranslate"><span class="pre">data</span></code> subdirectory of the ESMPy installation directory. This location can be changed by setting one of the following environment variables:</p>
+<ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">ESMPY_DATA_DIR</span></code> is set, this should point to a directory that has already been populated with the necessary data; the pre-existing data will be read from this directory and no automatic downloads will be attempted.</p></li>
+<li><p>Otherwise, if <code class="docutils literal notranslate"><span class="pre">ESMPY_DATA_NEW_DIR</span></code> is set, data will be downloaded to the path set by this variable instead of using the <code class="docutils literal notranslate"><span class="pre">data</span></code> subdirectory of the ESMPy installation directory.</p></li>
+</ul>
+</div>
 </section>
 <section id="limitations">
 <h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this heading">¶</a></h2>
@@ -254,13 +262,13 @@ including Darwin and Linux running gfortran with openMPI.</p></li>
         <li class="right" >
           <a href="intro.html" title="Overview"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.5.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.6.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Installation</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2011-2023, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
     </div>
   </body>
 </html>
