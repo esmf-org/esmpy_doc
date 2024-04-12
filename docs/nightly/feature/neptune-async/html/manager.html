@@ -48,7 +48,7 @@
 <h1>Manager<a class="headerlink" href="#manager" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="esmpy.api.esmpymanager.Manager">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">esmpy.api.esmpymanager.</span></span><span class="sig-name descname"><span class="pre">Manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.esmpymanager.Manager" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">esmpy.api.esmpymanager.</span></span><span class="sig-name descname"><span class="pre">Manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endFlag=&lt;EndAction.NORMAL:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.esmpymanager.Manager" title="Permalink to this definition">¶</a></dt>
 <dd><p>This singleton class is designed to ensure that ESMF is properly initialized 
 and finalized.  ESMF is initialized at 
 <a class="reference internal" href="#esmpy.api.esmpymanager.Manager" title="esmpy.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> creation, and the __del__ 
@@ -85,8 +85,12 @@ combinatorial expansions of <code class="xref py py-class docutils literal notra
 <code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code> creation parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>debug</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – outputs logging information to ESMF logfiles. If
-<code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to False.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>debug</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – outputs logging information to ESMF logfiles. If
+<code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to False.</p></li>
+<li><p><strong>endFlag</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – determines the action to take on ESMF finalization.
+See <code class="xref py py-class docutils literal notranslate"><span class="pre">EndAction</span></code> docstring for details. Defaults to <code class="docutils literal notranslate"><span class="pre">EndAction.NORMAL</span></code>.</p></li>
+</ul>
 </dd>
 </dl>
 <dl class="py property">
