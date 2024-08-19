@@ -287,7 +287,7 @@ elements. The specific values that are masked are specified in the
 
 <dl class="py method">
 <dt class="sig sig-object py" id="esmpy.api.mesh.Mesh.add_nodes">
-<span class="sig-name descname"><span class="pre">add_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_coords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_owners</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.mesh.Mesh.add_nodes" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_coords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_owners</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.mesh.Mesh.add_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add nodes to a <a class="reference internal" href="#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>, this must be done before adding elements.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -302,6 +302,15 @@ tuples into a numpy array that correspond to node_ids.</p></li>
 <li><p><strong>node_owners</strong> (<em>ndarray</em>) – a numpy array of shape (node_count, 1) to
 specify the rank of the processor that owns each node.</p></li>
 </ul>
+</dd>
+</dl>
+<p><em>OPTIONAL:</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>node_mask</strong> (<em>ndarray</em>) – a numpy array of shape
+<code class="docutils literal notranslate"><span class="pre">(node_count,</span> <span class="pre">1)</span></code> containing integer values to specify masked
+nodes. The specific values that are masked are specified in the
+<a class="reference internal" href="regrid.html#esmpy.api.regrid.Regrid" title="esmpy.api.regrid.Regrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Regrid</span></code></a> constructor.</p>
 </dd>
 </dl>
 </dd></dl>
