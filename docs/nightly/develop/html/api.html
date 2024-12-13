@@ -928,7 +928,7 @@ code can be run in parallel using mpirun as well as in serial mode.</p>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Could not connect to parent - &#39;</span> <span class="o">+</span> <span class="n">usage</span><span class="p">)</span>
 
     <span class="c1"># worker code goes here, regridding etc..</span>
-    <span class="nb">print</span> <span class="s2">&quot;Hello World from PET #&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">rank</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World from PET #&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">rank</span><span class="p">))</span>
 
     <span class="c1"># Shutdown</span>
     <span class="n">comm</span><span class="o">.</span><span class="n">Disconnect</span><span class="p">()</span>

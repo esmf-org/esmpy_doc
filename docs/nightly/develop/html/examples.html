@@ -1051,6 +1051,7 @@ can be run in serial or parallel with no modification.</p>
 
 <span class="kn">from</span> <span class="nn">esmpy.util.cache_data</span> <span class="kn">import</span> <span class="n">DATA_DIR</span>
 <span class="kn">from</span> <span class="nn">esmpy.util.exceptions</span> <span class="kn">import</span> <span class="n">DataMissing</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
 
 <span class="c1"># The data files can be retrieved from the ESMF data repository by uncommenting the</span>
 <span class="c1"># following block of code:</span>
@@ -1134,8 +1135,8 @@ can be run in serial or parallel with no modification.</p>
         <span class="n">meanrelerr</span> <span class="o">=</span> <span class="n">relerr</span> <span class="o">/</span> <span class="n">num_nodes</span>
 
     <span class="n">meanrelerr</span> <span class="o">=</span> <span class="n">relerr</span> <span class="o">/</span> <span class="n">num_nodes</span>
-    <span class="nb">print</span> <span class="s2">&quot;ESMPy regridding as a spawned MPI process:&quot;</span>
-    <span class="nb">print</span> <span class="s2">&quot;  interpolation mean relative error = </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">meanrelerr</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ESMPy regridding as a spawned MPI process:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  interpolation mean relative error = </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">meanrelerr</span><span class="p">))</span>
 
 
 <span class="c1">########################################### MAIN #############################</span>
