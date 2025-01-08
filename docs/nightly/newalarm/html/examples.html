@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Tutorials &#8212; ESMPy 8.7.0b0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css?v=89b800e6" />
     
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=f717ccdc"></script>
@@ -48,7 +48,7 @@
 <section id="hello-world">
 <h2>Hello World<a class="headerlink" href="#hello-world" title="Permalink to this heading">¶</a></h2>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">esmpy</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">esmpy</span>
 
 <span class="c1"># This call enables debug logging</span>
 <span class="c1"># esmpy = esmpy.Manager(debug=True)</span>
@@ -66,7 +66,7 @@ necessary to regrid data between <a class="reference internal" href="field.html#
 and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocStream" title="esmpy.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStreams</span></code></a>.</p>
 <section id="locstream-create">
 <h3>LocStream Create<a class="headerlink" href="#locstream-create" title="Permalink to this heading">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_locstream_spherical_16</span><span class="p">(</span><span class="n">coord_sys</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_DEG</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">create_locstream_spherical_16</span><span class="p">(</span><span class="n">coord_sys</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_DEG</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param coord_sys: the coordinate system of the LocStream</span>
 <span class="sd">    :param domask: a boolean to tell whether or not to add a mask</span>
@@ -92,7 +92,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 </section>
 <section id="locstream-create-parallel">
 <h3>LocStream Create Parallel<a class="headerlink" href="#locstream-create-parallel" title="Permalink to this heading">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_locstream_spherical_16_parallel</span><span class="p">(</span><span class="n">coord_sys</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_DEG</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">create_locstream_spherical_16_parallel</span><span class="p">(</span><span class="n">coord_sys</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_DEG</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param coord_sys: the coordinate system of the LocStream</span>
 <span class="sd">    :param domask: a boolean to tell whether or not to add a mask</span>
@@ -138,7 +138,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <section id="create-a-2d-grid">
 <h3>Create a 2D Grid<a class="headerlink" href="#create-a-2d-grid" title="Permalink to this heading">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">grid_create_from_coordinates</span><span class="p">(</span><span class="n">xcoords</span><span class="p">,</span> <span class="n">ycoords</span><span class="p">,</span> <span class="n">xcorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ycorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">doarea</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ctk</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">TypeKind</span><span class="o">.</span><span class="n">R8</span><span class="p">):</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">grid_create_from_coordinates</span><span class="p">(</span><span class="n">xcoords</span><span class="p">,</span> <span class="n">ycoords</span><span class="p">,</span> <span class="n">xcorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ycorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">doarea</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ctk</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">TypeKind</span><span class="o">.</span><span class="n">R8</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create a 2 dimensional Grid using the bounds of the x and y coordiantes.</span>
 <span class="sd">    :param xcoords: The 1st dimension or &#39;x&#39; coordinates at cell centers, as a Python list or numpy Array</span>
@@ -204,7 +204,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <section id="create-a-3d-grid">
 <h3>Create a 3D Grid<a class="headerlink" href="#create-a-3d-grid" title="Permalink to this heading">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">grid_create_from_coordinates_3d</span><span class="p">(</span><span class="n">xcoords</span><span class="p">,</span> <span class="n">ycoords</span><span class="p">,</span> <span class="n">zcoords</span><span class="p">,</span> <span class="n">xcorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ycorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">zcorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">doarea</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">grid_create_from_coordinates_3d</span><span class="p">(</span><span class="n">xcoords</span><span class="p">,</span> <span class="n">ycoords</span><span class="p">,</span> <span class="n">zcoords</span><span class="p">,</span> <span class="n">xcorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ycorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">zcorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">doarea</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create a 3 dimensional Grid using the xcoordinates, ycoordinates and zcoordinates.</span>
 <span class="sd">    :param xcoords: The 1st dimension or &#39;x&#39; coordinates at cell centers, as a Python list or numpy Array</span>
@@ -284,7 +284,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <section id="create-a-periodic-grid">
 <h3>Create a Periodic Grid<a class="headerlink" href="#create-a-periodic-grid" title="Permalink to this heading">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">grid_create_from_coordinates_periodic</span><span class="p">(</span><span class="n">longitudes</span><span class="p">,</span> <span class="n">latitudes</span><span class="p">,</span> <span class="n">lon_corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">lat_corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">grid_create_from_coordinates_periodic</span><span class="p">(</span><span class="n">longitudes</span><span class="p">,</span> <span class="n">latitudes</span><span class="p">,</span> <span class="n">lon_corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">lat_corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create a 2 dimensional periodic Grid using the &#39;longitudes&#39; and &#39;latitudes&#39;.</span>
 <span class="sd">    :param longitudes: longitude coordinate values at cell centers</span>
@@ -343,7 +343,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <section id="create-a-5-element-mesh">
 <h3>Create a 5 Element Mesh<a class="headerlink" href="#create-a-5-element-mesh" title="Permalink to this heading">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mesh_create_5</span><span class="p">():</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mesh_create_5</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    PRECONDITIONS: None</span>
 <span class="sd">    POSTCONDITIONS: A 5 element Mesh has been created.    </span>
@@ -412,7 +412,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <section id="create-a-field">
 <h3>Create a Field<a class="headerlink" href="#create-a-field" title="Permalink to this heading">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">create_field</span><span class="p">(</span><span class="n">gml</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span><span class="w"> </span><span class="nf">create_field</span><span class="p">(</span><span class="n">gml</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        PRECONDITIONS: An Grid, Mesh or LocStream has been created, and &#39;name&#39; is a string that</span>
 <span class="sd">                       will be used to initialize the name of a new Field.\n</span>
@@ -429,7 +429,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <section id="initialize-an-analytic-field">
 <h3>Initialize an Analytic Field<a class="headerlink" href="#initialize-an-analytic-field" title="Permalink to this heading">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">initialize_field_grid_periodic</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">initialize_field_grid_periodic</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    PRECONDITIONS: A Field has been created as &#39;field&#39; with a &#39;grid&#39;</span>
 <span class="sd">                   where coordinates have been set on both </span>
@@ -456,7 +456,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <section id="run-esmpy-regridding">
 <h3>Run ESMPy Regridding<a class="headerlink" href="#run-esmpy-regridding" title="Permalink to this heading">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">run_regridding</span><span class="p">(</span><span class="n">srcfield</span><span class="p">,</span> <span class="n">dstfield</span><span class="p">,</span> <span class="n">srcfracfield</span><span class="p">,</span> <span class="n">dstfracfield</span><span class="p">):</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span><span class="w"> </span><span class="nf">run_regridding</span><span class="p">(</span><span class="n">srcfield</span><span class="p">,</span> <span class="n">dstfield</span><span class="p">,</span> <span class="n">srcfracfield</span><span class="p">,</span> <span class="n">dstfracfield</span><span class="p">):</span>
         <span class="c1"># This is for documentation. Do not modify.</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        PRECONDITIONS: Two Fields have been created and a regridding</span>
@@ -487,7 +487,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <section id="compute-field-mass">
 <h3>Compute Field Mass<a class="headerlink" href="#compute-field-mass" title="Permalink to this heading">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_mass_grid</span><span class="p">(</span><span class="n">valuefield</span><span class="p">,</span> <span class="n">dofrac</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fracfield</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compute_mass_grid</span><span class="p">(</span><span class="n">valuefield</span><span class="p">,</span> <span class="n">dofrac</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fracfield</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                       <span class="n">uninitval</span><span class="o">=</span><span class="mf">422397696.</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    PRECONDITIONS: &#39;fracfield&#39; contains the fractions of each cell</span>
@@ -528,11 +528,11 @@ can be run in serial or parallel with no modification.</p>
 <span class="c1"># from file and use them for regridding.</span>
 
 
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">esmpy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">esmpy</span>
 
-<span class="kn">from</span> <span class="nn">esmpy.util.cache_data</span> <span class="kn">import</span> <span class="n">DATA_DIR</span>
-<span class="kn">from</span> <span class="nn">esmpy.util.exceptions</span> <span class="kn">import</span> <span class="n">DataMissing</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">esmpy.util.cache_data</span><span class="w"> </span><span class="kn">import</span> <span class="n">DATA_DIR</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">esmpy.util.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataMissing</span>
 
 <span class="c1"># The data files can be retrieved from the ESMF data repository by uncommenting the</span>
 <span class="c1"># following block of code:</span>
@@ -592,13 +592,13 @@ can be run in serial or parallel with no modification.</p>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This example demonstrates how to regrid between a Grid and a Mesh.</span>
 
 
-<span class="kn">import</span> <span class="nn">esmpy</span>
-<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">esmpy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
 
-<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="kn">import</span> <span class="nn">esmpy.util.helpers</span> <span class="k">as</span> <span class="nn">helpers</span>
-<span class="kn">import</span> <span class="nn">esmpy.api.constants</span> <span class="k">as</span> <span class="nn">constants</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">esmpy.util.helpers</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">helpers</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">esmpy.api.constants</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">constants</span>
 
 
 <span class="c1"># This call enables debug logging</span>
@@ -751,15 +751,15 @@ can be run in serial or parallel with no modification.</p>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This example demonstrates how to regrid between a Grid and a LocStream.</span>
 
-<span class="kn">import</span> <span class="nn">esmpy</span>
-<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">esmpy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
 
-<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="kn">import</span> <span class="nn">esmpy.util.helpers</span> <span class="k">as</span> <span class="nn">helpers</span>
-<span class="kn">import</span> <span class="nn">esmpy.api.constants</span> <span class="k">as</span> <span class="nn">constants</span>
-<span class="kn">from</span> <span class="nn">esmpy.util.cache_data</span> <span class="kn">import</span> <span class="n">DATA_DIR</span>
-<span class="kn">from</span> <span class="nn">esmpy.util.exceptions</span> <span class="kn">import</span> <span class="n">DataMissing</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">esmpy.util.helpers</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">helpers</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">esmpy.api.constants</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">constants</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">esmpy.util.cache_data</span><span class="w"> </span><span class="kn">import</span> <span class="n">DATA_DIR</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">esmpy.util.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataMissing</span>
 
 <span class="c1"># The data files can be retrieved from the ESMF data repository by uncommenting the</span>
 <span class="c1"># following block of code:</span>
@@ -774,7 +774,7 @@ can be run in serial or parallel with no modification.</p>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">grid1</span><span class="p">):</span>
     <span class="k">raise</span> <span class="n">DataMissing</span><span class="p">(</span><span class="s2">&quot;Data not available, try &#39;make download&#39;.&quot;</span><span class="p">)</span>
 
-<span class="kn">from</span> <span class="nn">esmpy.util.locstream_utilities</span> <span class="kn">import</span> <span class="n">create_locstream_spherical_16</span><span class="p">,</span> <span class="n">create_locstream_spherical_16_parallel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">esmpy.util.locstream_utilities</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_locstream_spherical_16</span><span class="p">,</span> <span class="n">create_locstream_spherical_16_parallel</span>
 <span class="n">coord_sys</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_DEG</span>
 <span class="n">domask</span><span class="o">=</span><span class="kc">True</span>
 <span class="k">if</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">pet_count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
@@ -856,17 +856,17 @@ can be run in serial or parallel with no modification.</p>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This example demonstrates how to regrid between a mesh and a locstream.</span>
 
-<span class="kn">import</span> <span class="nn">esmpy</span>
-<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">esmpy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
 
-<span class="kn">import</span> <span class="nn">esmpy.util.helpers</span> <span class="k">as</span> <span class="nn">helpers</span>
-<span class="kn">import</span> <span class="nn">esmpy.api.constants</span> <span class="k">as</span> <span class="nn">constants</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">esmpy.util.helpers</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">helpers</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">esmpy.api.constants</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">constants</span>
 
 <span class="c1"># This call enables debug logging</span>
 <span class="c1"># esmpy.Manager(debug=True)</span>
 
-<span class="kn">from</span> <span class="nn">esmpy.util.mesh_utilities</span> <span class="kn">import</span> <span class="n">mesh_create_5</span><span class="p">,</span> <span class="n">mesh_create_5_parallel</span>
-<span class="kn">from</span> <span class="nn">esmpy.util.locstream_utilities</span> <span class="kn">import</span> <span class="n">create_locstream_16</span><span class="p">,</span> <span class="n">create_locstream_16_parallel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">esmpy.util.mesh_utilities</span><span class="w"> </span><span class="kn">import</span> <span class="n">mesh_create_5</span><span class="p">,</span> <span class="n">mesh_create_5_parallel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">esmpy.util.locstream_utilities</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_locstream_16</span><span class="p">,</span> <span class="n">create_locstream_16_parallel</span>
 <span class="k">if</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">pet_count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
     <span class="n">mesh</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">mesh_create_5</span><span class="p">()</span>
     <span class="n">locstream</span> <span class="o">=</span> <span class="n">create_locstream_16</span><span class="p">()</span>
@@ -933,15 +933,15 @@ can be run in serial or parallel with no modification.</p>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This example demonstrates how to regrid between a LocStream and a Grid.</span>
 
-<span class="kn">import</span> <span class="nn">esmpy</span>
-<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">esmpy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
 
-<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="kn">import</span> <span class="nn">esmpy.util.helpers</span> <span class="k">as</span> <span class="nn">helpers</span>
-<span class="kn">import</span> <span class="nn">esmpy.api.constants</span> <span class="k">as</span> <span class="nn">constants</span>
-<span class="kn">from</span> <span class="nn">esmpy.util.cache_data</span> <span class="kn">import</span> <span class="n">DATA_DIR</span>
-<span class="kn">from</span> <span class="nn">esmpy.util.exceptions</span> <span class="kn">import</span> <span class="n">DataMissing</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">esmpy.util.helpers</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">helpers</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">esmpy.api.constants</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">constants</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">esmpy.util.cache_data</span><span class="w"> </span><span class="kn">import</span> <span class="n">DATA_DIR</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">esmpy.util.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataMissing</span>
 
 <span class="c1"># The data files can be retrieved from the ESMF data repository by uncommenting the</span>
 <span class="c1"># following block of code:</span>
@@ -958,7 +958,7 @@ can be run in serial or parallel with no modification.</p>
 
 <span class="n">grid</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Grid</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">grid1</span><span class="p">,</span> <span class="n">filetype</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">FileFormat</span><span class="o">.</span><span class="n">SCRIP</span><span class="p">)</span>
 
-<span class="kn">from</span> <span class="nn">esmpy.util.locstream_utilities</span> <span class="kn">import</span> <span class="n">create_locstream_spherical_16</span><span class="p">,</span> <span class="n">create_locstream_spherical_16_parallel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">esmpy.util.locstream_utilities</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_locstream_spherical_16</span><span class="p">,</span> <span class="n">create_locstream_spherical_16_parallel</span>
 <span class="n">coord_sys</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_DEG</span>
 <span class="n">domask</span><span class="o">=</span><span class="kc">True</span>
 <span class="k">if</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">pet_count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
@@ -1006,7 +1006,7 @@ can be run in serial or parallel with no modification.</p>
 <span class="n">dstfield</span> <span class="o">=</span> <span class="n">regrid</span><span class="p">(</span><span class="n">srcfield</span><span class="p">,</span> <span class="n">dstfield</span><span class="p">,</span> <span class="n">zero_region</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">Region</span><span class="o">.</span><span class="n">SELECT</span><span class="p">)</span>
 
 <span class="c1"># compute the mean relative error</span>
-<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">mul</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">operator</span><span class="w"> </span><span class="kn">import</span> <span class="n">mul</span>
 <span class="n">num_nodes</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">xctfield</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[:])</span>
 <span class="n">relerr</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">meanrelerr</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1045,12 +1045,12 @@ can be run in serial or parallel with no modification.</p>
 <span class="c1">#       installations built with mpich, however openmpi does work (July 2016).</span>
 <span class="c1">#</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span>
-<span class="kn">from</span> <span class="nn">mpi4py</span> <span class="kn">import</span> <span class="n">MPI</span>
-<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mpi4py</span><span class="w"> </span><span class="kn">import</span> <span class="n">MPI</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="kn">from</span> <span class="nn">esmpy.util.cache_data</span> <span class="kn">import</span> <span class="n">DATA_DIR</span>
-<span class="kn">from</span> <span class="nn">esmpy.util.exceptions</span> <span class="kn">import</span> <span class="n">DataMissing</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">esmpy.util.cache_data</span><span class="w"> </span><span class="kn">import</span> <span class="n">DATA_DIR</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">esmpy.util.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataMissing</span>
 
 <span class="c1"># The data files can be retrieved from the ESMF data repository by uncommenting the</span>
 <span class="c1"># following block of code:</span>
@@ -1060,9 +1060,9 @@ can be run in serial or parallel with no modification.</p>
 <span class="c1"># cache_data_file(os.path.join(DATA_DIR, &quot;mpas_uniform_10242_dual_counterclockwise.nc&quot;))</span>
 
 
-<span class="k">def</span> <span class="nf">regrid</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">regrid</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="kn">import</span> <span class="nn">esmpy</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">esmpy</span>
     <span class="k">except</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="s2">&quot;ESMF is not available on this machine&quot;</span><span class="p">)</span>
 
@@ -1120,9 +1120,9 @@ can be run in serial or parallel with no modification.</p>
 
     <span class="k">return</span> <span class="n">dstfield</span><span class="p">,</span> <span class="n">xctfield</span>
 
-<span class="k">def</span> <span class="nf">compute_error</span><span class="p">(</span><span class="n">dstfield</span><span class="p">,</span> <span class="n">xctfield</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">compute_error</span><span class="p">(</span><span class="n">dstfield</span><span class="p">,</span> <span class="n">xctfield</span><span class="p">):</span>
     <span class="c1"># compute the mean relative error</span>
-    <span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">mul</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">operator</span><span class="w"> </span><span class="kn">import</span> <span class="n">mul</span>
     <span class="n">num_nodes</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="n">mul</span><span class="p">,</span> <span class="n">xctfield</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
     <span class="n">relerr</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">meanrelerr</span> <span class="o">=</span> <span class="mi">0</span>
