@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Grid &#8212; ESMPy 8.9.0b3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="_static/documentation_options.js?v=7309bc43"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Mesh" href="mesh.html" />
+    <link rel="prev" title="Field" href="field.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mesh.html" title="Mesh"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="field.html" title="Field"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.9.0b3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Grid</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="grid">
+<h1>Grid<a class="headerlink" href="#grid" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">esmpy.api.grid.</span></span><span class="sig-name descname"><span class="pre">Grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_peri_dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periodic_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pole_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_sys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_typekind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pole_kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filetype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reg_decomp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decompflag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_sphere</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_corner_stagger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_user_area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">varname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tilesize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regDecompPTile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid" title="Link to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> class is a Python wrapper object for the ESMF Grid.  The individual 
+values of all coordinate and mask arrays are referenced to those of the
+underlying Fortran ESMF object.</p>
+<p>The <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> class is used to describe the geometry and
+discretization of logically rectangular physical grids.  It also contains
+the description of the underlying topology and decomposition of the physical
+grid across the available computational resources. The most frequent use of
+the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> class is to describe physical grids in user
+code so that sufficient information is available to perform regridding
+operations.</p>
+<p>Refer to the Grid Class of the 
+<a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_refdoc/">ESMF Reference Manual</a>
+for more information.</p>
+<p>A <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> can be created in two different ways, as a
+<a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> in memory, or from SCRIP formatted or CF compliant GRIDSPEC file. The
+arguments for each type of <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> creation are
+outlined below.</p>
+<p><strong>Created in-memory:</strong></p>
+<p><em>REQUIRED:</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>max_index</strong> (<em>list</em>) – An integer list of length 2 or 3, with the
+number of grid cells in each dimension.</p>
+</dd>
+</dl>
+<p><em>OPTIONAL:</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_peri_dims</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The number of periodic dimensions, either <code class="docutils literal notranslate"><span class="pre">0</span></code>
+or <code class="docutils literal notranslate"><span class="pre">1</span></code>. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p><strong>periodic_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The periodic dimension: <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">2</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p><strong>pole_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The pole dimension <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p><strong>coord_sys</strong> (<a class="reference internal" href="CoordSys.html#esmpy.api.constants.CoordSys" title="esmpy.api.constants.CoordSys"><em>CoordSys</em></a>) – Coordinate system for the
+<a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="CoordSys.html#esmpy.api.constants.CoordSys.SPH_DEG" title="esmpy.api.constants.CoordSys.SPH_DEG"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SPH_DEG</span></code></a>.</p></li>
+<li><p><strong>coord_typekind</strong> (<a class="reference internal" href="TypeKind.html#esmpy.api.constants.TypeKind" title="esmpy.api.constants.TypeKind"><em>TypeKind</em></a>) – Type of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
+coordinates.
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="TypeKind.html#esmpy.api.constants.TypeKind.R8" title="esmpy.api.constants.TypeKind.R8"><code class="xref py py-attr docutils literal notranslate"><span class="pre">R8</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Created either from file or in-memory:</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc" title="esmpy.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the coordinate values.
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER" title="esmpy.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a>
+in 2D and <a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER_VCENTER" title="esmpy.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in 3D.</p></li>
+<li><p><strong>pole_kind</strong> (<a class="reference internal" href="PoleKind.html#esmpy.api.constants.PoleKind" title="esmpy.api.constants.PoleKind"><em>PoleKind</em></a>) – Two item list which specifies the type of
+connection which occurs at the pole. The first value specifies the
+connection that occurs at the minimum end of the pole dimension. 
+The second value specifies the connection that occurs at the maximum 
+end of the pole dimension.
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="PoleKind.html#esmpy.api.constants.PoleKind.MONOPOLE" title="esmpy.api.constants.PoleKind.MONOPOLE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">MONOPOLE</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Created from file:</strong></p>
+<p><em>REQUIRED:</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – The name of the NetCDF grid file.</p></li>
+<li><p><strong>filetype</strong> (<a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat" title="esmpy.api.constants.FileFormat"><em>FileFormat</em></a>) – The grid <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat" title="esmpy.api.constants.FileFormat"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FileFormat</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+<p><em>OPTIONAL:</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>is_sphere</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> for a spherical grid, or <code class="docutils literal notranslate"><span class="pre">False</span></code>
+for regional. Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p><strong>add_corner_stagger</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> to use the information in
+the grid file to add the corner stagger to the grid. The coordinates for
+the corner stagger are required for conservative regridding. If
+not specified, defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>add_user_area</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> to read in the cell area from the
+grid file; otherwise, ESMF will calculate it. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>add_mask</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> to generate the mask using the
+<code class="docutils literal notranslate"><span class="pre">missing_value</span></code> attribute defined in <code class="docutils literal notranslate"><span class="pre">varname</span></code>.  This argument is
+only supported with filetype
+<a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.GRIDSPEC" title="esmpy.api.constants.FileFormat.GRIDSPEC"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GRIDSPEC</span></code></a>.
+Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>varname</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – If add_mask is <code class="docutils literal notranslate"><span class="pre">True</span></code>, provide a variable name stored
+in the grid file and the mask will be generated using the missing value
+of the data value of this variable.  The first two dimensions of the
+variable has to be the longitude and the latitude dimension and the
+mask is derived from the first 2D values of this variable even if this
+data is a 3D, or 4D array. This argument is only supported with
+filetype <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.GRIDSPEC" title="esmpy.api.constants.FileFormat.GRIDSPEC"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GRIDSPEC</span></code></a>.
+Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>coord_names</strong> (<em>list</em>) – A two-element array containing the longitude and
+latitude variable names in a GRIDSPEC file if there are multiple
+coordinates defined in the file. This argument is only supported with
+filetype <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.GRIDSPEC" title="esmpy.api.constants.FileFormat.GRIDSPEC"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GRIDSPEC</span></code></a>.
+Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Cubed sphere:</strong></p>
+<p><em>REQUIRED:</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tilesize</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The number of elements on each side of the tile of the
+cubed sphere grid.</p>
+</dd>
+</dl>
+<p><em>OPTIONAL:</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>regDecompPTile</strong> (<em>list</em>) – List of DE counts for each dimension. The second index steps through
+the tiles. The total deCount is determined as the sum over
+the products of regDecompPTile elements for each tile.
+By default every tile is decomposed in the same way.  If the total
+PET count is less than 6, one tile will be assigned to one DE and the DEs
+will be assigned to PETs sequentially, therefore, some PETs may have
+more than one DE. If the total PET count is greater than 6, the total
+number of DEs will be a multiple of 6 and less than or equal to the total
+PET count. For instance, if the total PET count is 16, the total DE count
+will be 12 with each tile decomposed into 1x2 blocks. The 12 DEs are mapped
+to the first 12 PETs and the remaining 4 PETs have no DEs locally.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – The name of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.area">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">area</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.area" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of numpy arrays with an entry for every stagger location
+of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> cell areas represented as
+numpy arrays of floats of size given by
+<code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.areatype">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">areatype</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.areatype" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="TypeKind.html#esmpy.api.constants.TypeKind" title="esmpy.api.constants.TypeKind"><code class="xref py py-attr docutils literal notranslate"><span class="pre">TypeKind</span></code></a></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The ESMF typekind of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> cell
+areas.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.coords">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">coords</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.coords" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2D list of numpy arrays of size given by
+<code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>, where the first index represents
+the stagger locations of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> and the
+second index represent the coordinate dimensions of the
+<a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The coordinates of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.coord_sys">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">coord_sys</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.coord_sys" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="CoordSys.html#esmpy.api.constants.CoordSys" title="esmpy.api.constants.CoordSys"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CoordSys</span></code></a></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The coordinate system of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.has_corners">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_corners</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.has_corners" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)">bool</a></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A boolean value to tell if the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
+has corners allocated.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.lower_bounds">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lower_bounds</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.lower_bounds" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of numpy arrays with an entry for every stagger location
+of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The lower bounds of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
+represented as numpy arrays of ints of size given by
+<code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.mask">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mask</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.mask" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of numpy arrays with an entry for every stagger location
+of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The mask of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> represented as
+numpy arrays of ints of size given by `
+<cite>upper_bounds - lower_bounds`</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.max_index">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_index</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.max_index" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A numpy array with as many values as the
+<a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> rank.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The number of <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> cells in each
+dimension of the grid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.num_peri_dims">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_peri_dims</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.num_peri_dims" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The total number of periodic dimensions in the
+<a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.periodic_dim">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">periodic_dim</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.periodic_dim" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The periodic dimension of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
+(e.g. <code class="docutils literal notranslate"><span class="pre">0</span></code> for <code class="docutils literal notranslate"><span class="pre">x</span></code> or <code class="docutils literal notranslate"><span class="pre">longitude</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code> for <code class="docutils literal notranslate"><span class="pre">y</span></code> or
+<code class="docutils literal notranslate"><span class="pre">latitude</span></code>, etc.).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.pole_dim">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pole_dim</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.pole_dim" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The pole dimension of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
+(e.g. <code class="docutils literal notranslate"><span class="pre">0</span></code> for <code class="docutils literal notranslate"><span class="pre">x</span></code> or <code class="docutils literal notranslate"><span class="pre">longitude</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code> for <code class="docutils literal notranslate"><span class="pre">y</span></code> or
+<code class="docutils literal notranslate"><span class="pre">latitude</span></code>, etc.).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.rank">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rank</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.rank" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The rank of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.size">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.size" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of numpy arrays with an entry for every stagger location
+of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The size of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> represented as
+numpy arrays of ints of size given by
+<code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.staggerloc">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">staggerloc</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.staggerloc" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of bools</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The stagger locations that have been allocated for the
+<a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.type">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.type" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="TypeKind.html#esmpy.api.constants.TypeKind" title="esmpy.api.constants.TypeKind"><code class="xref py py-attr docutils literal notranslate"><span class="pre">TypeKind</span></code></a></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The ESMF typekind of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
+coordinates.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.upper_bounds">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">upper_bounds</span></span><a class="headerlink" href="#esmpy.api.grid.Grid.upper_bounds" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of numpy arrays with an entry for every stagger location
+of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The upper bounds of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
+represented as numpy arrays of ints of size given by
+<code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.add_coords">
+<span class="sig-name descname"><span class="pre">add_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid.add_coords" title="Link to this definition">¶</a></dt>
+<dd><p>Add coordinates to the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> at the specified
+stagger location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc" title="esmpy.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the coordinate
+values. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to
+<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER" title="esmpy.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a>
+in 2D and <a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER_VCENTER" title="esmpy.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in
+3D.</p></li>
+<li><p><strong>coord_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The dimension number of the coordinates to return
+e.g. <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1,</span> <span class="pre">2)</span></code>, or <code class="docutils literal notranslate"><span class="pre">[lon,</span> <span class="pre">lat]</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1)</span></code>
+(coordinates will not be returned if coord_dim is not specified and
+staggerlocs is a list with more than one element).</p></li>
+<li><p><strong>from_file</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Boolean for internal use to determine whether the
+<a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> has already been created from file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A numpy array of coordinate values if staggerloc and
+coord_dim are specified, otherwise return None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.add_item">
+<span class="sig-name descname"><span class="pre">add_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid.add_item" title="Link to this definition">¶</a></dt>
+<dd><p>Allocate space for a <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> item (mask or areas)
+at a specified stagger location.</p>
+<p><em>REQUIRED:</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>item</strong> (<a class="reference internal" href="GridItem.html#esmpy.api.constants.GridItem" title="esmpy.api.constants.GridItem"><em>GridItem</em></a>) – The <a class="reference internal" href="GridItem.html#esmpy.api.constants.GridItem" title="esmpy.api.constants.GridItem"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GridItem</span></code></a> to
+allocate.</p>
+</dd>
+</dl>
+<p><em>OPTIONAL:</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc" title="esmpy.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the item
+values. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to
+<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER" title="esmpy.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a>
+in 2D and <a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER_VCENTER" title="esmpy.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in
+3D.</p></li>
+<li><p><strong>from_file</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Boolean for internal use to determine whether the
+<a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> has already been created from file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A numpy array of the mask or area values if a single
+staggerloc is given, otherwise return None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid.copy" title="Link to this definition">¶</a></dt>
+<dd><p>Copy a <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> in an ESMF-safe manner.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> shallow copy.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid.destroy" title="Link to this definition">¶</a></dt>
+<dd><p>Release the memory associated with a <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.get_coords">
+<span class="sig-name descname"><span class="pre">get_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coord_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid.get_coords" title="Link to this definition">¶</a></dt>
+<dd><p>Return a numpy array of coordinates at a specified stagger 
+location. The returned array is NOT a copy, it is
+directly aliased to the underlying memory allocated by esmpy.</p>
+<p><em>REQUIRED:</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>coord_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The dimension number of the coordinates to return
+e.g. <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1,</span> <span class="pre">2)</span></code>, or <code class="docutils literal notranslate"><span class="pre">[lon,</span> <span class="pre">lat]</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1)</span></code>
+(coordinates will not be returned if <code class="docutils literal notranslate"><span class="pre">coord_dim</span></code> is not specified
+and <code class="docutils literal notranslate"><span class="pre">staggerlocs</span></code> is a list with more than one element).</p>
+</dd>
+</dl>
+<p><em>OPTIONAL:</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc" title="esmpy.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the coordinate
+values. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to
+<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER" title="esmpy.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a>
+in 2D and <a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER_VCENTER" title="esmpy.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in
+3D.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A numpy array of coordinate values at the specified staggerloc.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="esmpy.api.grid.Grid.get_item">
+<span class="sig-name descname"><span class="pre">get_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid.get_item" title="Link to this definition">¶</a></dt>
+<dd><p>Return a numpy array of item values at a specified stagger
+location.  The returned array is NOT a copy, it is
+directly aliased to the underlying memory allocated by esmpy.</p>
+<p><em>REQUIRED:</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>item</strong> (<a class="reference internal" href="GridItem.html#esmpy.api.constants.GridItem" title="esmpy.api.constants.GridItem"><em>GridItem</em></a>) – The <a class="reference internal" href="GridItem.html#esmpy.api.constants.GridItem" title="esmpy.api.constants.GridItem"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GridItem</span></code></a> to
+return.</p>
+</dd>
+</dl>
+<p><em>OPTIONAL:</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc" title="esmpy.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the item
+values. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to
+<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER" title="esmpy.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a> in 2D and
+<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER_VCENTER" title="esmpy.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in 3D.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A numpy array of mask or area values at the specified staggerloc.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Grid</a><ul>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid"><code class="docutils literal notranslate"><span class="pre">Grid</span></code></a><ul>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.area"><code class="docutils literal notranslate"><span class="pre">Grid.area</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.areatype"><code class="docutils literal notranslate"><span class="pre">Grid.areatype</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.coords"><code class="docutils literal notranslate"><span class="pre">Grid.coords</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.coord_sys"><code class="docutils literal notranslate"><span class="pre">Grid.coord_sys</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.has_corners"><code class="docutils literal notranslate"><span class="pre">Grid.has_corners</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.lower_bounds"><code class="docutils literal notranslate"><span class="pre">Grid.lower_bounds</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.mask"><code class="docutils literal notranslate"><span class="pre">Grid.mask</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.max_index"><code class="docutils literal notranslate"><span class="pre">Grid.max_index</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.num_peri_dims"><code class="docutils literal notranslate"><span class="pre">Grid.num_peri_dims</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.periodic_dim"><code class="docutils literal notranslate"><span class="pre">Grid.periodic_dim</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.pole_dim"><code class="docutils literal notranslate"><span class="pre">Grid.pole_dim</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.rank"><code class="docutils literal notranslate"><span class="pre">Grid.rank</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.size"><code class="docutils literal notranslate"><span class="pre">Grid.size</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.staggerloc"><code class="docutils literal notranslate"><span class="pre">Grid.staggerloc</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.type"><code class="docutils literal notranslate"><span class="pre">Grid.type</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.upper_bounds"><code class="docutils literal notranslate"><span class="pre">Grid.upper_bounds</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.add_coords"><code class="docutils literal notranslate"><span class="pre">Grid.add_coords()</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.add_item"><code class="docutils literal notranslate"><span class="pre">Grid.add_item()</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.copy"><code class="docutils literal notranslate"><span class="pre">Grid.copy()</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.destroy"><code class="docutils literal notranslate"><span class="pre">Grid.destroy()</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.get_coords"><code class="docutils literal notranslate"><span class="pre">Grid.get_coords()</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.grid.Grid.get_item"><code class="docutils literal notranslate"><span class="pre">Grid.get_item()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="field.html"
+                          title="previous chapter">Field</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="mesh.html"
+                          title="next chapter">Mesh</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/grid.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mesh.html" title="Mesh"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="field.html" title="Field"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.9.0b3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Grid</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2011-2025, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.1.
+    </div>
+  </body>
+</html>
