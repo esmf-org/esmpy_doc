@@ -77,7 +77,7 @@ with coordinates allocated on at least one stagger location.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – An optional user friendly name for the
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – An optional user friendly name for the
 <a class="reference internal" href="#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>.</p></li>
 <li><p><strong>typekind</strong> (<a class="reference internal" href="TypeKind.html#esmpy.api.constants.TypeKind" title="esmpy.api.constants.TypeKind"><em>TypeKind</em></a>) – Type of the <a class="reference internal" href="#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>
 data. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="TypeKind.html#esmpy.api.constants.TypeKind.R8" title="esmpy.api.constants.TypeKind.R8"><code class="xref py py-attr docutils literal notranslate"><span class="pre">R8</span></code></a>.</p></li>
@@ -90,7 +90,7 @@ in 2D and <a class="reference internal" href="StaggerLoc.html#esmpy.api.constant
 <a class="reference internal" href="#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> data, only specify this argument when
 using a <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>
 if <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <a class="reference internal" href="MeshLoc.html#esmpy.api.constants.MeshLoc.NODE" title="esmpy.api.constants.MeshLoc.NODE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NODE</span></code></a>.</p></li>
-<li><p><strong>ndbounds</strong> (<em>tuple</em>) – The number of entries in an extra
+<li><p><strong>ndbounds</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><em>tuple</em></a>) – The number of entries in an extra
 <a class="reference internal" href="#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> dimension. This is represented as a
 single value, a list or a tuple containing the number of entries for
 each desired extra dimension of the <a class="reference internal" href="#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>. The
@@ -144,7 +144,7 @@ time dimension must be last, following Fortran indexing conventions.</p></li>
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#esmpy.api.field.Field.name" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)">str</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the name of the <a class="reference internal" href="#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>.</p>
@@ -157,7 +157,7 @@ time dimension must be last, following Fortran indexing conventions.</p></li>
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ndbounds</span></span><a class="headerlink" href="#esmpy.api.field.Field.ndbounds" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The bounds of the extra dimensions in the
@@ -171,7 +171,7 @@ time dimension must be last, following Fortran indexing conventions.</p></li>
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rank</span></span><a class="headerlink" href="#esmpy.api.field.Field.rank" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The rank of the <a class="reference internal" href="#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>.</p>
@@ -225,7 +225,7 @@ is built.</p>
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">xd</span></span><a class="headerlink" href="#esmpy.api.field.Field.xd" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The number of extra (ungridded) dimensions of the
@@ -278,15 +278,15 @@ dimensions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – The name of the NetCDF file.</p></li>
-<li><p><strong>variable</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – The name of the data variable to read from file.</p></li>
+<li><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The name of the NetCDF file.</p></li>
+<li><p><strong>variable</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The name of the data variable to read from file.</p></li>
 </ul>
 </dd>
 </dl>
 <p><em>OPTIONAL:</em></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>timeslice</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The number of timeslices to read.</p>
+<dd class="field-odd"><p><strong>timeslice</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – The number of timeslices to read.</p>
 </dd>
 </dl>
 </dd></dl>

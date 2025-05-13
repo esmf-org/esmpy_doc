@@ -82,11 +82,11 @@ for each type of <a class="reference internal" href="#esmpy.api.mesh.Mesh" title
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>parametric_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – the dimension of the topology of the
+<li><p><strong>parametric_dim</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – the dimension of the topology of the
 <a class="reference internal" href="#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> (e.g. a <a class="reference internal" href="#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> composed of squares would have a
 parametric dimension of 2 and a <a class="reference internal" href="#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> composed of cubes
 would have a parametric dimension of 3).</p></li>
-<li><p><strong>spatial_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – the number of coordinate dimensions
+<li><p><strong>spatial_dim</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – the number of coordinate dimensions
 needed to describe the locations of the nodes making up the
 <a class="reference internal" href="#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.  For a manifold the spatial dimension can be larger
 than the parametric dimension (e.g. the 2D surface of a
@@ -109,7 +109,7 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – the name of NetCDF file containing the <a class="reference internal" href="#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p></li>
+<li><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – the name of NetCDF file containing the <a class="reference internal" href="#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p></li>
 <li><p><strong>filetype</strong> (<a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat" title="esmpy.api.constants.FileFormat"><em>FileFormat</em></a>) – the input
 <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat" title="esmpy.api.constants.FileFormat"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FileFormat</span></code></a> of the <a class="reference internal" href="#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p></li>
 </ul>
@@ -119,16 +119,16 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>convert_to_dual</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – a boolean value to specify if the
+<li><p><strong>convert_to_dual</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – a boolean value to specify if the
 dual <a class="reference internal" href="#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> should be calculated.  Defaults to False.  This
 argument is only supported with
 <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.SCRIP" title="esmpy.api.constants.FileFormat.SCRIP"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SCRIP</span></code></a>.</p></li>
-<li><p><strong>add_user_area</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – a boolean value to specify if an area
+<li><p><strong>add_user_area</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – a boolean value to specify if an area
 property should be added to the mesh.  This argument is only
 supported for <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.SCRIP" title="esmpy.api.constants.FileFormat.SCRIP"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SCRIP</span></code></a>
 or <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.ESMFMESH" title="esmpy.api.constants.FileFormat.ESMFMESH"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ESMFMESH</span></code></a>.
 If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to False.</p></li>
-<li><p><strong>meshname</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – the name of the <a class="reference internal" href="#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> metadata variable in
+<li><p><strong>meshname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – the name of the <a class="reference internal" href="#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> metadata variable in
 a UGRID file.  This argument is only supported with
 <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.UGRID" title="esmpy.api.constants.FileFormat.UGRID"><code class="xref py py-attr docutils literal notranslate"><span class="pre">UGRID</span></code></a>.
 If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to the empty string.</p></li>
@@ -138,7 +138,7 @@ defined on the <code class="xref py py-attr docutils literal notranslate"><span 
 This argument is only supported with
 <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.UGRID" title="esmpy.api.constants.FileFormat.UGRID"><code class="xref py py-attr docutils literal notranslate"><span class="pre">UGRID</span></code></a>.
 If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to no masking.</p></li>
-<li><p><strong>varname</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – a variable name for the mask in a UGRID file
+<li><p><strong>varname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – a variable name for the mask in a UGRID file
 if mask_flag is specified.  This argument is only supported
 for <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.UGRID" title="esmpy.api.constants.FileFormat.UGRID"><code class="xref py py-attr docutils literal notranslate"><span class="pre">UGRID</span></code></a>.
 If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to the empty string.</p></li>
@@ -209,7 +209,7 @@ and elements of the <a class="reference internal" href="#esmpy.api.mesh.Mesh" ti
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rank</span></span><a class="headerlink" href="#esmpy.api.mesh.Mesh.rank" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The rank of the Mesh, (i.e. always 1).</p>
@@ -253,7 +253,7 @@ current processor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>element_count</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – the number of elements to add to the <a class="reference internal" href="#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p></li>
+<li><p><strong>element_count</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – the number of elements to add to the <a class="reference internal" href="#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p></li>
 <li><p><strong>element_ids</strong> (<em>ndarray</em>) – a numpy array of of shape
 <code class="docutils literal notranslate"><span class="pre">(element_count,</span> <span class="pre">1)</span></code> to specify the element ids.</p></li>
 <li><p><strong>element_types</strong> (<em>ndarray</em>) – a numpy array of
@@ -292,7 +292,7 @@ elements. The specific values that are masked are specified in the
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>node_count</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – the number of nodes to add to the <a class="reference internal" href="#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p></li>
+<li><p><strong>node_count</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – the number of nodes to add to the <a class="reference internal" href="#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>.</p></li>
 <li><p><strong>node_ids</strong> (<em>ndarray</em>) – a numpy array of shape (node_count, 1) to
 specify the node_ids.</p></li>
 <li><p><strong>node_coords</strong> (<em>ndarray</em>) – a numpy array of shape
@@ -351,7 +351,7 @@ directly aliased to the underlying memory allocated by esmpy.</p>
 <p><em>REQUIRED:</em></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>coord_dim</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – the dimension number of the coordinates to return:
+<dd class="field-odd"><p><strong>coord_dim</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – the dimension number of the coordinates to return:
 e.g. <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1,</span> <span class="pre">2)</span></code>, or <code class="docutils literal notranslate"><span class="pre">[lat,</span> <span class="pre">lon]</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1)</span></code></p>
 </dd>
 </dl>
