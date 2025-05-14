@@ -1,26 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Installation &#8212; ESMPy 8.3.0 beta snapshot documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    <title>Installation &#8212; ESMPy 8.9.0b8 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <script src="_static/documentation_options.js?v=67620526"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Tutorials" href="examples.html" />
     <link rel="prev" title="Overview" href="intro.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -35,7 +33,7 @@
         <li class="right" >
           <a href="intro.html" title="Overview"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.3.0 beta snapshot documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.9.0b8 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Installation</a></li> 
       </ul>
     </div>  
@@ -46,39 +44,40 @@
           <div class="body" role="main">
             
   <section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h1>
 <section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
 <p>The following packages are <em>required</em> to work with ESMPy:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_usrdoc/">ESMF installation</a></p></li>
-<li><p><a class="reference external" href="http://python.org/">python</a></p></li>
-<li><p><a class="reference external" href="http://www.numpy.org/">numpy</a></p></li>
+<li><p><a class="reference external" href="http://python.org/">python</a>, minimum version 3.8</p></li>
+<li><p><a class="reference external" href="http://www.numpy.org/">numpy</a>, minimum version 1.19</p></li>
 </ul>
 <p>The following packages are <em>optional</em>:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>ESMF installation with NetCDF - required to create <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grids</span></code></a> and <a class="reference internal" href="mesh.html#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Meshes</span></code></a> from file</dt><dd><ul>
+<dt>ESMF installation with NetCDF - required to create <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grids</span></code></a>, <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Meshes</span></code></a> and <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fields</span></code></a> from file, and to write regridding weights to file</dt><dd><ul>
 <li><p>NetCDF must be built as a shared library for ESMPy installation to succeed</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p><a class="reference external" href="http://mpi4py.scipy.org/">mpi4py</a>- python bindings to MPI, needed to run some of the parallel regridding examples</p></li>
-<li><p><a class="reference external" href="https://nose.readthedocs.org/en/latest/">nose</a> - for nose testing</p></li>
+<li><p>ESMF installation with PIO (the Parallel IO library) - required to create <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Meshes</span></code></a> and <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fields</span></code></a> from file, and to write regridding weights to file</p></li>
+<li><p><a class="reference external" href="https://mpi4py.readthedocs.io/en/stable/">mpi4py</a>- python bindings to MPI, needed to run some of the parallel regridding examples</p></li>
+<li><p><a class="reference external" href="https://docs.pytest.org/en/7.1.x/">pytest</a> - for testing</p></li>
 </ul>
 </section>
 <section id="getting-the-code">
-<h2>Getting the code<a class="headerlink" href="#getting-the-code" title="Permalink to this headline">¶</a></h2>
+<h2>Getting the code<a class="headerlink" href="#getting-the-code" title="Link to this heading">¶</a></h2>
 <p>The ESMPy source code can be downloaded from the
 <a class="reference external" href="https://github.com/esmf-org/esmf">ESMF git repository</a>.</p>
 <p>The <a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_usrdoc/">ESMF User’s Guide</a>
-contains information on building and installing ESMF.</p>
+contains information on building and installing esmpy.</p>
 <p>The <a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_refdoc/">ESMF Reference Manual</a>
 contains information on the architecture of ESMF, example code, and details of the API (Application Programming
 Interface).</p>
 <section id="anaconda-packages">
-<h3>Anaconda Packages<a class="headerlink" href="#anaconda-packages" title="Permalink to this headline">¶</a></h3>
+<h3>Anaconda Packages<a class="headerlink" href="#anaconda-packages" title="Link to this heading">¶</a></h3>
 <p>ESMPy conda packages are available through the conda-forge channel:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">esmpy</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">esmpy</span>
 </pre></div>
@@ -94,80 +93,72 @@ Interface).</p>
 </section>
 </section>
 <section id="installing-esmpy-from-source">
-<h2>Installing ESMPy from Source<a class="headerlink" href="#installing-esmpy-from-source" title="Permalink to this headline">¶</a></h2>
-<p>When installing from source, ESMPy requires a pointer to a file named esmf.mk
-that is generated during an ESMF installation.  The path of this file is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">ESMF_INSTALL_DIR</span><span class="o">&gt;/</span><span class="n">lib</span><span class="o">/</span><span class="n">lib</span><span class="o">&lt;</span><span class="n">g</span><span class="o">&lt;</span><span class="ow">or</span><span class="o">&gt;</span><span class="n">O</span><span class="o">&gt;/&lt;</span><span class="n">platform</span><span class="o">&gt;/</span><span class="n">esmf</span><span class="o">.</span><span class="n">mk</span>
-</pre></div>
-</div>
-<p>If the <code class="docutils literal notranslate"><span class="pre">ESMFMKFILE</span></code> flag is set when building ESMPy then it will not need to be
-referenced again.  If not, an environment variable of the same name must be set
-with the path to the esmf.mk file every time a new shell is initiated.</p>
-<p>ESMPy can be installed in a custom location using the
-<code class="docutils literal notranslate"><span class="pre">--prefix</span></code>, <code class="docutils literal notranslate"><span class="pre">--home</span></code>, or <code class="docutils literal notranslate"><span class="pre">--install-base</span></code> flags to the install command.  If this
-is done, then this location needs to be added to the <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> environment
-variable every time a new shell is initiated.  If a
-custom install location is not specified, ESMPy will be installed in the
-standard Python package installation directory on that particular machine.</p>
-<p>An installation of ESMPy in the default location for Python packages can be done
-with the following command issued from the top level ESMPy directory:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build</span> <span class="o">--</span><span class="n">ESMFMKFILE</span><span class="o">=&lt;</span><span class="n">DIR_TO_esmf</span><span class="o">.</span><span class="n">mk</span><span class="o">&gt;/</span><span class="n">esmf</span><span class="o">.</span><span class="n">mk</span> <span class="n">install</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>custom install location:</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build</span> <span class="o">--</span><span class="n">ESMFMKFILE</span><span class="o">=&lt;</span><span class="n">DIR_TO_esmf</span><span class="o">.</span><span class="n">mk</span><span class="o">&gt;/</span><span class="n">esmf</span><span class="o">.</span><span class="n">mk</span>
-
-<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=&lt;</span><span class="n">custom_install_location</span><span class="o">&gt;</span>
-
-<span class="n">setenv</span> <span class="n">PYTHONPATH</span> <span class="o">&lt;</span><span class="n">custom_install_location</span><span class="o">&gt;/</span><span class="n">lib</span><span class="o">/</span>\<span class="o">*/</span><span class="n">site_packages</span>
+<h2>Installing ESMPy from Source<a class="headerlink" href="#installing-esmpy-from-source" title="Link to this heading">¶</a></h2>
+<p>When installing from source, ESMPy uses <a class="reference external" href="https://pypi.org/project/pip//">pip</a>
+to build and install the package. An installation of ESMPy in the default location for Python packages can be done
+with the following command issued from the top level ESMPy directory (<code class="docutils literal notranslate"><span class="pre">src/addon/esmpy</span></code>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">.</span>
 </pre></div>
 </div>
 <p>Please contact <a class="reference external" href="mailto:esmf_support&#37;&#52;&#48;ucar&#46;edu">esmf_support<span>&#64;</span>ucar<span>&#46;</span>edu</a> with any questions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>With some python versions, there is a problem with the automatic installation of the required package <code class="docutils literal notranslate"><span class="pre">setuptools-git-versioning</span></code>. If the output from the <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> command ends with <code class="docutils literal notranslate"><span class="pre">Successfully</span> <span class="pre">installed</span> <span class="pre">esmpy-0.0.0</span></code>, this indicates that the <code class="docutils literal notranslate"><span class="pre">setuptools-git-versioning</span></code> package was not invoked and the build thinks you are using ESMF version 0.0.0. This will cause problems when you try to use ESMPy. To solve this problem, simply rerun the above installation command (<code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code>). You should then see a reasonable version number at the end, such as, <code class="docutils literal notranslate"><span class="pre">Successfully</span> <span class="pre">installed</span> <span class="pre">esmpy-8.4.0</span></code>.</p>
+</div>
 </section>
 <section id="importing-esmpy">
-<h2>Importing ESMPy<a class="headerlink" href="#importing-esmpy" title="Permalink to this headline">¶</a></h2>
+<h2>Importing ESMPy<a class="headerlink" href="#importing-esmpy" title="Link to this heading">¶</a></h2>
 <p>To use ESMPy in an external program, import it with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ESMF</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">esmpy</span>
 </pre></div>
+</div>
+<p>The environment variable <code class="docutils literal notranslate"><span class="pre">ESMFMKFILE</span></code> should be set when using ESMPy. If it is not found, the package will
+try to guess a few very common locations, but we recommend correctly setting the variable nonetheless.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Python module name for ESMPy was changed in v8.4.0 from “ESMF” to “esmpy”. If you are using a version older than v8.4.0, the import command is <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">ESMF</span></code>. See the <a class="reference external" href="http://earthsystemmodeling.org/static/releases.html">ESMF Release Notes</a> for more details and links to previous versions of the ESMPy documentation.</p>
 </div>
 </section>
 <section id="validation">
-<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
-<p>The ESMPy testing is done with the nose package, both in serial and
-parallel.  The nose commands are wrapped in the following ESMPy targets:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">test</span>
+<h2>Validation<a class="headerlink" href="#validation" title="Link to this heading">¶</a></h2>
+<p>The ESMPy testing is done with the pytest package, both in serial and
+parallel. Basic unit tests can be run with the following command, from
+the top level ESMPy directory (<code class="docutils literal notranslate"><span class="pre">src/addon/esmpy</span></code>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pytest</span>
+</pre></div>
+</div>
+<p>There are a few other pytest targets available for a wider range of testing if
+greater test coverage is desired:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">test_unit</span>
 
-<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">test_examples</span>
+<span class="n">make</span> <span class="n">test_examples</span>
 
-<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">test_regrid_from_file</span>
+<span class="n">make</span> <span class="n">test_unit_parallel</span>
 
-<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">test_parallel</span>
+<span class="n">make</span> <span class="n">test_examples_parallel</span>
 
-<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">test_examples_parallel</span>
-
-<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">test_regrid_from_file_parallel</span>
+<span class="n">make</span> <span class="n">test_regrid_from_file</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">regrid_from_file</span></code> tests can take up a lot of memory and bandwidth.
-The <code class="docutils literal notranslate"><span class="pre">test_regrid_from_file_dryrun</span></code> command will simply download the test
-files without actually running them (allowing the stress on the machine to
-be applied to bandwidth first, and then memory).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">regrid_from_file</span></code> and <code class="docutils literal notranslate"><span class="pre">example</span></code> tests can take up a lot of memory
+and bandwidth. The <code class="docutils literal notranslate"><span class="pre">download_regrid_from_file</span></code> and <code class="docutils literal notranslate"><span class="pre">download_examples</span></code>
+commands will simply download the test files without actually running them
+(allowing the stress on the machine to be applied to bandwidth first, and
+then memory).</p>
 </div>
-<p>Alternatively, individual tests can be run with nose using the following format:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nosetests</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">test</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>e.g.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nosetests</span> <span class="n">src</span><span class="o">/</span><span class="n">ESMF</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">test_api</span><span class="o">/</span><span class="n">test_regrid</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="n">TestRegrid</span><span class="o">.</span><span class="n">test_field_regrid</span>
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, test data will be downloaded to a <code class="docutils literal notranslate"><span class="pre">data</span></code> subdirectory of the ESMPy installation directory. This location can be changed by setting one of the following environment variables:</p>
+<ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">ESMPY_DATA_DIR</span></code> is set, this should point to a directory that has already been populated with the necessary data; the pre-existing data will be read from this directory and no automatic downloads will be attempted.</p></li>
+<li><p>Otherwise, if <code class="docutils literal notranslate"><span class="pre">ESMPY_DATA_NEW_DIR</span></code> is set, data will be downloaded to the path set by this variable instead of using the <code class="docutils literal notranslate"><span class="pre">data</span></code> subdirectory of the ESMPy installation directory.</p></li>
+</ul>
 </div>
 </section>
 <section id="limitations">
-<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+<h2>Limitations<a class="headerlink" href="#limitations" title="Link to this heading">¶</a></h2>
 <p>ESMPy doesn’t include many aspects of ESMF, including components, field bundles,
 time management, etc.  The limitations listed here are relative
 to ESMF offline and integrated regridding capabilities.</p>
@@ -175,16 +166,16 @@ to ESMF offline and integrated regridding capabilities.</p>
 <li><p>ESMPy cannot use an ESMF installation that is built with external LAPACK
 support.</p></li>
 <li><p>Coordinates cannot be retrieved from the elements of a
-<a class="reference internal" href="mesh.html#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>. This can affect the ability to set
-<a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> values on a source <a class="reference internal" href="mesh.html#ESMF.api.mesh.Mesh" title="ESMF.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>
+<a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>. This can affect the ability to set
+<a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> values on a source <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>
 created from file when using conservative regridding.</p></li>
-<li><p>Multi-tile <a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> support is limited to cubed-sphere
+<li><p>Multi-tile <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> support is limited to cubed-sphere
 grids created on 6 processors. A cubed-sphere grid can be created on any
 number of processors, but only when it is created on 6 processors will the
 coordinates be retrievable for the entire object. A
-<a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> created from a cubed-sphere
-<a class="reference internal" href="grid.html#ESMF.api.grid.Grid" title="ESMF.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> cannot be written to file in parallel.</p></li>
-<li><p>There is no <code class="docutils literal notranslate"><span class="pre">FieldBundle</span></code> class, only single <a class="reference internal" href="field.html#ESMF.api.field.Field" title="ESMF.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fields</span></code></a>.</p></li>
+<a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> created from a cubed-sphere
+<a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> cannot be written to file in parallel.</p></li>
+<li><p>There is no <code class="docutils literal notranslate"><span class="pre">FieldBundle</span></code> class, only single <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fields</span></code></a>.</p></li>
 </ul>
 <p>Testing related:</p>
 <ul class="simple">
@@ -199,7 +190,7 @@ including Darwin and Linux running gfortran with openMPI.</p></li>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="index.html">Table of Contents</a></h3>
@@ -236,7 +227,7 @@ including Darwin and Linux running gfortran with openMPI.</p></li>
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -244,13 +235,13 @@ including Darwin and Linux running gfortran with openMPI.</p></li>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -265,13 +256,13 @@ including Darwin and Linux running gfortran with openMPI.</p></li>
         <li class="right" >
           <a href="intro.html" title="Overview"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.3.0 beta snapshot documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.9.0b8 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Installation</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2011-2020, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    &#169; Copyright 2011-2025, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>
