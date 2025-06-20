@@ -190,7 +190,10 @@ of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.ap
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> cell areas represented as
 numpy arrays of floats of size given by
-<code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>.
+(It is an error to use this property in the uncommon case
+where there are multiple DEs per PET. In that case, use
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">all_areas()</span></code>.)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -217,11 +220,14 @@ areas.</p>
 <dd class="field-odd"><p>2D list of numpy arrays of size given by
 <code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>, where the first index represents
 the stagger locations of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> and the
-second index represent the coordinate dimensions of the
+second index represents the coordinate dimensions of the
 <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The coordinates of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.</p>
+<dd class="field-even"><p>The coordinates of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.
+(It is an error to use this property in the uncommon case
+where there are multiple DEs per PET. In that case, use
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">all_coords()</span></code>.)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -264,7 +270,10 @@ of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.ap
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The lower bounds of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
 represented as numpy arrays of ints of size given by
-<code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>.
+(It is an error to use this property in the uncommon case
+where there are multiple DEs per PET. In that case, use
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">all_lower_bounds()</span></code>.)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -280,7 +289,10 @@ of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.ap
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The mask of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> represented as
 numpy arrays of ints of size given by `
-<cite>upper_bounds - lower_bounds`</cite>.</p>
+<cite>upper_bounds - lower_bounds`</cite>.
+(It is an error to use this property in the uncommon case
+where there are multiple DEs per PET. In that case, use
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">all_masks()</span></code>.)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -368,7 +380,10 @@ of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.ap
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The size of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> represented as
 numpy arrays of ints of size given by
-<code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>.
+(It is an error to use this property in the uncommon case
+where there are multiple DEs per PET. In that case, use
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">all_sizes()</span></code>.)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -412,7 +427,10 @@ of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.ap
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The upper bounds of the <a class="reference internal" href="#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>
 represented as numpy arrays of ints of size given by
-<code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">upper_bounds</span> <span class="pre">-</span> <span class="pre">lower_bounds</span></code>.
+(It is an error to use this property in the uncommon case
+where there are multiple DEs per PET. In that case, use
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">all_upper_bounds()</span></code>.)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -439,8 +457,9 @@ staggerlocs is a list with more than one element).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A numpy array of coordinate values if staggerloc and
-coord_dim are specified, otherwise return None.</p>
+<dd class="field-even"><p>A numpy array of coordinate values if a single staggerloc is given,
+coord_dim is specified and there is a single local DE,
+otherwise return None.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -472,7 +491,8 @@ in 2D and <a class="reference internal" href="StaggerLoc.html#esmpy.api.constant
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A numpy array of the mask or area values if a single
-staggerloc is given, otherwise return None.</p>
+staggerloc is given and there is a single local DE,
+otherwise return None.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -496,10 +516,10 @@ staggerloc is given, otherwise return None.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="esmpy.api.grid.Grid.get_coords">
-<span class="sig-name descname"><span class="pre">get_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coord_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid.get_coords" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coord_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localde</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid.get_coords" title="Link to this definition">¶</a></dt>
 <dd><p>Return a numpy array of coordinates at a specified stagger 
-location. The returned array is NOT a copy, it is
-directly aliased to the underlying memory allocated by esmpy.</p>
+location, for a single local DE. The returned array is NOT a copy,
+it is directly aliased to the underlying memory allocated by esmpy.</p>
 <p><em>REQUIRED:</em></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -512,11 +532,15 @@ and <code class="docutils literal notranslate"><span class="pre">staggerlocs</sp
 <p><em>OPTIONAL:</em></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc" title="esmpy.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the coordinate
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc" title="esmpy.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the coordinate
 values. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to
 <a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER" title="esmpy.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a>
 in 2D and <a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER_VCENTER" title="esmpy.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in
-3D.</p>
+3D.</p></li>
+<li><p><strong>localde</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – The local decompositional element (DE). This is
+relevant in the uncommon case where there are multiple DEs per PET.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A numpy array of coordinate values at the specified staggerloc.</p>
@@ -526,10 +550,10 @@ in 2D and <a class="reference internal" href="StaggerLoc.html#esmpy.api.constant
 
 <dl class="py method">
 <dt class="sig sig-object py" id="esmpy.api.grid.Grid.get_item">
-<span class="sig-name descname"><span class="pre">get_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid.get_item" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staggerloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localde</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.grid.Grid.get_item" title="Link to this definition">¶</a></dt>
 <dd><p>Return a numpy array of item values at a specified stagger
-location.  The returned array is NOT a copy, it is
-directly aliased to the underlying memory allocated by esmpy.</p>
+location, for a single local DE. The returned array is NOT a copy,
+it is directly aliased to the underlying memory allocated by esmpy.</p>
 <p><em>REQUIRED:</em></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -540,10 +564,14 @@ return.</p>
 <p><em>OPTIONAL:</em></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc" title="esmpy.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the item
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>staggerloc</strong> (<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc" title="esmpy.api.constants.StaggerLoc"><em>StaggerLoc</em></a>) – The stagger location of the item
 values. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to
 <a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER" title="esmpy.api.constants.StaggerLoc.CENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER</span></code></a> in 2D and
-<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER_VCENTER" title="esmpy.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in 3D.</p>
+<a class="reference internal" href="StaggerLoc.html#esmpy.api.constants.StaggerLoc.CENTER_VCENTER" title="esmpy.api.constants.StaggerLoc.CENTER_VCENTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CENTER_VCENTER</span></code></a> in 3D.</p></li>
+<li><p><strong>localde</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – The local decompositional element (DE). This is
+relevant in the uncommon case where there are multiple DEs per PET.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A numpy array of mask or area values at the specified staggerloc.</p>
