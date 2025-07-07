@@ -104,6 +104,54 @@ field indices.</p></li>
 </dd>
 </dl>
 <dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.field.Field.all_data">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_data</span></span><a class="headerlink" href="#esmpy.api.field.Field.all_data" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of ndarrays with an entry for each local DE.
+(In the typical case of 1 DE per PET, this is a single-element list
+containing a single ndarray. For this case, see also
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">data()</span></code>.)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The data of the <a class="reference internal" href="#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.field.Field.all_lower_bounds">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_lower_bounds</span></span><a class="headerlink" href="#esmpy.api.field.Field.all_lower_bounds" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of ndarrays with an entry for each local DE.
+(In the typical case of 1 DE per PET, this is a single-element list
+containing a single ndarray. For this case, see also
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">lower_bounds()</span></code>.)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The lower bounds of the <a class="reference internal" href="#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.field.Field.all_upper_bounds">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_upper_bounds</span></span><a class="headerlink" href="#esmpy.api.field.Field.all_upper_bounds" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of ndarrays with an entry for each local DE.
+(In the typical case of 1 DE per PET, this is a single-element list
+containing a single ndarray. For this case, see also
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">upper_bounds()</span></code>.)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The upper bounds of the <a class="reference internal" href="#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="esmpy.api.field.Field.data">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#esmpy.api.field.Field.data" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -120,6 +168,20 @@ use <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.field.Field.finalized">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">finalized</span></span><a class="headerlink" href="#esmpy.api.field.Field.finalized" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Indicate if the underlying ESMF memory for this object has
+been deallocated.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="esmpy.api.field.Field.grid">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">grid</span></span><a class="headerlink" href="#esmpy.api.field.Field.grid" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -130,6 +192,20 @@ use <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The discretization object upon which the
 <a class="reference internal" href="#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> is built.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esmpy.api.field.Field.local_de_count">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">local_de_count</span></span><a class="headerlink" href="#esmpy.api.field.Field.local_de_count" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The number of DEs in the <a class="reference internal" href="#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>
+on this PET.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -317,8 +393,13 @@ dimensions.</p>
     <ul>
 <li><a class="reference internal" href="#">Field</a><ul>
 <li><a class="reference internal" href="#esmpy.api.field.Field"><code class="docutils literal notranslate"><span class="pre">Field</span></code></a><ul>
+<li><a class="reference internal" href="#esmpy.api.field.Field.all_data"><code class="docutils literal notranslate"><span class="pre">Field.all_data</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.field.Field.all_lower_bounds"><code class="docutils literal notranslate"><span class="pre">Field.all_lower_bounds</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.field.Field.all_upper_bounds"><code class="docutils literal notranslate"><span class="pre">Field.all_upper_bounds</span></code></a></li>
 <li><a class="reference internal" href="#esmpy.api.field.Field.data"><code class="docutils literal notranslate"><span class="pre">Field.data</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.field.Field.finalized"><code class="docutils literal notranslate"><span class="pre">Field.finalized</span></code></a></li>
 <li><a class="reference internal" href="#esmpy.api.field.Field.grid"><code class="docutils literal notranslate"><span class="pre">Field.grid</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.field.Field.local_de_count"><code class="docutils literal notranslate"><span class="pre">Field.local_de_count</span></code></a></li>
 <li><a class="reference internal" href="#esmpy.api.field.Field.lower_bounds"><code class="docutils literal notranslate"><span class="pre">Field.lower_bounds</span></code></a></li>
 <li><a class="reference internal" href="#esmpy.api.field.Field.name"><code class="docutils literal notranslate"><span class="pre">Field.name</span></code></a></li>
 <li><a class="reference internal" href="#esmpy.api.field.Field.ndbounds"><code class="docutils literal notranslate"><span class="pre">Field.ndbounds</span></code></a></li>
