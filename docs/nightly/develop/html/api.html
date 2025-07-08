@@ -863,6 +863,46 @@ also comes before temporal dimensions, when in use.</p>
 </div>
 </section>
 </section>
+<section id="decomposition-elements-des">
+<span id="des"></span><h2>Decomposition Elements (DEs)<a class="headerlink" href="#decomposition-elements-des" title="Link to this heading">¶</a></h2>
+<p>In ESMF, data classes are distributed over DEs, or Decomposition Elements. DEs are virtual
+units, not necessarily having a 1-to-1 correspondence to the Persistent Execution Threads
+(PETs) of a VM or the physical Processing Elements (PEs) in the underlying physical
+machine. In ESMPy data classes, there is typically exactly one DE per PET. The main
+exception to this is cubed-sphere grids that are represented as multi-tile grids; for
+these, there can be multiple DEs on a single PET (with the default decomposition, this
+occurs for &lt; 6 PETs) or zero DEs on a PET (with the default decomposition, this occurs for
+&gt; 6 PETs). (In the case of a non-cubed-sphere grid that is simply too small to decompose
+across the PETs, there is still 1 DE on each PET but some of these DEs will have data with
+size 0.)</p>
+<p>For ESMPy classes that support multiple DEs per PET (<a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> and
+<a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>), there are two versions of data accessor properties for
+any data that is decomposed across DEs. Examples are a <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>’s
+<a class="reference internal" href="field.html#esmpy.api.field.Field.data" title="esmpy.api.field.Field.data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">data</span></code></a> vs. <a class="reference internal" href="field.html#esmpy.api.field.Field.all_data" title="esmpy.api.field.Field.all_data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">all_data</span></code></a> and a
+<a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>’s <a class="reference internal" href="grid.html#esmpy.api.grid.Grid.area" title="esmpy.api.grid.Grid.area"><code class="xref py py-attr docutils literal notranslate"><span class="pre">area</span></code></a> vs.
+<a class="reference internal" href="grid.html#esmpy.api.grid.Grid.all_areas" title="esmpy.api.grid.Grid.all_areas"><code class="xref py py-attr docutils literal notranslate"><span class="pre">all_areas</span></code></a>. Versions of these properties <em>without</em> the
+<code class="docutils literal notranslate"><span class="pre">all_</span></code> prefix can only be used in the common case where there is exactly one DE per PET;
+these properties return the data on the single DE for the current PET. Versions of these
+properties <em>with</em> the <code class="docutils literal notranslate"><span class="pre">all_</span></code> prefix return lists indexed by DE. For example, to work
+with a <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>’s data in the situation where there may be multiple
+DEs per PET, user code should loop over DEs like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">de</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">myfield</span><span class="o">.</span><span class="n">local_de_count</span><span class="p">):</span>
+    <span class="n">this_data</span> <span class="o">=</span> <span class="n">myfield</span><span class="o">.</span><span class="n">all_data</span><span class="p">[</span><span class="n">de</span><span class="p">]</span>
+    <span class="c1"># operate on this_data</span>
+</pre></div>
+</div>
+<p>Some methods, such as a <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>’s
+<a class="reference internal" href="grid.html#esmpy.api.grid.Grid.get_item" title="esmpy.api.grid.Grid.get_item"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_item()</span></code></a>, default to retrieving values for the first DE
+(<code class="docutils literal notranslate"><span class="pre">localde=0</span></code>). Thus, for the common case with 1 DE per PET, these can be called without
+a <code class="docutils literal notranslate"><span class="pre">localde</span></code> argument. But in cases where there may be multiple DEs per PET, these should
+be called in a loop like in the above example. Furthermore, these methods with an optional
+<code class="docutils literal notranslate"><span class="pre">localde</span></code> argument should not be called in cases where there are zero DEs on a given
+PET; this can be handled via the same looping structure, or if it is known that the only
+possible cases are zero or one DE per PET, then via a conditional like <code class="docutils literal notranslate"><span class="pre">if</span>
+<span class="pre">grid.local_de_count</span> <span class="pre">==</span> <span class="pre">1</span></code>.</p>
+<p>Finally, note that slicing of a <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> or
+<a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> is currently not supported with multiple DEs per PET.</p>
+</section>
 <section id="parallel-execution">
 <h2>Parallel Execution<a class="headerlink" href="#parallel-execution" title="Link to this heading">¶</a></h2>
 <p>ESMPy is a thin wrapper on top of ESMF, which was designed for high performance
@@ -1005,6 +1045,7 @@ of the documentation.</p>
 <li><a class="reference internal" href="#dimension-ordering">Dimension Ordering</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#decomposition-elements-des">Decomposition Elements (DEs)</a></li>
 <li><a class="reference internal" href="#parallel-execution">Parallel Execution</a><ul>
 <li><a class="reference internal" href="#mpirun-vs-mpi-spawn">mpirun vs. MPI.Spawn</a><ul>
 <li><a class="reference internal" href="#mpirun">mpirun</a></li>

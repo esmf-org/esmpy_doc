@@ -108,12 +108,28 @@ with the following command issued from the top level ESMPy directory (<code clas
 </section>
 <section id="importing-esmpy">
 <h2>Importing ESMPy<a class="headerlink" href="#importing-esmpy" title="Link to this heading">¶</a></h2>
-<p>To use ESMPy in an external program, import it with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">esmpy</span>
+<p>ESMPy relies on a build of the underlying ESMF library. When using a conda package, this
+is made available automatically. However, when installing ESMPy from source, the
+corresponding ESMF library must also be built, per the <a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_usrdoc/">ESMF documentation</a>.</p>
+<p>Before importing ESMPy, the environment variable <code class="docutils literal notranslate"><span class="pre">ESMFMKFILE</span></code> must be set, pointing to
+the location of the <code class="docutils literal notranslate"><span class="pre">esmf.mk</span></code> file from the ESMF installation. (If this environment
+variable is not found, the package will try to guess a few common locations, but we
+recommend correctly setting the variable nonetheless.) The location of this file is:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&lt;ESMF_INSTALL_DIR&gt;/lib/lib&lt;g&lt;or&gt;O&gt;/&lt;platform&gt;/esmf.mk
 </pre></div>
 </div>
-<p>The environment variable <code class="docutils literal notranslate"><span class="pre">ESMFMKFILE</span></code> should be set when using ESMPy. If it is not found, the package will
-try to guess a few very common locations, but we recommend correctly setting the variable nonetheless.</p>
+<p>For example, with the bash shell on a Mac, where an optimized version of ESMF has been
+built with the gfortran+clang compilers and the OpenMPI MPI library, <code class="docutils literal notranslate"><span class="pre">ESMFMKFILE</span></code> can be
+set with the following (replacing the <code class="docutils literal notranslate"><span class="pre">&lt;ESMF_INSTALL_DIR&gt;</span></code> placeholder with the
+appropriate path):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">ESMFMKFILE</span><span class="o">=</span>&lt;ESMF_INSTALL_DIR&gt;/lib/libO/Darwin.gfortranclang.64.openmpi.default/esmf.mk
+</pre></div>
+</div>
+<p>After <code class="docutils literal notranslate"><span class="pre">ESMFMKFILE</span></code> has been set appropriately, to use ESMPy in an external program,
+import it with:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">esmpy</span>
+</pre></div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Python module name for ESMPy was changed in v8.4.0 from “ESMF” to “esmpy”. If you are using a version older than v8.4.0, the import command is <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">ESMF</span></code>. See the <a class="reference external" href="http://earthsystemmodeling.org/static/releases.html">ESMF Release Notes</a> for more details and links to previous versions of the ESMPy documentation.</p>
@@ -170,17 +186,14 @@ support.</p></li>
 <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> values on a source <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>
 created from file when using conservative regridding.</p></li>
 <li><p>Multi-tile <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> support is limited to cubed-sphere
-grids created on 6 processors. A cubed-sphere grid can be created on any
-number of processors, but only when it is created on 6 processors will the
-coordinates be retrievable for the entire object. A
-<a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> created from a cubed-sphere
+grids. A <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> created from a cubed-sphere
 <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> cannot be written to file in parallel.</p></li>
 <li><p>There is no <code class="docutils literal notranslate"><span class="pre">FieldBundle</span></code> class, only single <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fields</span></code></a>.</p></li>
 </ul>
 <p>Testing related:</p>
 <ul class="simple">
 <li><p>Nightly regression testing is limited to a small subset of the ESMF test platforms,
-including Darwin and Linux running gfortran with openMPI.</p></li>
+including Darwin and Linux with the gfortran and intel compilers.</p></li>
 </ul>
 </section>
 </section>
