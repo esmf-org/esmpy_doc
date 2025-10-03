@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>API &#8212; ESMPy 8.8.0b0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=89b800e6" />
+    <title>API &#8212; ESMPy 9.0.0b0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=ee9199f9"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/documentation_options.js?v=2f81d295"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Appendices" href="appendix.html" />
     <link rel="prev" title="Tutorials" href="examples.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="examples.html" title="Tutorials"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.8.0b0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 9.0.0b0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">API</a></li> 
       </ul>
     </div>  
@@ -44,9 +44,9 @@
           <div class="body" role="main">
             
   <section id="api">
-<h1>API<a class="headerlink" href="#api" title="Permalink to this heading">¶</a></h1>
+<h1>API<a class="headerlink" href="#api" title="Link to this heading">¶</a></h1>
 <section id="classes">
-<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">¶</a></h2>
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
 <p>ESMPy uses a <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> object to represent data variables
 built on an underlying spatial discretization, which is represented by a
 <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>, <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> or
@@ -86,7 +86,7 @@ more detail in the sections provided by the links in the following table.</p>
 </table>
 </section>
 <section id="named-constants">
-<h2>Named Constants<a class="headerlink" href="#named-constants" title="Permalink to this heading">¶</a></h2>
+<h2>Named Constants<a class="headerlink" href="#named-constants" title="Link to this heading">¶</a></h2>
 <p>ESMPy follows the ESMF convention of using “named constants” to represent the
 available options for parameters that expect a variety of specific inputs.  The
 following table lists the available named constants and provides links to pages
@@ -153,12 +153,12 @@ that further explain the available values.</p>
 </table>
 </section>
 <section id="manager">
-<h2>Manager<a class="headerlink" href="#manager" title="Permalink to this heading">¶</a></h2>
+<h2>Manager<a class="headerlink" href="#manager" title="Link to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="manager.html#esmpy.api.esmpymanager.Manager" title="esmpy.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> is used by ESMPy to simplify a
 number of low-level calls used by the underlying ESMF framework to allocate
 resources, enable logging, and control garbage collection.</p>
 <section id="resource-allocation">
-<h3>Resource Allocation<a class="headerlink" href="#resource-allocation" title="Permalink to this heading">¶</a></h3>
+<h3>Resource Allocation<a class="headerlink" href="#resource-allocation" title="Link to this heading">¶</a></h3>
 <p>The ESMF Virtual Machine (VM)
 is created at the beginning of each ESMPy execution, and contains information
 about the topology and characteristics of the underlying computer. The VM
@@ -178,7 +178,7 @@ number of PETs and the current PET can be queried from the
 for more information.</p>
 </section>
 <section id="logging">
-<h3>Logging<a class="headerlink" href="#logging" title="Permalink to this heading">¶</a></h3>
+<h3>Logging<a class="headerlink" href="#logging" title="Link to this heading">¶</a></h3>
 <p>The <a class="reference internal" href="manager.html#esmpy.api.esmpymanager.Manager" title="esmpy.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> is also used to enable logging:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mg</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Manager</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">local_pet</span> <span class="o">=</span> <span class="n">mg</span><span class="o">.</span><span class="n">local_pet</span>
@@ -187,7 +187,7 @@ for more information.</p>
 <p>The output will be logged in files named PET&lt;local_pet&gt;.ESMF_LogFile.</p>
 </section>
 <section id="memory-management">
-<h3>Memory management<a class="headerlink" href="#memory-management" title="Permalink to this heading">¶</a></h3>
+<h3>Memory management<a class="headerlink" href="#memory-management" title="Link to this heading">¶</a></h3>
 <p>The underlying ESMF framework needs to be initialized and finalized once and
 only once per execution. This is handled internally by the
 <a class="reference internal" href="manager.html#esmpy.api.esmpymanager.Manager" title="esmpy.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> and <strong>does not</strong> require any explicit
@@ -207,7 +207,7 @@ objects is required <em>prior</em> to the end of the program, the class level
 to interpolate data between many <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> pairs.</p>
 </section>
 <section id="moab-mesh-backend">
-<h3>MOAB Mesh backend<a class="headerlink" href="#moab-mesh-backend" title="Permalink to this heading">¶</a></h3>
+<h3>MOAB Mesh backend<a class="headerlink" href="#moab-mesh-backend" title="Link to this heading">¶</a></h3>
 <p>The Manager can be used to enable the <a class="reference external" href="https://sigma.mcs.anl.gov/moab-library/">MOAB</a>
 mesh backend to the Mesh.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mg</span><span class="o">.</span><span class="n">set_moab</span><span class="p">(</span><span class="n">moab_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -218,7 +218,7 @@ full support.</p>
 </section>
 </section>
 <section id="spatial-discretization-objects">
-<h2>Spatial Discretization Objects<a class="headerlink" href="#spatial-discretization-objects" title="Permalink to this heading">¶</a></h2>
+<h2>Spatial Discretization Objects<a class="headerlink" href="#spatial-discretization-objects" title="Link to this heading">¶</a></h2>
 <p>There are three different objects used for spatial coordinate representation:
 <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>, <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>, and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocStream" title="esmpy.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStream</span></code></a>. <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grids</span></code></a> are used to represent logically rectangular
 grids, <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Meshes</span></code></a> are used for unstructured collections of polygons, and
@@ -226,13 +226,13 @@ grids, <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title=
 objects are nearly identical counterparts to the objects of the same name in
 ESMF, with some simplifications for ease of use in the Python environment.</p>
 <section id="grid">
-<h3>Grid<a class="headerlink" href="#grid" title="Permalink to this heading">¶</a></h3>
+<h3>Grid<a class="headerlink" href="#grid" title="Link to this heading">¶</a></h3>
 <p>The <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> is used to represent the geometry and discretization of logically
 rectangular physical grids. The <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> can also hold information that can used in
 calculations involving the <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>, like a mask or the cell areas. Refer to the Grid Class of the
 <a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_refdoc/">ESMF Reference Manual</a> for more information.</p>
 <section id="staggering">
-<h4>Staggering<a class="headerlink" href="#staggering" title="Permalink to this heading">¶</a></h4>
+<h4>Staggering<a class="headerlink" href="#staggering" title="Link to this heading">¶</a></h4>
 <p>Staggering is a finite difference technique in which the values of different
 physical quantities are placed at different locations within a grid cell.</p>
 <p>The ESMF <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> class supports a variety of stagger locations, including cell
@@ -256,7 +256,7 @@ to a <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="e
 </div>
 </section>
 <section id="spherical-coordinates">
-<h4>Spherical Coordinates<a class="headerlink" href="#spherical-coordinates" title="Permalink to this heading">¶</a></h4>
+<h4>Spherical Coordinates<a class="headerlink" href="#spherical-coordinates" title="Link to this heading">¶</a></h4>
 <p>In the case that the <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> is on a sphere (coord_sys = <a class="reference internal" href="CoordSys.html#esmpy.api.constants.CoordSys.SPH_DEG" title="esmpy.api.constants.CoordSys.SPH_DEG"><code class="xref py py-class docutils literal notranslate"><span class="pre">esmpy.api.constants.CoordSys.SPH_DEG</span></code></a> or
 <a class="reference internal" href="CoordSys.html#esmpy.api.constants.CoordSys.SPH_RAD" title="esmpy.api.constants.CoordSys.SPH_RAD"><code class="xref py py-class docutils literal notranslate"><span class="pre">esmpy.api.constants.CoordSys.SPH_RAD</span></code></a>) then the coordinates given in the <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> are interpreted
 as latitude and longitude values. The coordinates can either be in degrees or
@@ -271,7 +271,7 @@ and longitude refer to positions on a perfect sphere.</p>
 </div>
 </section>
 <section id="periodicity">
-<h4>Periodicity<a class="headerlink" href="#periodicity" title="Permalink to this heading">¶</a></h4>
+<h4>Periodicity<a class="headerlink" href="#periodicity" title="Link to this heading">¶</a></h4>
 <p>A periodic connection can be specified when building <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grids</span></code></a> in spherical
 coordinates. The <code class="docutils literal notranslate"><span class="pre">num_peri_dims</span></code> parameter indicates the total number of
 periodic dimensions and <code class="docutils literal notranslate"><span class="pre">periodic_dim</span></code> is used to identify which dimensions
@@ -285,7 +285,7 @@ be one periodic dimension, dimension 0 (longitude).</p>
 </div>
 </section>
 <section id="pole-generation">
-<h4>Pole Generation<a class="headerlink" href="#pole-generation" title="Permalink to this heading">¶</a></h4>
+<h4>Pole Generation<a class="headerlink" href="#pole-generation" title="Link to this heading">¶</a></h4>
 <p>The <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> can generate an artificial pole by using the <code class="docutils literal notranslate"><span class="pre">pole_dim</span></code> parameter. This
 can be helpful for regridding operations to smooth out the interpolated values
 in the polar region. For the example of creating a global latitude-longitude
@@ -297,7 +297,7 @@ in the polar region. For the example of creating a global latitude-longitude
 </div>
 </section>
 <section id="masking">
-<h4>Masking<a class="headerlink" href="#masking" title="Permalink to this heading">¶</a></h4>
+<h4>Masking<a class="headerlink" href="#masking" title="Link to this heading">¶</a></h4>
 <p>Masking is the process used to mark parts of a <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> to be ignored during an
 operation. Marking <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> cells as masked can affect the <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> values that are
 represented by those cells. Masking is specified by assigning an integer value
@@ -307,8 +307,8 @@ corresponding integer values. The activation of <a class="reference internal" hr
 underlying <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> mask is handled by <a class="reference internal" href="regrid.html#esmpy.api.regrid.Regrid" title="esmpy.api.regrid.Regrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Regrid</span></code></a>, and a more
 general discussion of masking is covered in the <a class="reference internal" href="#id16"><span class="std std-ref">masking</span></a>
 section.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-   <span class="o">...</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">esmpy</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+   <span class="o">...</span><span class="p">:</span> <span class="kn">import</span><span class="w"> </span><span class="nn">esmpy</span>
    <span class="o">...</span><span class="p">:</span> <span class="n">grid</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Grid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]),</span> <span class="n">staggerloc</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">,</span>
    <span class="o">...</span><span class="p">:</span>                                <span class="n">coord_sys</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_DEG</span><span class="p">,</span>
    <span class="o">...</span><span class="p">:</span>                                <span class="n">num_peri_dims</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">periodic_dim</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">pole_dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -324,7 +324,7 @@ section.</p>
 </div>
 </section>
 <section id="cell-areas">
-<h4>Cell Areas<a class="headerlink" href="#cell-areas" title="Permalink to this heading">¶</a></h4>
+<h4>Cell Areas<a class="headerlink" href="#cell-areas" title="Link to this heading">¶</a></h4>
 <p><a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> cell areas can be calculated by ESMPy. Space must first be allocated for
 this calculation by adding an
 <a class="reference internal" href="GridItem.html#esmpy.api.constants.GridItem.AREA" title="esmpy.api.constants.GridItem.AREA"><code class="xref py py-class docutils literal notranslate"><span class="pre">AREA</span></code></a> item to the <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>.
@@ -373,7 +373,7 @@ been allocated and retrieved using <a class="reference internal" href="grid.html
 </section>
 </section>
 <section id="mesh">
-<h3>Mesh<a class="headerlink" href="#mesh" title="Permalink to this heading">¶</a></h3>
+<h3>Mesh<a class="headerlink" href="#mesh" title="Link to this heading">¶</a></h3>
 <p>A <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> is an object for representing unstructured grids.
 Refer to the Mesh Class of the
 <a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_refdoc/">ESMF Reference Manual</a>
@@ -413,7 +413,7 @@ supports any combination of element types within a particular dimension, but
 types from different dimensions may not be mixed. For example, a <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> cannot be
 constructed of both quadrilaterals and tetrahedra.</p>
 <section id="mesh-creation">
-<h4>Mesh Creation<a class="headerlink" href="#mesh-creation" title="Permalink to this heading">¶</a></h4>
+<h4>Mesh Creation<a class="headerlink" href="#mesh-creation" title="Link to this heading">¶</a></h4>
 <p>To create a <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> we need to set some properties of the <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> as a whole, some
 properties of each node in the <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> and then some properties of each element
 which connects the nodes.</p>
@@ -533,7 +533,7 @@ specify elements.</p>
 </div>
 </section>
 <section id="id3">
-<h4>Masking<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h4>
+<h4>Masking<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h4>
 <p>There are two types of masking available in <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>: node masking and element
 masking. These both work in a similar manner, but vary slightly in the details
 of setting the mask information during <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> creation.</p>
@@ -554,7 +554,7 @@ whose corresponding <code class="docutils literal notranslate"><span class="pre"
 with any other value than 1 will not be masked).</p>
 </section>
 <section id="areas">
-<h4>Areas<a class="headerlink" href="#areas" title="Permalink to this heading">¶</a></h4>
+<h4>Areas<a class="headerlink" href="#areas" title="Link to this heading">¶</a></h4>
 <p><a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> cell areas can be specified using the <code class="docutils literal notranslate"><span class="pre">element_areas</span></code> parameter to
 <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh.add_elements" title="esmpy.api.mesh.Mesh.add_elements"><code class="xref py py-class docutils literal notranslate"><span class="pre">add_elements()</span></code></a>.</p>
 <p>If cell areas are not specified by the user they can be calculated by ESMPy
@@ -562,7 +562,7 @@ using <a class="reference internal" href="field.html#esmpy.api.field.Field.get_a
 </section>
 </section>
 <section id="locstream">
-<h3>LocStream<a class="headerlink" href="#locstream" title="Permalink to this heading">¶</a></h3>
+<h3>LocStream<a class="headerlink" href="#locstream" title="Link to this heading">¶</a></h3>
 <p>A <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocStream" title="esmpy.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStream</span></code></a> can be used to represent the locations of a set of
 data points. For example, in the data assimilation world, <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocStream" title="esmpy.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStreams</span></code></a> can be used
 to represent a set of observations. The values of the data points are stored
@@ -602,14 +602,14 @@ relationship at all.</p>
 </section>
 </section>
 <section id="create-a-grid-or-mesh-from-file">
-<h2>Create a Grid or Mesh from File<a class="headerlink" href="#create-a-grid-or-mesh-from-file" title="Permalink to this heading">¶</a></h2>
+<h2>Create a Grid or Mesh from File<a class="headerlink" href="#create-a-grid-or-mesh-from-file" title="Link to this heading">¶</a></h2>
 <section id="file-formats">
-<h3>File Formats<a class="headerlink" href="#file-formats" title="Permalink to this heading">¶</a></h3>
+<h3>File Formats<a class="headerlink" href="#file-formats" title="Link to this heading">¶</a></h3>
 <p>ESMPy can create <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> or <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> objects from NetCDF files in a variety
 of formats.  A <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> can be created from files in <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.SCRIP" title="esmpy.api.constants.FileFormat.SCRIP"><code class="xref py py-class docutils literal notranslate"><span class="pre">SCRIP</span></code></a>, <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.ESMFMESH" title="esmpy.api.constants.FileFormat.ESMFMESH"><code class="xref py py-class docutils literal notranslate"><span class="pre">ESMFMESH</span></code></a>, and <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.UGRID" title="esmpy.api.constants.FileFormat.UGRID"><code class="xref py py-class docutils literal notranslate"><span class="pre">UGRID</span></code></a>
 formats.  <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> files can be in <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.SCRIP" title="esmpy.api.constants.FileFormat.SCRIP"><code class="xref py py-class docutils literal notranslate"><span class="pre">SCRIP</span></code></a> and <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.GRIDSPEC" title="esmpy.api.constants.FileFormat.GRIDSPEC"><code class="xref py py-class docutils literal notranslate"><span class="pre">GRIDSPEC</span></code></a> format.</p>
 <section id="scrip">
-<h4>SCRIP<a class="headerlink" href="#scrip" title="Permalink to this heading">¶</a></h4>
+<h4>SCRIP<a class="headerlink" href="#scrip" title="Link to this heading">¶</a></h4>
 <p id="id5">This file format is used by the <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.SCRIP" title="esmpy.api.constants.FileFormat.SCRIP"><code class="xref py py-class docutils literal notranslate"><span class="pre">SCRIP</span></code></a> <span id="id6">[<a class="reference internal" href="appendix.html#id7" title="SCRIP: A Spherical Coordinate Remapping and Interpolation Package. http://oceans11.lanl.gov/trac/SCRIP, last accessed on Dec 4, 2015. Los Alamos Software Release LACC 98-45.">1</a>]</span>, package, grid files that
 work with that package should also work here.  <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.SCRIP" title="esmpy.api.constants.FileFormat.SCRIP"><code class="xref py py-class docutils literal notranslate"><span class="pre">SCRIP</span></code></a> format files are
 capable of storing either 2D logically rectangular grids or 2D
@@ -617,7 +617,7 @@ unstructured grids.  More information can be found in the
 <a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_refdoc/">ESMF Reference Manual</a>.</p>
 </section>
 <section id="esmfmesh">
-<h4>ESMFMESH<a class="headerlink" href="#esmfmesh" title="Permalink to this heading">¶</a></h4>
+<h4>ESMFMESH<a class="headerlink" href="#esmfmesh" title="Link to this heading">¶</a></h4>
 <p id="id8">ESMF has a custom unstructured grid file format for describing <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Meshes</span></code></a>.
 This format is more compatible than the <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.SCRIP" title="esmpy.api.constants.FileFormat.SCRIP"><code class="xref py py-class docutils literal notranslate"><span class="pre">SCRIP</span></code></a> format with the methods
 used to create a <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> object, so less conversion needs to be done to
@@ -626,7 +626,7 @@ used with ESMPy.  More information can be found in the
 <a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_refdoc/">ESMF Reference Manual</a>.</p>
 </section>
 <section id="gridspec">
-<h4>GRIDSPEC<a class="headerlink" href="#gridspec" title="Permalink to this heading">¶</a></h4>
+<h4>GRIDSPEC<a class="headerlink" href="#gridspec" title="Link to this heading">¶</a></h4>
 <p id="id10"><a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.GRIDSPEC" title="esmpy.api.constants.FileFormat.GRIDSPEC"><code class="xref py py-class docutils literal notranslate"><span class="pre">GRIDSPEC</span></code></a> is an extension to the Climate and Forecast (CF) metadata
 conventions for the representation of gridded data for Earth System
 Models.  ESMPy supports NetCDF files that follow the CF <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.GRIDSPEC" title="esmpy.api.constants.FileFormat.GRIDSPEC"><code class="xref py py-class docutils literal notranslate"><span class="pre">GRIDSPEC</span></code></a>
@@ -635,7 +635,7 @@ information can be found in the
 <a class="reference external" href="http://earthsystemmodeling.org/docs/release/latest/ESMF_refdoc/">ESMF Reference Manual</a>.</p>
 </section>
 <section id="ugrid">
-<h4>UGRID<a class="headerlink" href="#ugrid" title="Permalink to this heading">¶</a></h4>
+<h4>UGRID<a class="headerlink" href="#ugrid" title="Link to this heading">¶</a></h4>
 <p id="id12"><a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.UGRID" title="esmpy.api.constants.FileFormat.UGRID"><code class="xref py py-class docutils literal notranslate"><span class="pre">UGRID</span></code></a> is an extension to the CF metadata
 conventions for the unstructured grid data model.  ESMPy support
 NetCDF files that follow the CF <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.UGRID" title="esmpy.api.constants.FileFormat.UGRID"><code class="xref py py-class docutils literal notranslate"><span class="pre">UGRID</span></code></a> convention for unstructured grids.
@@ -644,7 +644,7 @@ More information can be found in the
 </section>
 </section>
 <section id="meshes-from-file">
-<h3>Meshes from File<a class="headerlink" href="#meshes-from-file" title="Permalink to this heading">¶</a></h3>
+<h3>Meshes from File<a class="headerlink" href="#meshes-from-file" title="Link to this heading">¶</a></h3>
 <p>When creating a <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> from a <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.SCRIP" title="esmpy.api.constants.FileFormat.SCRIP"><code class="xref py py-class docutils literal notranslate"><span class="pre">SCRIP</span></code></a> format file, there are a number of
 options to control the output <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>. The data is located at the center
 of the grid cell in a <a class="reference internal" href="FileFormat.html#esmpy.api.constants.FileFormat.SCRIP" title="esmpy.api.constants.FileFormat.SCRIP"><code class="xref py py-class docutils literal notranslate"><span class="pre">SCRIP</span></code></a> grid. Therefore, when the <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> will be
@@ -659,7 +659,7 @@ The mask generated for a <a class="reference internal" href="mesh.html#esmpy.api
 have 0 for the masked values and 1 for the unmasked values.</p>
 </section>
 <section id="grids-from-file">
-<h3>Grids from File<a class="headerlink" href="#grids-from-file" title="Permalink to this heading">¶</a></h3>
+<h3>Grids from File<a class="headerlink" href="#grids-from-file" title="Link to this heading">¶</a></h3>
 <p>A number of optional boolean arguments are also supported to create a
 structured <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> from a file.  These include <code class="docutils literal notranslate"><span class="pre">is_sphere</span></code> to indicate whether
 the grid is spherical or regional, <code class="docutils literal notranslate"><span class="pre">add_corner_stagger</span></code> to add the corner
@@ -678,7 +678,7 @@ file (any format) will have 0 for the masked values and 1 for the unmasked value
 </section>
 </section>
 <section id="regridding">
-<h2>Regridding<a class="headerlink" href="#regridding" title="Permalink to this heading">¶</a></h2>
+<h2>Regridding<a class="headerlink" href="#regridding" title="Link to this heading">¶</a></h2>
 <p>The following table describe the regridding methods and options that are
 available in ESMPy, the flag that is required to use it and a short description.
 More information can be found on these options in the
@@ -723,7 +723,7 @@ More information can be found on these options in the
 </tbody>
 </table>
 <section id="great-circle-cells">
-<h3>Great Circle Cells<a class="headerlink" href="#great-circle-cells" title="Permalink to this heading">¶</a></h3>
+<h3>Great Circle Cells<a class="headerlink" href="#great-circle-cells" title="Link to this heading">¶</a></h3>
 <p>For Grids and Meshes on a sphere some combinations of interpolation options
 (e.g. first and second-order conservative methods) use cells whose edges are
 great circles. This section describes some behavior that the user may not expect
@@ -744,7 +744,7 @@ cells. This allows the application to resolve the ambiguity in edge direction.</
 </section>
 </section>
 <section id="id15">
-<h2>Masking<a class="headerlink" href="#id15" title="Permalink to this heading">¶</a></h2>
+<h2>Masking<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h2>
 <p id="id16">Masking is the process whereby parts of a <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>, <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> or <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocStream" title="esmpy.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStream</span></code></a> can be marked to be ignored
 during an operation, such as when they are used in regridding. Masking can be used on a <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>
 created from a regridding source to indicate that certain portions should not be used to generate
@@ -788,7 +788,7 @@ uninitialized value to help identify masked locations within the
 <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fields</span></code></a> data.</p>
 </section>
 <section id="numpy-slicing-and-indexing">
-<h2>Numpy Slicing and Indexing<a class="headerlink" href="#numpy-slicing-and-indexing" title="Permalink to this heading">¶</a></h2>
+<h2>Numpy Slicing and Indexing<a class="headerlink" href="#numpy-slicing-and-indexing" title="Link to this heading">¶</a></h2>
 <p>Numpy arrays are used to represent <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>, <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocStream" title="esmpy.api.locstream.LocStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocStream</span></code></a> coordinates and <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> data,
 among other things.  Standard numpy conventions for array indexing
 and slicing can be expected.  There are some exceptions when it comes to fancy
@@ -803,7 +803,7 @@ a <a class="reference internal" href="field.html#esmpy.api.field.Field" title="e
 through the ESMF regridding engine, and only the appropriate portion of
 the <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> slice will be updated with the regridded values.</p>
 <section id="dimension-ordering">
-<h3>Dimension Ordering<a class="headerlink" href="#dimension-ordering" title="Permalink to this heading">¶</a></h3>
+<h3>Dimension Ordering<a class="headerlink" href="#dimension-ordering" title="Link to this heading">¶</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The underlying ESMF library is built with a mix of Fortran and C/C++
@@ -816,8 +816,8 @@ generated by ESMPy will continue to use the 1-based indexing from the
 underlying ESMF code. Likewise, the dimension ordering still follows
 Fortran conventions. This means that longitude comes before latitude, which
 also comes before temporal dimensions, when in use.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-   <span class="o">...</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">esmpy</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+   <span class="o">...</span><span class="p">:</span> <span class="kn">import</span><span class="w"> </span><span class="nn">esmpy</span>
    <span class="o">...</span><span class="p">:</span>
    <span class="o">...</span><span class="p">:</span> <span class="n">grid</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Grid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]),</span> <span class="n">staggerloc</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">)</span>
    <span class="o">...</span><span class="p">:</span>
@@ -863,8 +863,48 @@ also comes before temporal dimensions, when in use.</p>
 </div>
 </section>
 </section>
+<section id="decomposition-elements-des">
+<span id="des"></span><h2>Decomposition Elements (DEs)<a class="headerlink" href="#decomposition-elements-des" title="Link to this heading">¶</a></h2>
+<p>In ESMF, data classes are distributed over DEs, or Decomposition Elements. DEs are virtual
+units, not necessarily having a 1-to-1 correspondence to the Persistent Execution Threads
+(PETs) of a VM or the physical Processing Elements (PEs) in the underlying physical
+machine. In ESMPy data classes, there is typically exactly one DE per PET. The main
+exception to this is cubed-sphere grids that are represented as multi-tile grids; for
+these, there can be multiple DEs on a single PET (with the default decomposition, this
+occurs for &lt; 6 PETs) or zero DEs on a PET (with the default decomposition, this occurs for
+&gt; 6 PETs). (In the case of a non-cubed-sphere grid that is simply too small to decompose
+across the PETs, there is still 1 DE on each PET but some of these DEs will have data with
+size 0.)</p>
+<p>For ESMPy classes that support multiple DEs per PET (<a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> and
+<a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>), there are two versions of data accessor properties for
+any data that is decomposed across DEs. Examples are a <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>’s
+<a class="reference internal" href="field.html#esmpy.api.field.Field.data" title="esmpy.api.field.Field.data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">data</span></code></a> vs. <a class="reference internal" href="field.html#esmpy.api.field.Field.all_data" title="esmpy.api.field.Field.all_data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">all_data</span></code></a> and a
+<a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>’s <a class="reference internal" href="grid.html#esmpy.api.grid.Grid.area" title="esmpy.api.grid.Grid.area"><code class="xref py py-attr docutils literal notranslate"><span class="pre">area</span></code></a> vs.
+<a class="reference internal" href="grid.html#esmpy.api.grid.Grid.all_areas" title="esmpy.api.grid.Grid.all_areas"><code class="xref py py-attr docutils literal notranslate"><span class="pre">all_areas</span></code></a>. Versions of these properties <em>without</em> the
+<code class="docutils literal notranslate"><span class="pre">all_</span></code> prefix can only be used in the common case where there is exactly one DE per PET;
+these properties return the data on the single DE for the current PET. Versions of these
+properties <em>with</em> the <code class="docutils literal notranslate"><span class="pre">all_</span></code> prefix return lists indexed by DE. For example, to work
+with a <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a>’s data in the situation where there may be multiple
+DEs per PET, user code should loop over DEs like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">de</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">myfield</span><span class="o">.</span><span class="n">local_de_count</span><span class="p">):</span>
+    <span class="n">this_data</span> <span class="o">=</span> <span class="n">myfield</span><span class="o">.</span><span class="n">all_data</span><span class="p">[</span><span class="n">de</span><span class="p">]</span>
+    <span class="c1"># operate on this_data</span>
+</pre></div>
+</div>
+<p>Some methods, such as a <a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>’s
+<a class="reference internal" href="grid.html#esmpy.api.grid.Grid.get_item" title="esmpy.api.grid.Grid.get_item"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_item()</span></code></a>, default to retrieving values for the first DE
+(<code class="docutils literal notranslate"><span class="pre">localde=0</span></code>). Thus, for the common case with 1 DE per PET, these can be called without
+a <code class="docutils literal notranslate"><span class="pre">localde</span></code> argument. But in cases where there may be multiple DEs per PET, these should
+be called in a loop like in the above example. Furthermore, these methods with an optional
+<code class="docutils literal notranslate"><span class="pre">localde</span></code> argument should not be called in cases where there are zero DEs on a given
+PET; this can be handled via the same looping structure, or if it is known that the only
+possible cases are zero or one DE per PET, then via a conditional like <code class="docutils literal notranslate"><span class="pre">if</span>
+<span class="pre">grid.local_de_count</span> <span class="pre">==</span> <span class="pre">1</span></code>.</p>
+<p>Finally, note that slicing of a <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> or
+<a class="reference internal" href="grid.html#esmpy.api.grid.Grid" title="esmpy.api.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a> is currently not supported with multiple DEs per PET.</p>
+</section>
 <section id="parallel-execution">
-<h2>Parallel Execution<a class="headerlink" href="#parallel-execution" title="Permalink to this heading">¶</a></h2>
+<h2>Parallel Execution<a class="headerlink" href="#parallel-execution" title="Link to this heading">¶</a></h2>
 <p>ESMPy is a thin wrapper on top of ESMF, which was designed for high performance
 and scalable computing. The ESMF virtual machine is used to manage the available
 resources of the execution environment in a layer that is transparent to the
@@ -881,7 +921,7 @@ for user intervention.</p>
 accessible on certain PETs. The mpi4py package may be necessary for post
 processing tasks that require access to global <a class="reference internal" href="field.html#esmpy.api.field.Field" title="esmpy.api.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> values.</p>
 <section id="mpirun-vs-mpi-spawn">
-<h3>mpirun vs. MPI.Spawn<a class="headerlink" href="#mpirun-vs-mpi-spawn" title="Permalink to this heading">¶</a></h3>
+<h3>mpirun vs. MPI.Spawn<a class="headerlink" href="#mpirun-vs-mpi-spawn" title="Link to this heading">¶</a></h3>
 <p>There are a few different options for using ESMPy in a parallel
 environment. Using mpirun to specify the desired number of computing cores
 is probably the easiest way to start a parallel ESMPy job. Another option is to
@@ -895,15 +935,15 @@ this method is not highly recommended.</p>
 parallel. Any of the scripts found in the examples directory of the ESMPy source
 code can be run in parallel using mpirun as well as in serial mode.</p>
 <section id="mpirun">
-<h4>mpirun<a class="headerlink" href="#mpirun" title="Permalink to this heading">¶</a></h4>
+<h4>mpirun<a class="headerlink" href="#mpirun" title="Link to this heading">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mpirun</span> <span class="o">-</span><span class="n">n</span> <span class="mi">4</span> <span class="n">python</span> <span class="n">hello_world</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 </section>
 <section id="mpi-spawn">
-<h4>MPI.Spawn<a class="headerlink" href="#mpi-spawn" title="Permalink to this heading">¶</a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">mpi4py</span> <span class="kn">import</span> <span class="n">MPI</span>
+<h4>MPI.Spawn<a class="headerlink" href="#mpi-spawn" title="Link to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mpi4py</span><span class="w"> </span><span class="kn">import</span> <span class="n">MPI</span>
 
 <span class="c1"># Parent</span>
 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
@@ -928,7 +968,7 @@ code can be run in parallel using mpirun as well as in serial mode.</p>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Could not connect to parent - &#39;</span> <span class="o">+</span> <span class="n">usage</span><span class="p">)</span>
 
     <span class="c1"># worker code goes here, regridding etc..</span>
-    <span class="nb">print</span> <span class="s2">&quot;Hello World from PET #&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">rank</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World from PET #&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">rank</span><span class="p">))</span>
 
     <span class="c1"># Shutdown</span>
     <span class="n">comm</span><span class="o">.</span><span class="n">Disconnect</span><span class="p">()</span>
@@ -950,7 +990,7 @@ of the documentation.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="index.html">Table of Contents</a></h3>
@@ -1005,6 +1045,7 @@ of the documentation.</p>
 <li><a class="reference internal" href="#dimension-ordering">Dimension Ordering</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#decomposition-elements-des">Decomposition Elements (DEs)</a></li>
 <li><a class="reference internal" href="#parallel-execution">Parallel Execution</a><ul>
 <li><a class="reference internal" href="#mpirun-vs-mpi-spawn">mpirun vs. MPI.Spawn</a><ul>
 <li><a class="reference internal" href="#mpirun">mpirun</a></li>
@@ -1035,7 +1076,7 @@ of the documentation.</p>
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -1043,13 +1084,13 @@ of the documentation.</p>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1064,13 +1105,13 @@ of the documentation.</p>
         <li class="right" >
           <a href="examples.html" title="Tutorials"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.8.0b0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 9.0.0b0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">API</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2011-2024, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+    &#169; Copyright 2011-2025, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>
