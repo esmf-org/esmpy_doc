@@ -10,8 +10,8 @@
     <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
     
     <script src="_static/documentation_options.js?v=2f81d295"></script>
-    <script src="_static/doctools.js?v=9bcbadda"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -48,7 +48,7 @@
 <h1>LineType<a class="headerlink" href="#linetype" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="esmpy.api.constants.LineType">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">esmpy.api.constants.</span></span><span class="sig-name descname"><span class="pre">LineType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.constants.LineType" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">esmpy.api.constants.</span></span><span class="sig-name descname"><span class="pre">LineType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.constants.LineType" title="Link to this definition">¶</a></dt>
 <dd><p>This argument controls the path of the line which connects two points on
 the surface of the sphere. This in turn controls the path along which
 distances are calculated and the shape of the edges that make up a cell.
@@ -57,7 +57,7 @@ calculated. As would be expected, this argument is only applicable with
 grids which lie on the surface of a sphere.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="esmpy.api.constants.LineType.CART">
-<span class="sig-name descname"><span class="pre">CART</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;LineType.CART:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#esmpy.api.constants.LineType.CART" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CART</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;LineType.CART:</span> <span class="pre">0&gt;</span></span><a class="headerlink" href="#esmpy.api.constants.LineType.CART" title="Link to this definition">¶</a></dt>
 <dd><p>Cartesian line. When this option is specified distances are calculated in a
 straight line through the 3D Cartesian space in which the sphere is
 embedded. Cells are approximated by 3D planes bounded by 3D Cartesian lines
@@ -68,7 +68,7 @@ for conservative.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="esmpy.api.constants.LineType.GREAT_CIRCLE">
-<span class="sig-name descname"><span class="pre">GREAT_CIRCLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;LineType.GREAT_CIRCLE:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#esmpy.api.constants.LineType.GREAT_CIRCLE" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">GREAT_CIRCLE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;LineType.GREAT_CIRCLE:</span> <span class="pre">1&gt;</span></span><a class="headerlink" href="#esmpy.api.constants.LineType.GREAT_CIRCLE" title="Link to this definition">¶</a></dt>
 <dd><p>Great circle line. When this option is specified distances are calculated
 along a great circle path (the shortest distance between two points on a
 sphere surface). Cells are bounded by great circle paths between their
@@ -154,7 +154,7 @@ currently the default for the conservative regrid method.</p>
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2011-2025, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.0.1.
     </div>
   </body>
 </html>
