@@ -10,8 +10,8 @@
     <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
     
     <script src="_static/documentation_options.js?v=35247c70"></script>
-    <script src="_static/doctools.js?v=9bcbadda"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -48,7 +48,7 @@
 <h1>Manager<a class="headerlink" href="#manager" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="esmpy.api.esmpymanager.Manager">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">esmpy.api.esmpymanager.</span></span><span class="sig-name descname"><span class="pre">Manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endFlag=&lt;EndAction.NORMAL:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.esmpymanager.Manager" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">esmpy.api.esmpymanager.</span></span><span class="sig-name descname"><span class="pre">Manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endFlag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">&lt;EndAction.NORMAL:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.esmpymanager.Manager" title="Link to this definition">¶</a></dt>
 <dd><p>This singleton class is designed to ensure that ESMF is properly initialized 
 and finalized.  ESMF is initialized at 
 <a class="reference internal" href="#esmpy.api.esmpymanager.Manager" title="esmpy.api.esmpymanager.Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Manager</span></code></a> creation, and the __del__ 
@@ -95,7 +95,7 @@ See <code class="xref py py-class docutils literal notranslate"><span class="pre
 </dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="esmpy.api.esmpymanager.Manager.local_pet">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">local_pet</span></span><a class="headerlink" href="#esmpy.api.esmpymanager.Manager.local_pet" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">local_pet</span></span><a class="headerlink" href="#esmpy.api.esmpymanager.Manager.local_pet" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)">int</a></p>
@@ -108,7 +108,7 @@ See <code class="xref py py-class docutils literal notranslate"><span class="pre
 
 <dl class="py property">
 <dt class="sig sig-object py" id="esmpy.api.esmpymanager.Manager.moab">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">moab</span></span><a class="headerlink" href="#esmpy.api.esmpymanager.Manager.moab" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">moab</span></span><a class="headerlink" href="#esmpy.api.esmpymanager.Manager.moab" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)">bool</a></p>
@@ -121,7 +121,7 @@ See <code class="xref py py-class docutils literal notranslate"><span class="pre
 
 <dl class="py property">
 <dt class="sig sig-object py" id="esmpy.api.esmpymanager.Manager.pet_count">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pet_count</span></span><a class="headerlink" href="#esmpy.api.esmpymanager.Manager.pet_count" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">pet_count</span></span><a class="headerlink" href="#esmpy.api.esmpymanager.Manager.pet_count" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)">int</a></p>
@@ -227,7 +227,7 @@ all PETs of the VM have issued the call.</p>
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2011-2025, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.0.1.
     </div>
   </body>
 </html>
