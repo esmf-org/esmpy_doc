@@ -5,13 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>MeshElemType &#8212; ESMPy 8.9.0b0 documentation</title>
+    <title>MeshElemType &#8212; ESMPy 9.0.0b0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
     
-    <script src="_static/documentation_options.js?v=44f13629"></script>
-    <script src="_static/doctools.js?v=9bcbadda"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/documentation_options.js?v=2f81d295"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="LogKind.html" title="LogKind"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.9.0b0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 9.0.0b0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" accesskey="U">Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">MeshElemType</a></li> 
       </ul>
@@ -48,7 +48,7 @@
 <h1>MeshElemType<a class="headerlink" href="#meshelemtype" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="esmpy.api.constants.MeshElemType">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">esmpy.api.constants.</span></span><span class="sig-name descname"><span class="pre">MeshElemType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.constants.MeshElemType" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">esmpy.api.constants.</span></span><span class="sig-name descname"><span class="pre">MeshElemType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esmpy.api.constants.MeshElemType" title="Link to this definition">¶</a></dt>
 <dd><p>A <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> can be constructed from a combination of different elements.
 The type of elements that can be used in a <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> depends on the
 parametric dimension of the <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>, which is set during <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a>
@@ -56,25 +56,25 @@ creation. The following are the valid <a class="reference internal" href="mesh.h
 valid <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> parametric dimension (2D or 3D).</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="esmpy.api.constants.MeshElemType.TRI">
-<span class="sig-name descname"><span class="pre">TRI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;MeshElemType.TRI:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#esmpy.api.constants.MeshElemType.TRI" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">TRI</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;MeshElemType.TRI:</span> <span class="pre">3&gt;</span></span><a class="headerlink" href="#esmpy.api.constants.MeshElemType.TRI" title="Link to this definition">¶</a></dt>
 <dd><p>2D triangular elements with 3 sides.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="esmpy.api.constants.MeshElemType.QUAD">
-<span class="sig-name descname"><span class="pre">QUAD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;MeshElemType.QUAD:</span> <span class="pre">4&gt;</span></em><a class="headerlink" href="#esmpy.api.constants.MeshElemType.QUAD" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">QUAD</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;MeshElemType.QUAD:</span> <span class="pre">4&gt;</span></span><a class="headerlink" href="#esmpy.api.constants.MeshElemType.QUAD" title="Link to this definition">¶</a></dt>
 <dd><p>2D quadrilateral elements with 4 sides.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="esmpy.api.constants.MeshElemType.TETRA">
-<span class="sig-name descname"><span class="pre">TETRA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;MeshElemType.TETRA:</span> <span class="pre">10&gt;</span></em><a class="headerlink" href="#esmpy.api.constants.MeshElemType.TETRA" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">TETRA</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;MeshElemType.TETRA:</span> <span class="pre">10&gt;</span></span><a class="headerlink" href="#esmpy.api.constants.MeshElemType.TETRA" title="Link to this definition">¶</a></dt>
 <dd><p>3D tetrahedral elements with 4 faces.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="esmpy.api.constants.MeshElemType.HEX">
-<span class="sig-name descname"><span class="pre">HEX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;MeshElemType.HEX:</span> <span class="pre">12&gt;</span></em><a class="headerlink" href="#esmpy.api.constants.MeshElemType.HEX" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">HEX</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;MeshElemType.HEX:</span> <span class="pre">12&gt;</span></span><a class="headerlink" href="#esmpy.api.constants.MeshElemType.HEX" title="Link to this definition">¶</a></dt>
 <dd><p>3D hexahedral elements with 6 faces.</p>
 </dd></dl>
 
@@ -151,14 +151,14 @@ valid <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="
         <li class="right" >
           <a href="LogKind.html" title="LogKind"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 8.9.0b0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ESMPy 9.0.0b0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="appendix.html" >Appendices</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">MeshElemType</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2011-2025, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    &#169; Copyright 2011-2026, University Corporation for Atmospheric Research, Massachusetts Institute of Technology, Geophysical Fluid Dynamics Laboratory, University of Michigan, National Centers for Environmental Prediction, Los Alamos National Laboratory, Argonne National Laboratory, NASA Goddard Space Flight Center.  Licensed under the University of Illinois-NCSA License.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
     </div>
   </body>
 </html>
