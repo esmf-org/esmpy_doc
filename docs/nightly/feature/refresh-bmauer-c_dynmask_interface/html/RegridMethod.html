@@ -127,6 +127,16 @@ provided in the <a class="reference internal" href="grid.html#esmpy.api.grid.Gri
 the <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="esmpy.api.mesh.Mesh"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></a> element location.</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="esmpy.api.constants.RegridMethod.BINNING">
+<span class="sig-name descname"><span class="pre">BINNING</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;RegridMethod.BINNING:</span> <span class="pre">6&gt;</span></span><a class="headerlink" href="#esmpy.api.constants.RegridMethod.BINNING" title="Link to this definition">¶</a></dt>
+<dd><p>Binning regridding. For this regrid method, values located at each source point are 
+mapped to the destination cell that contains the point. A given destination cell may 
+receive input from multiple source points, but no source point will go to 
+more than one destination cell. The value in a destination cell is the sum of all
+the source values mapped to it.</p>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -149,6 +159,7 @@ the <a class="reference internal" href="mesh.html#esmpy.api.mesh.Mesh" title="es
 <li><a class="reference internal" href="#esmpy.api.constants.RegridMethod.NEAREST_STOD"><code class="docutils literal notranslate"><span class="pre">RegridMethod.NEAREST_STOD</span></code></a></li>
 <li><a class="reference internal" href="#esmpy.api.constants.RegridMethod.NEAREST_DTOS"><code class="docutils literal notranslate"><span class="pre">RegridMethod.NEAREST_DTOS</span></code></a></li>
 <li><a class="reference internal" href="#esmpy.api.constants.RegridMethod.CONSERVE_2ND"><code class="docutils literal notranslate"><span class="pre">RegridMethod.CONSERVE_2ND</span></code></a></li>
+<li><a class="reference internal" href="#esmpy.api.constants.RegridMethod.BINNING"><code class="docutils literal notranslate"><span class="pre">RegridMethod.BINNING</span></code></a></li>
 </ul>
 </li>
 </ul>
