@@ -53,7 +53,7 @@
 <span class="c1"># This call enables debug logging</span>
 <span class="c1"># esmpy = esmpy.Manager(debug=True)</span>
 
-<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Hello ESMPy World from PET (processor) </span><span class="si">{0}</span><span class="s2">!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">esmpy</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">"Hello ESMPy World from PET (processor) </span><span class="si">{0}</span><span class="s2">!"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">esmpy</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()))</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -67,13 +67,13 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <section id="locstream-create">
 <h3>LocStream Create<a class="headerlink" href="#locstream-create" title="Link to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">create_locstream_spherical_16</span><span class="p">(</span><span class="n">coord_sys</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_DEG</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    :param coord_sys: the coordinate system of the LocStream</span>
 <span class="sd">    :param domask: a boolean to tell whether or not to add a mask</span>
 <span class="sd">    :return: LocStream</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">if</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">pet_count</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;processor count must be 1 to use this function&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"processor count must be 1 to use this function"</span><span class="p">)</span>
 
     <span class="n">locstream</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">LocStream</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="n">coord_sys</span><span class="o">=</span><span class="n">coord_sys</span><span class="p">)</span>
 
@@ -81,10 +81,10 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
     <span class="k">if</span> <span class="n">coord_sys</span> <span class="o">==</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_DEG</span><span class="p">:</span>
         <span class="n">deg_rad</span> <span class="o">=</span> <span class="mi">180</span>
 
-    <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.8</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.8</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.8</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.8</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
-    <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
+    <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Lon"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.8</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.8</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.8</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.8</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
+    <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Lat"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">domask</span><span class="p">:</span>
-        <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Mask&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+        <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Mask"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">locstream</span>
 </pre></div>
@@ -93,13 +93,13 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <section id="locstream-create-parallel">
 <h3>LocStream Create Parallel<a class="headerlink" href="#locstream-create-parallel" title="Link to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">create_locstream_spherical_16_parallel</span><span class="p">(</span><span class="n">coord_sys</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_DEG</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    :param coord_sys: the coordinate system of the LocStream</span>
 <span class="sd">    :param domask: a boolean to tell whether or not to add a mask</span>
 <span class="sd">    :return: LocStream</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">if</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">pet_count</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">4</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;processor count must be 4 to use this function&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"processor count must be 4 to use this function"</span><span class="p">)</span>
 
     <span class="n">deg_rad</span> <span class="o">=</span> <span class="n">pi</span>
     <span class="k">if</span> <span class="n">coord_sys</span> <span class="o">==</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_DEG</span><span class="p">:</span>
@@ -108,28 +108,28 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
     <span class="n">locstream</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="k">if</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">locstream</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">LocStream</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">coord_sys</span><span class="o">=</span><span class="n">coord_sys</span><span class="p">)</span>
-        <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
-        <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
+        <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Lon"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
+        <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Lat"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">domask</span><span class="p">:</span>
-            <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Mask&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+            <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Mask"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="n">locstream</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">LocStream</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">coord_sys</span><span class="o">=</span><span class="n">coord_sys</span><span class="p">)</span>
-        <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.8</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.8</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
-        <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
+        <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Lon"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.8</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.8</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
+        <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Lat"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">domask</span><span class="p">:</span>
-            <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Mask&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+            <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Mask"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
         <span class="n">locstream</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">LocStream</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">coord_sys</span><span class="o">=</span><span class="n">coord_sys</span><span class="p">)</span>
-        <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
-        <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
+        <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Lon"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
+        <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Lat"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">domask</span><span class="p">:</span>
-            <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Mask&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+            <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Mask"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
         <span class="n">locstream</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">LocStream</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">coord_sys</span><span class="o">=</span><span class="n">coord_sys</span><span class="p">)</span>
-        <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.8</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.8</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
-        <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
+        <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Lon"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.8</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">1.8</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
+        <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Lat"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">,</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">deg_rad</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">domask</span><span class="p">:</span>
-            <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Mask&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+            <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Mask"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">locstream</span>
 </pre></div>
@@ -139,17 +139,17 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <h3>Create a 2D Grid<a class="headerlink" href="#create-a-2d-grid" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">grid_create_from_coordinates</span><span class="p">(</span><span class="n">xcoords</span><span class="p">,</span> <span class="n">ycoords</span><span class="p">,</span> <span class="n">xcorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ycorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">doarea</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ctk</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">TypeKind</span><span class="o">.</span><span class="n">R8</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Create a 2 dimensional Grid using the bounds of the x and y coordiantes.</span>
-<span class="sd">    :param xcoords: The 1st dimension or &#39;x&#39; coordinates at cell centers, as a Python list or numpy Array</span>
-<span class="sd">    :param ycoords: The 2nd dimension or &#39;y&#39; coordinates at cell centers, as a Python list or numpy Array</span>
-<span class="sd">    :param xcorners: The 1st dimension or &#39;x&#39; coordinates at cell corners, as a Python list or numpy Array</span>
-<span class="sd">    :param ycorners: The 2nd dimension or &#39;y&#39; coordinates at cell corners, as a Python list or numpy Array</span>
+<span class="sd">    :param xcoords: The 1st dimension or 'x' coordinates at cell centers, as a Python list or numpy Array</span>
+<span class="sd">    :param ycoords: The 2nd dimension or 'y' coordinates at cell centers, as a Python list or numpy Array</span>
+<span class="sd">    :param xcorners: The 1st dimension or 'x' coordinates at cell corners, as a Python list or numpy Array</span>
+<span class="sd">    :param ycorners: The 2nd dimension or 'y' coordinates at cell corners, as a Python list or numpy Array</span>
 <span class="sd">    :param domask: boolean to determine whether to set an arbitrary mask or not</span>
 <span class="sd">    :param doarea: boolean to determine whether to set an arbitrary area values or not</span>
 <span class="sd">    :param ctk: the coordinate typekind</span>
 <span class="sd">    :return: grid</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 
     <span class="c1"># create a grid given the number of grid cells in each dimension, the center stagger location is allocated, the</span>
@@ -205,19 +205,19 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <h3>Create a 3D Grid<a class="headerlink" href="#create-a-3d-grid" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">grid_create_from_coordinates_3d</span><span class="p">(</span><span class="n">xcoords</span><span class="p">,</span> <span class="n">ycoords</span><span class="p">,</span> <span class="n">zcoords</span><span class="p">,</span> <span class="n">xcorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ycorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">zcorners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">doarea</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Create a 3 dimensional Grid using the xcoordinates, ycoordinates and zcoordinates.</span>
-<span class="sd">    :param xcoords: The 1st dimension or &#39;x&#39; coordinates at cell centers, as a Python list or numpy Array</span>
-<span class="sd">    :param ycoords: The 2nd dimension or &#39;y&#39; coordinates at cell centers, as a Python list or numpy Array</span>
-<span class="sd">    :param zcoords: The 3rd dimension or &#39;z&#39; coordinates at cell centers, as a Python list or numpy Array</span>
-<span class="sd">    :param xcorners: The 1st dimension or &#39;x&#39; coordinates at cell corners, as a Python list or numpy Array</span>
-<span class="sd">    :param ycorners: The 2nd dimension or &#39;y&#39; coordinates at cell corners, as a Python list or numpy Array</span>
-<span class="sd">    :param zcorners: The 3rd dimension or &#39;z&#39; coordinates at cell corners, as a Python list or numpy Array</span>
+<span class="sd">    :param xcoords: The 1st dimension or 'x' coordinates at cell centers, as a Python list or numpy Array</span>
+<span class="sd">    :param ycoords: The 2nd dimension or 'y' coordinates at cell centers, as a Python list or numpy Array</span>
+<span class="sd">    :param zcoords: The 3rd dimension or 'z' coordinates at cell centers, as a Python list or numpy Array</span>
+<span class="sd">    :param xcorners: The 1st dimension or 'x' coordinates at cell corners, as a Python list or numpy Array</span>
+<span class="sd">    :param ycorners: The 2nd dimension or 'y' coordinates at cell corners, as a Python list or numpy Array</span>
+<span class="sd">    :param zcorners: The 3rd dimension or 'z' coordinates at cell corners, as a Python list or numpy Array</span>
 <span class="sd">    :param corners: boolean to determine whether or not to add corner coordinates to this grid</span>
 <span class="sd">    :param domask: boolean to determine whether to set an arbitrary mask or not</span>
 <span class="sd">    :param doarea: boolean to determine whether to set an arbitrary area values or not</span>
 <span class="sd">    :return: grid</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 
     <span class="c1"># create a grid given the number of grid cells in each dimension, the center stagger location is allocated and the</span>
@@ -285,8 +285,8 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <h3>Create a Periodic Grid<a class="headerlink" href="#create-a-periodic-grid" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">grid_create_from_coordinates_periodic</span><span class="p">(</span><span class="n">longitudes</span><span class="p">,</span> <span class="n">latitudes</span><span class="p">,</span> <span class="n">lon_corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">lat_corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">corners</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Create a 2 dimensional periodic Grid using the &#39;longitudes&#39; and &#39;latitudes&#39;.</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Create a 2 dimensional periodic Grid using the 'longitudes' and 'latitudes'.</span>
 <span class="sd">    :param longitudes: longitude coordinate values at cell centers</span>
 <span class="sd">    :param latitudes: latitude coordinate values at cell centers</span>
 <span class="sd">    :param lon_corners: longitude coordinate values at cell corners</span>
@@ -294,7 +294,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <span class="sd">    :param corners: boolean to determine whether or not to add corner coordinates to this grid</span>
 <span class="sd">    :param domask: boolean to determine whether to set an arbitrary mask or not</span>
 <span class="sd">    :return: grid</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="p">[</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 
     <span class="c1"># create a grid given the number of grid cells in each dimension the center stagger location is allocated</span>
@@ -344,7 +344,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <h3>Create a 5 Element Mesh<a class="headerlink" href="#create-a-5-element-mesh" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mesh_create_5</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    PRECONDITIONS: None</span>
 <span class="sd">    POSTCONDITIONS: A 5 element Mesh has been created.    </span>
 <span class="sd">    RETURN VALUES: \n Mesh :: mesh \n</span>
@@ -365,7 +365,7 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <span class="sd">          Element Ids in centers</span>
 <span class="sd">    </span>
 <span class="sd">    Note: This mesh is not parallel, it can only be used in serial</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="c1"># Two parametric dimensions, and two spatial dimensions</span>
     <span class="n">mesh</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">parametric_dim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">spatial_dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     
@@ -413,12 +413,12 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <h3>Create a Field<a class="headerlink" href="#create-a-field" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span><span class="w"> </span><span class="nf">create_field</span><span class="p">(</span><span class="n">gml</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">        PRECONDITIONS: An Grid, Mesh or LocStream has been created, and &#39;name&#39; is a string that</span>
+<span class="w">        </span><span class="sd">'''</span>
+<span class="sd">        PRECONDITIONS: An Grid, Mesh or LocStream has been created, and 'name' is a string that</span>
 <span class="sd">                       will be used to initialize the name of a new Field.\n</span>
 <span class="sd">        POSTCONDITIONS: A Field has been created.\n</span>
 <span class="sd">        RETURN VALUES: \n Field :: field \n</span>
-<span class="sd">        &#39;&#39;&#39;</span>
+<span class="sd">        '''</span>
         <span class="n">field</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">gml</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">field</span>
@@ -430,14 +430,14 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <h3>Initialize an Analytic Field<a class="headerlink" href="#initialize-an-analytic-field" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">initialize_field_grid_periodic</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    PRECONDITIONS: A Field has been created as &#39;field&#39; with a &#39;grid&#39;</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    PRECONDITIONS: A Field has been created as 'field' with a 'grid'</span>
 <span class="sd">                   where coordinates have been set on both </span>
 <span class="sd">                   the center and corner stagger locations. \n</span>
-<span class="sd">    POSTCONDITIONS: The &#39;field&#39; has been initialized to an analytic </span>
+<span class="sd">    POSTCONDITIONS: The 'field' has been initialized to an analytic </span>
 <span class="sd">                    field.\n</span>
 <span class="sd">    RETURN VALUES: \n Field :: field \n</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">DEG2RAD</span> <span class="o">=</span> <span class="mf">3.141592653589793</span><span class="o">/</span><span class="mf">180.0</span>
 
     <span class="c1"># get the coordinate pointers and set the coordinates</span>
@@ -458,19 +458,19 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span><span class="w"> </span><span class="nf">run_regridding</span><span class="p">(</span><span class="n">srcfield</span><span class="p">,</span> <span class="n">dstfield</span><span class="p">,</span> <span class="n">srcfracfield</span><span class="p">,</span> <span class="n">dstfracfield</span><span class="p">):</span>
         <span class="c1"># This is for documentation. Do not modify.</span>
-<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="w">        </span><span class="sd">'''</span>
 <span class="sd">        PRECONDITIONS: Two Fields have been created and a regridding</span>
-<span class="sd">                       operation is desired from &#39;srcfield&#39; to &#39;dstfield&#39;.</span>
-<span class="sd">                       The &#39;srcfracfield&#39; and &#39;dstfractfield&#39; are Fields</span>
+<span class="sd">                       operation is desired from 'srcfield' to 'dstfield'.</span>
+<span class="sd">                       The 'srcfracfield' and 'dstfractfield' are Fields</span>
 <span class="sd">                       created to hold the fractions of the source and</span>
 <span class="sd">                       destination fields which contribute to conservative</span>
 <span class="sd">                       regridding.\n</span>
 <span class="sd">        POSTCONDITIONS: A regridding operation has set the data on</span>
-<span class="sd">                        &#39;dstfield&#39;, &#39;srcfracfield&#39;, and &#39;dstfracfield&#39;.\n</span>
+<span class="sd">                        'dstfield', 'srcfracfield', and 'dstfracfield'.\n</span>
 <span class="sd">        RETURN VALUES: \n Field :: dstfield \n</span>
 <span class="sd">                          Field :: srcfracfield \n</span>
 <span class="sd">                          Field :: dstfracfield \n</span>
-<span class="sd">        &#39;&#39;&#39;</span>
+<span class="sd">        '''</span>
         <span class="c1"># call the regridding functions</span>
         <span class="n">regridSrc2Dst</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Regrid</span><span class="p">(</span><span class="n">srcfield</span><span class="p">,</span> <span class="n">dstfield</span><span class="p">,</span>
                                     <span class="n">regrid_method</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">RegridMethod</span><span class="o">.</span><span class="n">CONSERVE</span><span class="p">,</span>
@@ -489,16 +489,16 @@ and <a class="reference internal" href="locstream.html#esmpy.api.locstream.LocSt
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compute_mass_grid</span><span class="p">(</span><span class="n">valuefield</span><span class="p">,</span> <span class="n">dofrac</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fracfield</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                       <span class="n">uninitval</span><span class="o">=</span><span class="mf">422397696.</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    PRECONDITIONS: &#39;fracfield&#39; contains the fractions of each cell</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    PRECONDITIONS: 'fracfield' contains the fractions of each cell</span>
 <span class="sd">                   which contributed to a regridding operation involving</span>
-<span class="sd">                   &#39;valuefield.  &#39;dofrac&#39; is a boolean value that gives </span>
-<span class="sd">                   the option to not use the &#39;fracfield&#39;.\n</span>
+<span class="sd">                   'valuefield.  'dofrac' is a boolean value that gives </span>
+<span class="sd">                   the option to not use the 'fracfield'.\n</span>
 <span class="sd">    POSTCONDITIONS: The mass of the data field is computed.\n</span>
 <span class="sd">    RETURN VALUES: float :: mass \n</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">mass</span> <span class="o">=</span> <span class="mf">0.0</span>
-    <span class="n">areafield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">valuefield</span><span class="o">.</span><span class="n">grid</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;areafield&#39;</span><span class="p">)</span>
+    <span class="n">areafield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">valuefield</span><span class="o">.</span><span class="n">grid</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'areafield'</span><span class="p">)</span>
     <span class="n">areafield</span><span class="o">.</span><span class="n">get_area</span><span class="p">()</span>
 
     <span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">valuefield</span><span class="o">.</span><span class="n">data</span> <span class="o">!=</span> <span class="n">uninitval</span><span class="p">)</span>
@@ -538,18 +538,18 @@ can be run in serial or parallel with no modification.</p>
 <span class="c1"># following block of code:</span>
 <span class="c1">#</span>
 <span class="c1"># from esmpy.util.cache_data import cache_data_file</span>
-<span class="c1"># cache_data_file(os.path.join(DATA_DIR, &quot;so_Omon_GISS-E2.nc&quot;))</span>
-<span class="c1"># cache_data_file(os.path.join(DATA_DIR, &quot;mpas_uniform_10242_dual_counterclockwise.nc&quot;))</span>
+<span class="c1"># cache_data_file(os.path.join(DATA_DIR, "so_Omon_GISS-E2.nc"))</span>
+<span class="c1"># cache_data_file(os.path.join(DATA_DIR, "mpas_uniform_10242_dual_counterclockwise.nc"))</span>
 
 <span class="c1"># This call enables debug logging</span>
 <span class="c1"># esmpy.Manager(debug=True)</span>
 
-<span class="n">datafile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="p">,</span> <span class="s2">&quot;so_Omon_GISS-E2.nc&quot;</span><span class="p">)</span>
+<span class="n">datafile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="p">,</span> <span class="s2">"so_Omon_GISS-E2.nc"</span><span class="p">)</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">datafile</span><span class="p">):</span>
-    <span class="k">raise</span> <span class="n">DataMissing</span><span class="p">(</span><span class="s2">&quot;Data not available, try &#39;make download&#39;.&quot;</span><span class="p">)</span>
-<span class="n">meshfile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="p">,</span> <span class="s2">&quot;mpas_uniform_10242_dual_counterclockwise.nc&quot;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="n">DataMissing</span><span class="p">(</span><span class="s2">"Data not available, try 'make download'."</span><span class="p">)</span>
+<span class="n">meshfile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="p">,</span> <span class="s2">"mpas_uniform_10242_dual_counterclockwise.nc"</span><span class="p">)</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">meshfile</span><span class="p">):</span>
-    <span class="k">raise</span> <span class="n">DataMissing</span><span class="p">(</span><span class="s2">&quot;Data not available, try &#39;make download&#39;.&quot;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="n">DataMissing</span><span class="p">(</span><span class="s2">"Data not available, try 'make download'."</span><span class="p">)</span>
 
 
 <span class="c1"># Create a  global grid from a GRIDSPEC formatted file</span>
@@ -561,7 +561,7 @@ can be run in serial or parallel with no modification.</p>
 
 <span class="c1"># Read the field data from file</span>
 <span class="n">srcfield</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="p">,</span> <span class="n">datafile</span><span class="p">),</span>
-           <span class="n">variable</span><span class="o">=</span><span class="s2">&quot;so&quot;</span><span class="p">,</span> <span class="n">timeslice</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+           <span class="n">variable</span><span class="o">=</span><span class="s2">"so"</span><span class="p">,</span> <span class="n">timeslice</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="c1"># Create an ESMF formatted unstructured mesh with clockwise cells removed</span>
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="p">,</span> <span class="n">meshfile</span><span class="p">),</span>
@@ -581,7 +581,7 @@ can be run in serial or parallel with no modification.</p>
 <span class="n">dstfield</span> <span class="o">=</span> <span class="n">regrid</span><span class="p">(</span><span class="n">srcfield</span><span class="p">,</span> <span class="n">dstfield</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Fields created from file regridded successfully :)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">"Fields created from file regridded successfully :)"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -622,8 +622,8 @@ can be run in serial or parallel with no modification.</p>
 <span class="n">slons_par</span> <span class="o">=</span> <span class="n">lons</span><span class="p">[</span><span class="n">srcgrid</span><span class="o">.</span><span class="n">lower_bounds</span><span class="p">[</span><span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span><span class="n">srcgrid</span><span class="o">.</span><span class="n">upper_bounds</span><span class="p">[</span><span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">][</span><span class="mi">0</span><span class="p">]]</span>
 <span class="n">slats_par</span> <span class="o">=</span> <span class="n">lats</span><span class="p">[</span><span class="n">srcgrid</span><span class="o">.</span><span class="n">lower_bounds</span><span class="p">[</span><span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">][</span><span class="mi">1</span><span class="p">]:</span><span class="n">srcgrid</span><span class="o">.</span><span class="n">upper_bounds</span><span class="p">[</span><span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">][</span><span class="mi">1</span><span class="p">]]</span>
 
-<span class="c1"># make sure to use indexing=&#39;ij&#39; as ESMPy backend uses matrix indexing (not Cartesian)</span>
-<span class="n">lonm</span><span class="p">,</span> <span class="n">latm</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">slons_par</span><span class="p">,</span> <span class="n">slats_par</span><span class="p">,</span> <span class="n">indexing</span><span class="o">=</span><span class="s1">&#39;ij&#39;</span><span class="p">)</span>
+<span class="c1"># make sure to use indexing='ij' as ESMPy backend uses matrix indexing (not Cartesian)</span>
+<span class="n">lonm</span><span class="p">,</span> <span class="n">latm</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">slons_par</span><span class="p">,</span> <span class="n">slats_par</span><span class="p">,</span> <span class="n">indexing</span><span class="o">=</span><span class="s1">'ij'</span><span class="p">)</span>
 
 <span class="n">srcGridCoordLon</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">lonm</span>
 <span class="n">srcGridCoordLat</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">latm</span>
@@ -643,18 +643,18 @@ can be run in serial or parallel with no modification.</p>
 <span class="n">dlons_par</span> <span class="o">=</span> <span class="n">lons</span><span class="p">[</span><span class="n">dstgrid</span><span class="o">.</span><span class="n">lower_bounds</span><span class="p">[</span><span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span><span class="n">dstgrid</span><span class="o">.</span><span class="n">upper_bounds</span><span class="p">[</span><span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">][</span><span class="mi">0</span><span class="p">]]</span>
 <span class="n">dlats_par</span> <span class="o">=</span> <span class="n">lats</span><span class="p">[</span><span class="n">dstgrid</span><span class="o">.</span><span class="n">lower_bounds</span><span class="p">[</span><span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">][</span><span class="mi">1</span><span class="p">]:</span><span class="n">dstgrid</span><span class="o">.</span><span class="n">upper_bounds</span><span class="p">[</span><span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">][</span><span class="mi">1</span><span class="p">]]</span>
 
-<span class="c1"># make sure to use indexing=&#39;ij&#39; as ESMPy backend uses matrix indexing (not Cartesian)</span>
-<span class="n">lonm</span><span class="p">,</span> <span class="n">latm</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">dlons_par</span><span class="p">,</span> <span class="n">dlats_par</span><span class="p">,</span> <span class="n">indexing</span><span class="o">=</span><span class="s1">&#39;ij&#39;</span><span class="p">)</span>
+<span class="c1"># make sure to use indexing='ij' as ESMPy backend uses matrix indexing (not Cartesian)</span>
+<span class="n">lonm</span><span class="p">,</span> <span class="n">latm</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">dlons_par</span><span class="p">,</span> <span class="n">dlats_par</span><span class="p">,</span> <span class="n">indexing</span><span class="o">=</span><span class="s1">'ij'</span><span class="p">)</span>
 
 <span class="n">dstGridCoordLon</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">lonm</span>
 <span class="n">dstGridCoordLat</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">latm</span>
 
 <span class="c1"># Create a field on the centers of the source grid with the mask applied.</span>
-<span class="n">srcfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">srcgrid</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;srcfield&quot;</span><span class="p">,</span> <span class="n">staggerloc</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">)</span>
+<span class="n">srcfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">srcgrid</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"srcfield"</span><span class="p">,</span> <span class="n">staggerloc</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">)</span>
 
 <span class="c1"># Create a field on the centers of the source grid with the mask applied.</span>
-<span class="n">dstfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">dstgrid</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;dstfield&quot;</span><span class="p">,</span> <span class="n">staggerloc</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">)</span>
-<span class="n">xctfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">dstgrid</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;xctfield&quot;</span><span class="p">,</span> <span class="n">staggerloc</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">)</span>
+<span class="n">dstfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">dstgrid</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"dstfield"</span><span class="p">,</span> <span class="n">staggerloc</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">)</span>
+<span class="n">xctfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">dstgrid</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"xctfield"</span><span class="p">,</span> <span class="n">staggerloc</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">)</span>
 
 <span class="n">gridLon</span> <span class="o">=</span> <span class="n">srcfield</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">get_coords</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">)</span>
 <span class="n">gridLat</span> <span class="o">=</span> <span class="n">srcfield</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">get_coords</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">)</span>
@@ -674,7 +674,7 @@ can be run in serial or parallel with no modification.</p>
 <span class="n">dstfield</span><span class="o">.</span><span class="n">data</span><span class="p">[:]</span> <span class="o">=</span> <span class="mf">1e20</span>
 
 <span class="c1"># write regridding weights to file</span>
-<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;esmpy_example_weight_file.nc&quot;</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">"esmpy_example_weight_file.nc"</span>
 <span class="k">if</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span>
         <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">filename</span><span class="p">)):</span>
@@ -709,8 +709,8 @@ can be run in serial or parallel with no modification.</p>
 <span class="c1"># output the results from one processor only</span>
 <span class="k">if</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">meanrelerr</span> <span class="o">=</span> <span class="n">relerr</span> <span class="o">/</span> <span class="n">num_nodes</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;ESMPy Grid Mesh Regridding Example&quot;</span><span class="p">)</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;  interpolation mean relative error = </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">meanrelerr</span><span class="p">))</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">"ESMPy Grid Mesh Regridding Example"</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">"  interpolation mean relative error = </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">meanrelerr</span><span class="p">))</span>
 
     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">filename</span><span class="p">)):</span>
         <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">filename</span><span class="p">))</span>
@@ -719,23 +719,23 @@ can be run in serial or parallel with no modification.</p>
 <span class="c1"># if esmpy.pet_count() == 0:</span>
 <span class="c1">#     import matplotlib.pyplot as plt</span>
 <span class="c1">#     fig = plt.figure(1, (15, 6))</span>
-<span class="c1">#     fig.suptitle(&#39;ESMPy Periodic Grids&#39;, fontsize=14, fontweight=&#39;bold&#39;)</span>
+<span class="c1">#     fig.suptitle('ESMPy Periodic Grids', fontsize=14, fontweight='bold')</span>
 <span class="c1"># </span>
 <span class="c1">#     ax = fig.add_subplot(1, 2, 1)</span>
-<span class="c1">#     im = ax.imshow(srcfield.data, vmin=1, vmax=3, cmap=&#39;gist_ncar&#39;, aspect=&#39;auto&#39;,</span>
+<span class="c1">#     im = ax.imshow(srcfield.data, vmin=1, vmax=3, cmap='gist_ncar', aspect='auto',</span>
 <span class="c1">#                    extent=[min(slons_par), max(slons_par), min(slats_par), max(slats_par)])</span>
 <span class="c1">#     ax.set_xbound(lower=min(slons_par), upper=max(slons_par))</span>
 <span class="c1">#     ax.set_ybound(lower=min(slats_par), upper=max(slats_par))</span>
-<span class="c1">#     ax.set_xlabel(&quot;Longitude&quot;)</span>
-<span class="c1">#     ax.set_ylabel(&quot;Latitude&quot;)</span>
-<span class="c1">#     ax.set_title(&quot;Source Data&quot;)</span>
+<span class="c1">#     ax.set_xlabel("Longitude")</span>
+<span class="c1">#     ax.set_ylabel("Latitude")</span>
+<span class="c1">#     ax.set_title("Source Data")</span>
 <span class="c1"># </span>
 <span class="c1">#     ax = fig.add_subplot(1, 2, 2)</span>
-<span class="c1">#     im = ax.imshow(dstfield.data, vmin=1, vmax=3, cmap=&#39;gist_ncar&#39;, aspect=&#39;auto&#39;,</span>
+<span class="c1">#     im = ax.imshow(dstfield.data, vmin=1, vmax=3, cmap='gist_ncar', aspect='auto',</span>
 <span class="c1">#                    extent=[min(dlons_par), max(dlons_par), min(dlats_par), max(dlats_par)])</span>
-<span class="c1">#     ax.set_xlabel(&quot;Longitude&quot;)</span>
-<span class="c1">#     ax.set_ylabel(&quot;Latitude&quot;)</span>
-<span class="c1">#     ax.set_title(&quot;Regrid Solution&quot;)</span>
+<span class="c1">#     ax.set_xlabel("Longitude")</span>
+<span class="c1">#     ax.set_ylabel("Latitude")</span>
+<span class="c1">#     ax.set_title("Regrid Solution")</span>
 <span class="c1"># </span>
 <span class="c1">#     fig.subplots_adjust(right=0.8)</span>
 <span class="c1">#     cbar_ax = fig.add_axes([0.9, 0.1, 0.01, 0.8])</span>
@@ -765,14 +765,14 @@ can be run in serial or parallel with no modification.</p>
 <span class="c1"># following block of code:</span>
 <span class="c1">#</span>
 <span class="c1"># from esmpy.util.cache_data import cache_data_file</span>
-<span class="c1"># cache_data_file(os.path.join(DATA_DIR, &quot;ll1deg_grid.nc&quot;))</span>
+<span class="c1"># cache_data_file(os.path.join(DATA_DIR, "ll1deg_grid.nc"))</span>
 
 <span class="c1"># This call enables debug logging</span>
 <span class="n">esmpy</span><span class="o">.</span><span class="n">Manager</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="n">grid1</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="p">,</span> <span class="s2">&quot;ll1deg_grid.nc&quot;</span><span class="p">)</span>
+<span class="n">grid1</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="p">,</span> <span class="s2">"ll1deg_grid.nc"</span><span class="p">)</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">grid1</span><span class="p">):</span>
-    <span class="k">raise</span> <span class="n">DataMissing</span><span class="p">(</span><span class="s2">&quot;Data not available, try &#39;make download&#39;.&quot;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="n">DataMissing</span><span class="p">(</span><span class="s2">"Data not available, try 'make download'."</span><span class="p">)</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">esmpy.util.locstream_utilities</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_locstream_spherical_16</span><span class="p">,</span> <span class="n">create_locstream_spherical_16_parallel</span>
 <span class="n">coord_sys</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_DEG</span>
@@ -785,10 +785,10 @@ can be run in serial or parallel with no modification.</p>
 <span class="n">grid</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Grid</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">grid1</span><span class="p">,</span> <span class="n">filetype</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">FileFormat</span><span class="o">.</span><span class="n">SCRIP</span><span class="p">)</span>
 
 <span class="c1"># create a field</span>
-<span class="n">srcfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;srcfield&#39;</span><span class="p">)</span>
+<span class="n">srcfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'srcfield'</span><span class="p">)</span>
 
-<span class="n">dstfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">locstream</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;dstfield&#39;</span><span class="p">)</span>
-<span class="n">xctfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">locstream</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;xctfield&#39;</span><span class="p">)</span>
+<span class="n">dstfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">locstream</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'dstfield'</span><span class="p">)</span>
+<span class="n">xctfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">locstream</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'xctfield'</span><span class="p">)</span>
 
 <span class="c1"># initialize the fields</span>
 <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -798,14 +798,14 @@ can be run in serial or parallel with no modification.</p>
 <span class="n">gridYCoord</span> <span class="o">=</span> <span class="n">srcfield</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">get_coords</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="n">srcfield</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10.0</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">gridXCoord</span> <span class="o">*</span> <span class="n">deg2rad</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">gridYCoord</span> <span class="o">*</span> <span class="n">deg2rad</span><span class="p">)</span>
 
-<span class="n">gridXCoord</span> <span class="o">=</span> <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lon&quot;</span><span class="p">]</span>
-<span class="n">gridYCoord</span> <span class="o">=</span> <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lat&quot;</span><span class="p">]</span>
+<span class="n">gridXCoord</span> <span class="o">=</span> <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Lon"</span><span class="p">]</span>
+<span class="n">gridYCoord</span> <span class="o">=</span> <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Lat"</span><span class="p">]</span>
 <span class="k">if</span> <span class="n">coord_sys</span> <span class="o">==</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_DEG</span><span class="p">:</span>
     <span class="n">xctfield</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10.0</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">gridXCoord</span> <span class="o">*</span> <span class="n">deg2rad</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">gridYCoord</span> <span class="o">*</span> <span class="n">deg2rad</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">coord_sys</span> <span class="o">==</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_RAD</span><span class="p">:</span>
     <span class="n">xctfield</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10.0</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">gridXCoord</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">gridYCoord</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;coordsys value does not work in this example&quot;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"coordsys value does not work in this example"</span><span class="p">)</span>
 
 <span class="n">dstfield</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1e20</span>
 
@@ -843,8 +843,8 @@ can be run in serial or parallel with no modification.</p>
 <span class="c1"># output the results from one processor only</span>
 <span class="k">if</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">meanrelerr</span> <span class="o">=</span> <span class="n">relerr</span> <span class="o">/</span> <span class="n">num_nodes</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;ESMPy Grid LocStream Regridding Example&quot;</span><span class="p">)</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;  interpolation mean relative error = </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">meanrelerr</span><span class="p">))</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">"ESMPy Grid LocStream Regridding Example"</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">"  interpolation mean relative error = </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">meanrelerr</span><span class="p">))</span>
 
     <span class="k">assert</span> <span class="p">(</span><span class="n">meanrelerr</span> <span class="o">&lt;</span> <span class="mf">5e-6</span><span class="p">)</span>
 </pre></div>
@@ -875,11 +875,11 @@ can be run in serial or parallel with no modification.</p>
     <span class="n">locstream</span> <span class="o">=</span> <span class="n">create_locstream_16_parallel</span><span class="p">()</span>
 
 <span class="c1"># create a field</span>
-<span class="n">srcfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;srcfield&#39;</span><span class="p">)</span><span class="c1">#, meshloc=esmpy.MeshLoc.ELEMENT)</span>
+<span class="n">srcfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'srcfield'</span><span class="p">)</span><span class="c1">#, meshloc=esmpy.MeshLoc.ELEMENT)</span>
 
 <span class="c1"># create a field on the locstream</span>
-<span class="n">dstfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">locstream</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;dstfield&#39;</span><span class="p">)</span>
-<span class="n">xctfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">locstream</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;xctfield&#39;</span><span class="p">)</span>
+<span class="n">dstfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">locstream</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'dstfield'</span><span class="p">)</span>
+<span class="n">xctfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">locstream</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'xctfield'</span><span class="p">)</span>
 
 <span class="c1"># initialize the fields</span>
 <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -889,8 +889,8 @@ can be run in serial or parallel with no modification.</p>
 <span class="n">gridYCoord</span> <span class="o">=</span> <span class="n">srcfield</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">get_coords</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="n">srcfield</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10.0</span> <span class="o">+</span> <span class="p">(</span><span class="n">gridXCoord</span> <span class="o">*</span> <span class="n">deg2rad</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">gridYCoord</span> <span class="o">*</span> <span class="n">deg2rad</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
 
-<span class="n">gridXCoord</span> <span class="o">=</span> <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:X&quot;</span><span class="p">]</span>
-<span class="n">gridYCoord</span> <span class="o">=</span> <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Y&quot;</span><span class="p">]</span>
+<span class="n">gridXCoord</span> <span class="o">=</span> <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:X"</span><span class="p">]</span>
+<span class="n">gridYCoord</span> <span class="o">=</span> <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Y"</span><span class="p">]</span>
 <span class="n">xctfield</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10.0</span> <span class="o">+</span> <span class="p">(</span><span class="n">gridXCoord</span> <span class="o">*</span> <span class="n">deg2rad</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">gridYCoord</span> <span class="o">*</span> <span class="n">deg2rad</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
 
 <span class="n">dstfield</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1e20</span>
@@ -920,8 +920,8 @@ can be run in serial or parallel with no modification.</p>
 <span class="c1"># output the results from one processor only</span>
 <span class="k">if</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">meanrelerr</span> <span class="o">=</span> <span class="n">relerr</span> <span class="o">/</span> <span class="n">num_nodes</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;ESMPy Grid Mesh Regridding Example&quot;</span><span class="p">)</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;  interpolation mean relative error = </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">meanrelerr</span><span class="p">))</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">"ESMPy Grid Mesh Regridding Example"</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">"  interpolation mean relative error = </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">meanrelerr</span><span class="p">))</span>
 
     <span class="k">assert</span> <span class="p">(</span><span class="n">meanrelerr</span> <span class="o">&lt;</span> <span class="mf">3e-5</span><span class="p">)</span>
 </pre></div>
@@ -947,14 +947,14 @@ can be run in serial or parallel with no modification.</p>
 <span class="c1"># following block of code:</span>
 <span class="c1">#</span>
 <span class="c1"># from esmpy.util.cache_data import cache_data_file</span>
-<span class="c1"># cache_data_file(os.path.join(DATA_DIR, &quot;ll1deg_grid.nc&quot;))</span>
+<span class="c1"># cache_data_file(os.path.join(DATA_DIR, "ll1deg_grid.nc"))</span>
 
 <span class="c1"># This call enables debug logging</span>
 <span class="n">esmpy</span><span class="o">.</span><span class="n">Manager</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="n">grid1</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="p">,</span> <span class="s2">&quot;ll1deg_grid.nc&quot;</span><span class="p">)</span>
+<span class="n">grid1</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="p">,</span> <span class="s2">"ll1deg_grid.nc"</span><span class="p">)</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">grid1</span><span class="p">):</span>
-    <span class="k">raise</span> <span class="n">DataMissing</span><span class="p">(</span><span class="s2">&quot;Data not available, try &#39;make download&#39;.&quot;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="n">DataMissing</span><span class="p">(</span><span class="s2">"Data not available, try 'make download'."</span><span class="p">)</span>
 
 <span class="n">grid</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Grid</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">grid1</span><span class="p">,</span> <span class="n">filetype</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">FileFormat</span><span class="o">.</span><span class="n">SCRIP</span><span class="p">)</span>
 
@@ -967,23 +967,23 @@ can be run in serial or parallel with no modification.</p>
     <span class="n">locstream</span> <span class="o">=</span> <span class="n">create_locstream_spherical_16_parallel</span><span class="p">(</span><span class="n">coord_sys</span><span class="o">=</span><span class="n">coord_sys</span><span class="p">,</span> <span class="n">domask</span><span class="o">=</span><span class="n">domask</span><span class="p">)</span>
 
 <span class="c1"># create a field</span>
-<span class="n">srcfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">locstream</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;srcfield&#39;</span><span class="p">)</span>
+<span class="n">srcfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">locstream</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'srcfield'</span><span class="p">)</span>
 
-<span class="n">dstfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;dstfield&#39;</span><span class="p">)</span>
-<span class="n">xctfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;xctfield&#39;</span><span class="p">)</span>
+<span class="n">dstfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'dstfield'</span><span class="p">)</span>
+<span class="n">xctfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'xctfield'</span><span class="p">)</span>
 
 <span class="c1"># initialize the fields</span>
 <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">deg2rad</span> <span class="o">=</span> <span class="mf">3.14159</span><span class="o">/</span><span class="mi">180</span>
 
-<span class="n">gridXCoord</span> <span class="o">=</span> <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lon&quot;</span><span class="p">]</span>
-<span class="n">gridYCoord</span> <span class="o">=</span> <span class="n">locstream</span><span class="p">[</span><span class="s2">&quot;ESMF:Lat&quot;</span><span class="p">]</span>
+<span class="n">gridXCoord</span> <span class="o">=</span> <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Lon"</span><span class="p">]</span>
+<span class="n">gridYCoord</span> <span class="o">=</span> <span class="n">locstream</span><span class="p">[</span><span class="s2">"ESMF:Lat"</span><span class="p">]</span>
 <span class="k">if</span> <span class="n">coord_sys</span> <span class="o">==</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_DEG</span><span class="p">:</span>
     <span class="n">srcfield</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10.0</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">gridXCoord</span> <span class="o">*</span> <span class="n">deg2rad</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">gridYCoord</span> <span class="o">*</span> <span class="n">deg2rad</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">coord_sys</span> <span class="o">==</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">CoordSys</span><span class="o">.</span><span class="n">SPH_RAD</span><span class="p">:</span>
     <span class="n">srcfield</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10.0</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">gridXCoord</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">gridYCoord</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;coordsys value does not apply in this example&quot;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"coordsys value does not apply in this example"</span><span class="p">)</span>
 
 <span class="n">gridXCoord</span> <span class="o">=</span> <span class="n">xctfield</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">get_coords</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="n">gridYCoord</span> <span class="o">=</span> <span class="n">xctfield</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">get_coords</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
@@ -1027,8 +1027,8 @@ can be run in serial or parallel with no modification.</p>
 <span class="c1"># output the results from one processor only</span>
 <span class="k">if</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">local_pet</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">meanrelerr</span> <span class="o">=</span> <span class="n">relerr</span> <span class="o">/</span> <span class="n">num_nodes</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;ESMPy LocStream Grid Regridding Example&quot;</span><span class="p">)</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;  interpolation mean relative error = </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">meanrelerr</span><span class="p">))</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">"ESMPy LocStream Grid Regridding Example"</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">"  interpolation mean relative error = </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">meanrelerr</span><span class="p">))</span>
 
     <span class="k">assert</span> <span class="p">(</span><span class="n">meanrelerr</span> <span class="o">&lt;</span> <span class="mf">4e-7</span><span class="p">)</span>
 </pre></div>
@@ -1057,23 +1057,23 @@ can be run in serial or parallel with no modification.</p>
 <span class="c1"># following block of code:</span>
 <span class="c1">#</span>
 <span class="c1"># from esmpy.util.cache_data import cache_data_file</span>
-<span class="c1"># cache_data_file(os.path.join(DATA_DIR, &quot;ll1deg_grid.nc&quot;))</span>
-<span class="c1"># cache_data_file(os.path.join(DATA_DIR, &quot;mpas_uniform_10242_dual_counterclockwise.nc&quot;))</span>
+<span class="c1"># cache_data_file(os.path.join(DATA_DIR, "ll1deg_grid.nc"))</span>
+<span class="c1"># cache_data_file(os.path.join(DATA_DIR, "mpas_uniform_10242_dual_counterclockwise.nc"))</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">regrid</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="kn">import</span><span class="w"> </span><span class="nn">esmpy</span>
     <span class="k">except</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="s2">&quot;ESMF is not available on this machine&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="s2">"ESMF is not available on this machine"</span><span class="p">)</span>
 
-    <span class="n">grid1</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="p">,</span> <span class="s2">&quot;ll1deg_grid.nc&quot;</span><span class="p">)</span>
+    <span class="n">grid1</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="p">,</span> <span class="s2">"ll1deg_grid.nc"</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">grid1</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="n">DataMissing</span><span class="p">(</span><span class="s2">&quot;Data not available, try &#39;make download&#39;.&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">DataMissing</span><span class="p">(</span><span class="s2">"Data not available, try 'make download'."</span><span class="p">)</span>
 
-    <span class="n">grid2</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="p">,</span> <span class="s2">&quot;mpas_uniform_10242_dual_counterclockwise.nc&quot;</span><span class="p">)</span>
+    <span class="n">grid2</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="p">,</span> <span class="s2">"mpas_uniform_10242_dual_counterclockwise.nc"</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">grid2</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="n">DataMissing</span><span class="p">(</span><span class="s2">&quot;Data not available, try &#39;make download&#39;.&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">DataMissing</span><span class="p">(</span><span class="s2">"Data not available, try 'make download'."</span><span class="p">)</span>
 
     <span class="c1"># Create a uniform global latlon grid from a SCRIP formatted file</span>
     <span class="n">grid</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Grid</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">grid1</span><span class="p">,</span> <span class="n">filetype</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">FileFormat</span><span class="o">.</span><span class="n">SCRIP</span><span class="p">)</span>
@@ -1082,18 +1082,18 @@ can be run in serial or parallel with no modification.</p>
     <span class="c1">#                  add_corner_stagger=True)</span>
 
     <span class="c1"># create a field on the center stagger locations of the source grid</span>
-    <span class="n">srcfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;srcfield&#39;</span><span class="p">,</span>
+    <span class="n">srcfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'srcfield'</span><span class="p">,</span>
                           <span class="n">staggerloc</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">StaggerLoc</span><span class="o">.</span><span class="n">CENTER</span><span class="p">)</span>
 
     <span class="c1"># create an ESMF formatted unstructured mesh with clockwise cells removed</span>
     <span class="n">mesh</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">grid2</span><span class="p">,</span> <span class="n">filetype</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">FileFormat</span><span class="o">.</span><span class="n">ESMFMESH</span><span class="p">)</span>
 
     <span class="c1"># create a field on the nodes of the destination mesh</span>
-    <span class="n">dstfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;dstfield&#39;</span><span class="p">,</span> <span class="n">meshloc</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">MeshLoc</span><span class="o">.</span><span class="n">NODE</span><span class="p">)</span>
-    <span class="n">xctfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;xctfield&#39;</span><span class="p">,</span> <span class="n">meshloc</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">MeshLoc</span><span class="o">.</span><span class="n">NODE</span><span class="p">)</span>
+    <span class="n">dstfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'dstfield'</span><span class="p">,</span> <span class="n">meshloc</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">MeshLoc</span><span class="o">.</span><span class="n">NODE</span><span class="p">)</span>
+    <span class="n">xctfield</span> <span class="o">=</span> <span class="n">esmpy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'xctfield'</span><span class="p">,</span> <span class="n">meshloc</span><span class="o">=</span><span class="n">esmpy</span><span class="o">.</span><span class="n">MeshLoc</span><span class="o">.</span><span class="n">NODE</span><span class="p">)</span>
     <span class="c1"># NOTE: Field must be built on elements of Mesh for conservative regridding</span>
-    <span class="c1"># dstfield = esmpy.Field(mesh, name=&#39;dstfield&#39;, meshloc=esmpy.MeshLoc.ELEMENT)</span>
-    <span class="c1"># xctfield = esmpy.Field(mesh, name=&#39;xctfield&#39;, meshloc=esmpy.MeshLoc.ELEMENT)</span>
+    <span class="c1"># dstfield = esmpy.Field(mesh, name='dstfield', meshloc=esmpy.MeshLoc.ELEMENT)</span>
+    <span class="c1"># xctfield = esmpy.Field(mesh, name='xctfield', meshloc=esmpy.MeshLoc.ELEMENT)</span>
 
     <span class="c1"># initialize the fields</span>
     <span class="p">[</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -1135,14 +1135,14 @@ can be run in serial or parallel with no modification.</p>
         <span class="n">meanrelerr</span> <span class="o">=</span> <span class="n">relerr</span> <span class="o">/</span> <span class="n">num_nodes</span>
 
     <span class="n">meanrelerr</span> <span class="o">=</span> <span class="n">relerr</span> <span class="o">/</span> <span class="n">num_nodes</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ESMPy regridding as a spawned MPI process:&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  interpolation mean relative error = </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">meanrelerr</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"ESMPy regridding as a spawned MPI process:"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"  interpolation mean relative error = </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">meanrelerr</span><span class="p">))</span>
 
 
 <span class="c1">########################################### MAIN #############################</span>
 
-<span class="n">start_worker</span> <span class="o">=</span> <span class="s1">&#39;worker&#39;</span>
-<span class="n">usage</span> <span class="o">=</span> <span class="s1">&#39;Program should be started without arguments&#39;</span>
+<span class="n">start_worker</span> <span class="o">=</span> <span class="s1">'worker'</span>
+<span class="n">usage</span> <span class="o">=</span> <span class="s1">'Program should be started without arguments'</span>
 <span class="n">pet_count</span> <span class="o">=</span> <span class="mi">4</span>
 
 <span class="c1"># Parent</span>
@@ -1177,7 +1177,7 @@ can be run in serial or parallel with no modification.</p>
         <span class="n">comm</span> <span class="o">=</span> <span class="n">MPI</span><span class="o">.</span><span class="n">Comm</span><span class="o">.</span><span class="n">Get_parent</span><span class="p">()</span>
         <span class="n">rank</span> <span class="o">=</span> <span class="n">comm</span><span class="o">.</span><span class="n">Get_rank</span><span class="p">()</span>
     <span class="k">except</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Could not connect to parent - &#39;</span> <span class="o">+</span> <span class="n">usage</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Could not connect to parent - '</span> <span class="o">+</span> <span class="n">usage</span><span class="p">)</span>
 
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># call ESMPy regridding</span>
